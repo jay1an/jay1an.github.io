@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="markdown语法" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+ 
+            <!--注意：首页既不是post也不是page-->
+            
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            markdown语法
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="post-toc-text">基础语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95"><span class="post-toc-text">拓展语法</span></a></li></ol>
+        
+        <h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><ul>
+<li>标题语法</li>
+</ul>
+<p>添加 # 号，# 的数量代表标题的级别，以三级标题为例：</p>
+<pre><code class="markdown">### title
+</code></pre>
+<ul>
+<li>段落语法</li>
+</ul>
+<p>一段直接在空行敲即可。</p>
+<p>建议不要使用 space 和 tab 键缩进段落。</p>
+<ul>
+<li>换行语法</li>
+</ul>
+<p>可以使用专门的换行标签，同html。</p>
+<pre><code class="markdown">&lt;br&gt;
+</code></pre>
+<p>例：小草偷偷地从土里钻出来，嫩嫩的，绿绿的。<br>园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的,草软绵绵的。</p>
+<p>注：与直接按Enter不同。( But Shift+Enter is alright. )</p>
+<ul>
+<li>强调语法</li>
+</ul>
+<p>加粗：使用 ** 包围文本。</p>
+<p>斜体：使用 * 包围文本。</p>
+<p>加粗和斜体：使用 *** 包围文本。</p>
+<p>eg: hello I am jay1an –&gt; <em>hello</em> <strong>I</strong> am <em><strong>jay1an</strong></em>.</p>
+<pre><code class="markdown">*hello* **I** am ***jay1an***
+</code></pre>
+<ul>
+<li>引用语法</li>
+</ul>
+<p>使用符号 &gt; </p>
+<blockquote>
+<p>hello I am jay1an</p>
+</blockquote>
+<pre><code class="markdown">&gt; hello I am jay1an
+</code></pre>
+<ul>
+<li><p>列表语法</p>
+<ul>
+<li><p>有序列表</p>
+<p>直接使用 ‘数字+.’ 的方式，第一个必须是1</p>
+</li>
+<li><p>无须列表</p>
+<p>可以使用- * + （可以支持子列表 &amp; 有序无序可混用）</p>
+</li>
+</ul>
+<p>若要保留列表连续性的同时添加其他元素，则要增加四个空格符</p>
+</li>
+</ul>
+<p>eg:</p>
+<ul>
+<li><p>This is the first list item.</p>
+</li>
+<li><p>Here’s the second list item.</p>
+<blockquote>
+<p>A blockquote would look great below the second list item.</p>
+</blockquote>
+</li>
+<li><p>And here’s the third list item.</p>
+</li>
+</ul>
+<pre><code class="markdown">*   This is the first list item.
+*   Here&#39;s the second list item.
+
+    &gt; A blockquote would look great below the second list item.
+
+*   And here&#39;s the third list item.
+</code></pre>
+<ul>
+<li>代码语法</li>
+</ul>
+<p>使用反引号 &#96; </p>
+<p><code>hello I am jay1an</code></p>
+<pre><code class="markdown">`hello I am jay1an`
+</code></pre>
+<ul>
+<li>分割线语法</li>
+</ul>
+<p>使用多个 * 或者 - 或者 _ </p>
+<hr>
+<hr>
+<hr>
+<p>效果一致</p>
+<pre><code class="markdown">---
+***
+___
+</code></pre>
+<ul>
+<li>链接语法</li>
+</ul>
+<p>链接文本放在中括号内，链接地址放在后面的括号中，链接title可选。</p>
+<p>超链接Markdown语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code> </p>
+<p>注：地址之后有一个空格</p>
+<p><a target="_blank" rel="noopener" href="https://jay1an.github.io/" title="I am title">jay1an</a></p>
+<pre><code class="markdown">[jay1an](https://jay1an.github.io/ &quot;I am title&quot;)
+</code></pre>
+<ul>
+<li>图片语法</li>
+</ul>
+<p>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code></p>
+<p>方括号增加替代文本，title可选。</p>
+<p><img src="https://jay1an.github.io/img/favicon.webp" alt="jay1an&#39;s pic" title="I am title"></p>
+<pre><code class="markdown">![jay1an&#39;s pic](https://jay1an.github.io/img/favicon.webp &quot;I am title&quot;)
+</code></pre>
+<ul>
+<li>转义语法</li>
+</ul>
+<p>在需要转义的字符前加上 \</p>
+<p>## this is should be a title</p>
+<pre><code class="markdown">\## this is should be a title
+</code></pre>
+<p>还有一些 	&amp; –&gt; &amp;amp; 	&lt; –&gt; &amp;lt;        （查阅官方文档<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/escaping-characters.html">Markdown 转义字符语法 | Markdown 官方教程</a>） </p>
+<h3 id="拓展语法"><a href="#拓展语法" class="headerlink" title="拓展语法"></a>拓展语法</h3><ul>
+<li><p>制表</p>
+<p>使用至少3个连字符-，并且使用管道|分割</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th align="left">age</th>
+<th>birthday</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>jay1an</td>
+<td align="left">10086</td>
+<td>10086</td>
+</tr>
+</tbody></table>
+<p>（本网站的主题似乎不能选成功渲染表格）</p>
+<p>若使用Typora直接用管道分割即可生成表格，如上。</p>
+<p>如果使用编译器，语法如下：</p>
+<p>—代表分割，:代表对齐</p>
+<pre><code class="markdown">| Syntax      | Description | Test Text     |
+| :---        |    :----:   |          ---: |
+| Header      | Title       | Here&#39;s this   |
+| Paragraph   | Text        | And more      |
+</code></pre>
+</li>
+<li><p>围栏代码块</p>
+<p>使用 3个反引号&#96;&#96;&#96;，或者3个波浪号~~~</p>
+<p>空格后加上语言名实现语法高亮</p>
+<pre><code class="markdown">​~~~ markdown
+``` markdown
+</code></pre>
+</li>
+<li><p>脚注</p>
+<p>可以单击链接以跳至页面底部的脚注内容。</p>
+<p> [^footnote]</p>
+</li>
+</ul>
+<p>[^footnote]: this is a simple footnore</p>
+<pre><code class="markdown">[^footnore]: this is a simple footnote
+</code></pre>
+<ul>
+<li><p>删除线</p>
+<p>2个波浪号 ~~包围单词 </p>
+<p><del>I am not jay1an</del></p>
+</li>
+</ul>
+<pre><code class="markdown">~~I am not jay1an~~
+</code></pre>
+<ul>
+<li>任务列表语法<ul>
+<li><input checked="" disabled="" type="checkbox"> study</li>
+<li><input disabled="" type="checkbox"> eat</li>
+<li><input disabled="" type="checkbox"> sleep</li>
+</ul>
+</li>
+</ul>
+<pre><code class="markdown">- [x] study
+- [ ] eat
+- [ ] sleep
+</code></pre>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-07-25</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/markdown/'>
+                            markdown
+                        </a>
+                    
+                        <a href='/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/'>
+                            基础语法
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9F%BA%E7%A1%80/'>
+                            基础
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+        
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+
+    
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>
