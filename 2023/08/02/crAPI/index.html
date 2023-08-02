@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="crAPI" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            crAPI
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3"><span class="post-toc-text">接口安全个人理解</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#crAPI%E9%9D%B6%E5%9C%BA%E7%BB%83%E4%B9%A0"><span class="post-toc-text">crAPI靶场练习</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%8E%B7%E5%BE%97%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E8%BD%A6%E8%BE%86%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="post-toc-text">获得其他用户车辆的信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%BF%E9%97%AE%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E7%9A%84%E6%9C%BA%E6%A2%B0%E6%8A%A5%E5%91%8A"><span class="post-toc-text">访问其他用户的机械报告</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%87%8D%E7%BD%AE%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E7%9A%84%E5%AF%86%E7%A0%81"><span class="post-toc-text">重置其他用户的密码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%89%BE%E5%88%B0%E6%B3%84%E9%9C%B2%E5%85%B6%E4%BB%96%E7%94%A8%E6%88%B7%E6%95%8F%E6%84%9F%E4%BF%A1%E6%81%AF%E7%9A%84API%E6%8E%A5%E5%8F%A3"><span class="post-toc-text">找到泄露其他用户敏感信息的API接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%89%BE%E5%88%B0%E6%B3%84%E9%9C%B2%E8%A7%86%E9%A2%91%E5%86%85%E9%83%A8%E5%B1%9E%E6%80%A7%E7%9A%84API%E6%8E%A5%E5%8F%A3"><span class="post-toc-text">找到泄露视频内部属性的API接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%80%9F%E7%8E%87%E6%A3%80%E6%B5%8B%E6%BC%8F%E6%B4%9EAPI"><span class="post-toc-text">速率检测漏洞API</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%A0%E9%99%A4%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E7%9A%84%E8%A7%86%E9%A2%91"><span class="post-toc-text">删除另一个用户的视频</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%BE%97%E4%B8%80%E4%BB%B6%E7%89%A9%E5%93%81"><span class="post-toc-text">免费获得一件物品</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B0%86%E4%BD%99%E9%A2%9D%E5%A2%9E%E5%8A%A0%E8%87%B31000%E5%85%83%E4%BB%A5%E4%B8%8A"><span class="post-toc-text">将余额增加至1000元以上</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9B%B4%E6%96%B0%E5%86%85%E9%83%A8%E8%A7%86%E9%A2%91%E5%B1%9E%E6%80%A7"><span class="post-toc-text">更新内部视频属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%A9crAPI%E5%8F%91%E9%80%81%E4%B8%80%E4%B8%AAHTTP%E8%B0%83%E7%94%A8%E5%88%B0baidu%EF%BC%8C%E5%B9%B6%E8%BF%94%E5%9B%9E%E5%93%8D%E5%BA%94"><span class="post-toc-text">让crAPI发送一个HTTP调用到baidu，并返回响应</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8D%E7%9F%A5%E4%BC%98%E6%83%A0%E5%88%B8%E4%BB%A3%E7%A0%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%85%8D%E8%B4%B9%E8%8E%B7%E5%BE%97%E4%BC%98%E6%83%A0%E5%88%B8"><span class="post-toc-text">不知优惠券代码的情况下免费获得优惠券</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%89%BE%E5%88%B0%E4%B8%80%E7%A7%8D%E9%80%9A%E8%BF%87%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9D%A5%E5%85%91%E6%8D%A2%E5%B7%B2%E7%BB%8F%E9%A2%86%E5%8F%96%E7%9A%84%E4%BC%98%E6%83%A0%E5%88%B8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="post-toc-text">找到一种通过修改数据库来兑换已经领取的优惠券的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9F%A5%E6%89%BE%E4%B8%8D%E4%B8%BA%E7%94%A8%E6%88%B7%E6%89%A7%E8%A1%8C%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="post-toc-text">查找不为用户执行身份验证的接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E2%98%85-%E6%89%BE%E5%88%B0%E4%BC%AA%E9%80%A0%E6%9C%89%E6%95%88JWT%E4%BB%A4%E7%89%8C%E7%9A%84%E6%96%B9%E6%B3%95"><span class="post-toc-text">★ 找到伪造有效JWT令牌的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E6%BC%8F%E6%B4%9E1%EF%BC%9A%E4%B8%8A%E4%BC%A0%E5%95%86%E5%93%81"><span class="post-toc-text">其他漏洞1：上传商品</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E6%BC%8F%E6%B4%9E2%EF%BC%9A%E6%9C%AA%E6%A3%80%E6%9F%A5%E6%95%B0%E6%8D%AE%E5%90%88%E6%B3%95%E6%80%A7"><span class="post-toc-text">其他漏洞2：未检查数据合法性</span></a></li></ol></li></ol>
+        
+        <p>本文记录完成crAPI挑战的过程以及收获。</p>
+<p>crAPI GitHub:<a target="_blank" rel="noopener" href="https://github.com/OWASP/crAPI">OWASP&#x2F;crAPI: completely ridiculous API (crAPI) (github.com)</a></p>
+<h2 id="接口安全个人理解"><a href="#接口安全个人理解" class="headerlink" title="接口安全个人理解"></a>接口安全个人理解</h2><p>个人理解接口安全是确保应用程序中的 API 在设计、实现和使用过程中，能够防止恶意攻击并保护敏感数据不被未经授权的访问。接口安全涵盖多个方面，主要目标是保护 API的机密性、完整性和可用性，同时防止应用程序受到各种安全漏洞和攻击。接口安全需要考虑以下几个方面：</p>
+<ol>
+<li>认证与授权： 确保只有经过身份验证并授权的用户或应用程序可以访问 API。认证过程是验证用户或应用程序的身份，而授权则是根据其权限级别限制对 API 的访问。</li>
+<li>输入验证和过滤： 对于从客户端接收到的所有输入数据，必须进行严格的验证和过滤，防止恶意数据进入系统，避免各种注入攻击，如 SQL 注入和 NoSQL 注入。</li>
+<li>输出编码： 在将数据响应给客户端之前，对输出数据进行适当的编码和转义，以防止XSS 攻击，确保返回的数据是安全的。</li>
+<li>敏感信息保护： 不要返回敏感信息，如数据库凭据、API 密钥等，以免泄露重要信息。对于敏感数据的传输，应该使用加密协议（如 HTTPS）来保障数据的机密性。</li>
+<li>限制访问频率和请求量： 对 API 的访问进行限制，防止暴力攻击和 DDoS 攻击。可以采用限流机制来限制用户的访问频率和请求量。</li>
+<li>日志和监控： 对 API 的访问进行日志记录和实时监控，及时发现异常请求和攻击行为，以便快速应对。</li>
+<li>最小权限原则： 给予 API 访问的用户或应用程序最小权限，即只赋予其必要的操作权限，避免过度授权。</li>
+</ol>
+<p>在 crAPI 靶场中，有许多接口在存在安全漏洞，缺少验证、缺少敏感信息保护等等。我们通过 crAPI 靶场可以更加直观地了解到不安全的接口可以造成的恶劣后果。</p>
+<h2 id="crAPI靶场练习"><a href="#crAPI靶场练习" class="headerlink" title="crAPI靶场练习"></a>crAPI靶场练习</h2><p>靶场的搭建过程略，本人使用docker进行搭建，期间需要使用VPN。</p>
+<p>靶场的所有挑战：<a target="_blank" rel="noopener" href="https://github.com/OWASP/crAPI/blob/develop/docs/challenges.md">crAPI&#x2F;docs&#x2F;challenges.md at develop · OWASP&#x2F;crAPI (github.com)</a></p>
+<h3 id="获得其他用户车辆的信息"><a href="#获得其他用户车辆的信息" class="headerlink" title="获得其他用户车辆的信息"></a>获得其他用户车辆的信息</h3><p>打开浏览器的开发者窗口的网页栏，获取浏览器和服务器通讯的数据包，发现在点击靶场的community后，服务器的接口&#x2F;community&#x2F;api&#x2F;v2&#x2F;community&#x2F;posts&#x2F;recent会返回给我们用户的敏感信息：email、vehicleid等。</p>
+<p><img src="/../img/crAPI/1-1.png" alt="1-1"></p>
+<p>通过分析dashboard页面中的location功能，发现可以通过此接口：&#x2F;identity&#x2F;api&#x2F;v2&#x2F;vehicle&#x2F;{vehicleid} &#x2F;location，可以在没有车辆所有者的允许下查看车辆的位置信息。</p>
+<p><img src="/../img/crAPI/1-2.png" alt="1-2"></p>
+<h3 id="访问其他用户的机械报告"><a href="#访问其他用户的机械报告" class="headerlink" title="访问其他用户的机械报告"></a>访问其他用户的机械报告</h3><p>通过对Contact Mechanic功能进行抓包分析得到一个接口：workshop&#x2F;api&#x2F;merchant&#x2F;contact_mechanic，通过传入report_id即可访问其他用户的报告。</p>
+<p><img src="/../img/crAPI/2-1.png" alt="2-1"></p>
+<h3 id="重置其他用户的密码"><a href="#重置其他用户的密码" class="headerlink" title="重置其他用户的密码"></a>重置其他用户的密码</h3><p>先进入forget password页面，再向邮箱发送了验证码后，点击Set Password按钮前开始抓包，获得发送重置密码请求的数据包，其中有三个输入元素：验证码、邮箱、新密码。</p>
+<p>需要正确的验证码才能成功重置密码，由于验证码只有4位，最多仅有10000种可能，可以通过爆破的方法得到正确的验证码。</p>
+<p>但仍然需要考虑网站的安全机制，多次使用验证码验证失败后可能会导致该账号被禁止登录或者更改密码操作。通过几次尝试后该项目更改密码存在两个接口。&#x2F;community&#x2F;api&#x2F;v3&#x2F;community&#x2F;posts&#x2F;recent；这个接口是网站重置密码默认使用的接口，对此接口在检测到多次失败后就会提示ERROR，无法对其进行爆破。</p>
+<p><img src="/../img/crAPI/3-1.png" alt="3-1"></p>
+<p>但是还有一个接口：&#x2F;community&#x2F;api&#x2F;v2&#x2F;community&#x2F;posts&#x2F;recent（将v3改为v2），此接口安全性较低，没有对错误进行反馈，可以对其爆破。</p>
+<p><img src="/../img/crAPI/3-2.png" alt="3-2"></p>
+<p>可以使用burpsuite工具的intruder模块和密码本开始爆破，我们以挑战一获得的用户email为例：</p>
+<p><img src="/../img/crAPI/3-3.png" alt="3-3"></p>
+<p><img src="/../img/crAPI/3-4.png" alt="3-4"></p>
+<p>效果如上，验证码为0135时，修改密码成功。</p>
+<p>这个问题出现的原因，一是验证码的长度太短，容易被爆破，另外就是仍然存在可用的不安全接口，在检查代码的时候应该将其禁用。</p>
+<h3 id="找到泄露其他用户敏感信息的API接口"><a href="#找到泄露其他用户敏感信息的API接口" class="headerlink" title="找到泄露其他用户敏感信息的API接口"></a>找到泄露其他用户敏感信息的API接口</h3><p>在挑战1中，我们已经找到返回用户车辆信息和车辆定位信息的接口，这些接口返回了过多的数据，不应该返回给用户过多的敏感数据，容易导致数据泄露。</p>
+<h3 id="找到泄露视频内部属性的API接口"><a href="#找到泄露视频内部属性的API接口" class="headerlink" title="找到泄露视频内部属性的API接口"></a>找到泄露视频内部属性的API接口</h3><p>对个人主页的视频改名功能抓包分析，可以而得到此接口：&#x2F;identity&#x2F;api&#x2F;v2&#x2F;user&#x2F;videos&#x2F;{video_id}</p>
+<p><img src="/../img/crAPI/5-1.png" alt="5-1"></p>
+<p>发现返回了视频的id，name，conversion_params，profileVideo等内容。</p>
+<h3 id="速率检测漏洞API"><a href="#速率检测漏洞API" class="headerlink" title="速率检测漏洞API"></a>速率检测漏洞API</h3><p>通过抓取发送维修信息的数据包可以发现其中有一个值为number_of_repeats，</p>
+<p>假设此值为极大值，那么就会重复发起很多次请求，占用服务器资源，实现拒绝服务(DoS)攻击。</p>
+<p>通过将repeat_request_if_failed改为ture并将number_of_repeats改为极大，这样既可实现crAPI靶场的DoS攻击。</p>
+<p><img src="/../img/crAPI/6-1.png" alt="6-1"></p>
+<p><img src="/../img/crAPI/6-2.png" alt="6-2"></p>
+<h3 id="删除另一个用户的视频"><a href="#删除另一个用户的视频" class="headerlink" title="删除另一个用户的视频"></a>删除另一个用户的视频</h3><p>在挑战5中，发现使用GET方法对接口：&#x2F;identity&#x2F;api&#x2F;v2&#x2F;user&#x2F;videos&#x2F;{video_id}请求可以获得视频的详细信息。</p>
+<p>我们可以使用OPTINOS方法对此接口请求，了解此接口开放了哪些方法。</p>
+<p><img src="/../img/crAPI/7-1.png" alt="7-1"></p>
+<p>可以发现，Allow中有DELETE方法，我们可以将请求的方法改为DELETE，但是会失败，通过将user改为admin，访问&#x2F;identity&#x2F;api&#x2F;v2&#x2F;admin&#x2F;videos&#x2F;{video_id}即可以成功删除视频。</p>
+<p><img src="/../img/crAPI/7-2.png" alt="7-2"></p>
+<h3 id="免费获得一件物品"><a href="#免费获得一件物品" class="headerlink" title="免费获得一件物品"></a>免费获得一件物品</h3><p>抓取下订单后的数据包进行分析可得，提交订单使用的是POST方法，发送request请求后发现服务器返回了当前订单的id信息。</p>
+<p><img src="/../img/crAPI/8-1.png" alt="8-1"></p>
+<p>我们尝试改用GET方法，并在接口后附上订单ID，发现服务器会返回订单的详细信息。</p>
+<p><img src="/../img/crAPI/8-2.png" alt="8-2"></p>
+<p>此时我们注意到订单信息中有一个status，我们可以通过PUT方法在data部分将status改为returned，即将订单改为已退还状态，此时金额会被退回，即完成了免费获得一件物品的效果（用户手动通过API将订单状态改为returned，但实际并没有return，这样可以将钱退回至用户账号，但是用户手上的商品并没有退还）。</p>
+<p><img src="/../img/crAPI/8-3.png" alt="8-3"></p>
+<h3 id="将余额增加至1000元以上"><a href="#将余额增加至1000元以上" class="headerlink" title="将余额增加至1000元以上"></a>将余额增加至1000元以上</h3><p>在上一个挑战中，使用PUT方法修改订单状态的时候，我们注意到订单中还有一个属性为quantity，可以在修改订单状态的时候同时将quantity修改为极大，这样系统就会退还quantity*订单金额的钱。</p>
+<p><img src="/../img/crAPI/9-1.png" alt="9-1"></p>
+<p>效果如下：</p>
+<p><img src="/../img/crAPI/9-2.png" alt="9-2"></p>
+<h3 id="更新内部视频属性"><a href="#更新内部视频属性" class="headerlink" title="更新内部视频属性"></a>更新内部视频属性</h3><p>对个人主页下的修改视频名字的功能进行抓包分析，得到接口&#x2F;identity&#x2F;api&#x2F;v2&#x2F;user&#x2F;videos&#x2F;{videoid}，使用PUT方法对其发起请求即可修改视频属性。</p>
+<p><img src="/../img/crAPI/10-1.png" alt="10-1"></p>
+<h3 id="让crAPI发送一个HTTP调用到baidu，并返回响应"><a href="#让crAPI发送一个HTTP调用到baidu，并返回响应" class="headerlink" title="让crAPI发送一个HTTP调用到baidu，并返回响应"></a>让crAPI发送一个HTTP调用到baidu，并返回响应</h3><p>对上传修理信息抓包分析后，发现对&#x2F;workshop&#x2F;api&#x2F;merchant&#x2F;contact_mechanic接口的request中包含mechanic_api，通过将其改为baidu.com即可完成此挑战。</p>
+<p><img src="/../img/crAPI/11-1.png" alt="11-1"></p>
+<h3 id="不知优惠券代码的情况下免费获得优惠券"><a href="#不知优惠券代码的情况下免费获得优惠券" class="headerlink" title="不知优惠券代码的情况下免费获得优惠券"></a>不知优惠券代码的情况下免费获得优惠券</h3><p>通过兑换优惠券的功能进行抓包分析可以得到crAPI的一个接口：&#x2F;community&#x2F;api&#x2F;v2&#x2F;coupon&#x2F;validate-coupon，发现可以利用类似sql注入的方式修改请求中的coupon_code。</p>
+<p><img src="/../img/crAPI/12-1.png" alt="12-1"></p>
+<h3 id="找到一种通过修改数据库来兑换已经领取的优惠券的方法"><a href="#找到一种通过修改数据库来兑换已经领取的优惠券的方法" class="headerlink" title="找到一种通过修改数据库来兑换已经领取的优惠券的方法"></a>找到一种通过修改数据库来兑换已经领取的优惠券的方法</h3><p>挑战13的题目不是很懂…</p>
+<p>申请优惠券的API为&#x2F;workshop&#x2F;api&#x2F;shop&#x2F;apply_coupon（crAPI的所有API可以在github文档中找到）</p>
+<p>或许是使用 <code>1&#39; or &#39;1&#39; = &#39;1</code>注入？</p>
+<h3 id="查找不为用户执行身份验证的接口"><a href="#查找不为用户执行身份验证的接口" class="headerlink" title="查找不为用户执行身份验证的接口"></a>查找不为用户执行身份验证的接口</h3><p>在之前的挑战中发现有两个接口，不需要身份验证即可返回信息。</p>
+<p>机械功报告查看接口：&#x2F;workshop&#x2F;api&#x2F;mechanic&#x2F;mechanic_1 report?report_id&#x3D;7</p>
+<p><img src="/../img/crAPI/14-1.png" alt="14-1"></p>
+<p>订单信息查看接口：&#x2F;workshop&#x2F;api&#x2F;shop&#x2F;orders&#x2F;1</p>
+<p><img src="/../img/crAPI/14-2.png" alt="14-2"></p>
+<h3 id="★-找到伪造有效JWT令牌的方法"><a href="#★-找到伪造有效JWT令牌的方法" class="headerlink" title="★ 找到伪造有效JWT令牌的方法"></a>★ 找到伪造有效JWT令牌的方法</h3><p>JWT是JSON Web Token的缩写，是一种用于在网络应用间传输信息的开放标准（RFC 7519）。它由三部分组成：头部（Header）、载荷（Payload）和签名（Signature）。JWT通常用于身份验证和授权机制。</p>
+<p>头部（Header）：头部通常由两部分组成，标识令牌类型和所使用的签名算法。</p>
+<p>载荷（Payload）：载荷包含要传输的数据。它可以包含预定义的标准声明（例如，发行人（issuer）、主题（subject）、过期时间（expiration time）等），以及自定义的声明。</p>
+<p>签名（Signature）：签名用于验证令牌的真实性和完整性。它由使用头部中指定的签名算法和密钥对头部、载荷进行加密生成。签名防止了令牌被篡改。</p>
+<p>JWT的工作流程如下：</p>
+<ol>
+<li>身份验证：用户通过用户名和密码等方式进行身份验证。</li>
+<li>生成令牌：身份验证成功后，服务器使用私钥对头部和载荷进行签名生成JWT令牌。</li>
+<li>返回令牌：服务器将生成的JWT令牌发送给客户端。</li>
+<li>客户端使用令牌：客户端在后续请求中将令牌包含在请求头或请求参数中。</li>
+<li>验证令牌：服务器收到请求后，使用存储的公钥验证令牌的真实性和完整性，解码令牌并提取相关信息进行授权和身份验证。</li>
+</ol>
+<p>通常，JWT令牌在HTTP请求的授权头部（Authorization Header）中发送。具体来说，令牌通常放置在授权头部的Bearer字段后面。</p>
+<p>在本靶场中，可以通过伪造Authorization实现假冒其他用户身份的效果。</p>
+<p>crAPI项目的dashboard页面，即&#x2F;identity&#x2F;api&#x2F;v2&#x2F;user&#x2F;dashboard并没有对JWT的第三部分进行验证，故我们可以直接改变Payload中的 sub，改为其他用户的邮箱再重新提交请求即可得到其他用户的dashboard信息。</p>
+<p><img src="/../img/crAPI/15-1.png" alt="15-1"></p>
+<p>还可以使用混淆攻击。分析原本的JWT可以得到用于加密header和payload的算法是RSA，非对称算法。服务器使用私钥对header和payload加密，作为sign负载后部，客户端可以使用服务器的公钥来验证真实性。</p>
+<p>混淆攻击，即将header中的alg从RS256改为HS256，将非对称密码算法改为对称密码算法，此时再获取服务器的公钥，用公钥和HS256对header和payload签名，将此JWT发送至服务器。</p>
+<p>服务器发现header部分的alg为HS256，则会将RS256的公钥视为HS256的密钥，签名就会验证成功。这样攻击者就可以自己伪造JWT，模拟任意用户的身份登录。</p>
+<p>除了算法混淆漏洞外，还有jku滥用漏洞。”jku”是JWT header中的一个可选字段，用于指定用于验证签名的JWK Set的URL。JWK Set是包含公钥或公钥集合的JSON对象，用于验证JWT的签名。通过在JWT标头中包含”jku”字段，可以指定用于获取JWK Set的URL。验证方可以使用该URL来获取公钥并验证JWT的签名。</p>
+<p>crAPI 将使用 JWT 标头指向的任何公钥验证 JWTjku令牌，我们使用自己创建的公钥&#x2F;私钥对并使用 RS256 算法签署 JWT，以 JWK 格式将公钥托管在某处，使用适当的标头在jku标头中传递公钥 URL，该 JWT 将被 crAPI 接受为有效的 JWT 令牌。本质是让服务器使用我们创建的另外一对密钥进行验证签名，而这一对密钥是我们自己创建的，所以我们也可以任意伪造签名，模拟任意用户的身份登录。</p>
+<p>windows上的burpsuite的jwt板块有bug，建议使用另一个网站辅助：<a target="_blank" rel="noopener" href="https://jwt.io/">https://jwt.io/</a></p>
+<p>但是我后面伪造签名的实验试了很多次都失败了，目前还不知道原因。后面会针对JWT进行进一步的练习。</p>
+<h3 id="其他漏洞1：上传商品"><a href="#其他漏洞1：上传商品" class="headerlink" title="其他漏洞1：上传商品"></a>其他漏洞1：上传商品</h3><p>通过对shop页面抓包分析，我们可以得到此接口&#x2F;workshop&#x2F;api&#x2F;shop&#x2F;products，使用GET方法请求可以得到商品信息。</p>
+<p><img src="/../img/crAPI/16-1.png" alt="16-1"></p>
+<p>发现可以构造一个商品，并通过POST方法成功上传。</p>
+<p><img src="/../img/crAPI/16-2.png" alt="16-2"></p>
+<p><img src="/../img/crAPI/16-3.png" alt="16-3"></p>
+<h3 id="其他漏洞2：未检查数据合法性"><a href="#其他漏洞2：未检查数据合法性" class="headerlink" title="其他漏洞2：未检查数据合法性"></a>其他漏洞2：未检查数据合法性</h3><p>商品的金额和订单的数量应该都为正数，但是在crAPI靶场中，我们可以通过PUT方法将其改为负数，并且还可以正常运行。导致出现了购买商品还增加余额的现象。</p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-08-02</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8/'>
+                            接口安全
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E6%B8%97%E9%80%8F/'>
+                            渗透
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>

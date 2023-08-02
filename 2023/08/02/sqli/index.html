@@ -10,17 +10,15 @@
 
     
         
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+<link rel="stylesheet" href="/css/reset.css">
 
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+        
+<link rel="stylesheet" href="/css/markdown.css">
 
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+        
+<link rel="stylesheet" href="/css/fonts.css">
  
-            <!--注意：首页既不是post也不是page-->
-            
+         <!--注意：首页既不是post也不是page-->
         
     
     
@@ -92,22 +90,22 @@
 
     <div class="post-md">
         
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Integer-based-SQL-Injection"><span class="post-toc-text">Integer-based SQL Injection</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AF%BB%E6%89%BE%E6%B3%A8%E5%85%A5%E7%82%B9"><span class="post-toc-text">寻找注入点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9E%84%E9%80%A0%E7%89%B9%E6%AE%8Asql%E8%AF%AD%E5%8F%A5"><span class="post-toc-text">构造特殊sql语句</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E6%98%8E%E5%BD%93%E5%89%8D%E8%A1%A8%E7%9A%84%E5%88%97%E6%95%B0"><span class="post-toc-text">查明当前表的列数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="post-toc-text">获得当前数据库的名称</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2Metadata%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF"><span class="post-toc-text">查询Metadata以获得当前数据库的更多信息</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E7%9A%84%E5%88%97%E4%BF%A1%E6%81%AF"><span class="post-toc-text">查询表的列信息</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E5%86%85%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="post-toc-text">查询表内的数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-text">总结</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%BB%E6%89%BE%E6%B3%A8%E5%85%A5%E7%82%B9"><span class="post-toc-text">寻找注入点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9E%84%E9%80%A0%E7%89%B9%E6%AE%8Asql%E8%AF%AD%E5%8F%A5%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE"><span class="post-toc-text">构造特殊sql语句查询数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9F%A5%E6%98%8E%E5%BD%93%E5%89%8D%E8%A1%A8%E7%9A%84%E5%88%97%E6%95%B0"><span class="post-toc-text">查明当前表的列数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="post-toc-text">获得当前数据库的名称</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2Metadata%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF"><span class="post-toc-text">查询Metadata以获得当前数据库的更多信息</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E7%9A%84%E5%88%97%E4%BF%A1%E6%81%AF"><span class="post-toc-text">查询表的列信息</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E5%86%85%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="post-toc-text">查询表内的数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-text">总结</span></a></li></ol>
         
-        <h3 id="Integer-based-SQL-Injection"><a href="#Integer-based-SQL-Injection" class="headerlink" title="Integer-based SQL Injection"></a>Integer-based SQL Injection</h3><p>本文记录ctfhub技能树web分支下的整数型sql注入的过程。</p>
+        <p>本文记录ctfhub技能树web分支下的整数型sql注入的过程。</p>
 <p>SQL 注入攻击的原理是利用应用程序对用户输入数据的处理不当。当应用程序没有对用户输入进行充分验证和过滤时，攻击者可以在输入字段中注入特殊的 SQL 语句片段，使得应用程序在处理这些恶意输入时，错误地将其当作合法的 SQL 代码执行。</p>
-<h4 id="寻找注入点"><a href="#寻找注入点" class="headerlink" title="寻找注入点"></a>寻找注入点</h4><p><img src="/../img/sqli/1.png" alt="1"></p>
+<h3 id="寻找注入点"><a href="#寻找注入点" class="headerlink" title="寻找注入点"></a>寻找注入点</h3><p><img src="/../img/sqli/1.png" alt="1"></p>
 <p>当输入id为1+1时，网页返回id&#x3D;2的结果，这表明当前页面存在sql漏洞，可以在此页面上进行注入。</p>
 <p>我们可以通过<strong>构造特殊的sql查询语句</strong>获得数据库中的其他重要信息。</p>
-<h4 id="构造特殊sql语句"><a href="#构造特殊sql语句" class="headerlink" title="构造特殊sql语句"></a>构造特殊sql语句</h4><h5 id="查明当前表的列数"><a href="#查明当前表的列数" class="headerlink" title="查明当前表的列数"></a>查明当前表的列数</h5><p>构造sql语句使其执行order by命令，发现 order by 2时可以正常返回结果，但order by 3不行。</p>
+<h3 id="构造特殊sql语句查询数据"><a href="#构造特殊sql语句查询数据" class="headerlink" title="构造特殊sql语句查询数据"></a>构造特殊sql语句查询数据</h3><h4 id="查明当前表的列数"><a href="#查明当前表的列数" class="headerlink" title="查明当前表的列数"></a>查明当前表的列数</h4><p>构造sql语句使其执行order by命令，发现 order by 2时可以正常返回结果，但order by 3不行。</p>
 <p>所以当前表的列数为2</p>
 <p><img src="/../img/sqli/2.png" alt="2"></p>
-<h5 id="获得当前数据库的名称"><a href="#获得当前数据库的名称" class="headerlink" title="获得当前数据库的名称"></a>获得当前数据库的名称</h5><p>目前已知该表有2列，所以可以使用union构造联合查询。此时使左查询为空，则页面会显示右查询的结果。而右查询可以根据我们的需求构造。</p>
+<h4 id="获得当前数据库的名称"><a href="#获得当前数据库的名称" class="headerlink" title="获得当前数据库的名称"></a>获得当前数据库的名称</h4><p>目前已知该表有2列，所以可以使用union构造联合查询。此时使左查询为空，则页面会显示右查询的结果。而右查询可以根据我们的需求构造。</p>
 <p>使用database()函数获得当前数据库的名称。</p>
 <pre><code class="sql">select -1 union select 1,database();
 </code></pre>
 <p><img src="/../img/sqli/3.png" alt="3"></p>
-<h5 id="查询Metadata以获得当前数据库的更多信息"><a href="#查询Metadata以获得当前数据库的更多信息" class="headerlink" title="查询Metadata以获得当前数据库的更多信息"></a>查询Metadata以获得当前数据库的更多信息</h5><p>目前已知当前数据库的名称为sqli，我们还需要知道当前数据库中存有哪些表。</p>
+<h4 id="查询Metadata以获得当前数据库的更多信息"><a href="#查询Metadata以获得当前数据库的更多信息" class="headerlink" title="查询Metadata以获得当前数据库的更多信息"></a>查询Metadata以获得当前数据库的更多信息</h4><p>目前已知当前数据库的名称为sqli，我们还需要知道当前数据库中存有哪些表。</p>
 <p>在 MySQL 中，<code>information_schema</code> 用于存储数据库的元数据（metadata），包含了一系列系统表，这些表提供了有关数据库、表、列、索引、用户权限等信息。通过查询 <code>information_schema</code> 中的表，可以获取关于数据库结构和其他元数据的详细信息，用于进行数据库管理和查询优化等操作。</p>
 <p>在 <code>information_schema</code> 数据库中，存在 <code>TABLES</code> 表和 <code>COLUMNS</code> 表，它们是用来存储有关数据库中表和表的列的元数据信息的。</p>
 <ol>
@@ -144,7 +142,7 @@
 </code></pre>
 <p>在注入点上使用union构造：</p>
 <p><img src="/../img/sqli/4.png" alt="4"></p>
-<h5 id="查询表的列信息"><a href="#查询表的列信息" class="headerlink" title="查询表的列信息"></a>查询表的列信息</h5><p>目前已知sqli数据库中的有两个表: flag news</p>
+<h4 id="查询表的列信息"><a href="#查询表的列信息" class="headerlink" title="查询表的列信息"></a>查询表的列信息</h4><p>目前已知sqli数据库中的有两个表: flag news</p>
 <p>在本次注入的情况下，flag表里储存的是重要信息，我们在要查询flag表就必须知道表中有哪些列。</p>
 <p>这也同样可以通过查询information_schema数据库获得。</p>
 <p>sql语句如下</p>
@@ -153,13 +151,13 @@
 <p>在注入点上使用union构造：</p>
 <p><img src="/../img/sqli/5.png" alt="5"></p>
 <p>显示的结果表明flag表中只有1列，该列的名称为flag</p>
-<h5 id="查询表内的数据"><a href="#查询表内的数据" class="headerlink" title="查询表内的数据"></a>查询表内的数据</h5><p>到此步就很简单了，直接构造查询语句即可。</p>
+<h4 id="查询表内的数据"><a href="#查询表内的数据" class="headerlink" title="查询表内的数据"></a>查询表内的数据</h4><p>到此步就很简单了，直接构造查询语句即可。</p>
 <pre><code class="sql">select flag from flag
 </code></pre>
 <p>在注入点上使用union构造：</p>
 <p><img src="/../img/sqli/6.png" alt="6"></p>
 <p>成功获得flag表中的数据。</p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>要完成手工的sql注入，需要识别注入点，还需要对sql语句有简单的了解，比如说order by语句和union联合查询的用法，这样才能成功构造sql语句。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>要完成手工的sql注入，需要识别注入点，还需要对sql语句有简单的了解，比如说order by语句和union联合查询的用法，这样才能成功构造sql语句。</p>
 <p>最重要的是如何从information_schema中获得数据库和表的详细信息，这就要求渗透者要了解储存元数据表的结构。（MySQL是使用information_schema数据库中的各种表来储存元数据，不同的数据库有差异）</p>
 <p>此外，还可以使用sqlmap脚本进行注入，脚本注入的方法比较简单就不再赘述。</p>
 
@@ -227,16 +225,14 @@
 
 
     
-        
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
-
-        
-<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
-
-        
-<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
 
     
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
 
 
 <script>
