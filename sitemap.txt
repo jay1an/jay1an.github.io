@@ -1,0 +1,14 @@
+https://jay1an.github.io/index/index.html
+https://jay1an.github.io/2023/07/25/markdown%20grammar/
+https://jay1an.github.io/2023/08/02/crAPI/
+https://jay1an.github.io/2023/08/02/sqli/
+https://jay1an.github.io/categories/index.html
+https://jay1an.github.io/tags/index.html
+https://jay1an.github.io/list/index.html
+https://jay1an.github.io/
+https://jay1an.github.io/tags/%E6%8E%A5%E5%8F%A3%E5%AE%89%E5%85%A8/
+https://jay1an.github.io/tags/markdown/
+https://jay1an.github.io/tags/%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/
+https://jay1an.github.io/tags/sqli/
+https://jay1an.github.io/categories/%E6%B8%97%E9%80%8F/
+https://jay1an.github.io/categories/%E5%9F%BA%E7%A1%80/
