@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="Integer-based SQLI" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+ 
+            <!--注意：首页既不是post也不是page-->
+            
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            Integer-based SQLI
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Integer-based-SQL-Injection"><span class="post-toc-text">Integer-based SQL Injection</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AF%BB%E6%89%BE%E6%B3%A8%E5%85%A5%E7%82%B9"><span class="post-toc-text">寻找注入点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9E%84%E9%80%A0%E7%89%B9%E6%AE%8Asql%E8%AF%AD%E5%8F%A5"><span class="post-toc-text">构造特殊sql语句</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E6%98%8E%E5%BD%93%E5%89%8D%E8%A1%A8%E7%9A%84%E5%88%97%E6%95%B0"><span class="post-toc-text">查明当前表的列数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%90%8D%E7%A7%B0"><span class="post-toc-text">获得当前数据库的名称</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2Metadata%E4%BB%A5%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF"><span class="post-toc-text">查询Metadata以获得当前数据库的更多信息</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E7%9A%84%E5%88%97%E4%BF%A1%E6%81%AF"><span class="post-toc-text">查询表的列信息</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%9F%A5%E8%AF%A2%E8%A1%A8%E5%86%85%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="post-toc-text">查询表内的数据</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-text">总结</span></a></li></ol></li></ol>
+        
+        <h3 id="Integer-based-SQL-Injection"><a href="#Integer-based-SQL-Injection" class="headerlink" title="Integer-based SQL Injection"></a>Integer-based SQL Injection</h3><p>本文记录ctfhub技能树web分支下的整数型sql注入的过程。</p>
+<p>SQL 注入攻击的原理是利用应用程序对用户输入数据的处理不当。当应用程序没有对用户输入进行充分验证和过滤时，攻击者可以在输入字段中注入特殊的 SQL 语句片段，使得应用程序在处理这些恶意输入时，错误地将其当作合法的 SQL 代码执行。</p>
+<h4 id="寻找注入点"><a href="#寻找注入点" class="headerlink" title="寻找注入点"></a>寻找注入点</h4><p><img src="/../img/sqli/1.png" alt="1"></p>
+<p>当输入id为1+1时，网页返回id&#x3D;2的结果，这表明当前页面存在sql漏洞，可以在此页面上进行注入。</p>
+<p>我们可以通过<strong>构造特殊的sql查询语句</strong>获得数据库中的其他重要信息。</p>
+<h4 id="构造特殊sql语句"><a href="#构造特殊sql语句" class="headerlink" title="构造特殊sql语句"></a>构造特殊sql语句</h4><h5 id="查明当前表的列数"><a href="#查明当前表的列数" class="headerlink" title="查明当前表的列数"></a>查明当前表的列数</h5><p>构造sql语句使其执行order by命令，发现 order by 2时可以正常返回结果，但order by 3不行。</p>
+<p>所以当前表的列数为2</p>
+<p><img src="/../img/sqli/2.png" alt="2"></p>
+<h5 id="获得当前数据库的名称"><a href="#获得当前数据库的名称" class="headerlink" title="获得当前数据库的名称"></a>获得当前数据库的名称</h5><p>目前已知该表有2列，所以可以使用union构造联合查询。此时使左查询为空，则页面会显示右查询的结果。而右查询可以根据我们的需求构造。</p>
+<p>使用database()函数获得当前数据库的名称。</p>
+<pre><code class="sql">select -1 union select 1,database();
+</code></pre>
+<p><img src="/../img/sqli/3.png" alt="3"></p>
+<h5 id="查询Metadata以获得当前数据库的更多信息"><a href="#查询Metadata以获得当前数据库的更多信息" class="headerlink" title="查询Metadata以获得当前数据库的更多信息"></a>查询Metadata以获得当前数据库的更多信息</h5><p>目前已知当前数据库的名称为sqli，我们还需要知道当前数据库中存有哪些表。</p>
+<p>在 MySQL 中，<code>information_schema</code> 用于存储数据库的元数据（metadata），包含了一系列系统表，这些表提供了有关数据库、表、列、索引、用户权限等信息。通过查询 <code>information_schema</code> 中的表，可以获取关于数据库结构和其他元数据的详细信息，用于进行数据库管理和查询优化等操作。</p>
+<p>在 <code>information_schema</code> 数据库中，存在 <code>TABLES</code> 表和 <code>COLUMNS</code> 表，它们是用来存储有关数据库中表和表的列的元数据信息的。</p>
+<ol>
+<li><code>TABLES</code> 表：<ul>
+<li><code>TABLES</code> 表包含有关数据库中所有表的信息，比如表名、表类型（如表、视图、系统表等）、表所属的数据库、表的引擎类型等。</li>
+<li>通过查询 <code>TABLES</code> 表，您可以获取数据库中所有表的列表和相关信息。</li>
+<li>表结构示例：<ul>
+<li><code>TABLE_CATALOG</code>: 表所属的数据库名称</li>
+<li><code>TABLE_SCHEMA</code>: 表所属的模式（数据库的命名空间）</li>
+<li><code>TABLE_NAME</code>: 表名</li>
+<li><code>TABLE_TYPE</code>: 表类型，如 ‘BASE TABLE’ 表示普通表，’VIEW’ 表示视图</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>COLUMNS</code> 表：<ul>
+<li><code>COLUMNS</code> 表包含有关数据库表中所有列的信息，如列名、数据类型、是否允许为 NULL、列的位置等。</li>
+<li>通过查询 <code>COLUMNS</code> 表，您可以了解表的列结构和相关属性信息。</li>
+<li>表结构示例：<ul>
+<li><code>TABLE_CATALOG</code>: 表所属的数据库名称</li>
+<li><code>TABLE_SCHEMA</code>: 表所属的模式（数据库的命名空间）</li>
+<li><code>TABLE_NAME</code>: 表名</li>
+<li><code>COLUMN_NAME</code>: 列名</li>
+<li><code>ORDINAL_POSITION</code>: 列在表中的位置</li>
+<li><code>DATA_TYPE</code>: 列的数据类型</li>
+<li><code>IS_NULLABLE</code>: 列是否允许为空（’YES’ 或 ‘NO’）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>那么我们可以构造执行以下sql语句，查询sqli数据库中的所有表的名称</p>
+<pre><code class="sql">select group_concat(table_name) from information_schema.tables where table_schema = &#39;sqli&#39;
+</code></pre>
+<p>在注入点上使用union构造：</p>
+<p><img src="/../img/sqli/4.png" alt="4"></p>
+<h5 id="查询表的列信息"><a href="#查询表的列信息" class="headerlink" title="查询表的列信息"></a>查询表的列信息</h5><p>目前已知sqli数据库中的有两个表: flag news</p>
+<p>在本次注入的情况下，flag表里储存的是重要信息，我们在要查询flag表就必须知道表中有哪些列。</p>
+<p>这也同样可以通过查询information_schema数据库获得。</p>
+<p>sql语句如下</p>
+<pre><code class="sql">select group_concat(column_name) from information_schema.columns where table_schema = &#39;sqli&#39; and table_name = &#39;flag&#39;
+</code></pre>
+<p>在注入点上使用union构造：</p>
+<p><img src="/../img/sqli/5.png" alt="5"></p>
+<p>显示的结果表明flag表中只有1列，该列的名称为flag</p>
+<h5 id="查询表内的数据"><a href="#查询表内的数据" class="headerlink" title="查询表内的数据"></a>查询表内的数据</h5><p>到此步就很简单了，直接构造查询语句即可。</p>
+<pre><code class="sql">select flag from flag
+</code></pre>
+<p>在注入点上使用union构造：</p>
+<p><img src="/../img/sqli/6.png" alt="6"></p>
+<p>成功获得flag表中的数据。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>要完成手工的sql注入，需要识别注入点，还需要对sql语句有简单的了解，比如说order by语句和union联合查询的用法，这样才能成功构造sql语句。</p>
+<p>最重要的是如何从information_schema中获得数据库和表的详细信息，这就要求渗透者要了解储存元数据表的结构。（MySQL是使用information_schema数据库中的各种表来储存元数据，不同的数据库有差异）</p>
+<p>此外，还可以使用sqlmap脚本进行注入，脚本注入的方法比较简单就不再赘述。</p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-08-02</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/sqli/'>
+                            sqli
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E6%B8%97%E9%80%8F/'>
+                            渗透
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+        
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+
+    
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>
