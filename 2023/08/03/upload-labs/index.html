@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="upload-labs" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            upload-labs
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%A6%82%E5%BF%B5"><span class="post-toc-text">漏洞概念</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86"><span class="post-toc-text">漏洞原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%8D%B1%E5%AE%B3"><span class="post-toc-text">漏洞危害</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#upload-labs%E8%BF%87%E5%85%B3%E8%AE%B0%E5%BD%95"><span class="post-toc-text">upload-labs过关记录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%80%E5%85%B3%EF%BC%9A%E7%BB%95%E8%BF%87%E5%89%8D%E7%AB%AF%E6%A3%80%E6%B5%8B"><span class="post-toc-text">第一关：绕过前端检测</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%85%B3%EF%BC%9AMIME%E7%BB%95%E8%BF%87"><span class="post-toc-text">第二关：MIME绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%89%E5%85%B3%EF%BC%9A%E9%BB%91%E5%90%8D%E5%8D%95%E9%99%90%E5%88%B6%E4%B8%8D%E5%85%A8"><span class="post-toc-text">第三关：黑名单限制不全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%85%B3%EF%BC%9A-htaccess-%E7%BB%95%E8%BF%87"><span class="post-toc-text">第四关：.htaccess 绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%BA%94%E5%85%B3%EF%BC%9A%E4%B8%8A%E4%BC%A0-user-ini%E6%96%87%E4%BB%B6"><span class="post-toc-text">第五关：上传.user.ini文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%85%AD%E5%85%B3%EF%BC%9A%E5%A4%A7%E5%B0%8F%E5%86%99%E7%BB%95%E8%BF%87"><span class="post-toc-text">第六关：大小写绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%B8%83%E5%85%B3%EF%BC%9A%E7%A9%BA%E6%A0%BC%E7%BB%95%E8%BF%87"><span class="post-toc-text">第七关：空格绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%85%AB%E5%85%B3%EF%BC%9A%E7%82%B9%E7%BB%95%E8%BF%87"><span class="post-toc-text">第八关：点绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E4%B9%9D%E5%85%B3%EF%BC%9A%E5%8F%8C%E5%86%99-DATA%E7%BB%95%E8%BF%87"><span class="post-toc-text">第九关：双写::$DATA绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%8D%81%E5%85%B3%EF%BC%9A%E9%92%88%E5%AF%B9%E4%BB%A3%E7%A0%81%E9%80%BB%E8%BE%91%E7%9A%84%E7%BB%95%E8%BF%87"><span class="post-toc-text">第十关：针对代码逻辑的绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%80%E5%85%B3%EF%BC%9A%E5%8F%8C%E5%86%99%E7%BB%95%E8%BF%87"><span class="post-toc-text">第十一关：双写绕过</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%85%B3%EF%BC%9A%E7%99%BD%E5%90%8D%E5%8D%95%EF%BC%8C-00%E6%88%AA%E6%96%AD"><span class="post-toc-text">第十二关：白名单，%00截断</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%89%E5%85%B3%EF%BC%9A%E7%99%BD%E5%90%8D%E5%8D%95%EF%BC%8C00-hex-%E6%88%AA%E6%96%AD"><span class="post-toc-text">第十三关：白名单，00(hex)截断</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%85%B3%EF%BC%9A%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87%E9%A9%AC"><span class="post-toc-text">第十四关：上传图片马</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AC%AC%E5%8D%81%E4%B8%83%E5%85%B3%EF%BC%9A%E5%9B%BE%E7%89%87%E9%A9%AC%E4%B9%8B%E4%BA%8C%E6%AC%A1%E6%B8%B2%E6%9F%93"><span class="post-toc-text">第十七关：图片马之二次渲染</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#upload-labs%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%93%8D%E6%80%BB%E7%BB%93"><span class="post-toc-text">upload-labs靶场实操总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%BC%95%E7%94%A8github%E4%B8%8A%E7%9A%84%E6%9C%AC%E9%A1%B9%E7%9B%AE%E7%9A%84%E4%B8%A4%E5%BC%A0%E5%9B%BE"><span class="post-toc-text">引用github上的本项目的两张图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B%E5%88%86%E7%B1%BB"><span class="post-toc-text">漏洞类型分类</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E%E7%B1%BB%E5%9E%8B"><span class="post-toc-text">如何判断上传漏洞类型</span></a></li></ol></li></ol>
+        
+        <p>本文记录川大网安23暑期实训内容中的文件上传漏洞实验部分。</p>
+<h2 id="漏洞概念"><a href="#漏洞概念" class="headerlink" title="漏洞概念"></a>漏洞概念</h2><p>文件上传漏洞（File Upload Vulnerability）是一种常见的网络安全漏洞，它通常出现在允许用户上传文件的Web应用程序中。这种漏洞可能允许恶意用户上传包含恶意代码的文件，从而使攻击者能够执行各种恶意活动，比如执行任意代码、获取敏感信息、篡改网站内容或攻击其他用户。</p>
+<h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p>漏洞的原理在于，应用程序未正确验证和限制用户上传的文件类型、大小和内容，或者未对上传的文件进行充分的检查和过滤。攻击者利用这个漏洞，可能会上传各种类型的恶意文件，如：</p>
+<p>可执行文件：例如恶意脚本、木马、后门程序，允许攻击者在服务器上执行任意代码。</p>
+<p>Web Shell：用于在服务器上执行命令并获取控制权的恶意脚本。</p>
+<p>恶意文档：包含宏病毒的文档，可能感染用户系统并传播恶意代码。</p>
+<p>恶意图片：利用图片解析漏洞进行攻击，例如通过包含恶意脚本的图片进行跨站脚本攻击（XSS）。</p>
+<p>伪装文件：攻击者可能上传伪装成其他类型文件的恶意文件，绕过安全检查。</p>
+<h2 id="漏洞危害"><a href="#漏洞危害" class="headerlink" title="漏洞危害"></a>漏洞危害</h2><p>文件上传漏洞的危害在于允许攻击者上传包含恶意代码的文件至服务器，导致执行任意代码、获取敏感信息、篡改网站内容或攻击其他用户。攻击者可上传恶意脚本、后门程序或Web Shell，获得服务器控制权，危及整个系统安全。此外，攻击者还可上传恶意文档感染用户系统，或通过恶意图片实施XSS攻击。</p>
+<h2 id="upload-labs过关记录"><a href="#upload-labs过关记录" class="headerlink" title="upload-labs过关记录"></a>upload-labs过关记录</h2><p><a target="_blank" rel="noopener" href="https://github.com/c0ny1/upload-labs">https://github.com/c0ny1/upload-labs</a></p>
+<h3 id="第一关：绕过前端检测"><a href="#第一关：绕过前端检测" class="headerlink" title="第一关：绕过前端检测"></a>第一关：绕过前端检测</h3><p>此关卡仅在前端验证文件的类型，故可以先将webshell.php文件的后缀改为可以通过检测的后缀，比如jpg, png等。再使用burpsuite抓取上传文件的数据包，此数据包已经通过了前端的验证，故我们可以直接对数据包进行修改，在包中将文件的后缀改回php，此时再点击发送数据包即可将webshell.php文件成功发送至服务器。</p>
+<p><img src="/../img/upload-labs/1-1.png" alt="1-1"></p>
+<p>也可以打开浏览器的开发者选项，勾选禁用JavaScript，这样也可以使前端的验证失效，此时直接上传webshell.php即可。</p>
+<h3 id="第二关：MIME绕过"><a href="#第二关：MIME绕过" class="headerlink" title="第二关：MIME绕过"></a>第二关：MIME绕过</h3><p>检查Content-Type标头是否与MIME 类型匹配。</p>
+<p>在Web上，MIME类型通常在HTTP头中使用，指示要发送的资源的内容类型。MIME类型由一个字符串组成，例如”image&#x2F;jpeg”表示JPEG图像文件，”audio&#x2F;mp3”表示MP3音频文件，”text&#x2F;plain”表示纯文本文件等。每种MIME类型都对应于一种特定的文件类型或数据格式。</p>
+<p>我们仍可以通过burpsuite抓取上传文件的数据包，通过修改文件头的Content-type，达到绕过的目的。</p>
+<p><img src="/../img/upload-labs/2-1.png" alt="2-1"></p>
+<h3 id="第三关：黑名单限制不全"><a href="#第三关：黑名单限制不全" class="headerlink" title="第三关：黑名单限制不全"></a>第三关：黑名单限制不全</h3><p>后端使用了deny_ext黑名单的阻挡方式。</p>
+<p><img src="/../img/upload-labs/3-1.png" alt="3-1"></p>
+<p>我们可以通过使用一些非常规的但是可以执行的后缀名来绕过，比如php5、php3等。但是由于phpEvn的配置问题，无法执行php5和php3后缀的文件。于是采用<strong>双写绕过</strong>的方法上传木马文件。</p>
+<p>如果文件名为”abc.txt::$DATA”，在Windows中，该文件名将被视为使用了”文件流”功能。这意味着你在为”abc.txt”这个文件添加了一个名为”::$DATA”的额外数据流。</p>
+<p>文件流功能允许在一个文件中存储多个数据流，每个数据流都有自己的名称。默认数据流就是文件的主要数据，如果创建了额外的数据流，它们可以通过附加名称来引用。在这种情况下，”abc.txt::$DATA”表示的是文件”abc.txt”的额外数据流，而不是文件的默认数据。</p>
+<p>通常Windows会尝试自动处理这种情况并将文件名恢复为”abc.txt”。这是因为”::$DATA”是一个特殊的标记，表示额外的数据流，而不是常规的文件名。</p>
+<p>分析代码可以发现，后端会检测是否存在::$DATA，如果存在则会去除，但是由于去除的代码仅去除一次，所以可以使用双写的方式来绕过，即去除掉::$DATA后剩余部分又拼接成了::$DATA。</p>
+<p>故我们先抓取上传文件的数据包，将文件名改为webshell.php::$DA::$DATATA，这样上传到服务器后，服务器会去掉一个::$DATA，此时上传的文件名为webshell.php::$DATA，然后windows又会再进行处理一次，将::$DATA去除，所以webshell.php就被成功上传至服务器了。</p>
+<p><img src="/../img/upload-labs/3-2.png" alt="3-2"></p>
+<h3 id="第四关：-htaccess-绕过"><a href="#第四关：-htaccess-绕过" class="headerlink" title="第四关：.htaccess 绕过"></a>第四关：.htaccess 绕过</h3><p>实践时候由于配置差异无法成功。</p>
+<h3 id="第五关：上传-user-ini文件"><a href="#第五关：上传-user-ini文件" class="headerlink" title="第五关：上传.user.ini文件"></a>第五关：上传.user.ini文件</h3><p>后端使用了数量更多的黑名单，无法上传类似php3，htaccess类型的文件，但我们仍可以上传.user.ini文件，改变服务器上执行php文件的配置。</p>
+<p>在 PHP 中，”.user.ini” 是一种用于配置用户级别的 PHP 设置的文件。它类似于常见的 “.htaccess” 文件，但主要用于 PHP 相关的设置。这个文件允许用户在其网站的目录级别上设置 PHP 配置选项，以便对特定目录或应用程序进行自定义设置，而不影响其他目录或全局设置。</p>
+<p>auto_prepend_file 是 PHP 的一个配置选项，用于指定在每个 PHP 文件执行之前自动包含（预加载）的文件。这个配置选项允许你在所有 PHP 文件执行前，自动包含一个指定的文件，无需在每个 PHP 文件中手动添加 include 或 require 语句。</p>
+<p>使用 auto_prepend_file 配置选项可以方便地在全局范围内引入一些常用的函数、类、或者设置一些全局变量。这样，这些文件中的内容会在每个 PHP 文件执行之前自动加载，确保这些公共的功能在整个项目中都可用。</p>
+<p>auto_prepend_file 配置选项所指定的文件在每个 PHP 文件执行前会被自动加载和执行。这意味着预加载文件中的代码会在每个 PHP 脚本执行之前被执行。</p>
+<p>于是我们先上传一个.user.ini，内容中有auto_prepend_file，指定某一个内容中有木马代码的文件。</p>
+<p><img src="/../img/upload-labs/5-1.png" alt="5-1"></p>
+<p>shell.jpg是木马文件webshell.php改完后缀的名字，这样改是为了突破后端的检测。</p>
+<p><img src="/../img/upload-labs/5-2.png" alt="5-2"></p>
+<p>此时，由于有.user.ini的设置，每执行一个php文件前都会预先加载执行shell.jpg，并且是以php方式执行，shell.jpg的内容仍是php木马，故仅需要点击readme.php即可触发该木马。</p>
+<p><img src="/../img/upload-labs/5-3.png" alt="5-3"></p>
+<h3 id="第六关：大小写绕过"><a href="#第六关：大小写绕过" class="headerlink" title="第六关：大小写绕过"></a>第六关：大小写绕过</h3><p>经过简单的代码审计之后发现该文件上传系统的后端并没有对后缀的大小写进行处理，故我们直接上传webshell.Php即可通过检测。</p>
+<p><img src="/../img/upload-labs/6-1.png" alt="6-1"></p>
+<h3 id="第七关：空格绕过"><a href="#第七关：空格绕过" class="headerlink" title="第七关：空格绕过"></a>第七关：空格绕过</h3><p>经过简单的代码审计可以发现，该文件上传系统的后端并没有对文件后缀的空格进行处理，故我们可以在后缀加上一个空格，这样我们的后缀就为’php ’，后端的黑名单只能匹配’php’，所以会让后缀多一个空格的’php ’文件通行。</p>
+<p><img src="/../img/upload-labs/7-1.png" alt="7-1"></p>
+<p>此时操作系统接收到文件后会自动将末尾的空格去掉，实际上放在操作系统中的文件仍是’php’后缀，可以被执行。</p>
+<p><img src="/../img/upload-labs/7-2.png" alt="7-2"></p>
+<h3 id="第八关：点绕过"><a href="#第八关：点绕过" class="headerlink" title="第八关：点绕过"></a>第八关：点绕过</h3><p>进行简单的代码审计可以发现，上传系统的后端检测并没有删除文件扩展名后的点。然而对于Windows操作系统来说，如果点后无内容，Windows会自动将点删除。</p>
+<p>所以我们可以通过burpsuite抓包，然后在文件名后加点来绕过检测。</p>
+<p><img src="/../img/upload-labs/8-1.png" alt="8-1"></p>
+<h3 id="第九关：双写-DATA绕过"><a href="#第九关：双写-DATA绕过" class="headerlink" title="第九关：双写::$DATA绕过"></a>第九关：双写::$DATA绕过</h3><p>通过简单的代码审计可以发现，该上传系统的后端检测未对::$DATA进行处理，故我们可以通过burpsuite抓取上传的数据包，在数据包中修改文件的名字，在后缀加上::$DATA，这样后端检测系统就会认为后缀为php::$DATA，这样即可绕过黑名单。但是在操作系统拿到文件后会自动处理掉::$DATA，所以最终存储在服务器上的仍是php后缀的文件，可以被执行。</p>
+<p><img src="/../img/upload-labs/9-1.png" alt="9-1"></p>
+<h3 id="第十关：针对代码逻辑的绕过"><a href="#第十关：针对代码逻辑的绕过" class="headerlink" title="第十关：针对代码逻辑的绕过"></a>第十关：针对代码逻辑的绕过</h3><p>经过简单的代码审计，发现该文件系统对后缀的处理过程为：先删除文件末尾的点，然后转换大小写，去除::$DATA，首尾去空。</p>
+<p>存在一个漏洞，即删除点和空格的操作只进行了一次。该删除点的函数逻辑为：函数从末尾向前检测，检测到第一个点后，会继续向前检测，但遇到空格会停下来。可以构造一个特定的后缀，使其经过删点操作和首位去空的操作后后缀为’php.’。</p>
+<p>所以我们使用burpsuite抓取上传文件的数据包，修改上传文件的后缀，改为’php. .’。这样在经过后端的处理流程后，文件后缀变为’php.’，仍然可以通过黑名单。</p>
+<p><img src="/../img/upload-labs/10-1.png" alt="10-1"></p>
+<h3 id="第十一关：双写绕过"><a href="#第十一关：双写绕过" class="headerlink" title="第十一关：双写绕过"></a>第十一关：双写绕过</h3><p>经过简单的代码审计，发现该文件系统对后缀的处理过程存在str_ireplace函数，先检测后缀里有无黑名单内的字符，如果有，则将该字符缀替换成空。但漏洞为，str_ireplace只运行了一次，所以我们可以构造一个经过替换之后的其余部分拼接在一起仍可以为php的文件后缀。</p>
+<p>所以我们使用burpsuite抓取上传文件的数据包，将后缀改为’.phphpp’，使用双写绕过后端检测，这样经过后端的str_ireplace后会删除php，那么剩余的部分平凑在一起后仍为’.php’。</p>
+<p><img src="/../img/upload-labs/11-1.png" alt="11-1"></p>
+<h3 id="第十二关：白名单，-00截断"><a href="#第十二关：白名单，-00截断" class="headerlink" title="第十二关：白名单，%00截断"></a>第十二关：白名单，%00截断</h3><p>条件：php版本 &lt; 5.3.4 ; magic_quotes_gpc&#x3D;Off</p>
+<p>本关卡采用白名单的方式进行过滤，只接受jpg，png，gif的后缀文件。</p>
+<p>通过代码审计，可以发现上传路径save_path是从前端GET方法传入的。我们可以通过通过修改save_path，加入%00对其截断。</p>
+<p>在计算机编程和网络通信中，”%00” 表示空字节（Null Byte），也称为空字符或零字节。它是 ASCII 编码中的控制字符，其十六进制值为 0x00。在字符串中，它表示一个空字符或字符串的结尾。</p>
+<p>使用burpsuite抓取上传的数据包，使用%00将路径截断。这里用%00截断是因为，url栏会将%00转码成空字符。实际上是用空字符截断。</p>
+<p><img src="/../img/upload-labs/12-1.png" alt="12-1"></p>
+<h3 id="第十三关：白名单，00-hex-截断"><a href="#第十三关：白名单，00-hex-截断" class="headerlink" title="第十三关：白名单，00(hex)截断"></a>第十三关：白名单，00(hex)截断</h3><p>与第12关类似，同样也可以通过使用类似’%00’截断的方法。但是第12关是使用GET方法从前端获得save_path，本关卡是使用POST方法获得save_path。</p>
+<p>所以我们仍使用burpsuite抓取上传文件的数据包，在data体中将save_path使用空字符截断。在这里截断不用’%00’，因为这里是请求中的data体，不会被编码成空字符，直接在Hex模块下，将路径upload&#x2F;webshell.php后面的一个字节改为00(hex)即可。</p>
+<p><img src="/../img/upload-labs/13-1.png" alt="13-1"></p>
+<h3 id="第十四关：上传图片马"><a href="#第十四关：上传图片马" class="headerlink" title="第十四关：上传图片马"></a>第十四关：上传图片马</h3><p>本关卡的要求是上传图片马。</p>
+<p>图片马的攻击方式通常涉及利用恶意构造的图像文件，通过构造恶意图像文件，攻击者可能成功执行任意代码、进行远程命令执行、绕过安全措施或获取未授权访问权限等。</p>
+<p>本网站还存在一个 include.php漏洞文件。构造：include.php?file&#x3D;upload&#x2F;shell.jpg ，include 会以本文的形式读取shell.jpg的内容，这样存在于shell.jpg里的一句话木马就可以执行</p>
+<p>首先使用cmd命令将恶意代码和正常图片融合。</p>
+<p><img src="/../img/upload-labs/14-1.png" alt="14-1"></p>
+<p>然后将生成的jay1anshell.png上传至服务器。</p>
+<p>然后浏览器输入<code>http://jay1an.uploadlabs/include.php?file=</code>图片马的路径’，即可成功执行图片中的恶意代码。</p>
+<p><img src="/../img/upload-labs/14-2.png" alt="14-2"></p>
+<p>第十五、十六关均为上传图片马，步骤同上。</p>
+<h3 id="第十七关：图片马之二次渲染"><a href="#第十七关：图片马之二次渲染" class="headerlink" title="第十七关：图片马之二次渲染"></a>第十七关：图片马之二次渲染</h3><p>通过对比上传后的文件和原文件后发现两者的大小不一致，则判断这里存在图片二次渲染。</p>
+<p>可以通过多次上传，测试图片的渲染后没有修改的位置，然后再将恶意代码添加进去，避免恶意代码被渲染掉，这样就可以利用文件包含漏洞去执行恶意代码了。</p>
+<p>这里直接采用老师给的成品图片，恶意代码部分不会被渲染掉。</p>
+<p><img src="/../img/upload-labs/16-1.png" alt="16-1"></p>
+<p>执行效果如下：</p>
+<p><img src="/../img/upload-labs/16-2.png" alt="16-2"></p>
+<h2 id="upload-labs靶场实操总结"><a href="#upload-labs靶场实操总结" class="headerlink" title="upload-labs靶场实操总结"></a>upload-labs靶场实操总结</h2><p>upload-labs包含了前端绕过、php3&#x2F;php5绕过、.htaccess绕过、MIME绕过、.user.ini绕过、点绕过、空格绕过、双写绕过、::$DATA绕过、路径截断、图片马等方法上传将恶意代码上传至服务器。</p>
+<p>通过本次的upload-靶场实操，我学习到了以下几个方面：</p>
+<p>文件类型检查： 在实战中，需要仔细检查应用程序对文件类型的检查机制。有些应用程序仅通过文件后缀名来验证文件类型，这是不安全的，因为攻击者可以伪造文件后缀名。正确的做法是结合文件的MIME类型和文件内容来进行验证。</p>
+<p>文件名截断漏洞： 有些应用程序在保存上传的文件时，可能会截断文件名，导致文件名和实际内容不一致，从而可能引发安全问题。在实战中，需要注意是否有可能利用文件名截断漏洞绕过文件上传的限制。作为服务器方，对于文件名，应该进行字符过滤和验证，只允许特定的安全字符和常见的文件名字符。禁止或过滤特殊字符、路径分隔符和敏感字符，以防止攻击者利用特殊字符绕过文件名验证。另外还可以对于文件名中的特殊字符或非ASCII字符，应该进行适当的编码。这可以帮助确保文件名不会被解释为路径或执行代码。</p>
+<p>文件内容检查： 在实战中，要注意应用程序对上传文件内容的检查。有些应用程序可能仅验证了文件类型，但没有检查文件内容，导致可以上传包含恶意代码的文件。</p>
+<p>双重扩展漏洞： 双重扩展漏洞是一种利用应用程序对文件扩展名处理不当的漏洞。攻击者可以上传带有双重或多重扩展名的文件，绕过文件类型检查。若服务器的策略是检测非法字符然后删除，那么应该在删除后再次检测，使用while逻辑，而不是if逻辑，这样可以避免双写绕过。当然也可以使用转义来防范双写绕过。</p>
+<p>上传绕过技巧： 在实战中，可以利用各种上传绕过技巧，如图片木马、绕过前端验证、构造特殊文件等，来成功绕过文件上传的限制。</p>
+<p>安全的文件上传策略： 在实战中，需要学习和了解安全的文件上传策略，包括文件类型验证、文件内容验证、文件存储路径、访问控制等，以防止文件上传漏洞的发生</p>
+<h2 id="引用github上的本项目的两张图"><a href="#引用github上的本项目的两张图" class="headerlink" title="引用github上的本项目的两张图"></a>引用github上的本项目的两张图</h2><h3 id="漏洞类型分类"><a href="#漏洞类型分类" class="headerlink" title="漏洞类型分类"></a>漏洞类型分类</h3><p><img src="/../img/upload-labs/sitefromgithub-1.png" alt="sitefromgithub-1"></p>
+<h3 id="如何判断上传漏洞类型"><a href="#如何判断上传漏洞类型" class="headerlink" title="如何判断上传漏洞类型"></a>如何判断上传漏洞类型</h3><p><img src="/../img/upload-labs/sitefromgithub-2.png" alt="sitefromgithub-2"></p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-08-03</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/'>
+                            文件上传漏洞
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E6%B8%97%E9%80%8F/'>
+                            渗透
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>
