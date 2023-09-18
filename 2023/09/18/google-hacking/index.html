@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="google_hacking" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            google_hacking
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Google-Hacking"><span class="post-toc-text">Google Hacking</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="post-toc-text">基本语法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2"><span class="post-toc-text">高级搜索</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="post-toc-text">实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B1%EF%BC%9Asite%E3%80%81filetype%E3%80%81intext-%E9%85%8D%E5%90%88"><span class="post-toc-text">实例1：site、filetype、intext 配合</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B2%EF%BC%9Agoogle%E6%90%9C%E7%B4%A2%E8%87%AA%E5%B7%B1%E7%9A%84blog%E6%98%AF%E5%90%A6%E8%A2%AB%E6%94%B6%E5%BD%95"><span class="post-toc-text">实例2：google搜索自己的blog是否被收录</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E2%80%93-%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7"><span class="post-toc-text">网络攻防技术课程实验–&gt;域名信息收集工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E8%A6%81%E6%B1%82"><span class="post-toc-text">实验要求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#python%E4%BB%A3%E7%A0%81%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="post-toc-text">python代码的实现</span></a></li></ol></li></ol>
+        
+        <h3 id="Google-Hacking"><a href="#Google-Hacking" class="headerlink" title="Google Hacking"></a>Google Hacking</h3><p><strong>Google Hacking</strong>就是利用搜索引擎强大的搜索功能，选用搜索语法和特殊的搜索关键字，将隐藏在目标网站中的不恰当配置信息和后门信息找出来。</p>
+<h4 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h4><ul>
+<li>and ：逻辑与</li>
+<li>or ：；逻辑或</li>
+<li>+：强制包含搜索项</li>
+<li>-：逻辑非</li>
+<li>“关键词”：完整匹配</li>
+<li>*?：通配符</li>
+</ul>
+<h4 id="高级搜索"><a href="#高级搜索" class="headerlink" title="高级搜索"></a>高级搜索</h4><ul>
+<li>site：搜索具体服务器或域名的网页</li>
+<li>filetype：搜索特定类型的文件</li>
+<li>intitle：搜索网页标题</li>
+<li>inurl：搜索URL</li>
+<li>intext：搜索正文</li>
+<li>link：搜索连接到指定网页的网页</li>
+<li>allintitle：用法和intitle类似，但可以指定多个词</li>
+</ul>
+<p>这些方法可以互相可以组合。</p>
+<blockquote>
+<p>附：Filetype所支持的文件类型</p>
+<p>• Adobe Portable Document Format (pdf)</p>
+<p>• Adobe PostScript (ps)</p>
+<p>• Lotus 1-2-3 (wk1, wk2, wk3, wk4, wk5, wki, wks, wku)</p>
+<p>• Lotus WordPro (lwp)</p>
+<p>• MacWrite (mw)</p>
+<p>• Microsoft Excel (xls)</p>
+<p>• Microsoft PowerPoint (ppt)</p>
+<p>• Microsoft Word (doc)</p>
+<p>• Microsoft Works (wks, wps, wdb)</p>
+<p>• Microsoft Write (wri)</p>
+<p>• Rich Text Format (rtf)</p>
+<p>• Text (ans, txt)</p>
+</blockquote>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="实例1：site、filetype、intext-配合"><a href="#实例1：site、filetype、intext-配合" class="headerlink" title="实例1：site、filetype、intext 配合"></a>实例1：site、filetype、intext 配合</h4><pre><code class="json">site: scu.edu.cn filetype:xls intext:冯玮
+</code></pre>
+<p><img src="/../img/google-hacking/1.png" alt="1"></p>
+<h4 id="实例2：google搜索自己的blog是否被收录"><a href="#实例2：google搜索自己的blog是否被收录" class="headerlink" title="实例2：google搜索自己的blog是否被收录"></a>实例2：google搜索自己的blog是否被收录</h4><p><img src="/../img/google-hacking/2.png" alt="2"></p>
+<h3 id="网络攻防技术课程实验–-域名信息收集工具"><a href="#网络攻防技术课程实验–-域名信息收集工具" class="headerlink" title="网络攻防技术课程实验–&gt;域名信息收集工具"></a>网络攻防技术课程实验–&gt;域名信息收集工具</h3><h4 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h4><ul>
+<li>支持百度搜索引擎的域名提取，其中从百度搜索引擎提取的域名需为真实域名，而非百度的域名跳转链接。</li>
+<li>可扩充其他功能，比如域名所在的标题等信息。</li>
+</ul>
+<h4 id="python代码的实现"><a href="#python代码的实现" class="headerlink" title="python代码的实现"></a>python代码的实现</h4><pre><code class="python">import requests                         
+from bs4 import BeautifulSoup            
+from urllib.parse import urlparse        
+import time
+import random
+
+# made by jay1an 2023/9/12
+def baidu_search(pages):
+    Subdomains = []
+    Subdomains_dict = &#123;&#125;    # 字典存储网域和标题
+    # site:[域名]           eg. site:qq.com
+    hearders = &#123;                                                                 # 在这种情况下 仅加User-Agent即可正常获得数据
+        &#39;user-agent&#39;:&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&#39;,
+    &#125;
+    for start in range(pages):
+        url=f&#39;https://www.baidu.com/s?wd=site%3Adouban.com&amp;pn=&#123;start*10&#125;&#39;  # 改变参数实现翻页        # 该url为示例，爬取的是douban.com域名下的子域名
+        resp = requests.get(url,headers=hearders)
+        time.sleep(random.uniform(0.5,1.5))                                    # 加入随机延迟 模拟真实点击 (important)
+        soup = BeautifulSoup(resp.content,&#39;html.parser&#39;)                       # 使用BeautifulSoup对网页结果进行解析
+        class_name = &quot;result c-container xpath-log new-pmd&quot;
+        div_elements = soup.find_all(&#39;div&#39;, class_=class_name)                 # 找出class的值为result c-container xpath-log new-pmd的div块
+        for i in div_elements:                                                 # 从div块中提取出url和title
+            link = i.get(&#39;mu&#39;)                                                 
+            domain = str(urlparse(link).scheme + &quot;://&quot; + urlparse(link).netloc)
+            if domain in Subdomains:                                           # 去重
+                pass
+            else:
+                Subdomains.append(domain)
+                Subdomains_dict[domain] = i.h3.a.get_text()
+    return Subdomains_dict                                                     # 返回值为字典，&#39;domain&#39; : &#39;title&#39; 
+
+
+# bing_search()
+
+dict = baidu_search(10)           # 爬取10页的结果
+for key, value in dict.items():   # 输出爬取的结果
+    print(f&#39;&#123;key&#125;: &#123;value&#125;&#39;)      # eg. &quot;https://www.qq.com: 腾讯网&quot;
+</code></pre>
+<p>运行结果：</p>
+<pre><code class="json">https://help.douban.com: 帮助中心
+https://www.douban.com: 豆瓣电影
+https://movie.douban.com: 豆瓣电影
+http://group.douban.com: 讨论精选 (豆瓣)
+https://book.douban.com: 豆瓣读书
+http://mobilestore.douban.com: 登录豆瓣
+https://m.douban.com: 豆瓣电影
+https://frodo.douban.com: 豆瓣App
+https://jobs.douban.com: 在豆瓣工作
+https://beijing.douban.com: 豆瓣同城_北京
+https://blog.douban.com: 豆瓣blog
+https://market.douban.com: 豆瓣豆品
+https://music.douban.com: 豆瓣音乐
+https://read.douban.com: 电子图书 | 豆瓣阅读
+https://dongxi.douban.com: 豆瓣
+http://talion.douban.com: 豆瓣(手机版)
+http://douban.com: 豆瓣
+http://shuo.douban.com: 豆瓣
+https://site.douban.com: 豆瓣
+https://accounts.douban.com: 登录豆瓣
+</code></pre>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-09-18</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86/'>
+                            信息收集
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6-%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF/'>
+                            四川大学-网络攻防技术
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>

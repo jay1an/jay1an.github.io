@@ -14,7 +14,7 @@ p
 {
     word-wrap: break-word;
     white-space: pre-wrap;
-    text-indent: 2em; /* 2em 为缩进的单位，可以根据需要调整 */
+    /* text-indent: 2em; 2em 为缩进的单位，可以根据需要调整 */
 }
 
 body
