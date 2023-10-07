@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jay1an.github.io/2023/10/07/md5-collision/</loc>
+    <lastmod>2023-10-07</lastmod>
+  </url>
+  <url>
     <loc>https://jay1an.github.io/2023/10/01/network-scanning/</loc>
     <lastmod>2023-10-01</lastmod>
   </url>
