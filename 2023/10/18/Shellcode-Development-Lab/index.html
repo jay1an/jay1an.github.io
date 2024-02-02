@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="Shellcode Development Lab" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+ 
+            <!--注意：首页既不是post也不是page-->
+            
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            Shellcode Development Lab
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Shellcode"><span class="post-toc-text">Shellcode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Writing-shellcode"><span class="post-toc-text">Task1. Writing shellcode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-a-The-Entire-Process"><span class="post-toc-text">Task1.a The Entire Process</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-b-Eliminating-Zeros-0x00-from-the-code"><span class="post-toc-text">Task1.b Eliminating Zeros(0x00) from the code</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-c-Providing-Arguments-for-System-Calls"><span class="post-toc-text">Task1.c Providing Arguments for System Calls</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Using-Code-Segement"><span class="post-toc-text">Task2. Using Code Segement</span></a></li></ol></li></ol></li></ol>
+        
+        <h1 id="Shellcode"><a href="#Shellcode" class="headerlink" title="Shellcode"></a>Shellcode</h1><p>Shellcode 是一段设计用于利用计算机系统漏洞的机器代码。它通常是一系列二进制指令，以字节形式表示，并且通常编写为目标特定的机器码，以在目标系统上执行特定的操作。</p>
+<h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Shellcode is widely used in many attacks that involve code injection. Writing shellcode is quite challenging.<br>Although we can easily find existing shellcode from the Internet, there are situations where we have to write<br>a shellcode that satisfies certain specific requirements. Moreover, to be able to write our own shellcode from<br>scratch is always exciting. There are several interesting techniques involved in shellcode. The purpose of<br>this lab is to help students understand these techniques so they can write their own shellcode.</p>
+<p>There are several challenges in writing shellcode, one is to ensure that there is no zero in the binary, and<br>the other is to find out the address of the data used in the command. The first challenge is not very difficult<br>to solve, and there are several ways to solve it. The solutions to the second challenge led to two typical<br>approaches to write shellcode. In one approach, data are pushed into the stack during the execution, so their<br>addresses can be obtained from the stack pointer. In the second approach, data are stored in the code region,<br>right after a call instruction. When the call instruction is executed, the address of the data is treated as<br>the return address, and is pushed into the stack. Both solutions are quite elegant, and we hope students can<br>learn these two techniques. This lab covers the following topics:<br>    • Shellcode<br>    • Assembly code<br>    • Disassembling</p>
+</blockquote>
+<p>本实验给出了一些简单的利用shellcode完成攻击的场景，并介绍了成功编写Shellcode的挑战的注意事项：如何保证二进制中不能出现0x00、如何找到指令中所用到的数据的地址。</p>
+<p>实验资料网址：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/Software/Shellcode/">https://seedsecuritylabs.org/Labs_20.04/Software/Shellcode/</a></p>
+<p>实验中各任务的要求参照实验指导PDF。</p>
+<h3 id="Task1-Writing-shellcode"><a href="#Task1-Writing-shellcode" class="headerlink" title="Task1. Writing shellcode"></a>Task1. Writing shellcode</h3><h4 id="Task1-a-The-Entire-Process"><a href="#Task1-a-The-Entire-Process" class="headerlink" title="Task1.a The Entire Process"></a>Task1.a The Entire Process</h4><p>①使用nasm命令将示例的汇编代码编译成ELF二进制格式。</p>
+<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143338540.png" alt="image-20240119143338540">                              </p>
+<p>②使用ld命令将mysh.o编译成可执行二进制文件，-m elf_i386选项意味着生成32位的ELF二进制文件，这个步骤之后，会获得最终的可执行二进制代码文件mysh，运行它，会生成一个shell。</p>
+<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143353546.png" alt="image-20240119143353546"></p>
+<p>③运行mysh并检测效果。</p>
+<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143357287.png" alt="image-20240119143357287"></p>
+<p>两次打印的shell的PID不相同，证明mysh确实打开了另外一个shell，功能正常运行。</p>
+<p>④在攻击中，起作用的是机器码，而不只是标准的可执行文件。所以我们需要从可执行文件中提<strong>取出需要的机器码</strong>。</p>
+<p>可以使用objdump命令对mysh.o进行反汇编，–Mintel选项是指用Intel的语法模式（另外一种模式是AT&amp;T）。</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119143422649.png" alt="image-20240119143422649"></p>
+<p>左边部分是机器码，右边是汇编。</p>
+<p>我们再使用xxd命令打印整个二进制程序mysh.o的机器码，在其中找到我们需要的段。</p>
+<p>-p 表示使用’plain’输出模式，将文本内容以纯十六机制形式显示，而不包含行号或ASCII文本。</p>
+<p>-c 20 指定每行显示20个16进制字符的数量。</p>
+<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143452830.png" alt="image-20240119143452830"></p>
+<p>这一部分就是我们需要的机器码。</p>
+<p>⑤使用实验给出的convert.py程序，将真正的shellcode转换并储存在python的数组中，以便实施攻击。</p>
+<p>先将shellcode粘贴到convert.py文件中：</p>
+<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143459832.png" alt="image-20240119143459832"></p>
+<p>运行convert.py，生成存有shellcode的python数组：</p>
+<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143541247.png" alt="image-20240119143541247"></p>
+<h4 id="Task1-b-Eliminating-Zeros-0x00-from-the-code"><a href="#Task1-b-Eliminating-Zeros-0x00-from-the-code" class="headerlink" title="Task1.b Eliminating Zeros(0x00) from the code"></a>Task1.b Eliminating Zeros(0x00) from the code</h4><p>Shellcode 广泛用于缓冲区溢出攻击。但很多情况下，攻击会因为字符串复制而失败，例如strcpy()函数。对于这些字符串复制函数，零被视为字符串的结尾。因此，如果我们在 shellcode 中间有一个零，字符串复制将无法将零之后的任何内容从该 shellcode 复制到目标缓冲区，因此攻击将无法成功。尽管并非所有Shellcode都存在零问题，但 shellcode 要求机器码中不能有任何零；否则，shellcode的应用将会受到限制。</p>
+<p>在mysh.s中有4个不同的地方都用到了零，<strong>找出mysh.s中所有用到零的地方，并解释代码是如何在不出现零的条件下使用零。</strong></p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119143914018.png" alt="image-20240119143914018"></p>
+<p>其中1、2、3都是通过xor操作将寄存器的值置为0，而不是直接使用mov指令，如果使用mov指令，那么机器码必然包含0x00。</p>
+<p>4的作用是将0x0b赋值给al(eax的低8位)，这样eax的值就为0x0000000b，如果用mov eax,0x0b，那么实际的操作数其实是0x0000000b，在内存中有三个0x00。</p>
+<p>还有一种避免出现0x00的方法就是“位移”。</p>
+<p>如果要将0x007A7978赋值给ebx，如果直接使用mov指令，那么机器码中必然会出现0x00。但是可以先用一个字节的占位符#，即把0x237A7978值赋值给ebx，然后再让ebx左移8位然后又右移8位，这样最终ebx的值会从0x237A7978变成0x007A7978，但是整个指令的机器码中不会含有0x00。</p>
+<p>本次任务的要求为：<strong>将执行&#x2F;bin&#x2F;sh改为执行bin&#x2F;bash，但是不能通过加多余斜杠的方式来使得补齐push的四字节。</strong></p>
+<p>bin&#x2F;bash一共九个字节，而push是以四个字节为单位进栈的。如果直接push ‘h’会导致最终的机器码中存在0x00。</p>
+<p>那么我们可以采用位移的方式解决这个问题。</p>
+<p>使用三个占位符#，将’h###’赋值给ecx，然后对让ecx先左移24位然后又右移24位，再push ecx即可。</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119144041264.png" alt="image-20240119144041264"></p>
+<p>重新编译可执行文件运行：</p>
+<p><img src="/../img/Shellcode-Development-Lab/1.png" alt="1"></p>
+<p>查看机器码中是否有0x00。</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119144725224.png" alt="image-20240119144725224"></p>
+<p>经验证，机器码中没有0x00。</p>
+<h4 id="Task1-c-Providing-Arguments-for-System-Calls"><a href="#Task1-c-Providing-Arguments-for-System-Calls" class="headerlink" title="Task1.c Providing Arguments for System Calls"></a>Task1.c Providing Arguments for System Calls</h4><p>本次任务是为系统调用提供参数，实现ls -la。</p>
+<p><strong>思路：</strong></p>
+<p>我们想用execve函数执行&#x2F;bin&#x2F;sh -c ls -la，那么我们传入execve的参数应该为:</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119144836700.png" alt="image-20240119144836700"></p>
+<p>所以我们先将这些字符串压入栈，通过esp寄存器获得每个字符串的起始位置，最后在依次压入栈调用函数即可。</p>
+<p>注意，需要避免机器码中出现0x00，所以当push的值不足4字节的时候需要使用位移的方法<strong>。</strong></p>
+<p><strong>实验步骤：</strong></p>
+<p>在 mysh.s中用汇编代码完成对各个字符串的压栈和函数调用参数地址的压栈。</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119144909649.png" alt="image-20240119144909649"></p>
+<p>重新编译运行：</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119144935385.png" alt="image-20240119144935385"></p>
+<p>成功输出了当前目录下所有文件的信息，表明实验成功。</p>
+<h3 id="Task2-Using-Code-Segement"><a href="#Task2-Using-Code-Segement" class="headerlink" title="Task2. Using Code Segement"></a>Task2. Using Code Segement</h3><p>在Task 1中，都是通过动态地压入栈，通过esp获得数据的地址。</p>
+<p>但还有一种办法，即：将数据储存在代码区，并通过函数的调用机制获得其地址。Task 2就是介绍此方法。</p>
+<p>Task 2 中的mysh2.s汇编代码如下：</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119145019487.png" alt="image-20240119145019487.png"></p>
+<p>（1）  从第七行开始逐行解释代码</p>
+<p>第7行：将当前栈顶的值弹出，赋给ebp。因为运行call之后，操作系统会自动将call的下一条指令的地址压入栈，而该地址正好是字符串的地址，通过第7行代码将字符串的地址传入ebp，以便进行下一步操作。</p>
+<p>第8行：将eax置零。</p>
+<p>第9行：将一个字节0x0存储到ebp+7的位置，因为ebp是字符串的地址，那么ebp+7的位置刚好对应字符串中的*占位符，这样做的目的是使用0隔断符截断字符串，使操作系统从ebp读取&#x2F;bin&#x2F;sh就结束，不多读取。</p>
+<p>第10行：将ebp的值(字符串的地址)，放在ebp+8的内存位置。相当Task 1中将argv[0]压入栈。</p>
+<p>第11行：将ebx+12地址上的值置为0，相当于Task 1中将argv[1]压入栈，argv[1]的值为0，表示参数数组argv的结束。</p>
+<p>第12行：使得ecx &#x3D; ebx +8，使得ecx的值指向数组argv[]，满足exceve函数的传参（ecx传递argv的地址）。</p>
+<p>第13行：使得edx为0，满足exceve函数的传参：edx为envp[]的指针，这里为Null表示没有环境变量。</p>
+<p>第14、15行：触发系统中断，int 0x80 是一个常用的方式来触发系统调用。0x80 是系统调用的中断号，它告诉操作系统执行特定的系统调用功能。接下来，操作系统会根据 eax 寄存器的值来确定要执行哪个系统调用，而其他寄存器则用于传递参数和返回结果。</p>
+<p>（2）  实现&#x2F;usr&#x2F;bin&#x2F;env并打印a&#x3D;11 b&#x3D;22</p>
+<p><strong>思路：</strong></p>
+<p>要实现该功能的命令为：&#x2F;usr&#x2F;bin&#x2F;env – a&#x3D;11 b&#x3D;22</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119145105712.png" alt="image-20240119145105712"></p>
+<p>所以我们的目的就是将execve函数中的argv[]参数，设置为&#x2F;usr&#x2F;bin&#x2F;env – a&#x3D;11 b&#x3D;22。那么argv数组将会有五个元素（最后一个为Null）。</p>
+<p>所以我们这样设计：</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119145123562.png" alt="image-20240119145123562"></p>
+<p><strong>AAAA存放<code>usr/bin/env</code>的地址，BBBB存放<code>-</code>的地址，CCCC存放<code>a=11</code>的地址，DDDD存放<code>b=22</code>的地址，EEEE置0，表示Null，表示argv数组结尾。</strong></p>
+<p>然后还要把ecx设为&amp;argv[0]，满足对execve函数传参的时候；将edx设置为0，表示没有环境变量。</p>
+<p><strong>实验操作：</strong></p>
+<p>修改mysh2.s代码，通过汇编代码实现思路。</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119145231961.png" alt="sss"></p>
+<p>编译成二进制文件运行：</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119145249887.png" alt="123"></p>
+<p>查看机器码，有无0x00：</p>
+<p><img src="/../img/Shellcode-Development-Lab/image-20240119145306513.png" alt="233"></p>
+<p>经检验，能正常满足任务要求，并且机器码中无0x00。</p>
+<p>Task 2完成。</p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-10-18</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%BC%93%E5%86%B2%E5%8C%BA%E6%BA%A2%E5%87%BA/'>
+                            缓冲区溢出
+                        </a>
+                    
+                        <a href='/tags/%E6%B1%87%E7%BC%96/'>
+                            汇编
+                        </a>
+                    
+                        <a href='/tags/shellcode/'>
+                            shellcode
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6-%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF/'>
+                            四川大学-网络攻防技术
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+        
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+
+    
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>

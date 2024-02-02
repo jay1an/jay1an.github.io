@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="SQL Injection Attack Lab" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+ 
+            <!--注意：首页既不是post也不是page-->
+            
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            SQL Injection Attack Lab
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SQL-Injection-Attack-Lab"><span class="post-toc-text">SQL Injection Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Get-Familiar-with-SQL-Statements"><span class="post-toc-text">Task1. Get Familiar with SQL Statements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-SQL-Injection-Attack-on-SELECT-Statement"><span class="post-toc-text">Task2. SQL Injection Attack on SELECT Statement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-1-SQL-Injection-Attack-from-webpage"><span class="post-toc-text">Task2.1 SQL Injection Attack from webpage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-2-SQL-Injection-Attack-from-command-line"><span class="post-toc-text">Task2.2 SQL Injection Attack from command line</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-3-Append-a-new-SQL-statement"><span class="post-toc-text">Task2.3 Append a new SQL statement</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-SQL-Injection-Attack-on-UPDATE-Statement"><span class="post-toc-text">Task3. SQL Injection Attack on UPDATE Statement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-1-Modify-your-own-salary"><span class="post-toc-text">Task3.1 Modify your own salary</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-2-Modify-other-people%E2%80%99s-salary"><span class="post-toc-text">Task3.2 Modify other people’s salary</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-3-Modify-other-people%E2%80%99s-password"><span class="post-toc-text">Task3.3 Modify other people’s password</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Countermeasure-Prepared-Statement"><span class="post-toc-text">Task4. Countermeasure - Prepared Statement</span></a></li></ol></li></ol></li></ol>
+        
+        <h1 id="SQL-Injection-Attack-Lab"><a href="#SQL-Injection-Attack-Lab" class="headerlink" title="SQL Injection Attack Lab"></a>SQL Injection Attack Lab</h1><p>SQL 注入攻击是一种网络安全威胁，攻击者通过在应用程序的用户输入中注入恶意的 SQL 代码，从而实现对数据库的非法访问和操纵。这种攻击利用了应用程序对用户输入的处理不当，导致攻击者能够执行未经授权的数据库操作。</p>
+<h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>SQL injection is a code injection technique that exploits the vulnerabilities in the interface between web applications and database servers. The vulnerability is present when user’s inputs are not correctly checked within the web applications before being sent to the back-end database servers.</p>
+<p>Many web applications take inputs from users, and then use these inputs to construct SQL queries, so they can get information from the database. Web applications also use SQL queries to store information in the database. These are common practices in the development of web applications. When SQL queries are not carefully constructed, SQL injection vulnerabilities can occur. SQL injection is one of the most common<br>attacks on web applications.</p>
+<p>In this lab, we have created a web application that is vulnerable to the SQL injection attack. Our web application includes the common mistakes made by many web developers. Students’ goal is to find ways to exploit the SQL injection vulnerabilities, demonstrate the damage that can be achieved by the attack, and master the techniques that can help defend against such type of attacks. This lab covers the following topics:</p>
+<p>• SQL statements: SELECT and UPDATE statements </p>
+<p>• SQL injection</p>
+<p>• Prepared statement</p>
+</blockquote>
+<p>实验资料：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/Web/Web_SQL_Injection/">https://seedsecuritylabs.org/Labs_20.04/Web/Web_SQL_Injection/</a></p>
+<p>使用docker搭建实验环境的步骤略。</p>
+<h3 id="Task1-Get-Familiar-with-SQL-Statements"><a href="#Task1-Get-Familiar-with-SQL-Statements" class="headerlink" title="Task1. Get Familiar with SQL Statements"></a>Task1. Get Familiar with SQL Statements</h3><p>本次task的目标是熟悉sql语句，需要进入开放数据库服务的容器，在里面进行数据库操作。</p>
+<p><strong>实验步骤：</strong></p>
+<p>进入开放数据库服务的容器的shell，进入数据库服务。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/1.png" alt="1"></p>
+<p>选择数据库中的表，打印期中的信息。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/2.png" alt="2"></p>
+<p>Select * from credential where Name &#x3D; ‘Alice’</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/3.png" alt="3"></p>
+<h3 id="Task2-SQL-Injection-Attack-on-SELECT-Statement"><a href="#Task2-SQL-Injection-Attack-on-SELECT-Statement" class="headerlink" title="Task2. SQL Injection Attack on SELECT Statement"></a>Task2. SQL Injection Attack on SELECT Statement</h3><p>本次task的目标是在不知道任何一个employee的密码的情况下从主页登录。</p>
+<p>实验手册给出了前端的验证代码，对代码进行简单的审计即可发现前端验证系统存在sql注入漏洞。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/4.png" alt="4"></p>
+<p>并没有对要输入的username和password进行处理的代码，但是由于password要进行hash运算，所以password的值不好控制，可以选择构造username的值实现sql注入。</p>
+<h4 id="Task2-1-SQL-Injection-Attack-from-webpage"><a href="#Task2-1-SQL-Injection-Attack-from-webpage" class="headerlink" title="Task2.1 SQL Injection Attack from webpage"></a>Task2.1 SQL Injection Attack from webpage</h4><p>在网页上进行sql注入，在知道管理员账号为admin的情况下登录管理员账号。</p>
+<p><strong>实验步骤：</strong></p>
+<p>将构造好的username值输入，直接登录。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/5.png" alt="5"></p>
+<p>点击Login直接登陆成功了。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/6.png" alt="6"></p>
+<p><strong>分析：</strong></p>
+<p>因为验证部分没有对输入进行检查处理，并且代码逻辑不够完善，我们构造username的值使原始的sql语句中途截断。</p>
+<p>Username &#x3D; admin’ – (最后有一个空格)</p>
+<p>使得sql语句变成了 SELECT * FROM credential WHERE name &#x3D; ‘admin’ – and Password &#x3D; …….</p>
+<p>由于‘ – ’ 在sql语句中表示注释，所以后面对Password的判断没有生效，所以查询出来的结果就是admin的信息，根据后面代码的逻辑，就可以成功以admin的身份登录。</p>
+<h4 id="Task2-2-SQL-Injection-Attack-from-command-line"><a href="#Task2-2-SQL-Injection-Attack-from-command-line" class="headerlink" title="Task2.2 SQL Injection Attack from command line"></a>Task2.2 SQL Injection Attack from command line</h4><p>使用命令行发送http请求完成sql注入。</p>
+<p>注意：使用curl命令时，如果有特殊符号（如&amp;），需要放在同网址一起放在单引号中，不然会被shell编译。其次，在网址中的一些符号需要被url编码，比如说单引号、空格等。</p>
+<p>实验步骤：</p>
+<p>登录时发送的的http请求为：</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/7.png" alt="7"></p>
+<p>同样，我们还是构造恶意的username，实现sql注入的效果，不过需要对单引号和空格进行url编码。</p>
+<p>所以我们在终端的输入为：</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/8.png" alt="8"></p>
+<p>发现成功返回了所有employee的信息。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/9.png" alt="9"></p>
+<p><strong>分析：</strong></p>
+<p>Sql注入的原理与上一个小实验仍然是相同的，只是本次实验使用curl在命令行上进行操作，需要额外对特殊字符进行url编码。</p>
+<h4 id="Task2-3-Append-a-new-SQL-statement"><a href="#Task2-3-Append-a-new-SQL-statement" class="headerlink" title="Task2.3 Append a new SQL statement"></a>Task2.3 Append a new SQL statement</h4><p>在前两次task中，都是通过sql注入从数据库拿数据，如果可以修改数据库就更好了，在SQL中，分号；用来分割两个sql语句，在本次task中需要在登陆界面尝试执行两个sql语句。</p>
+<p>但是对抗机制会阻止两个sql语句的运行，我们需要找出对抗机制是什么。</p>
+<p><strong>实验步骤：</strong></p>
+<p>先尝试分号的效果。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/10.png" alt="10"></p>
+<p>的确执行了两条sql语句，证明分号确实可以用来分割sql语句。</p>
+<p>下面在登录页面上使用sql注入构造两个sql语句。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/11.png" alt="11"></p>
+<p>点击登陆后，提示语法错误，无法执行第二条sql语句。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/12.png" alt="12"></p>
+<p><strong>分析：</strong></p>
+<p>执行失败了，通过查看unsafe_home.php发现其使用query函数执行sql语句。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/13.png" alt="13"></p>
+<p>查询php的mysqli::query函数:</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/14.png" alt="14"></p>
+<p>此函数只能一次执行一个sql语句，如果需要一次执行多条SQL命令，就必须使用mysqli对象中的 multi_query()方法。具体做法是把多条SQL命令写在同一个字符串里作为参数传递给multi_query()方法，多条SQL之间使用分号 (;)分隔。</p>
+<p>因为代码中使用的query函数来执行sql语句，所以当输入的是多条sql命令的时候，query无法处理，不会成功执行。</p>
+<h3 id="Task3-SQL-Injection-Attack-on-UPDATE-Statement"><a href="#Task3-SQL-Injection-Attack-on-UPDATE-Statement" class="headerlink" title="Task3. SQL Injection Attack on UPDATE Statement"></a>Task3. SQL Injection Attack on UPDATE Statement</h3><p>在task2中，sql注入漏洞发生在SELECT语句处，所以我们可以利用此漏洞获取数据库内的信息。但如果sql漏洞发生在UPDATE语句处，后果将会非常严重，因为我们可以通过注入，在UPDATE的基础上对数据库中的数据做修改。</p>
+<p>实验说明中给出了employee修改个人资料的代码逻辑：</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/15.png" alt="15"></p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/16.png" alt="16"></p>
+<p>可以看出，代码并没有对输入的数据进行进一步的检测和处理，所以在修改个人资料的功能处是存在sql注入漏洞的。在接下来的小task中，会利用此漏洞修改数据库中的数据。</p>
+<h4 id="Task3-1-Modify-your-own-salary"><a href="#Task3-1-Modify-your-own-salary" class="headerlink" title="Task3.1 Modify your own salary"></a>Task3.1 Modify your own salary</h4><p>对于每一个employee，只能修改Nickname、emails等数据，无法修改Salary，本次task的目标就是以employee的身份登录并且利用sql注入漏洞修改自己的salary。</p>
+<p>实验步骤：</p>
+<p>登录Alice的账户，打开编辑个人信息的页面，在Nickname栏输入进行构造的数据，执行sql注入。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/17.png" alt="17"></p>
+<p>点击save提交，再查看Alice的信息可以发现Salary已经被修改了。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/18.png" alt="18"></p>
+<p><strong>分析：</strong></p>
+<p>Salary的值被修改了，表明Salary&#x3D;’9999999’被执行了。</p>
+<p>因为我们输入的NickName的值传到了后端会导致sql语句变成：</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/19.png" alt="19"></p>
+<p>Salary&#x3D;’9999999’被插入并且成功执行。</p>
+<h4 id="Task3-2-Modify-other-people’s-salary"><a href="#Task3-2-Modify-other-people’s-salary" class="headerlink" title="Task3.2 Modify other people’s salary"></a>Task3.2 Modify other people’s salary</h4><p>本次task的目标是将上司Boby的工资改为1。</p>
+<p><strong>实验步骤：</strong></p>
+<p>根据sql漏洞构造特殊的输入。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/20.png" alt="20"></p>
+<p>点击Save，提交表单，然后查看Boby的工资发现的确被修改为1。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/21.png" alt="21"></p>
+<p><strong>分析：</strong></p>
+<p>原理同上，利用sql漏洞将Salary&#x3D;’1’插入要执行的sql语句中。</p>
+<p>只是在task3.2中需要用WHERE条件对Boby进行定位，所以需要用注释符 – 将后面的无关的sql语句部分注释掉，如果不注释掉就会有两个WHERE条件，出现语法错误。</p>
+<h4 id="Task3-3-Modify-other-people’s-password"><a href="#Task3-3-Modify-other-people’s-password" class="headerlink" title="Task3.3 Modify other people’s password"></a>Task3.3 Modify other people’s password</h4><p>在Task3.2中，我们登录Alice的账户，通过sql漏洞修改了上司Boby的工资。本次Task的目标是通过sql漏洞修改Boby的password，进而我们可以用新的password登录Boby的账户。</p>
+<p><strong>注意：数据库中存放的密码是原密码经过散列运算的值，所以如果要直接修改Password，就必须要先得到其散列运算的值。</strong></p>
+<p>查看源码，我们可以知道散列函数为SHA1。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/22.png" alt="22"></p>
+<p><strong>实验步骤：</strong></p>
+<p>假设要Boby的password改为’pwd’，先获得SHA1(‘pwd’)。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/23.png" alt="23"></p>
+<p>根据sql漏洞构造特殊的输入。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/24.png" alt="24"></p>
+<p>我们的输入会使得后端真正执行的sql语句为：</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/25.png" alt="25"></p>
+<p>这会将Boby的密码改为SHA1(‘pwd’)。</p>
+<p>我们在登陆界面用这个密码(pwd)登录Boby的账号。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/26.png" alt="26"></p>
+<p>发现可以成功登录。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/27.png" alt="27"></p>
+<p><strong>分析：</strong></p>
+<p>注入的原理仍然与前两次实验相同，都是通过将想要执行的sql语句插入到原来的sql语句中，然后再使用WHERE对Boby进行定位，最后使用注释符 – 将多余的sql语句部分注释。</p>
+<p>但值得注意的是，Password在数据库中是以散列值的方式存储的，所以直修改Password进行修改时，要先获得新密码的散列值，将散列值存入数据库，而不是新密码本身。</p>
+<h3 id="Task4-Countermeasure-Prepared-Statement"><a href="#Task4-Countermeasure-Prepared-Statement" class="headerlink" title="Task4. Countermeasure - Prepared Statement"></a>Task4. Countermeasure - Prepared Statement</h3><p>在本次task中，介绍了如何用预处理的方式处理防止sql注入。</p>
+<p>在实验说明中，介绍了sql服务器对于前端传递的sql语句的处理过程。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/28.png" alt="28"></p>
+<p>在数据库系统中，当执行一个SQL查询时，会经历几个关键的阶段，这些阶段包括解析和规范化（Parsing and Normalization）、编译（Compilation）、查询优化（Query Optimization）和缓存（Cache）。以下是每个阶段的详细解释：</p>
+<p><strong>Parsing and Normalization Phase</strong></p>
+<p>这是SQL查询处理的第一阶段，在这个阶段中，查询的文本被分析并转换成数据库系统能理解的结构化表示形式。</p>
+<p>解析（Parsing）：解析器首先检查SQL查询语法是否正确。它将SQL文本分解成个别的元素，并构建一个初始的内部数据结构，通常是一种称为解析树（Parse Tree）的东西。</p>
+<p>规范化（Normalization）：在解析树创建之后，数据库进一步处理这个树来产生一个规范化的查询。这包括消除歧义、应用优化规则（如推导出表达式的简化版）以及转换成一个标准形式。</p>
+<p><strong>Compilation Phase</strong></p>
+<p>一旦SQL查询被解析和规范化，它就会被编译成数据库可以执行的形式。</p>
+<p>编译：编译阶段涉及将规范化的查询转换成一个或多个执行计划。执行计划是一系列数据库操作（如扫描、连接、排序等）的集合，这些操作定义了如何从数据库中检索或修改数据。</p>
+<p><strong>Query Optimization Phase</strong></p>
+<p>在编译阶段创建的执行计划可能不是最有效的。查询优化器的任务是找到最佳的执行计划。</p>
+<p>查询优化：优化器评估不同的执行计划，并选择成本最低（例如，执行时间最短、资源使用最少）的计划。这个选择是基于数据库的统计信息，如表的大小、索引的存在以及数据分布情况。</p>
+<p><strong>Cache Phase</strong></p>
+<p>最优的执行计划可能会被缓存以便将来重用，这样在处理相同或相似的查询时可以节省优化和编译的时间。</p>
+<p><strong>对于预处理的理解：</strong></p>
+<p>预处理指的是预先将SQL语句编译并优化，然后在实际执行时再提供具体的参数值。</p>
+<p>那么对于预处理的sql语句，只需要经历一次Parsing and Normalization Phase，SQL语句被解析为一个解析树，并进行规范化，此时占位符代替了实际的参数值。</p>
+<p>之后也会经历Compilation Phase，转换为一个内部的执行计划，但由于还没有提供参数值，所以编译生成的执行计划会考虑到各种可能的参数。</p>
+<p>在Query Optimization Phase，sql系统的优化器会为这个没有具体参数值的SQL语句生成最优的执行计划。由于没有具体的参数值，优化器可能会选择一个适用于各种可能参数的通用执行计划。</p>
+<p>进入Cache Phase，编译和优化后的执行计划会被缓存。对于预处理语句，这意味着当相同的语句需要被重复执行时，它可以直接使用缓存中的执行计划，无需重新经历解析、编译和优化阶段。</p>
+<p><strong>预处理的好处：</strong></p>
+<p>预处理语句通过使用占位符来提供参数，从而避免了SQL注入攻击的风险。参数不会被解释为SQL的一部分，因此不能改变执行计划的结构。并且预处理语句通常只需要解析、编译和优化一次，会提高程序的性能。</p>
+<p>所以本次task的目标就是利用预处理修复sql注入漏洞。</p>
+<p><strong>实验步骤：</strong></p>
+<p>登录&#x2F;defense网页，此网页具有sql注入漏洞。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/29.png" alt="29"></p>
+<p>我们对username栏进行sql注入，发现可以成功登录admin的账号。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/30.png" alt="30"></p>
+<p>查看unsafe.php源码，发现其并没有采用过滤输入或者预处理的方式来预防sql注入。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/31.png" alt="31"></p>
+<p>这使得我们很容易就可以登录任意账户。</p>
+<p>下面对unsafe.php进行修改，采用预处理的方式对sql注入进行防御。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/32.png" alt="32"></p>
+<p>保存，重新dcbuild，dcup，再次访问&#x2F;defense页面，尝试进行sql注入攻击。</p>
+<p><img src="/../img/SQL-Injection-Attack-Lab/33.png" alt="33"></p>
+<p>发现用同样的sql注入手段已经无法成功获取到admin的数据了，证明预编译成功防御了这种sql注入攻击。</p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-11-08</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/Web%E6%94%BB%E5%87%BB/'>
+                            Web攻击
+                        </a>
+                    
+                        <a href='/tags/SQLI/'>
+                            SQLI
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6-%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF/'>
+                            四川大学-网络攻防技术
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+        
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+
+    
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>

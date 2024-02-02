@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="Cross-Site Request Forgery Attack Lab" />
+    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an | </title>
+
+    
+        
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+
+            
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+ 
+            <!--注意：首页既不是post也不是page-->
+            
+        
+    
+    
+<link rel="stylesheet" href="/css/ui.css">
+ 
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    <body>
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            Cross-Site Request Forgery Attack Lab
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Cross-Site-Request-Forgery-Attack-Lab"><span class="post-toc-text">Cross-Site Request Forgery Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Posting-a-Malicious-Message-to-Display-an-Alert-Window"><span class="post-toc-text">Task1. Posting a Malicious Message to Display an Alert Window</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Posting-a-Malicious-Message-to-Display-Cookies"><span class="post-toc-text">Task2. Posting a Malicious Message to Display Cookies</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Stealing-Cookies-from-the-Victim%E2%80%99s-Machine"><span class="post-toc-text">Task3. Stealing Cookies from the Victim’s Machine</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Becoming-the-Victim%E2%80%99s-Friend"><span class="post-toc-text">Task4. Becoming the Victim’s Friend</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Modifying-the-Victim%E2%80%99s-Profile"><span class="post-toc-text">Task5. Modifying the Victim’s Profile</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-Writing-a-Self-Propagating-XSS-Worm"><span class="post-toc-text">Task6. Writing a Self-Propagating XSS Worm</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-Defeating-XSS-Attacks-Using-CSP"><span class="post-toc-text">Task7. Defeating XSS Attacks Using CSP</span></a></li></ol></li></ol></li></ol>
+        
+        <h1 id="Cross-Site-Request-Forgery-Attack-Lab"><a href="#Cross-Site-Request-Forgery-Attack-Lab" class="headerlink" title="Cross-Site Request Forgery Attack Lab"></a>Cross-Site Request Forgery Attack Lab</h1><p>跨站脚本攻击（Cross-Site Scripting，XSS）是一种常见的网络安全漏洞，攻击者利用这种漏洞向网页注入恶意脚本，然后这些脚本被浏览器执行。XSS 攻击的目标是在受害者的浏览器中执行恶意脚本，以获取用户敏感信息、窃取会话令牌或执行其他恶意操作。</p>
+<h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The objective of this lab is to help students understand the Cross-Site Request Forgery (CSRF) attack. A CSRF attack involves a victim user, a trusted site, and a malicious site. The victim user holds an activesession with a trusted site while visiting a malicious site. The malicious site injects an HTTP request for thetrusted site into the victim user session, causing damages.</p>
+<p>In this lab, students will be attacking a social networking web application using the CSRF attack. The open-source social networking application is called Elgg, which has already been installed in our VM. Elgg has countermeasures against CSRF, but we have turned them off for the purpose of this lab. This lab covers the following topics:<br>    • Cross-Site Request Forgery attack<br>    • CSRF countermeasures: Secret token and Same-site cookie<br>    • HTTP GET and POST requests<br>    • JavaScript and Ajax</p>
+</blockquote>
+<p>实验资料：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/Web/Web_CSRF_Elgg/">https://seedsecuritylabs.org/Labs_20.04/Web/Web_CSRF_Elgg/</a></p>
+<p>实验要求见实验指导PDF。</p>
+<h3 id="Task1-Posting-a-Malicious-Message-to-Display-an-Alert-Window"><a href="#Task1-Posting-a-Malicious-Message-to-Display-an-Alert-Window" class="headerlink" title="Task1. Posting a Malicious Message to Display an Alert Window"></a>Task1. Posting a Malicious Message to Display an Alert Window</h3><p>在个人主页的介绍里插入JS代码，使得其他用户在访问本用户的介绍时会弹出提示框。</p>
+<p><strong>实验步骤：</strong></p>
+<p>将弹出提示框的js代码输入profile中的brief description栏中：</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/1.png" alt="1"></p>
+<p>点击save保存，再次点击Alice主页，会发现有弹窗。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/2.png" alt="2"></p>
+<p><strong>分析：</strong></p>
+<p>攻击者将恶意JavaScript代码注入到网页内容中，然后当其他人访问包含这恶意代码的内容时，其浏览器会执行该代码。这是因为浏览器在渲染网页时会将HTML和JavaScript代码解释执行。</p>
+<h3 id="Task2-Posting-a-Malicious-Message-to-Display-Cookies"><a href="#Task2-Posting-a-Malicious-Message-to-Display-Cookies" class="headerlink" title="Task2. Posting a Malicious Message to Display Cookies"></a>Task2. Posting a Malicious Message to Display Cookies</h3><p>在本次任务中，我们要通过XSS攻击获得访问当前页面的用户的Cookie。</p>
+<p>使用document.cookie获得网页的cookie信息。</p>
+<p>实验步骤：</p>
+<p>将cookie信息通过alert函数进行弹窗展示。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/3.png" alt="3"></p>
+<p>再次访问Alice的主页，就会发现Alice的cookie显示在弹窗中。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/4.png" alt="4"></p>
+<p>换另一个用户boby尝试，发现也成功弹出boby的cookie。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/5.png" alt="5"></p>
+<p><strong>分析：</strong></p>
+<p>与task1方法相同，只是在task2中，将弹窗中的数据设置为当前用户的cookie信息。</p>
+<h3 id="Task3-Stealing-Cookies-from-the-Victim’s-Machine"><a href="#Task3-Stealing-Cookies-from-the-Victim’s-Machine" class="headerlink" title="Task3. Stealing Cookies from the Victim’s Machine"></a>Task3. Stealing Cookies from the Victim’s Machine</h3><p>在前两次实验中，都是登录的用户本人在弹窗中看到cookie等信息，而不是攻击者。在本次任务中，我们以攻击者的身份，尝试窃取合法用户的cookie。</p>
+<p>使用document.write()函数将img标签写入文档内，而img属性中制定了一个url，这会使得浏览器向该url发送http请求，以加载该图像，然而该url是攻击者构造的，其作用是将合法用户的cookie通过http请求发送到攻击者的电脑。</p>
+<p><strong>实验步骤：</strong></p>
+<p><strong>第一步：</strong>使用nc -lknv 12345命令，在本机的12345端口上监听tcp连接，并打印详细信息。</p>
+<p>-l: 这是nc的选项，表示在监听模式下运行。它告诉nc开始监听并等待来自远程计算机的连接。</p>
+<p>-k: 这是nc的选项，表示保持监听器持续运行，即使一个连接结束，也会继续等待新的连接。这对于创建一个持续监听的服务器很有用。</p>
+<p>-n: 这是nc的选项，表示不执行DNS反向解析。这有助于提高性能，因为它不会尝试查找IP地址对应的域名。</p>
+<p>-v: 这是nc的选项，表示使用详细输出模式，显示更多关于连接的信息。</p>
+<p>12345: 这是指定的监听端口号。nc将在端口12345上开始监听。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/6.png" alt="6"></p>
+<p><strong>第二步：</strong>嵌入恶意的js代码，实现通过http传输合法用户的cookie。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/7.png" alt="7"></p>
+<p><strong>第三步：</strong>访问嵌入js代码的页面，接收受害者的cookie。</p>
+<p>分别以Alice和Boby的身份对该页面进行访问，有两个http请求的头部信息，可以看见在请求行中参数c的值就是cookie，所以这两个请求头中的c值0分别就是Alice和Boby的cookie。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/8.png" alt="8"></p>
+<p><strong>分析：</strong></p>
+<p>浏览器在加载页面时会自动使用GET方法请求<img>标签中指定的URL，本意是下载目标url上的图片进而渲染在本地浏览器上。但是在本次实验中，我们将其设置为攻击者的IP地址:特定端口，将受害者的cookie作为参数，那么浏览器就会对攻击者的IP:特定端口发起http请求。攻击者若开启此端口的监听，则可以记录这次http请求的相关信息，并且可以在请求行中到这个值为cookie的参数c，以此实现cookie的盗取。</p>
+<h3 id="Task4-Becoming-the-Victim’s-Friend"><a href="#Task4-Becoming-the-Victim’s-Friend" class="headerlink" title="Task4. Becoming the Victim’s Friend"></a>Task4. Becoming the Victim’s Friend</h3><p>在本次任务中，我们需要实现一个2005年类似Samy对MySpace网站的攻击，即编写一个XSS蠕虫，使得任意访问Samy主页的用户都会添加Samy为好友。</p>
+<p>我们需要编写一段恶意的JS代码，使得受害者的浏览器在不受到我们的干预下，自动发起HTTP请求，这个HTTP请求的目的就是将用户Samy加为好友。</p>
+<p><strong>实验步骤：</strong></p>
+<ol>
+<li>登录Alice的账号，分析加Samy好友的HTTP请求。</li>
+</ol>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/9.png" alt="9"></p>
+<p>发现浏览器使用GET方法对此url进行了请求。</p>
+<p><code>http://www.seed-server.com/action/friends/add?friend=59&amp;__elgg_ts=1698738982,1698738982&amp;__elgg_token=t4PjVMeGcylMGNy44tzE5Q,t4PjVMeGcylMGNy44tzE5Q</code></p>
+<p>即浏览器对action&#x2F;friends&#x2F;add API进行请求，携带了friend, __elgg_ts, __elgg_token参数，实现添加好友的功能。</p>
+<ol start="2">
+<li>根据添加好友的HTTP请求信息构造添加好友的HTTP请求。</li>
+</ol>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/10.png" alt="10"></p>
+<ol start="3">
+<li>将构造好的js代码放置在samy个人主页中的About me中。</li>
+</ol>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/11.png" alt="11"></p>
+<ol start="4">
+<li>保存之后，使用Alice的账户登录，访问Samy的主页进行测试。</li>
+</ol>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/12.png" alt="12"></p>
+<p>刷新页面，发现已经成功添加Samy为好友了。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/13.png" alt="13"></p>
+<p><strong>分析：</strong></p>
+<p>原理仍然同前几个实验，使得受害者的浏览器执行我们插入的恶意js代码，在task3中，我们使受害者的浏览器往特定的url进行http请求。而此次我们将行动变得更有意义一些：将目标地址改为触发添加samy为好友功能的url，当受害者的浏览器执行此恶意代码后，受害者就会自动将samy添加为好友。</p>
+<p><strong>回答问题：</strong></p>
+<p><strong>问题一：代码中的ts和token有什么作用？</strong></p>
+<p><strong>答：</strong>ts应该表示time stamp，用来确保请求在某个特定的时间内生效，防止不合法的过期的请求。而token应该是用于身份验证的，确保请求来自合法的用户。在对Add功能API请求的url中必须要添加这些参数，否则无法成功。</p>
+<p><strong>问题二：如果Elgg应用对About Me区域无法开启Text mode，那这次攻击能否会成功？</strong></p>
+<p><strong>答：</strong>当然可以，因为Elgg应用的brief description栏有XSS漏洞，即使我们的js代码可能超出了brief description栏的字数限制，但是仍可以将恶意代码托管到某个服务器上，利用src属性请求js代码再执行，如下图。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/14.png" alt="14"></p>
+<h3 id="Task5-Modifying-the-Victim’s-Profile"><a href="#Task5-Modifying-the-Victim’s-Profile" class="headerlink" title="Task5. Modifying the Victim’s Profile"></a>Task5. Modifying the Victim’s Profile</h3><p>本次task的目标是：使受害者在访问Samy主页的时候，通过执行恶意js代码实现修改受害者的个人资料中的About Me内容。所以，我们会编写一个XSS蠕虫病毒来实现这个任务。（但是这个蠕虫病毒不会自传播，在task6中会实现自传播。）</p>
+<p><strong>实验步骤：</strong></p>
+<p>先探究正常修改个人资料里的About Me的HTTP请求。</p>
+<p>我们登录Alice的账号，对个人资料里的About Me进行修改提交，查看发送的HTTP请求。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/15.png" alt="15"></p>
+<p>发现浏览器对&#x2F;action&#x2F;profile&#x2F;edit API进行了HTTP请求，但是使用的是POST方法，向服务器发送我们修改的About Me中的内容。与GET方法不同的是，POST请求将请求参数放在请求的消息体中，因此不会在URL中可见。</p>
+<p>根据获取到的HTTP请求信息构造我们实施攻击的HTTP请求。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/16.png" alt="16"></p>
+<p>content 变量的内容将作为POST请求的消息体，我们构造content的内容，即可将受害者的个人资料改为我们想要的值。</p>
+<p>将构造好的恶意js代码嵌入samy的个人资料中。</p>
+<p>先在控制台中获得samy的guid，值为59。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/17.png" alt="17"></p>
+<p>然后在samy的个人资料中嵌入代码：</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/18.png" alt="18"></p>
+<p>点击保存，然后登录Alice的账号，访问Samy的个人主页。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/19.png" alt="19"></p>
+<p>查看Alice的个人主页，发现About Me确实被修改了。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/20.png" alt="20"></p>
+<p>再使用其他用户访问Samy的主页，发现也一样有效果。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/21.png" alt="21"></p>
+<p><strong>分析：</strong></p>
+<p>原理仍然同前几个实验，使得受害者的浏览器执行我们插入的恶意js代码，在task4中，我们使受害者在访问了Samy主页后会请求添加好友的API，使得受害者会自动添加Samy为好友。而在本次任务中，我们修改url，使得受害者向修改个人资料的API进行访问，并为这次HTTP请求配上合适的参数，以实现修改受害者的个人资料的目的。</p>
+<p>值得注意的是，在task4中，是用GET方法进行请求的，所以参数都在url中，而本次任务中，使用POST方法，提交的数据都位于消息体中。</p>
+<p><strong>回答问题：</strong></p>
+<p><strong>问题三：在本次的恶意的js代码中，分析下图中的代码，为什么我们需要这个if判断，如果没有的话会怎么样？</strong></p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/22.png" alt="22"></p>
+<p>这个if语句的作用就是使得Samy的个人主页免于被修改，如果没有这个if判断，那么Samy将恶意代码提交保存之后，会跳转到Samy的个人主页，这时恶意代码就会被执行，将Samy设置的恶意代码给改掉了，这样就无法实施攻击。</p>
+<p>将其删掉后的后果如下：</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/23.png" alt="23"></p>
+<p>恶意的js代码不复存在，被覆盖了。</p>
+<h3 id="Task6-Writing-a-Self-Propagating-XSS-Worm"><a href="#Task6-Writing-a-Self-Propagating-XSS-Worm" class="headerlink" title="Task6. Writing a Self-Propagating XSS Worm"></a>Task6. Writing a Self-Propagating XSS Worm</h3><p>一个真正的XSS蠕虫需要实现自传播，本次任务的目标就是使得受害者在访问了Samy的主页之后，自己的主页被篡改、自动添加Samy的好友，并且还会将XSS蠕虫复制到自己的主页上，这样其他人访问受害者主页也会像访问Samy的主页一样，同时也会复制一份XSS蠕虫。这样实现XSS蠕虫的大规模传播。</p>
+<p>实验说明文档介绍了一种可以从html网页上将恶意js代码复制一份的方法。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/24.png" alt="24"></p>
+<p>那么，我们可以通过将恶意js代码写入受害者的个人资料中，这样实现蠕虫的传播效果。</p>
+<p>（DOM）实验步骤：</p>
+<p>将恶意代码嵌入Samy的个人主页中。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/25.png" alt="25"></p>
+<p>保存之后，以Alice的账号登陆，访问Samy主页，发现浏览器的确发起了添加好友的GET请求和修改个人资料的POST请求。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/26.png" alt="26"></p>
+<p>刷新查看Alice的资料，发现也已经被修改。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/27.png" alt="27"></p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/28.png" alt="28"></p>
+<p>我们再用Boby和Charlie的账号登录，访问Alice主页，发现js代码同样生效，且Boby和Charlie的个人主页上也被植入了恶意js代码。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/29.png" alt="29"></p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/30.png" alt="30"></p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/31.png" alt="31"></p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/32.png" alt="32"></p>
+<p><strong>分析：</strong></p>
+<p>原理仍然是通过XSS漏洞让受害者执行恶意js代码，若要实现自传播功能，就要求我们将恶意js代码也复制到受害者上。我们在task5中已经实现修改受害者个人资料的功能了，所以只要将恶意js代码附加到受害者个人资料中的About Me栏中即可。</p>
+<p>值得注意的是，当在 HTTP POST 请求中发送数据并将 Content-Type 设置为 application&#x2F;x-www-form-urlencoded时，数据也应该被编码。该编码方案称为 URL 编码，它将数据中的非字母数字字符替换为 %HH、一个百分号和两个表示字符 ASCII 代码的十六进制数字。可以用encodeURIComponent()函数将其转换为URL编码。</p>
+<h3 id="Task7-Defeating-XSS-Attacks-Using-CSP"><a href="#Task7-Defeating-XSS-Attacks-Using-CSP" class="headerlink" title="Task7. Defeating XSS Attacks Using CSP"></a>Task7. Defeating XSS Attacks Using CSP</h3><p>CSP，即内容安全策略（Content Security Policy），是一种安全机制，用于帮助保护网站免受XSS和ClickJacking攻击。CSP通过定义并实施一组策略规则，限制了网页中可以加载和执行的资源来源以及允许执行的脚本，从而增强了网站的安全性。</p>
+<p>本次任务的目标就是学习利用CSP防御XSS攻击。</p>
+<p><strong>实验前分析：</strong></p>
+<p>example60|70服务器用于托管js代码文件。</p>
+<p>example32(a|b|c) 服务器托管相同的网页index.html，该网页用于演示CSP 的工作原理。在该页面中，有六个区域，area1 至area6。最初，每个区域都显示“Faild”。该页面还包括六段 JavaScript 代码，每段都试图在其相应区域写入“OK”。如果某个区域可以看到OK，则说明该区域对应的JavaScript代码已经成功执行；否则，我们会看到失败。其中，area1-3如果显示OK，那么表示代码段中的js代码执行成功；如果area4显示OK，那么表示该本机中的js代码文件被执行成功；如果area5显示OK，那么表示example60服务器上的js代码执行成功；如果area6显示OK，那么表示example70服务器上的js代码执行成功。</p>
+<p>所以我们通过修改CSP配置文件，查看example32(a|b|c)的6个area情况分析CSP是如何工作的。</p>
+<p><strong>实验步骤：</strong></p>
+<ol>
+<li>Describe and explain your observations when you visit these websites.</li>
+</ol>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/33.png" alt="33"></p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/34.png" alt="34"></p>
+<p>登录example32a.com，发现每一个area都是OK，因为没有为example32a.com设置任何的CSP。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/35.png" alt="35"></p>
+<p>登录example32b.com发现只有self和example70服务器上的js代码被执行了，查看配置文件发现刚好与之对应。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/36.png" alt="36"></p>
+<p>登录example32c.com发现1，4，6area显示为OK。example32c的CSP配置并没有像example32a|b那样写在apache_csp.conf文件中，但是example32c的入口点为phpindex.php，所以example32c的CSP配置是在phpindex.php中实现的。</p>
+<p>因为，CSP由web服务器设置为HTTP标头。有两种典型的设置标头的方法，一种是由web服务器（如Apache）设置，另一种是通过web应用程序设置。example32a|b就是前者，example32c就是后者。</p>
+<ol start="2">
+<li>Click the button in the web pages from all the three websites, describe and explain your observations.</li>
+</ol>
+<p>只有example32a.com的按钮才有效，即下面的js代码只有在example32a服务器上才能被执行。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/37.png" alt="37"></p>
+<p>因为example32b|c都设定了js代码的“白名单”，而上面的按钮对应的js代码并不在其中，所以在example32b|c服务器上点击按钮没有反应。</p>
+<ol start="3">
+<li>Change the server configuration on example32b (modify the Apache configuration), so Areas 5 and 6 display OK. Please include your modified configuration in the lab report.</li>
+</ol>
+<p>我们修改apach_csp.conf，再重新dcbuild重开即可。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/38.png" alt="38"></p>
+<ol start="4">
+<li>Change the server configuration on example32c (modify the PHP code), so Areas 1, 2, 4, 5, and 6 all display OK. Please include your modified configuration in the lab report.</li>
+</ol>
+<p>根据要求修改phpindex.php文件然后再重新dcbuild重开即可。</p>
+<p><img src="/../img/Cross-Site-Request-Forgery-Attack-Lab-2/39.png" alt="39"></p>
+<ol start="5">
+<li>Please explain why CSP can help prevent Cross-Site Scripting attacks.</li>
+</ol>
+<p>CSP可以严格控制哪些js代码可以被执行，而XSS攻击就是要让受害者的浏览器执行特定的恶意js代码，如果此恶意js代码不再CSP允许的范围内，那么它就不会被执行，所以XSS攻击会失败。</p>
+<p>所以，CSP就像是一个白名单政策，只让受信任的js代码被执行。</p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2023-11-01</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/Web%E6%94%BB%E5%87%BB/'>
+                            Web攻击
+                        </a>
+                    
+                        <a href='/tags/XSS/'>
+                            XSS
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6-%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF/'>
+                            四川大学-网络攻防技术
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2023 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+        
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
+
+        
+<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+
+    
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+                </div>
+            
+    </body>
+</html>
