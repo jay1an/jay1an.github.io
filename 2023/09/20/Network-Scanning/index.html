@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
     <meta name="description" content="Network Scanning" />
-    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <meta name="hexo-theme-A4" content="v1.8.2" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
-    <title>Jay1an | </title>
+    <title>Jay1an</title>
 
     
         
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
 
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+        
+<link rel="stylesheet" href="/css/reset.css">
 
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
  
-            <!--注意：首页既不是post也不是page-->
-            
+         <!--注意：首页既不是post也不是page-->
         
-    
-    
+        
+        
 <link rel="stylesheet" href="/css/ui.css">
  
-    
+        
 <link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+    
 
 <meta name="generator" content="Hexo 6.3.0"></head>
     
+    
     <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
         <div class="paper">
             
             
@@ -92,7 +119,9 @@
 
     <div class="post-md">
         
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Network-Scanning"><span class="post-toc-text">Network-Scanning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ICMP-Protocol"><span class="post-toc-text">ICMP-Protocol</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F"><span class="post-toc-text">主机扫描</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sL%EF%BC%8C%E5%88%97%E8%A1%A8%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sL，列表扫描</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sP%EF%BC%8C%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sP，端口扫描</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#P0%EF%BC%8C%E6%97%A0ping"><span class="post-toc-text">-P0，无ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PS%EF%BC%8CTCP-SYN-Ping"><span class="post-toc-text">-PS，TCP SYN Ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PA%EF%BC%8CTCP-ACK-Ping"><span class="post-toc-text">-PA，TCP ACK Ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E6%89%AB%E6%8F%8F%E6%96%B9%E6%B3%95"><span class="post-toc-text">其他扫描方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">端口扫描</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%8A%80%E6%9C%AF"><span class="post-toc-text">端口扫描技术</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sS%EF%BC%8CTCP-SYN%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sS，TCP SYN扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sT%EF%BC%8CTCP-connect-%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sT，TCP connect()扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sU%EF%BC%8CUDP%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sU，UDP扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sN-sF-sX%EF%BC%8CTCP-Null%EF%BC%8CFIN%EF%BC%8CXmas%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sN; -sF; -sX，TCP Null，FIN，Xmas扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sA%EF%BC%8CTCP-ACK%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sA，TCP ACK扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sW%EF%BC%8CTCP%E7%AA%97%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sW，TCP窗口扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E2%80%93scanflags-%E5%AE%9A%E5%88%B6TCP%E6%89%AB%E6%8F%8F"><span class="post-toc-text">–scanflags 定制TCP扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%85%B6%E4%BD%99%E7%9A%84%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%8A%80%E6%9C%AF"><span class="post-toc-text">其余的端口扫描技术</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Nmap%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="post-toc-text">Nmap其他功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li></ol></li></ol>
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Network-Scanning"><span class="post-toc-text">Network-Scanning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ICMP-Protocol"><span class="post-toc-text">ICMP-Protocol</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F"><span class="post-toc-text">主机扫描</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sL%EF%BC%8C%E5%88%97%E8%A1%A8%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sL，列表扫描</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sP%EF%BC%8C%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sP，端口扫描</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#P0%EF%BC%8C%E6%97%A0ping"><span class="post-toc-text">-P0，无ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PS%EF%BC%8CTCP-SYN-Ping"><span class="post-toc-text">-PS，TCP SYN Ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PA%EF%BC%8CTCP-ACK-Ping"><span class="post-toc-text">-PA，TCP ACK Ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E6%89%AB%E6%8F%8F%E6%96%B9%E6%B3%95"><span class="post-toc-text">其他扫描方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">端口扫描</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%8A%80%E6%9C%AF"><span class="post-toc-text">端口扫描技术</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sS%EF%BC%8CTCP-SYN%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sS，TCP SYN扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sT%EF%BC%8CTCP-connect-%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sT，TCP connect()扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sU%EF%BC%8CUDP%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sU，UDP扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sN-sF-sX%EF%BC%8CTCP-Null%EF%BC%8CFIN%EF%BC%8CXmas%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sN; -sF; -sX，TCP Null，FIN，Xmas扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sA%EF%BC%8CTCP-ACK%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sA，TCP ACK扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sW%EF%BC%8CTCP%E7%AA%97%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sW，TCP窗口扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E2%80%93scanflags-%E5%AE%9A%E5%88%B6TCP%E6%89%AB%E6%8F%8F"><span class="post-toc-text">–scanflags 定制TCP扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%85%B6%E4%BD%99%E7%9A%84%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%8A%80%E6%9C%AF"><span class="post-toc-text">其余的端口扫描技术</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Nmap%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="post-toc-text">Nmap其他功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li></ol></li></ol>
+            
         
         <h2 id="Network-Scanning"><a href="#Network-Scanning" class="headerlink" title="Network-Scanning"></a>Network-Scanning</h2><p>网络扫描对于侵、维护都十分重要，是信息收集工作的一部分。</p>
 <p>通过网络扫描我们可以知道主机的开放情况、主机端口的开放情况、是否采用防火墙等。</p>
@@ -514,6 +543,7 @@ if __name__ == &#39;__main__&#39;:
 
 
 
+                                      
                     
                     
                     <div class="footer">
@@ -537,24 +567,57 @@ if __name__ == &#39;__main__&#39;:
 </div>
 
 
+   
     
-        
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
-
-        
-<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
-
-        
-<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+<script src="/js/highlight.min.js"></script>
 
     
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
 
 
 <script>
     hljs.initHighlightingOnLoad();
     hljs.initLineNumbersOnLoad();
 </script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
                 </div>
             
     </body>
+
+
 </html>

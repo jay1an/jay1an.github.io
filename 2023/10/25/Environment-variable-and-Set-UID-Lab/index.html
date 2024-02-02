@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+    
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
     <meta name="description" content="Environment variable and Set-UID Lab" />
-    <meta name="hexo-theme-A4" content="v1.7.0" />
+    <meta name="hexo-theme-A4" content="v1.8.2" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
-    <title>Jay1an | </title>
+    <title>Jay1an</title>
 
     
         
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/reset.css">
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
 
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/markdown.css">
+        
+<link rel="stylesheet" href="/css/reset.css">
 
-            
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/fonts.css">
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
  
-            <!--注意：首页既不是post也不是page-->
-            
+         <!--注意：首页既不是post也不是page-->
         
-    
-    
+        
+        
 <link rel="stylesheet" href="/css/ui.css">
  
-    
+        
 <link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+    
 
 <meta name="generator" content="Hexo 6.3.0"></head>
     
+    
     <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
         <div class="paper">
             
             
@@ -92,7 +119,9 @@
 
     <div class="post-md">
         
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Environment-Variable-and-Set-UID-Lab"><span class="post-toc-text">Environment Variable and Set-UID Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="post-toc-text">环境变量</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Set-UID"><span class="post-toc-text">Set-UID</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Manipulating-Environment-Variables"><span class="post-toc-text">Task1. Manipulating Environment Variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Passing-Environment-Variables-from-Parent-Process-to-Child-Process"><span class="post-toc-text">Task2. Passing Environment Variables from Parent Process to Child Process</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Enviroment-Variables-and-execve"><span class="post-toc-text">Task3. Enviroment Variables and execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Environment-Varibales-and-systems"><span class="post-toc-text">Task4. Environment Varibales and systems()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task5. Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-The-PATH-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task6. The PATH Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-The-LD-PRELOAD-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task7. The LD PRELOAD Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task8-Invoking-External-Programs-Using-system-versus-execve"><span class="post-toc-text">Task8. Invoking External Programs Using system() versus execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task9-Capability-Leaking"><span class="post-toc-text">Task9. Capability Leaking</span></a></li></ol></li></ol></li></ol>
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Environment-Variable-and-Set-UID-Lab"><span class="post-toc-text">Environment Variable and Set-UID Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="post-toc-text">环境变量</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Set-UID"><span class="post-toc-text">Set-UID</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Manipulating-Environment-Variables"><span class="post-toc-text">Task1. Manipulating Environment Variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Passing-Environment-Variables-from-Parent-Process-to-Child-Process"><span class="post-toc-text">Task2. Passing Environment Variables from Parent Process to Child Process</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Enviroment-Variables-and-execve"><span class="post-toc-text">Task3. Enviroment Variables and execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Environment-Varibales-and-systems"><span class="post-toc-text">Task4. Environment Varibales and systems()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task5. Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-The-PATH-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task6. The PATH Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-The-LD-PRELOAD-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task7. The LD PRELOAD Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task8-Invoking-External-Programs-Using-system-versus-execve"><span class="post-toc-text">Task8. Invoking External Programs Using system() versus execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task9-Capability-Leaking"><span class="post-toc-text">Task9. Capability Leaking</span></a></li></ol></li></ol></li></ol>
+            
         
         <h1 id="Environment-Variable-and-Set-UID-Lab"><a href="#Environment-Variable-and-Set-UID-Lab" class="headerlink" title="Environment Variable and Set-UID Lab"></a>Environment Variable and Set-UID Lab</h1><h5 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h5><p><strong>环境变量 (Environment Variables)</strong> 是在操作系统中存储配置信息和系统状态的动态值。它们为操作系统和应用程序提供了一种在运行时传递信息的方式。每个进程都可以有自己的环境变量，允许它们在不同的上下文中运行。</p>
 <p>例：</p>
@@ -339,6 +368,7 @@
 
 
 
+                                      
                     
                     
                     <div class="footer">
@@ -362,24 +392,57 @@
 </div>
 
 
+   
     
-        
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/a11y-dark.min.css">
-
-        
-<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlight.min.js"></script>
-
-        
-<script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/highlightjs-line-numbers.js"></script>
+<script src="/js/highlight.min.js"></script>
 
     
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
 
 
 <script>
     hljs.initHighlightingOnLoad();
     hljs.initLineNumbersOnLoad();
 </script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
                 </div>
             
     </body>
+
+
 </html>
