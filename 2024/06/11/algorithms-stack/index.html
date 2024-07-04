@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta name="description" content="Stack" />
+    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+    
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+    
+    
+    <body>
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            Stack
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%A0%88"><span class="post-toc-text">基础算法 - 栈</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LeetCode-%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">LeetCode 相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">20. 有效的括号 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#155-%E6%9C%80%E5%B0%8F%E6%A0%88-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">155. 最小栈 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#394-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E7%A0%81-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">394. 字符串解码 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">739. 每日温度 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#496-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0-I-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">496. 下一个更大元素 I - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#503-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0-II-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">503. 下一个更大元素 II - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#556-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0-III-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">556. 下一个更大元素 III - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#31-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">31. 下一个排列 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">84. 柱状图中最大的矩形 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#316-%E5%8E%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E5%AD%97%E6%AF%8D-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">316. 去除重复字母 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#402-%E7%A7%BB%E6%8E%89-K-%E4%BD%8D%E6%95%B0%E5%AD%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">402. 移掉 K 位数字 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1019-%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E8%8A%82%E7%82%B9-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">1019. 链表中的下一个更大节点 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <h1 id="基础算法-栈"><a href="#基础算法-栈" class="headerlink" title="基础算法 - 栈"></a>基础算法 - 栈</h1><p>在计算机科学中，数据结构是算法和程序设计的基石。栈（Stack）作为其中一种重要的数据结构，以其独特的“后进先出”（Last In First Out, LIFO）特性，在各种应用中扮演着关键角色。从函数调用栈到表达式求值，栈的应用无处不在。</p>
+<p>在开始之前，我们先来回顾一下栈的定义和特点。栈是一种线性数据结构，具有以下两个主要操作：</p>
+<ol>
+<li><strong>压栈（Push）</strong>：将元素添加到栈的顶端。</li>
+<li><strong>弹栈（Pop）</strong>：移除并返回栈顶元素。</li>
+</ol>
+<p>通过这些基本操作，栈能够高效地管理数据的存取顺序。接下来，我们将详细介绍栈的实现方法和应用场景。</p>
+<p>此篇记录使用栈解题的思路。</p>
+<h2 id="LeetCode-相关题目"><a href="#LeetCode-相关题目" class="headerlink" title="LeetCode 相关题目"></a>LeetCode 相关题目</h2><h3 id="20-有效的括号-力扣（LeetCode）"><a href="#20-有效的括号-力扣（LeetCode）" class="headerlink" title="20. 有效的括号 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked">20. 有效的括号 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<pre><code class="java">class Solution &#123;
+    public boolean isValid(String s) &#123;
+        LinkedList&lt;Character&gt; stack = new LinkedList&lt;&gt;();
+        
+        char[] sChars = s.toCharArray();
+        
+        for(char ch: sChars)&#123;
+            if(stack.isEmpty())&#123;   // 如果当前栈为空，入栈的是下面这三个闭合括号，直接返回false
+                if(ch==&#39;)&#39;||ch==&#39;]&#39;||ch==&#39;&#125;&#39;)
+                    return false;
+                else
+                    stack.push(ch);
+            &#125;else&#123;
+                char peek = stack.peek();   // 相同的相互抵消
+                if(ch==&#39;)&#39;&amp;&amp;peek==&#39;(&#39;)
+                    stack.pop();
+                else if(ch==&#39;]&#39;&amp;&amp;peek==&#39;[&#39;)
+                    stack.pop();
+                else if(ch==&#39;&#125;&#39;&amp;&amp;peek==&#39;&#123;&#39;)
+                    stack.pop();
+                else stack.push(ch);
+            &#125;
+        &#125;
+        if(stack.isEmpty())
+            return true;
+        else return false;
+    &#125;
+&#125;
+</code></pre>
+<p><strong>为什么使用栈？</strong></p>
+<p>栈的特点使得它非常适合处理成对出现的匹配问题。具体来说：</p>
+<ol>
+<li><strong>后进先出（LIFO）</strong>：当我们遇到一个闭括号时，我们需要检查最近的一个开括号是否与之匹配。这正是栈的后进先出性质能够完美实现的功能。我们可以通过弹出栈顶元素来检查匹配情况。</li>
+<li><strong>开括号和闭括号的顺序</strong>：栈能帮助我们记录未匹配的开括号，当遇到闭括号时，直接检查栈顶的开括号是否匹配。如果匹配，则弹出栈顶元素，表示这一对括号已经匹配。</li>
+</ol>
+<h3 id="155-最小栈-力扣（LeetCode）"><a href="#155-最小栈-力扣（LeetCode）" class="headerlink" title="155. 最小栈 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-100-liked">155. 最小栈 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<pre><code class="java">class MinStack &#123;
+    
+    LinkedList&lt;Integer&gt; stack;
+    LinkedList&lt;Integer&gt; min;
+    
+    public MinStack() &#123;  // 初始化
+        stack = new LinkedList&lt;&gt;();
+        min = new LinkedList&lt;&gt;();
+    &#125;
+    
+    public void push(int val) &#123;
+        stack.push(val);
+        if(min.isEmpty())&#123;
+            min.push(val);
+        &#125;else&#123;
+            int peek = min.peek();   // min栈顶同步更新stack中最小值
+            if(peek&lt;val)&#123;
+                min.push(peek);
+            &#125;else&#123;
+                min.push(val);
+            &#125;
+        &#125;
+    &#125;
+    
+    public void pop() &#123;
+        stack.pop();
+        min.pop();
+    &#125;
+    
+    public int top() &#123;
+        return stack.peek();
+    &#125;
+    
+    public int getMin() &#123;  // 直接从min栈中取即可
+        return min.peek();
+    &#125;
+&#125;
+</code></pre>
+<p>为了在常数时间内获取最小值，我们引入了一个辅助栈 <code>min</code>。辅助栈 <code>min</code> 的每个元素对应于主栈 <code>stack</code> 中的元素，使得 <code>min</code> 栈顶始终保持当前栈的最小值。因此，通过同步更新 <code>min</code> 栈，我们可以在 <code>O(1)</code> 时间复杂度内获取栈中的最小值。</p>
+<h3 id="394-字符串解码-力扣（LeetCode）"><a href="#394-字符串解码-力扣（LeetCode）" class="headerlink" title="394. 字符串解码 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/decode-string/?envType=study-plan-v2&envId=top-100-liked">394. 字符串解码 - 力扣（LeetCode）</a></h3><p>难度：中等（中等偏上）</p>
+<p>嵌套括号是本题的难点</p>
+<pre><code class="java">class Solution &#123;
+    
+    LinkedList&lt;String&gt; Sstack; // 存储字符串的栈
+    LinkedList&lt;Integer&gt; Istack; // 存储倍数的栈
+    String tmp = &quot;&quot;; // 临时存储当前的子字符串
+    int k = 0; // 临时存储当前的倍数
+
+    public String decodeString(String s) &#123;
+        Sstack = new LinkedList&lt;&gt;();
+        Istack = new LinkedList&lt;&gt;();
+
+        for (char ch : s.toCharArray()) &#123;
+            if (Character.isDigit(ch)) &#123; // 如果是数字
+                k = k * 10 + ch - &#39;0&#39;; // 计算倍数
+            &#125; else if (ch == &#39;[&#39;) &#123; // 遇到 &#39;[&#39;，保存状态
+                Istack.push(k); // 保存当前倍数
+                k = 0; // 重置倍数
+                Sstack.push(tmp); // 保存当前字符串
+                tmp = &quot;&quot;; // 重置当前字符串
+            &#125; else if (ch == &#39;]&#39;) &#123; // 遇到 &#39;]&#39;
+                StringBuffer sb = new StringBuffer(Sstack.pop()); // 取出之前保存的字符串
+                int times = Istack.pop(); // 取出倍数
+                for (int i = 0; i &lt; times; i++) &#123;
+                    sb.append(tmp); // 拼接当前子字符串多次
+                &#125;
+                tmp = sb.toString(); // 更新当前字符串
+            &#125; else &#123; // 普通字符，直接累加到当前字符串
+                tmp += ch;
+            &#125;
+        &#125;
+        return tmp; // 返回最终解码后的字符串
+    &#125;
+&#125;
+</code></pre>
+<p><img src="/../img/basic_algorithms/e7c91ad3adf0af47d98f38be9ad1541b.jpg" alt="e7c91ad3adf0af47d98f38be9ad1541b"></p>
+<p><strong>为什么用栈</strong></p>
+<p>在处理嵌套的结构（如括号中的括号）时，栈是一种非常自然且有效的数据结构。对于这道题目，使用栈的关键作用如下：</p>
+<ol>
+<li><strong>处理嵌套结构</strong>：栈的后进先出（LIFO）特性非常适合处理嵌套的括号结构。在遇到 <code>[</code> 时，我们将当前的状态（当前字符串和当前的数字）入栈，以便在遇到 <code>]</code> 时能够恢复并继续处理。</li>
+<li><strong>保存状态</strong>：当遇到 <code>[</code> 时，我们需要保存当前的字符串和倍数，因为接下来的内容是一个新的子字符串，直到遇到对应的 <code>]</code> 才会结束。使用栈可以方便地保存和恢复这些状态。</li>
+<li><strong>简化操作</strong>：通过栈，我们可以很方便地进行字符串的累积和倍数的计算，不需要额外的复杂数据结构或逻辑。</li>
+</ol>
+<h3 id="739-每日温度-力扣（LeetCode）"><a href="#739-每日温度-力扣（LeetCode）" class="headerlink" title="739. 每日温度 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/daily-temperatures/?envType=study-plan-v2&envId=top-100-liked">739. 每日温度 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<pre><code class="java">class Solution &#123;
+    public int[] dailyTemperatures(int[] temperatures) &#123;
+        int len = temperatures.length;
+        int[] res =  new int[len];
+        // stack
+        LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();
+        int p = 0;
+        while(p&lt;len)&#123;
+            if(stack.isEmpty())&#123;
+                stack.push(p);
+                p++;
+            &#125;else&#123;
+                // 使得这个栈的，栈底&gt;栈顶
+                if(temperatures[stack.peek()]&gt;=temperatures[p]) &#123;
+                    stack.push(p);
+                    p++;
+                &#125;else&#123;
+                    // 如果新的大元素来了，依次pop，并更新res数组
+                    while (!stack.isEmpty()&amp;&amp;temperatures[stack.peek()]&lt;temperatures[p])&#123;
+                        int tmp = stack.pop();
+                        res[tmp] = p-tmp;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+        return res;
+    &#125;
+&#125;
+</code></pre>
+<p>这个题挺简单的，就是利用栈的特性，维护一个从栈底到栈顶是 大-&gt;小的顺序，如果新来的下一个元素比当前的栈顶大，那么就依次pop，pop的同时更新res数组，因为这个新来的大元素就是栈中小元素的”下一个”大元素。</p>
+<p>为了方便起见，我们在栈中存放的是index</p>
+<h3 id="496-下一个更大元素-I-力扣（LeetCode）"><a href="#496-下一个更大元素-I-力扣（LeetCode）" class="headerlink" title="496. 下一个更大元素 I - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-i/description/">496. 下一个更大元素 I - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<pre><code class="java">class Solution &#123;
+    public int[] nextGreaterElement(int[] nums1, int[] nums2) &#123;
+        LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();
+        int[] help = new int[10001];
+        // help[i]=j表示，值为i的元素下一个更大的是j，如果没有下一个更大的，那么j为0
+        // 维护栈：栈底 &gt; 栈顶
+        for(int i=0;i&lt;nums2.length;i++)&#123;
+            if(!stack.isEmpty())&#123;
+                int peek = stack.peek();
+                while(peek&lt;nums2[i])&#123;
+                    help[stack.pop()] = nums2[i];
+                    if(stack.isEmpty()) break;
+                    peek = stack.peek();
+                &#125;
+            &#125;
+            stack.push(nums2[i]);
+        &#125;
+        // 根据help数组中的值得到最终返回数组res
+        int[] res = new int[nums1.length];
+        for(int i=0;i&lt;nums1.length;i++)&#123;
+            res[i] = (help[nums1[i]]==0)?-1:help[nums1[i]];
+        &#125;
+        return res;
+    &#125;
+&#125;
+</code></pre>
+<p>这一题与 [每日温度](#<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/daily-temperatures/?envType=study-plan-v2&envId=top-100-liked">739. 每日温度 - 力扣（LeetCode）</a>) 很像，都是通过维护单调栈得到下一个更大的元素的值或者下标。</p>
+<h3 id="503-下一个更大元素-II-力扣（LeetCode）"><a href="#503-下一个更大元素-II-力扣（LeetCode）" class="headerlink" title="503. 下一个更大元素 II - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-ii/">503. 下一个更大元素 II - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<p>与 [下一个更大元素 Ⅰ](#<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-i/description/">496. 下一个更大元素 I - 力扣（LeetCode）</a>) 相比，这里的数组是循环数组，这意味着最后一个元素的下一个是第一个元素。所以，进行两次数组的出栈入栈操作即可。</p>
+<pre><code class="java">class Solution &#123;
+    public int[] nextGreaterElements(int[] nums) &#123;
+        int n = nums.length;
+        int[] result = new int[n];
+        Arrays.fill(result, -1); // 初始化结果数组，默认为 -1
+        Stack&lt;Integer&gt; stack = new Stack&lt;&gt;(); // 栈用于存储索引
+        
+        // 遍历数组，找出每个元素的下一个更大元素
+        for (int i = 0; i &lt; n; i++) &#123;
+            while (!stack.isEmpty() &amp;&amp; nums[stack.peek()] &lt; nums[i]) &#123;
+                result[stack.pop()] = nums[i]; // 更新结果数组中相应位置的值
+            &#125;
+            stack.push(i); // 当前索引入栈x
+        &#125;
+        
+        // 再次遍历数组，处理循环数组的情况
+        for (int i = 0; i &lt; n; i++) &#123;
+            while (!stack.isEmpty() &amp;&amp; nums[stack.peek()] &lt; nums[i]) &#123;
+                result[stack.pop()] = nums[i]; // 更新结果数组中相应位置的值
+            &#125;
+        &#125;
+        
+        return result; // 返回结果数组
+    &#125;
+&#125;
+</code></pre>
+<h3 id="556-下一个更大元素-III-力扣（LeetCode）"><a href="#556-下一个更大元素-III-力扣（LeetCode）" class="headerlink" title="556. 下一个更大元素 III - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-iii/description/">556. 下一个更大元素 III - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<p>这个题与栈没关系了。更像 [下一个排列](#<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-permutation/description/">31. 下一个排列 - 力扣（LeetCode）</a>)</p>
+<pre><code class="java">class Solution &#123;
+    public int nextGreaterElement(int n) &#123;
+        char[] con = Integer.toString(n).toCharArray();
+        int len = con.length;
+        int p = len-1;
+        for(;p&gt;=1;p--)&#123;
+            if(con[p-1]&lt;con[p])break;
+        &#125;
+        // 表明全是降序
+        if(p==0)return -1;
+        // 寻找交换的数
+        int q = len-1;
+        for(;q&gt;=p;q--)&#123;
+            if(con[q]&gt;con[p-1])break;
+        &#125;
+        // swap
+        char tmp = con[q];
+        con[q] = con[p-1];
+        con[p-1] = tmp;
+        // reverse
+        reverse(con,p,len-1);
+        
+        System.out.println(Arrays.toString(con));
+        long ans =  Long.parseLong(String.valueOf(con));
+        if(ans&gt;Integer.MAX_VALUE) return -1;  // 不满足32位整数也返回-1
+        return (int)ans;
+    &#125;
+
+    private void reverse(char[] con,int start,int end)&#123;
+        for(int i=start,j=end;i&lt;j;i++,j--)&#123;
+            char tmp = con[i];
+            con[i] = con[j];
+            con[j] = tmp;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h3 id="31-下一个排列-力扣（LeetCode）"><a href="#31-下一个排列-力扣（LeetCode）" class="headerlink" title="31. 下一个排列 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-permutation/description/">31. 下一个排列 - 力扣（LeetCode）</a></h3><p><strong>数组 双指针</strong></p>
+<p>主要还是弄懂题目的解法步骤，如何去拆分成可以被程序表达的步骤</p>
+<p><img src="/../img/basic_algorithms/image-20240523111929453.png" alt="image-20240523111929453"></p>
+<pre><code class="java">class Solution &#123;
+    public void nextPermutation(int[] nums) &#123;
+        int len = nums.length;
+        int p = len-1;
+        for(;p&gt;=1;p--)&#123;
+            if(nums[p-1]&lt;nums[p])break;
+        &#125;
+        // 如果p==0表明nums全是降序的
+        if(p==0)&#123;
+            reverse(nums,0,len-1);
+            return;
+        &#125;
+        int q=len-1;
+        for(;q&gt;p-1;q--)&#123;
+            if(nums[p-1]&lt;nums[q])break;
+        &#125;
+        //swap
+        int tmp = nums[p-1];
+        nums[p-1] = nums[q];
+        nums[q] = tmp;
+        // reverse
+        reverse(nums,p,len-1);
+        return;
+    &#125;
+
+    private void reverse(int[] nums,int start,int end)&#123;
+        for(int i=start,j=end;i&lt;j;i++,j--)&#123;
+            int tmp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = tmp;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p><img src="/../img/basic_algorithms/image-20240523111941751.png" alt="image-20240523111941751"></p>
+<h3 id="84-柱状图中最大的矩形-力扣（LeetCode）"><a href="#84-柱状图中最大的矩形-力扣（LeetCode）" class="headerlink" title="84. 柱状图中最大的矩形 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/largest-rectangle-in-histogram/description/?envType=study-plan-v2&envId=top-100-liked">84. 柱状图中最大的矩形 - 力扣（LeetCode）</a></h3><p>难度：困难</p>
+<pre><code class="java">class Solution &#123;
+    public int largestRectangleArea(int[] heights) &#123;
+        LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();   // stack中存放索引
+        stack.push(-1);  // 第一个哨兵进栈
+        int res = Integer.MIN_VALUE;
+        
+        for(int i=0;i&lt;=heights.length;i++)&#123;
+            int cur;
+            if(i!=heights.length)&#123;   // 最后一个哨兵
+                cur = heights[i];
+            &#125;else&#123;
+                cur = -1;
+            &#125;
+            int peekIdx = stack.peek();
+            int peek;
+            if(peekIdx!=-1)&#123;  
+                peek = heights[peekIdx];
+            &#125;else&#123; 
+                peek = -1;  // 如果当前是哨兵索引
+            &#125;
+            while(peek&gt;cur)&#123;
+                stack.pop();
+                int h = peek;
+                int w = i - stack.peek() - 1;
+                res = Math.max(h*w,res);
+                peekIdx = stack.peek();
+                if(peekIdx!=-1)&#123;
+                    peek = heights[peekIdx];
+                &#125;else&#123;
+                    peek = -1;
+                &#125;
+            &#125;
+            stack.push(i);
+        &#125;
+        return res;
+    &#125;
+&#125;
+</code></pre>
+<p>维护一个<strong>单调栈</strong>，栈底 &lt;&lt; 栈顶，当有新的值要入栈时，如果新的值比当前栈顶的值小，那么就计算<strong>以当前栈顶高度为高的最大矩形面积</strong>，<strong>宽就为当前值的索引 减去 当前栈顶弹出后新栈顶的值(这个索引对应的高度一定小于当前栈顶，所以这里是这个高度所能向左边延申的边界) 再减 1</strong></p>
+<p>所以该题关键是找到某个高度能延申的左右边界，以高度为单位求最大矩形面积。</p>
+<h3 id="316-去除重复字母-力扣（LeetCode）"><a href="#316-去除重复字母-力扣（LeetCode）" class="headerlink" title="316. 去除重复字母 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicate-letters/description/">316. 去除重复字母 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<pre><code class="java">class Solution &#123;
+    public String removeDuplicateLetters(String s) &#123;
+        int[] count = new int[26]; // 用于记录每个字母的出现次数
+        for (char ch : s.toCharArray()) &#123;
+            count[ch - &#39;a&#39;]++; // 计算每个字母的出现次数
+        &#125;
+
+        boolean[] flag = new boolean[26]; // 用于标记字母是否已经在栈中
+        
+        LinkedList&lt;Character&gt; stack = new LinkedList&lt;&gt;(); // 用于构建结果的单调栈
+        
+        for (char ch : s.toCharArray()) &#123;
+            if (!flag[ch - &#39;a&#39;]) &#123; // 如果当前字母还没有被加入到最终结果中
+                while (!stack.isEmpty() &amp;&amp; stack.peek() &gt; ch &amp;&amp; count[stack.peek() - &#39;a&#39;] &gt; 0) &#123;
+                    flag[stack.pop() - &#39;a&#39;] = false; // 将那些比当前字母大且后续还会出现的字母从栈中移除
+                &#125;
+                stack.push(ch); // 将当前字母加入栈中
+                flag[ch - &#39;a&#39;] = true; // 标记当前字母已被加入栈中
+            &#125;
+            count[ch - &#39;a&#39;]--; // 当前字母的剩余数量减一
+        &#125;
+        
+        StringBuilder res = new StringBuilder(); // 用于构建最终结果字符串
+        while (!stack.isEmpty()) &#123;
+            res.append(stack.removeLast()); // 从栈底开始构建最终结果
+        &#125;
+        
+        return res.toString(); // 返回最终结果
+    &#125;
+&#125;
+</code></pre>
+<p>维护单调栈，但是这个题维护单调栈有一些<strong>额外的要求，比如说每个不同的字母只能出现一次（flag数组辅助），还要保证必须出现一次，即不能错过这个字母（count数组辅助）。</strong></p>
+<h3 id="402-移掉-K-位数字-力扣（LeetCode）"><a href="#402-移掉-K-位数字-力扣（LeetCode）" class="headerlink" title="402. 移掉 K 位数字 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-k-digits/description/">402. 移掉 K 位数字 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<pre><code class="java">class Solution &#123;
+    public String removeKdigits(String num, int k) &#123;
+        int len = num.length();
+        if(k&gt;=len)return &quot;0&quot;;
+        
+        LinkedList&lt;Character&gt; stack = new LinkedList&lt;&gt;();
+        
+        int cnt = 0;  // 表示当前移除了多少位数字了
+        
+        for(char ch : num.toCharArray())&#123;
+            while(!stack.isEmpty()&amp;&amp;stack.peek()&gt;ch&amp;&amp;cnt&lt;k)&#123;
+                stack.pop();
+                cnt++;
+            &#125;
+            stack.push(ch);
+        &#125;
+        
+        // 避免cnt&lt;k
+        for(;cnt&lt;k;cnt++)&#123;
+            stack.pop();
+        &#125;
+        
+        // 清除前置0
+        while(!stack.isEmpty()&amp;&amp;stack.getLast()==&#39;0&#39;)&#123;
+            stack.removeLast();
+        &#125;
+        
+        // 组装最后的res
+        String res = &quot;&quot;;
+        while(!stack.isEmpty())&#123;
+            res += stack.removeLast();
+        &#125;
+        
+        return (res==&quot;&quot;)?&quot;0&quot;:res;
+        
+    &#125;
+&#125;
+</code></pre>
+<p>用数组模拟栈，stack中存放索引，这样可以使得代码运行更快。</p>
+<pre><code class="java">class Solution &#123;
+    public String removeKdigits(String num, int k) &#123;
+        int len = num.length();
+        if(k&gt;=len)return &quot;0&quot;;
+        
+        int[] stack = new int[len];
+        int top = -1;
+        char[] con = num.toCharArray();
+        
+        for(int i=0;i&lt;len;i++)&#123;
+            while(top!=-1&amp;&amp;con[stack[top]]&gt;con[i]&amp;&amp;k&gt;0)&#123;
+                k--;
+                top--;
+            &#125;
+            top++;
+            stack[top] = i;
+        &#125;
+        
+        // 用掉可能多余的k
+        top -= k;
+        
+        // 去除前置0
+        int start = 0;
+        for(;start&lt;=top;start++)&#123;
+            if(con[stack[start]]==&#39;0&#39;)
+                continue;
+            else
+                break;
+        &#125;
+        if(start&gt;top)
+            return &quot;0&quot;;
+        
+        StringBuffer sb =new StringBuffer();
+        for(int i=start;i&lt;=top;i++)&#123;
+            sb.append(con[stack[i]]);
+        &#125;
+        return sb.toString();
+        
+        
+    &#125;
+&#125;
+</code></pre>
+<p>该题也是在维护单调栈的同时要满足一些要求，比如说规定了从栈中pop出的元素的数量。</p>
+<h3 id="1019-链表中的下一个更大节点-力扣（LeetCode）"><a href="#1019-链表中的下一个更大节点-力扣（LeetCode）" class="headerlink" title="1019. 链表中的下一个更大节点 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-node-in-linked-list/description/">1019. 链表中的下一个更大节点 - 力扣（LeetCode）</a></h3><pre><code class="java">/**
+ * Definition for singly-linked list.
+ * public class ListNode &#123;
+ *     int val;
+ *     ListNode next;
+ *     ListNode() &#123;&#125;
+ *     ListNode(int val) &#123; this.val = val; &#125;
+ *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;
+ * &#125;
+ */
+class Solution &#123;
+    
+    int[] res;
+    LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();
+    
+    public int[] nextLargerNodes(ListNode head) &#123;
+        f(head,0);
+        return res;
+    &#125;
+    
+    private void f(ListNode p,int i)&#123;
+        if(p==null)&#123;
+            res = new int[i];
+            return;
+        &#125;
+        // 先递归到底，初始化res数组
+        // 然后再从最后往前遍历节点
+        f(p.next,i+1);
+        while(!stack.isEmpty()&amp;&amp;stack.peek()&lt;=p.val)&#123;
+            stack.pop();
+        &#125;
+        if(!stack.isEmpty())&#123;
+            res[i] = stack.peek();
+        &#125;
+        stack.push(p.val);
+    &#125;
+&#125;
+</code></pre>
+<p>由于现在操作的目标是链表，无法获得其索引值，需要一些技巧初始化<code>res</code>，并且需要用合适的方式遍历链表 维护单调栈。</p>
+<p><strong>主要思路</strong></p>
+<ol>
+<li><strong>递归到底，初始化结果数组</strong>：<ul>
+<li>使用递归遍历链表，直到链表的末尾。在到达末尾节点时，确定结果数组 <code>res</code> 的长度。</li>
+</ul>
+</li>
+<li><strong>从后向前处理节点</strong>：<ul>
+<li>递归函数在递归到底返回时，从最后一个节点开始向前处理。这相当于反向遍历链表，方便我们使用栈来找到每个节点的下一个更大节点。</li>
+</ul>
+</li>
+<li><strong>利用栈来找到下一个更大节点</strong>：<ul>
+<li>使用栈来存储节点值，保证栈中的元素是单调递减的，这样可以快速找到每个节点的下一个更大节点。</li>
+</ul>
+</li>
+</ol>
+<p><strong>从前向后遍历维护单调栈</strong> 与 <strong>从后向前遍历维护单调栈</strong> 有什么不同？</p>
+<p>前者确定下一个更大的元素是在 更大的元素加入栈后将小的元素依次pop出的时候确定的。</p>
+<p>后者确定下一个更大的元素是在 将新元素与当前栈顶元素进行比较，将不行的pop出，直到找到大于当前新元素的栈顶，这时才能确定。</p>
+<p>也就是说，前者可能出现新元素入栈时候确定了很多个元素的下一个最大元素，而后者是新元素入栈时只能确定新元素的下一个最大元素。</p>
+
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-06-11</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                        <a href='/tags/%E6%A0%88/'>
+                            栈
+                        </a>
+                    
+                        <a href='/tags/%E5%8D%95%E8%B0%83%E6%A0%88/'>
+                            单调栈
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+   
+    
+<script src="/js/highlight.min.js"></script>
+
+    
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+
+
+</html>
