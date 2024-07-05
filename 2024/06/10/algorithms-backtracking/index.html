@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="回溯 - Backtracking" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            回溯 - Backtracking
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%9B%9E%E6%BA%AF"><span class="post-toc-text">基础算法 - 回溯</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LeetCode-%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">LeetCode 相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#46-%E5%85%A8%E6%8E%92%E5%88%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">46. 全排列 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#47-%E5%85%A8%E6%8E%92%E5%88%97-II-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">47. 全排列 II - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#78-%E5%AD%90%E9%9B%86-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">78. 子集 - 力扣（LeetCode）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="post-toc-text">动态规划</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9B%9E%E6%BA%AF"><span class="post-toc-text">回溯</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">17. 电话号码的字母组合 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#39-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">39. 组合总和 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">22. 括号生成 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#79-%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">79. 单词搜索 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#131-%E5%88%86%E5%89%B2%E5%9B%9E%E6%96%87%E4%B8%B2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">131. 分割回文串 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#51-N-%E7%9A%87%E5%90%8E-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">51. N 皇后 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-回溯"><a href="#基础算法-回溯" class="headerlink" title="基础算法 - 回溯"></a>基础算法 - 回溯</h1><p>回溯（Backtracking）作为一种重要的算法设计技术，在解决组合问题、排列问题以及搜索问题中广泛应用。其核心思想是通过试探和撤销的方式，在搜索过程中找到所有可能的解决方案。</p>
+<p>回溯算法的主要特点包括：</p>
+<ul>
+<li><strong>递归</strong>：回溯算法通常采用递归方式实现，通过递归函数进行问题的求解。</li>
+<li><strong>试探</strong>：在每一步中，尝试不同的选择，进入下一步递归。</li>
+<li><strong>撤销</strong>：当当前选择不满足问题的要求时，撤销该选择并尝试其他可能的选择。</li>
+</ul>
+<p>回溯算法适用于解决那些具有多个步骤和多个选择的问题，例如全排列、组合、子集、数独、八皇后等问题。其时间复杂度通常较高，但可以通过剪枝等优化方法提高效率。</p>
+<p><strong>回溯问题都可以通过画树图的方式理思路</strong></p>
+<h2 id="LeetCode-相关题目"><a href="#LeetCode-相关题目" class="headerlink" title="LeetCode 相关题目"></a>LeetCode 相关题目</h2><h3 id="46-全排列-力扣（LeetCode）"><a href="#46-全排列-力扣（LeetCode）" class="headerlink" title="46. 全排列 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/permutations/?envType=study-plan-v2&envId=top-100-liked">46. 全排列 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// res为最终返回的答案</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 全排列</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">permute</span><span class="params">(<span class="type">int</span> []nums)</span>&#123;</span><br><span class="line">        <span class="comment">// 数组的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="comment">// isUsed 记录对应的元素是否被使用过 状态变量</span></span><br><span class="line">        <span class="comment">// 初始值为false</span></span><br><span class="line">        <span class="type">boolean</span>[] isUsed = <span class="keyword">new</span> <span class="title class_">boolean</span>[num];</span><br><span class="line">        <span class="comment">// 记录每一次排列的临时数组</span></span><br><span class="line">        List&lt;Integer&gt; tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// index记录当前临时数组中的元素个数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        dfs(nums,num,index,isUsed,tmp);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> num, <span class="type">int</span> index, <span class="type">boolean</span>[] isUsed, List&lt;Integer&gt; tmp)</span>&#123;</span><br><span class="line">        <span class="comment">// 当tmp数组中满了的时候，就直接退出函数（出栈）</span></span><br><span class="line">        <span class="keyword">if</span>(index==num)&#123;</span><br><span class="line"><span class="comment">//            res.add(tmp);  这样是错误的，因为这样我添加的就是tmp的引用而不是tmp的拷贝</span></span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(tmp));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;num;i++)&#123;</span><br><span class="line">            <span class="comment">// 如果访问的当前的这个元素没有被使用过，那么就将其加入tmp，并且还要更新状态</span></span><br><span class="line">            <span class="keyword">if</span>(!isUsed[i])&#123;</span><br><span class="line">                tmp.add(nums[i]);</span><br><span class="line">                index++;</span><br><span class="line">                isUsed[i] = <span class="literal">true</span>;</span><br><span class="line">                <span class="comment">// 然后深度优先搜索了</span></span><br><span class="line">                dfs(nums,num,index,isUsed,tmp);</span><br><span class="line">                <span class="comment">// dfs出栈之后，就需要将状态更新</span></span><br><span class="line">                index --;</span><br><span class="line">                isUsed[i] = <span class="literal">false</span>;</span><br><span class="line">                tmp.remove(tmp.size()-<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>主要涉及到栈的深度优先遍历，回溯所需要的depth（index）、状态记录（isUsed）…</p>
+<p>还要注意到java的参数引用传递</p>
+<p><a href="/../img/basic_algorithms/0bf18f9b86a2542d1f6aa8db6cc45475fce5aa329a07ca02a9357c2ead81eec1-image.png" title="image.png" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/0bf18f9b86a2542d1f6aa8db6cc45475fce5aa329a07ca02a9357c2ead81eec1-image.png" alt="image.png"></a></p>
+<h3 id="47-全排列-II-力扣（LeetCode）"><a href="#47-全排列-II-力扣（LeetCode）" class="headerlink" title="47. 全排列 II - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/permutations-ii/">47. 全排列 II - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<p>画数图会发现，<strong>只要在每一层保证重复的元素只用一次即可。</strong></p>
+<p>可以用哈希表来实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">permuteUnique</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        List&lt;Integer&gt; tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span>[] state = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		dfs(res,tmp,nums,state,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(List&lt;List&lt;Integer&gt;&gt; res,List&lt;Integer&gt; tmp,<span class="type">int</span>[] nums,<span class="type">int</span>[] state,<span class="type">int</span> count)</span>&#123;</span><br><span class="line">        HashSet&lt;Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();  <span class="comment">// 记录在前一个节点下 当前层出现过哪些值</span></span><br><span class="line">        <span class="keyword">if</span>(count==nums.length)&#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(tmp));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(state[i]==<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(map.contains(nums[i])) <span class="keyword">continue</span>; <span class="comment">// 剪枝</span></span><br><span class="line">                <span class="keyword">else</span> map.add(nums[i]);</span><br><span class="line">                state[i]=<span class="number">1</span>;</span><br><span class="line">                tmp.add(nums[i]);</span><br><span class="line">                dfs(res,tmp,nums,state,count+<span class="number">1</span>);</span><br><span class="line">                tmp.remove(count);</span><br><span class="line">                state[i]=<span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="78-子集-力扣（LeetCode）"><a href="#78-子集-力扣（LeetCode）" class="headerlink" title="78. 子集 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/subsets/solutions/7683/er-jin-zhi-wei-zhu-ge-mei-ju-dfssan-chong-si-lu-9c/?envType=study-plan-v2&envId=top-100-liked">78. 子集 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<h4 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 子集</span></span><br><span class="line">    <span class="comment">// 根据子集的特点，可以把它看作一种动态规划</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">subsets</span><span class="params">(<span class="type">int</span>[] nums)</span>&#123;</span><br><span class="line">        <span class="comment">// 先将空集加入</span></span><br><span class="line">        res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;());</span><br><span class="line">        <span class="comment">// nums的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i&lt;num; i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> res.size();</span><br><span class="line">            System.out.println(size);</span><br><span class="line">            System.out.println(res);</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j&lt;size; j++)&#123;</span><br><span class="line">                <span class="comment">// 获取之前的子集，新的子集 = 之前的子集 + 新元素</span></span><br><span class="line">                <span class="comment">// dp[i] = dp[i-1] + new</span></span><br><span class="line">                List&lt;Integer&gt; new_t = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(res.get(j));</span><br><span class="line">                new_t.add(nums[i]);</span><br><span class="line">                res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(new_t));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用了动态规划的思想，如果当前数组为<code>[1,2,3]</code>，<code>dp[0]</code>初始状态为空集，<code>dp[1]</code>为<code>[]</code>加上<code>[1]</code>，</p>
+<p><code>dp[2] = dp[1] + new</code>，而这个new就等于以前的<code>dp[1]</code>中的所有子集加上这个新的<code>2</code>。</p>
+<h4 id="回溯"><a href="#回溯" class="headerlink" title="回溯"></a>回溯</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    List&lt;Integer&gt; t = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">subsets</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        dfs(<span class="number">0</span>, nums);</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> cur, <span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="comment">// 访问到了最后一个位置，将t数组中的元素加入</span></span><br><span class="line">        <span class="keyword">if</span> (cur == nums.length) &#123;</span><br><span class="line">            ans.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;(t));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 将当前元素加入 进行遍历</span></span><br><span class="line">        t.add(nums[cur]);</span><br><span class="line">        dfs(cur + <span class="number">1</span>, nums);</span><br><span class="line">        <span class="comment">// 将当前元素移除 进行遍历</span></span><br><span class="line">        t.remove(t.size() - <span class="number">1</span>);</span><br><span class="line">        dfs(cur + <span class="number">1</span>, nums)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为<strong>每一个元素其实有两个状态，被选中或者未被选中</strong>，我们依次dfs即可。</p>
+<p><strong>可以想象成一个二叉树</strong>，每一层代表每一个元素，左子树代表选中，右子树代表未选中，从根节点到叶子节点的路径就为一个子集。</p>
+<h3 id="17-电话号码的字母组合-力扣（LeetCode）"><a href="#17-电话号码的字母组合-力扣（LeetCode）" class="headerlink" title="17. 电话号码的字母组合 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/letter-chttps://leetcode.cn/problems/letter-combinations-of-a-phone-number/">17. 电话号码的字母组合 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> List&lt;String&gt; <span class="title function_">letterCombinations</span><span class="params">(String digits)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化 map</span></span><br><span class="line">        HashMap&lt;Character,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Character,String&gt;();</span><br><span class="line">        map.put(<span class="string">&#x27;2&#x27;</span>, <span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;3&#x27;</span>, <span class="string">&quot;def&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;4&#x27;</span>, <span class="string">&quot;ghi&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;5&#x27;</span>, <span class="string">&quot;jkl&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;6&#x27;</span>, <span class="string">&quot;mno&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;7&#x27;</span>, <span class="string">&quot;pqrs&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;8&#x27;</span>, <span class="string">&quot;tuv&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;9&#x27;</span>, <span class="string">&quot;wxyz&quot;</span>);</span><br><span class="line">        <span class="comment">// res是要返回的结果,初始值为空</span></span><br><span class="line">        ArrayList&lt;String&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(digits.equals(<span class="string">&quot;&quot;</span>))&#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="comment">// StringBuffer 数据结构对于String的处理提供的接口更加多</span></span><br><span class="line">        dfs(res,map,digits,<span class="number">0</span>,<span class="keyword">new</span> <span class="title class_">StringBuffer</span>());</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(List&lt;String&gt; res,HashMap&lt;Character,String&gt; map,String digits, <span class="type">int</span> index, StringBuffer tmp)</span>&#123;</span><br><span class="line">        <span class="comment">// index代表当前tmp中有多少个字母了</span></span><br><span class="line">        <span class="keyword">if</span>(index == digits.length())&#123;</span><br><span class="line">            <span class="comment">// 当字母数量足够了的时候，就需要记录这个字母组合，也就是tmp</span></span><br><span class="line">            res.add(tmp.toString());</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 根据index取出需要的digit</span></span><br><span class="line">        <span class="type">char</span> <span class="variable">digit</span> <span class="operator">=</span> digits.charAt(index);</span><br><span class="line">        <span class="comment">// 从map中获得数字对应的letters</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">letters</span> <span class="operator">=</span> map.get(digit);</span><br><span class="line">        <span class="comment">// 获得letters的长度，进行dfs遍历</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">letterLen</span> <span class="operator">=</span> letters.length();</span><br><span class="line">        <span class="comment">// 遍历过程</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;letterLen;i++)&#123;</span><br><span class="line">            <span class="comment">// 将字母加入临时组合tmp</span></span><br><span class="line">            tmp.append(letters.charAt(i));</span><br><span class="line">            <span class="comment">// 第index位的字母已经被选中，通过dfs往更深的地方寻找目标</span></span><br><span class="line">            dfs(res,map,digits,index+<span class="number">1</span>,tmp);</span><br><span class="line">            <span class="comment">// 回溯，退回之后要将第index位的字符给弹出（状态改变）</span></span><br><span class="line">            tmp.deleteCharAt(index);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>回溯的精髓就在于 <strong>回退之后的状态改变</strong></p>
+<p><strong>也就是递归之后需要做和递归之前相反的事情</strong></p>
+<p><a href="/../img/basic_algorithms/38567dcbb6401d88946ca974aacffb5ab27cb1ad54056f02b59016c0cc68b40f-file_1562774451350" title="算法过程.png" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/38567dcbb6401d88946ca974aacffb5ab27cb1ad54056f02b59016c0cc68b40f-file_1562774451350" alt="算法过程.png"></a></p>
+<h3 id="39-组合总和-力扣（LeetCode）"><a href="#39-组合总和-力扣（LeetCode）" class="headerlink" title="39. 组合总和 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/combination-sum/description/?envType=study-plan-v2&envId=top-100-liked">39. 组合总和 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">combinationSum</span><span class="params">(<span class="type">int</span>[] candidates, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;candidates.length;i++)&#123;</span><br><span class="line">            tmp.add(candidates[i]);</span><br><span class="line">            dfs(candidates,target,tmp, candidates[i],i);</span><br><span class="line">            tmp.remove(tmp.size()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span>[] candidates, <span class="type">int</span> target,List&lt;Integer&gt; tmp,<span class="type">int</span> sum,<span class="type">int</span> pos)</span>&#123;   <span class="comment">// 这个pos是去重的关键</span></span><br><span class="line">        <span class="keyword">if</span>(sum==target)&#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(tmp));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(sum&gt;target)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=pos;i&lt;candidates.length;i++)&#123;</span><br><span class="line">            tmp.add(candidates[i]);</span><br><span class="line">            dfs(candidates,target,tmp,sum+candidates[i],i);</span><br><span class="line">            tmp.remove(tmp.size()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>题目告诉了给出的nums数组中的元素是不重复的（而且还是按照从小到大的顺序的）</p>
+<p>未考虑去重：</p>
+<p><a href="/../img/basic_algorithms/1598091943-hZjibJ-file_1598091940241.png" title="1598091943-hZjibJ-file_1598091940241" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/1598091943-hZjibJ-file_1598091940241.png" alt="1598091943-hZjibJ-file_1598091940241"></a></p>
+<p>考虑去重:</p>
+<p><a href="/../img/basic_algorithms/1598091943-GPoHAJ-file_1598091940246.png" title="1598091943-GPoHAJ-file_1598091940246" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/1598091943-GPoHAJ-file_1598091940246.png" alt="1598091943-GPoHAJ-file_1598091940246"></a></p>
+<h3 id="22-括号生成-力扣（LeetCode）"><a href="#22-括号生成-力扣（LeetCode）" class="headerlink" title="22. 括号生成 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/generate-parentheses/description/?envType=study-plan-v2&envId=top-100-liked">22. 括号生成 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    List&lt;String&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">generateParenthesis</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">        dfs(n,n,sb);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> left,<span class="type">int</span> right,StringBuffer sb)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(left==<span class="number">0</span>&amp;&amp;right==<span class="number">0</span>)&#123;</span><br><span class="line">            res.add(sb.toString());</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(left&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            sb.append(<span class="string">&#x27;(&#x27;</span>);</span><br><span class="line">            dfs(left-<span class="number">1</span>,right,sb);</span><br><span class="line">            sb.deleteCharAt(sb.length()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(left&lt;right)&#123;   <span class="comment">// 这里要加以限制一下（括号合法）</span></span><br><span class="line">            sb.append(<span class="string">&#x27;)&#x27;</span>);</span><br><span class="line">            dfs(left,right-<span class="number">1</span>,sb);</span><br><span class="line">            sb.deleteCharAt(sb.length()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以想象成二叉树，<strong>根节点往左拐就是增加一个左括号，往右拐增加一个右括号</strong>，找到满足合法括号的路径。</p>
+<p>在这里<code>sb</code>相当于<strong>栈</strong>。</p>
+<h3 id="79-单词搜索-力扣（LeetCode）"><a href="#79-单词搜索-力扣（LeetCode）" class="headerlink" title="79. 单词搜索 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/word-search/?envType=study-plan-v2&envId=top-100-liked">79. 单词搜索 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<p>二维的dfs</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution_exist_redo</span> &#123;</span><br><span class="line">    <span class="type">boolean</span> <span class="variable">res</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="type">int</span>[][] dr = &#123;&#123;<span class="number">0</span>, <span class="number">1</span>&#125;, &#123;<span class="number">0</span>, -<span class="number">1</span>&#125;, &#123;<span class="number">1</span>, <span class="number">0</span>&#125;, &#123;-<span class="number">1</span>, <span class="number">0</span>&#125;&#125;;  <span class="comment">// 代表四个方向</span></span><br><span class="line">    <span class="type">boolean</span>[][] state;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">exist</span><span class="params">(<span class="type">char</span>[][] board, String word)</span> &#123;</span><br><span class="line">        state = <span class="keyword">new</span> <span class="title class_">boolean</span>[board.length][board[<span class="number">0</span>].length];</span><br><span class="line">        <span class="type">int</span> <span class="variable">idx</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">needChar</span> <span class="operator">=</span> word.charAt(idx);  <span class="comment">// 当前需要的字符串</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; board.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; board[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (board[i][j] == needChar) &#123;</span><br><span class="line">                    state[i][j] = <span class="literal">true</span>;</span><br><span class="line">                    dfs(board, word, idx + <span class="number">1</span>, i, j);  <span class="comment">// 以这个为基准往四周dfs寻找</span></span><br><span class="line">                    state[i][j] = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">if</span>(res) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">char</span>[][] board, String word, <span class="type">int</span> idx, <span class="type">int</span> x, <span class="type">int</span> y)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (idx == word.length()) &#123;</span><br><span class="line">            res = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;  <span class="comment">// for遍历四个方向</span></span><br><span class="line">            <span class="comment">// 如果res=true，表明已经找到了提前结束dfs</span></span><br><span class="line">            <span class="keyword">if</span> (res) <span class="keyword">return</span>;</span><br><span class="line">            <span class="comment">// 新位置</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">nextX</span> <span class="operator">=</span> x + dr[i][<span class="number">0</span>];</span><br><span class="line">            <span class="type">int</span> <span class="variable">nextY</span> <span class="operator">=</span> y + dr[i][<span class="number">1</span>];</span><br><span class="line">            <span class="comment">// 新位置是否越界，新位置是否访问过，新位置的值是否是想要的</span></span><br><span class="line">            <span class="keyword">if</span> (nextX &lt; <span class="number">0</span> || nextX &gt;= board.length)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span> (nextY &lt; <span class="number">0</span> || nextY &gt;= board[<span class="number">0</span>].length)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span> (state[nextX][nextY])</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span> (board[nextX][nextY] != word.charAt(idx))</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            state[nextX][nextY] = <span class="literal">true</span>;</span><br><span class="line">            dfs(board, word, idx + <span class="number">1</span>, nextX, nextY);</span><br><span class="line">            state[nextX][nextY] = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但是dfs回溯的思想是一样的。</p>
+<h3 id="131-分割回文串-力扣（LeetCode）"><a href="#131-分割回文串-力扣（LeetCode）" class="headerlink" title="131. 分割回文串 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/palindrome-partitioning/description/?envType=study-plan-v2&envId=top-100-liked">131. 分割回文串 - 力扣（LeetCode）</a></h3><p>难度：中等（较难）</p>
+<p>要先理解怎么判断回文字符串（<strong>动态规划</strong>），然后<strong>回溯</strong>寻找所有可能的分割方案</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    List&lt;List&lt;String&gt;&gt; res;</span><br><span class="line">    <span class="type">boolean</span>[][] dp;</span><br><span class="line">    List&lt;String&gt; tmp;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; <span class="title function_">partition</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化</span></span><br><span class="line">        res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        dp = <span class="keyword">new</span> <span class="title class_">boolean</span>[len][len]; <span class="comment">// dp[i][j]表示字符串s[i]..s[j]是不是回文字符串</span></span><br><span class="line">        <span class="comment">// 初始化dp，dp[i][j], 当j&gt;=i的时候，也就是dp的左下角都是true，这样才不影响后续的dp</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">            Arrays.fill(dp[i], <span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 动态规划  这里一定要倒着来，因为dp[i]计算需要dp[i+1]</span></span><br><span class="line">        <span class="comment">// j 正着来，因为dp[i][j]依赖与dp[i+1][j-1]，j-1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i + <span class="number">1</span>; j &lt; len; j++) &#123;</span><br><span class="line">                dp[i][j] = dp[i + <span class="number">1</span>][j - <span class="number">1</span>] &amp;&amp; (s.charAt(i) == s.charAt(j));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        dfs(s,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(String s, <span class="type">int</span> cur)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (cur == s.length()) &#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(tmp));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> cur; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (dp[cur][i]) &#123;</span><br><span class="line">                tmp.add(s.substring(cur,i+<span class="number">1</span>));</span><br><span class="line">                dfs(s,i+<span class="number">1</span>);  <span class="comment">// 进入下一个dfs的是i+1,不是cur</span></span><br><span class="line">                tmp.remove(tmp.size()-<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>动态规划</strong>  +  <strong>回溯</strong></p>
+<p><strong>核心思路</strong></p>
+<ol>
+<li><strong>动态规划预处理</strong>：首先使用动态规划（DP）来预处理字符串 <code>s</code>，确定每个子串是否为回文。这部分预处理将帮助我们在回溯时快速判断子串是否为回文，从而减少不必要的重复计算。</li>
+<li><strong>回溯（DFS）</strong>：然后使用回溯（深度优先搜索，DFS）来尝试所有可能的分割方式。每当发现一个合法的回文子串时，就递归地继续分割剩余的字符串，直到处理完整个字符串。</li>
+</ol>
+<p>以<code>aabb</code>为例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">               &quot;&quot;</span><br><span class="line">             /     \</span><br><span class="line">           &quot;<span class="selector-tag">a</span>&quot;     &quot;aa&quot;</span><br><span class="line">          /   \       \</span><br><span class="line">        &quot;<span class="selector-tag">a</span>&quot;   &quot;ab&quot;    &quot;<span class="selector-tag">b</span>&quot;</span><br><span class="line">        / \      (不合法) \</span><br><span class="line">      &quot;<span class="selector-tag">b</span>&quot; &quot;bb&quot;           &quot;<span class="selector-tag">b</span>&quot;</span><br><span class="line">      /     \            (空)</span><br><span class="line">   &quot;<span class="selector-tag">b</span>&quot;     &quot;<span class="selector-tag">b</span>&quot; </span><br><span class="line">   /         (空)</span><br><span class="line">(空)</span><br></pre></td></tr></table></figure>
+
+<h3 id="51-N-皇后-力扣（LeetCode）"><a href="#51-N-皇后-力扣（LeetCode）" class="headerlink" title="51. N 皇后 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/n-queens/description/?envType=study-plan-v2&envId=top-100-liked">51. N 皇后 - 力扣（LeetCode）</a></h3><p>难度：困难</p>
+<p>掌握了dfs的核心之后这个题就变得非常简单了，本题最复杂的点就是如何对访问过的点做标记。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 用数组来记录位置</span></span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; path = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 记录状态，记录每一个格子被多少个皇后锁定了</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; <span class="title function_">solveNQueens</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">// 0 表示没有被皇后锁定，表明下一个皇后可以放置在这个位置上</span></span><br><span class="line">        <span class="comment">// 初始state数组均为0</span></span><br><span class="line">        <span class="type">int</span>[][] state = <span class="keyword">new</span> <span class="title class_">int</span>[n][n];</span><br><span class="line">        dfs(<span class="number">0</span>, state);</span><br><span class="line">        <span class="comment">// 答案都存在ans数组里面，但是题目要求我们给出的是字符串...所以我们需要加上这一段,旨在将数组类型的答案转换为字符串List</span></span><br><span class="line">        List&lt;List&lt;String&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; ans.size(); i++) &#123;</span><br><span class="line">            path = ans.get(i);</span><br><span class="line">            List&lt;String&gt; tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="type">StringBuffer</span> <span class="variable">stringBuffer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">                <span class="type">int</span> <span class="variable">pos</span> <span class="operator">=</span> path.get(j);</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (k == pos) &#123;</span><br><span class="line">                        stringBuffer.append(<span class="string">&#x27;Q&#x27;</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        stringBuffer.append(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                tmp.add(stringBuffer.toString());</span><br><span class="line">            &#125;</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(tmp));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果皇后放在了i，j这个位置，那么需要在state上做一些标记，比如说某一些格子会被攻击</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">mark</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j, <span class="type">int</span>[][] state)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> state.length;</span><br><span class="line">        <span class="comment">// 注意这样的话state[i][j]就会+4</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            <span class="comment">// 每一行需要被标记</span></span><br><span class="line">            state[k][j]++;</span><br><span class="line">            <span class="comment">// 每一列也需要被标记</span></span><br><span class="line">            state[i][k]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 斜着的</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> -n + <span class="number">1</span>; k &lt; n; k++) &#123;</span><br><span class="line">            <span class="comment">// i，j同+k，为 \</span></span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i + k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i + k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i + k][j + k]++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// i,j 异号 k,为/</span></span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i - k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i - k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i - k][j + k]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对应反相减就可以了</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">unMark</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j, <span class="type">int</span>[][] state)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> state.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            state[k][j]--;</span><br><span class="line">            state[i][k]--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> -n + <span class="number">1</span>; k &lt; n; k++) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i + k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i + k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i + k][j + k]--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i - k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i - k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i - k][j + k]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> cur, <span class="type">int</span>[][] state)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> state.length;</span><br><span class="line">        <span class="comment">// cur代表这一次的dfs是寻找第cur个皇后的位置的</span></span><br><span class="line">        <span class="comment">// 如果cur等于n，代表所有的皇后都找到了对应的位置了，那么可以返回了</span></span><br><span class="line">        <span class="keyword">if</span> (cur == n) &#123;</span><br><span class="line">            ans.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(path));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 遍历每一个位置，尝试每一个位置</span></span><br><span class="line">        <span class="comment">// 经过思考，其实不必要遍历每一个位置，因为N皇后的第一个肯定是在第一行的，第二个肯定是在第二行的....</span></span><br><span class="line">        <span class="comment">// 所以我们就根据cur的值，确定在哪一行进行遍历就可以了(cur可以作为行的索引)</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="comment">// 如果有位置的话，就搜索下一个</span></span><br><span class="line">            <span class="keyword">if</span> (state[cur][i] == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="comment">// 先标记</span></span><br><span class="line">                mark(cur, i, state);</span><br><span class="line">                <span class="comment">// tmp中最多有n-1个元素，分别代表每一行的皇后对应的位置</span></span><br><span class="line">                path.add(i);</span><br><span class="line">                dfs(cur + <span class="number">1</span>, state);</span><br><span class="line">                <span class="comment">// 弹出</span></span><br><span class="line">                path.remove(path.size() - <span class="number">1</span>);</span><br><span class="line">                <span class="comment">// 清楚标记</span></span><br><span class="line">                unMark(cur, i, state);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>和前面的回溯题没什么不同，就是标记元素的方式改变了。<code>Mark()</code>与<code>UnMark()</code></p>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-06-10</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                        <a href='/tags/%E5%9B%9E%E6%BA%AF/'>
+                            回溯
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>

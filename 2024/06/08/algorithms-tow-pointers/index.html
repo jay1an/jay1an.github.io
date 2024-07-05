@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="双指针 - Two Pointers" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            双指针 - Two Pointers
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8F%8C%E6%8C%87%E9%92%88"><span class="post-toc-text">基础算法 - 双指针</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LeetCode-%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">LeetCode 相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#283-%E7%A7%BB%E5%8A%A8%E9%9B%B6-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">283. 移动零 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">11. 盛最多水的容器 - 力扣（LeetCode）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9A%B4%E5%8A%9B%E8%A7%A3%E6%B3%95%EF%BC%9A"><span class="post-toc-text">暴力解法：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="post-toc-text">双指针</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">15. 三数之和 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#42-%E6%8E%A5%E9%9B%A8%E6%B0%B4-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">42. 接雨水 - 力扣（LeetCode）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%951-%E6%8C%89%E8%A1%8C%E6%B1%82"><span class="post-toc-text">方法1 - 按行求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%952-%E6%8C%89%E5%88%97%E6%B1%82"><span class="post-toc-text">方法2 - 按列求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%953-DP"><span class="post-toc-text">方法3 - DP</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%954-%E5%8F%8C%E6%8C%87%E9%92%88"><span class="post-toc-text">方法4 - 双指针</span></a></li></ol></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-双指针"><a href="#基础算法-双指针" class="headerlink" title="基础算法 - 双指针"></a>基础算法 - 双指针</h1><p>双指针（Two Pointers）是一种常见的算法技巧，通常用于解决数组或链表中的问题。它的核心思想是使用两个指针在给定条件下同时移动，以解决问题或优化算法性能。</p>
+<p><strong>主要特点</strong></p>
+<ul>
+<li><strong>并行移动</strong>：双指针通常会从数组或链表的两端开始，并以不同的速度向中间移动，直到两个指针相遇或交叉。</li>
+<li><strong>降低时间复杂度</strong>：通过使用双指针，可以在不增加空间复杂度的情况下，降低问题的时间复杂度，通常优于暴力求解方法。</li>
+<li><strong>适用场景</strong>：适合解决排序数组的查找问题、链表中的环检测、数组或字符串的滑动窗口问题等。</li>
+</ul>
+<h2 id="LeetCode-相关题目"><a href="#LeetCode-相关题目" class="headerlink" title="LeetCode 相关题目"></a>LeetCode 相关题目</h2><h3 id="283-移动零-力扣（LeetCode）"><a href="#283-移动零-力扣（LeetCode）" class="headerlink" title="283. 移动零 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/move-zeroes/description/?envType=study-plan-v2&envId=top-100-liked">283. 移动零 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">moveZeroes</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">nonZero</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 记录下一个非0元素应该放置的位置</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历数组，将非0元素依次放置到nonZero位置上</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                nums[nonZero++] = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 将nonZero之后的位置都置为0</span></span><br><span class="line">        <span class="keyword">while</span> (nonZero &lt; len) &#123;</span><br><span class="line">            nums[nonZero++] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-盛最多水的容器-力扣（LeetCode）"><a href="#11-盛最多水的容器-力扣（LeetCode）" class="headerlink" title="11. 盛最多水的容器 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/container-with-most-water/description/?envType=study-plan-v2&envId=top-100-liked">11. 盛最多水的容器 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<h4 id="暴力解法："><a href="#暴力解法：" class="headerlink" title="暴力解法："></a>暴力解法：</h4><p>这是最朴素的暴力解法，计算出每一个可能的结果然后进行比较，当然是一定会超时的，时间复杂度为n^2^。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxArea</span><span class="params">(<span class="type">int</span>[] height)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> Integer.MIN_VALUE;</span><br><span class="line">        <span class="comment">// len&gt;=2</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> height.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>;j&lt;len;j++)&#123;</span><br><span class="line">                <span class="comment">// w代表宽度，h代表高度</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">w</span> <span class="operator">=</span> j - i;</span><br><span class="line">                <span class="type">int</span> <span class="variable">h</span> <span class="operator">=</span> Math.min(height[i],height[j]);</span><br><span class="line">                res = Math.max(h*w,res);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">        <span class="comment">// 关键的一点：让left和right之间收缩！</span></span><br><span class="line">        <span class="comment">// 如果让更高的那一端收缩，那么面积一定会减小；但是如果让短的那一端收缩，那么面积可能会增大！！！</span></span><br><span class="line">        <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxArea</span><span class="params">(<span class="type">int</span>[] height)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> Integer.MIN_VALUE;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> height.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(left&lt;right) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">w</span> <span class="operator">=</span> right - left;</span><br><span class="line">            <span class="keyword">if</span> (height[left] &lt; height[right])</span><br><span class="line">                res = Math.max(res, height[left++] * w);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                res = Math.max(res, height[right--] * w);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与暴力解法相比，<strong>双指针解法没有计算那些根本没有意义的面积</strong>（比如说哪些让更高的一端收缩的面积），双指针更关注于可能得更大值。</p>
+<h3 id="15-三数之和-力扣（LeetCode）"><a href="#15-三数之和-力扣（LeetCode）" class="headerlink" title="15. 三数之和 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/3sum/description/?envType=study-plan-v2&envId=top-100-liked">15. 三数之和 - 力扣（LeetCode）</a></h3><p>如果要暴力破解的话，时间复杂度应该为n^3^，而且还要去重的操作，非常繁琐，肯定会超时。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 注意：只是i!=j!=k而已，不是nums[i]!=nums[j]!=nums[k]</span></span><br><span class="line">	<span class="comment">// 每一个元素只能用一次</span></span><br><span class="line">	<span class="comment">// 但是每组之间三数是不可以相同的（如何去重是关键）</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">threeSum</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 首先排序</span></span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> Integer.MAX_VALUE;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len - <span class="number">2</span>; i++) &#123;</span><br><span class="line">            <span class="comment">// 这里的cur代表上一个满足要求的三数中的第一个数</span></span><br><span class="line">            <span class="comment">// 如果nums[i]与cur相同的话，后面会产生相同的答案，故要跳过 ⭐ 去重第一步</span></span><br><span class="line">            <span class="keyword">if</span> (cur == nums[i]) <span class="keyword">continue</span>;</span><br><span class="line">            cur = nums[i];</span><br><span class="line">            <span class="comment">// 因为是排过序的，如果cur已经&gt;0，那么后面的都 &gt;cur，一定不满足条件，可以直接break ⭐ 剪枝</span></span><br><span class="line">            <span class="keyword">if</span> (cur &gt; <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">            <span class="comment">// ⭐ 双指针</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">head</span> <span class="operator">=</span> i + <span class="number">1</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">tail</span> <span class="operator">=</span> len - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span> (head &lt; tail) &#123;</span><br><span class="line">                <span class="keyword">if</span> (cur + nums[head] + nums[tail] == <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="comment">// 将答案记录至res</span></span><br><span class="line">                    List&lt;Integer&gt; tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">                    tmp.add(cur);</span><br><span class="line">                    tmp.add(nums[head]);</span><br><span class="line">                    tmp.add(nums[tail]);</span><br><span class="line">                    res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(tmp));</span><br><span class="line">                    <span class="comment">// 将head和tail指针移至可能出现重复的字符串中的最后一个字符   ⭐ 去重第二步</span></span><br><span class="line">                    <span class="keyword">while</span> (head &lt; tail &amp;&amp; nums[head] == nums[head + <span class="number">1</span>])</span><br><span class="line">                        head++;</span><br><span class="line">                    <span class="keyword">while</span> (head &lt; tail &amp;&amp; nums[tail] == nums[tail - <span class="number">1</span>])</span><br><span class="line">                        tail--;</span><br><span class="line">                    <span class="comment">// 使得head和tail指针指向与之前不同的值</span></span><br><span class="line">                    head++;</span><br><span class="line">                    tail--;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (cur + nums[head] + nums[tail] &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="comment">// 由于cur&lt;=nums[head]&lt;=nums[tail] 且nums数组已经排过序了</span></span><br><span class="line">                    <span class="comment">// head++使得和增加，tail--使得和减少</span></span><br><span class="line">                    head++;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    tail--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 当head==tail时，以cur为第一个值的所有满足要求的条件已经找完了</span></span><br><span class="line">                <span class="comment">// 应该以下一个cur去寻找了</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="42-接雨水-力扣（LeetCode）"><a href="#42-接雨水-力扣（LeetCode）" class="headerlink" title="42. 接雨水 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/trapping-rain-water/description/?envType=study-plan-v2&envId=top-100-liked">42. 接雨水 - 力扣（LeetCode）</a></h3><h4 id="方法1-按行求"><a href="#方法1-按行求" class="headerlink" title="方法1 - 按行求"></a>方法1 - 按行求</h4><p>利用雨水一定在凹槽里的特点 ，又根据层数计算雨水，将多层分解为多个单层，单层的逻辑很简单。</p>
+<p>这样的时间复杂度为 n*(max(height))</p>
+<p>如果max(height)很大，那么很容易超时</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">trap</span><span class="params">(<span class="type">int</span>[] height)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> getMax(height);<span class="comment">//找到最大的高度，以便遍历。</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= max; i++) &#123;  <span class="comment">// i表示层数，一层一层地求雨水</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">isStart</span> <span class="operator">=</span> <span class="literal">false</span>; <span class="comment">//标记是否开始更新 temp</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">temp_sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; height.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (isStart &amp;&amp; height[j] &lt; i) &#123;</span><br><span class="line">                temp_sum++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (height[j] &gt;= i) &#123; <span class="comment">// 遇到比当前高的柱子为界</span></span><br><span class="line">                sum = sum + temp_sum;</span><br><span class="line">                temp_sum = <span class="number">0</span>;</span><br><span class="line">                isStart = <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> <span class="title function_">getMax</span><span class="params">(<span class="type">int</span>[] height)</span> &#123;</span><br><span class="line">		<span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; height.length; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (height[i] &gt; max) &#123;</span><br><span class="line">				max = height[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">作者：windliang</span><br><span class="line">链接：https:<span class="comment">//leetcode.cn/problems/trapping-rain-water/solutions/9112/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-8/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+<h4 id="方法2-按列求"><a href="#方法2-按列求" class="headerlink" title="方法2 - 按列求"></a>方法2 - 按列求</h4><p>按列求是比较容易想到的方法。</p>
+<p>关键思路：如果要求某一列的雨水，需要考虑哪些呢？ – &gt; <strong>左边最高的墙</strong>、<strong>右边最高的墙</strong>、<strong>该列的墙的高度</strong>，雨水为 &#x3D; <code>max(min(left,right) - cur,0)</code></p>
+<p><a href="/../img/basic_algorithms/542754f4431d93141920185252aee31664a96dd17285b92dfe390e9e977bebb1-image.png" title="image.png" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/542754f4431d93141920185252aee31664a96dd17285b92dfe390e9e977bebb1-image.png" alt="image.png"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">trap</span><span class="params">(<span class="type">int</span>[] height)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 根据题目要求 len&gt;=3</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> height.length;</span><br><span class="line">        <span class="comment">// 求第 2列 到 len-1列的雨水， 端点的两个不用考虑</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> height[i];</span><br><span class="line">            <span class="type">int</span> <span class="variable">leftMax</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="type">int</span> <span class="variable">rightMax</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">            <span class="comment">// 寻找该列左边所有列的最大值</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> l=i-<span class="number">1</span>;l&gt;=<span class="number">0</span>;l--)</span><br><span class="line">                leftMax = Math.max(leftMax,height[l]);</span><br><span class="line">            <span class="comment">// 右边最大值</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> r=i+<span class="number">1</span>;r&lt;len;r++)</span><br><span class="line">                rightMax = Math.max(rightMax,height[r]);</span><br><span class="line">            <span class="comment">// 关键：求的该列的雨水</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">low</span> <span class="operator">=</span> Math.min(leftMax,rightMax);</span><br><span class="line">            res+=Math.max(low-cur,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个思路简单，代码简洁，但是时间复杂度稍高n^2^</p>
+<p>因为对于每一列，我们都需要重新向左向右遍历最大值。</p>
+<h4 id="方法3-DP"><a href="#方法3-DP" class="headerlink" title="方法3 - DP"></a>方法3 - DP</h4><p>在上一个方法中，我们求leftMax和rightMax的时候很多元素被重复遍历了很多次，造成了时间复杂度稍高。</p>
+<p>那么我们就可以<strong>使用记忆化搜索的方法来优化求leftMax和rightMax</strong>，也就是使用动态规划的方法优化（空间换时间）。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">trap</span><span class="params">(<span class="type">int</span>[] height)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> height.length;</span><br><span class="line">        <span class="comment">// 记忆化搜索 (动态规划) 空间换时间</span></span><br><span class="line">        <span class="comment">// leftMax[i]代表在第i列以左，最高的列有多高</span></span><br><span class="line">        <span class="comment">// rightMax[i]代表在第i列以右，最高的列有多高</span></span><br><span class="line">        <span class="comment">// 状态更新方程为 ： leftMax[i] = max(leftMax[i-1],height[i-1])</span></span><br><span class="line">        <span class="type">int</span>[] leftMax = <span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">        <span class="comment">// rightMax[i] = max(rightMax[i+1],height[i+1])  这个要反着来</span></span><br><span class="line">        <span class="type">int</span>[] rightMax = <span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">        <span class="comment">// 所以我们先遍历一遍，将数据记录在dp数组中</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="comment">// i: 1 -&gt; len-2</span></span><br><span class="line">            leftMax[i] = Math.max(leftMax[i-<span class="number">1</span>],height[i-<span class="number">1</span>]);</span><br><span class="line">            <span class="comment">// k: len-2 -&gt; 1</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> len-<span class="number">1</span>-i;</span><br><span class="line">            rightMax[k] = Math.max(rightMax[k+<span class="number">1</span>],height[k+<span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 接下来leftMax和rightMax就可以在O(1)时间复杂度下获得了</span></span><br><span class="line">        <span class="comment">// 以下的逻辑还是按列求雨水</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;len-<span class="number">1</span>;i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> height[i];</span><br><span class="line">            <span class="type">int</span> <span class="variable">low</span> <span class="operator">=</span> Math.min(leftMax[i],rightMax[i]);</span><br><span class="line">            res+=Math.max(low-cur,<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意，求rightMax[]的时候需要反着来。</p>
+<p>这下子时间复杂度为O(n)，但是空间复杂度上去了。</p>
+<h4 id="方法4-双指针"><a href="#方法4-双指针" class="headerlink" title="方法4 - 双指针"></a>方法4 - 双指针</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">trap_redo</span><span class="params">(<span class="type">int</span>[] height)</span>&#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> height.length-<span class="number">2</span>;</span><br><span class="line">    </span><br><span class="line">        <span class="type">int</span> <span class="variable">leftMax</span> <span class="operator">=</span> height[left-<span class="number">1</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">rightMax</span> <span class="operator">=</span> height[right+<span class="number">1</span>];</span><br><span class="line">    </span><br><span class="line">        <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">            <span class="keyword">if</span>(leftMax&lt;rightMax)&#123;</span><br><span class="line">                res+=Math.max(leftMax-height[left],<span class="number">0</span>);</span><br><span class="line">                leftMax = Math.max(leftMax,height[left]);</span><br><span class="line">                left++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                res += Math.max(rightMax-height[right],<span class="number">0</span>);</span><br><span class="line">                rightMax = Math.max(rightMax,height[right]);</span><br><span class="line">                right--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>因为我们要的出某一列的水，就要知道该列左右各两边最高的之中的最低的一个有多低，但并不关心更高的哪一个有多高</strong>，所以，只要<strong>当右边有一个比左边最高的还高的时候</strong>就可以计算当前列的水了，让left在左边，right在右边，两个指针分别往中间靠，边靠边更新leftMax和rightMax，哪边比较小，就计算那边所对应的列，同时将对应的指针改变。</p>
+<p><a href="/../img/basic_algorithms/image-20240427191518934.png" title="image-20240427191518934" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/image-20240427191518934.png" alt="image-20240427191518934"></a></p>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-06-08</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                        <a href='/tags/%E5%8F%8C%E6%8C%87%E9%92%88/'>
+                            双指针
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
