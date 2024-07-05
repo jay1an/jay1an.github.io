@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Shellcode Development Lab" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Shellcode"><span class="post-toc-text">Shellcode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Writing-shellcode"><span class="post-toc-text">Task1. Writing shellcode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-a-The-Entire-Process"><span class="post-toc-text">Task1.a The Entire Process</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-b-Eliminating-Zeros-0x00-from-the-code"><span class="post-toc-text">Task1.b Eliminating Zeros(0x00) from the code</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-c-Providing-Arguments-for-System-Calls"><span class="post-toc-text">Task1.c Providing Arguments for System Calls</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Using-Code-Segement"><span class="post-toc-text">Task2. Using Code Segement</span></a></li></ol></li></ol></li></ol>
             
         
-        <h1 id="Shellcode"><a href="#Shellcode" class="headerlink" title="Shellcode"></a>Shellcode</h1><p>Shellcode 是一段设计用于利用计算机系统漏洞的机器代码。它通常是一系列二进制指令，以字节形式表示，并且通常编写为目标特定的机器码，以在目标系统上执行特定的操作。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Shellcode"><a href="#Shellcode" class="headerlink" title="Shellcode"></a>Shellcode</h1><p>Shellcode 是一段设计用于利用计算机系统漏洞的机器代码。它通常是一系列二进制指令，以字节形式表示，并且通常编写为目标特定的机器码，以在目标系统上执行特定的操作。</p>
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
 <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>Shellcode is widely used in many attacks that involve code injection. Writing shellcode is quite challenging.<br>Although we can easily find existing shellcode from the Internet, there are situations where we have to write<br>a shellcode that satisfies certain specific requirements. Moreover, to be able to write our own shellcode from<br>scratch is always exciting. There are several interesting techniques involved in shellcode. The purpose of<br>this lab is to help students understand these techniques so they can write their own shellcode.</p>
 <p>There are several challenges in writing shellcode, one is to ensure that there is no zero in the binary, and<br>the other is to find out the address of the data used in the command. The first challenge is not very difficult<br>to solve, and there are several ways to solve it. The solutions to the second challenge led to two typical<br>approaches to write shellcode. In one approach, data are pushed into the stack during the execution, so their<br>addresses can be obtained from the stack pointer. In the second approach, data are stored in the code region,<br>right after a call instruction. When the call instruction is executed, the address of the data is treated as<br>the return address, and is pushed into the stack. Both solutions are quite elegant, and we hope students can<br>learn these two techniques. This lab covers the following topics:<br>    • Shellcode<br>    • Assembly code<br>    • Disassembling</p>
@@ -132,29 +341,29 @@
 <p>实验资料网址：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/Software/Shellcode/">https://seedsecuritylabs.org/Labs_20.04/Software/Shellcode/</a></p>
 <p>实验中各任务的要求参照实验指导PDF。</p>
 <h3 id="Task1-Writing-shellcode"><a href="#Task1-Writing-shellcode" class="headerlink" title="Task1. Writing shellcode"></a>Task1. Writing shellcode</h3><h4 id="Task1-a-The-Entire-Process"><a href="#Task1-a-The-Entire-Process" class="headerlink" title="Task1.a The Entire Process"></a>Task1.a The Entire Process</h4><p>①使用nasm命令将示例的汇编代码编译成ELF二进制格式。</p>
-<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143338540.png" alt="image-20240119143338540">                              </p>
+<p> <a href="/../img/Shellcode-Development-Lab/image-20240119143338540.png" title="image-20240119143338540" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143338540.png" alt="image-20240119143338540"></a>                              </p>
 <p>②使用ld命令将mysh.o编译成可执行二进制文件，-m elf_i386选项意味着生成32位的ELF二进制文件，这个步骤之后，会获得最终的可执行二进制代码文件mysh，运行它，会生成一个shell。</p>
-<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143353546.png" alt="image-20240119143353546"></p>
+<p> <a href="/../img/Shellcode-Development-Lab/image-20240119143353546.png" title="image-20240119143353546" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143353546.png" alt="image-20240119143353546"></a></p>
 <p>③运行mysh并检测效果。</p>
-<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143357287.png" alt="image-20240119143357287"></p>
+<p> <a href="/../img/Shellcode-Development-Lab/image-20240119143357287.png" title="image-20240119143357287" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143357287.png" alt="image-20240119143357287"></a></p>
 <p>两次打印的shell的PID不相同，证明mysh确实打开了另外一个shell，功能正常运行。</p>
 <p>④在攻击中，起作用的是机器码，而不只是标准的可执行文件。所以我们需要从可执行文件中提<strong>取出需要的机器码</strong>。</p>
 <p>可以使用objdump命令对mysh.o进行反汇编，–Mintel选项是指用Intel的语法模式（另外一种模式是AT&amp;T）。</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119143422649.png" alt="image-20240119143422649"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119143422649.png" title="image-20240119143422649" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143422649.png" alt="image-20240119143422649"></a></p>
 <p>左边部分是机器码，右边是汇编。</p>
 <p>我们再使用xxd命令打印整个二进制程序mysh.o的机器码，在其中找到我们需要的段。</p>
 <p>-p 表示使用’plain’输出模式，将文本内容以纯十六机制形式显示，而不包含行号或ASCII文本。</p>
 <p>-c 20 指定每行显示20个16进制字符的数量。</p>
-<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143452830.png" alt="image-20240119143452830"></p>
+<p> <a href="/../img/Shellcode-Development-Lab/image-20240119143452830.png" title="image-20240119143452830" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143452830.png" alt="image-20240119143452830"></a></p>
 <p>这一部分就是我们需要的机器码。</p>
 <p>⑤使用实验给出的convert.py程序，将真正的shellcode转换并储存在python的数组中，以便实施攻击。</p>
 <p>先将shellcode粘贴到convert.py文件中：</p>
-<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143459832.png" alt="image-20240119143459832"></p>
+<p> <a href="/../img/Shellcode-Development-Lab/image-20240119143459832.png" title="image-20240119143459832" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143459832.png" alt="image-20240119143459832"></a></p>
 <p>运行convert.py，生成存有shellcode的python数组：</p>
-<p> <img src="/../img/Shellcode-Development-Lab/image-20240119143541247.png" alt="image-20240119143541247"></p>
+<p> <a href="/../img/Shellcode-Development-Lab/image-20240119143541247.png" title="image-20240119143541247" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143541247.png" alt="image-20240119143541247"></a></p>
 <h4 id="Task1-b-Eliminating-Zeros-0x00-from-the-code"><a href="#Task1-b-Eliminating-Zeros-0x00-from-the-code" class="headerlink" title="Task1.b Eliminating Zeros(0x00) from the code"></a>Task1.b Eliminating Zeros(0x00) from the code</h4><p>Shellcode 广泛用于缓冲区溢出攻击。但很多情况下，攻击会因为字符串复制而失败，例如strcpy()函数。对于这些字符串复制函数，零被视为字符串的结尾。因此，如果我们在 shellcode 中间有一个零，字符串复制将无法将零之后的任何内容从该 shellcode 复制到目标缓冲区，因此攻击将无法成功。尽管并非所有Shellcode都存在零问题，但 shellcode 要求机器码中不能有任何零；否则，shellcode的应用将会受到限制。</p>
 <p>在mysh.s中有4个不同的地方都用到了零，<strong>找出mysh.s中所有用到零的地方，并解释代码是如何在不出现零的条件下使用零。</strong></p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119143914018.png" alt="image-20240119143914018"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119143914018.png" title="image-20240119143914018" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119143914018.png" alt="image-20240119143914018"></a></p>
 <p>其中1、2、3都是通过xor操作将寄存器的值置为0，而不是直接使用mov指令，如果使用mov指令，那么机器码必然包含0x00。</p>
 <p>4的作用是将0x0b赋值给al(eax的低8位)，这样eax的值就为0x0000000b，如果用mov eax,0x0b，那么实际的操作数其实是0x0000000b，在内存中有三个0x00。</p>
 <p>还有一种避免出现0x00的方法就是“位移”。</p>
@@ -163,28 +372,28 @@
 <p>bin&#x2F;bash一共九个字节，而push是以四个字节为单位进栈的。如果直接push ‘h’会导致最终的机器码中存在0x00。</p>
 <p>那么我们可以采用位移的方式解决这个问题。</p>
 <p>使用三个占位符#，将’h###’赋值给ecx，然后对让ecx先左移24位然后又右移24位，再push ecx即可。</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119144041264.png" alt="image-20240119144041264"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119144041264.png" title="image-20240119144041264" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119144041264.png" alt="image-20240119144041264"></a></p>
 <p>重新编译可执行文件运行：</p>
-<p><img src="/../img/Shellcode-Development-Lab/1.png" alt="1"></p>
+<p><a href="/../img/Shellcode-Development-Lab/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/1.png" alt="1"></a></p>
 <p>查看机器码中是否有0x00。</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119144725224.png" alt="image-20240119144725224"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119144725224.png" title="image-20240119144725224" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119144725224.png" alt="image-20240119144725224"></a></p>
 <p>经验证，机器码中没有0x00。</p>
 <h4 id="Task1-c-Providing-Arguments-for-System-Calls"><a href="#Task1-c-Providing-Arguments-for-System-Calls" class="headerlink" title="Task1.c Providing Arguments for System Calls"></a>Task1.c Providing Arguments for System Calls</h4><p>本次任务是为系统调用提供参数，实现ls -la。</p>
 <p><strong>思路：</strong></p>
 <p>我们想用execve函数执行&#x2F;bin&#x2F;sh -c ls -la，那么我们传入execve的参数应该为:</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119144836700.png" alt="image-20240119144836700"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119144836700.png" title="image-20240119144836700" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119144836700.png" alt="image-20240119144836700"></a></p>
 <p>所以我们先将这些字符串压入栈，通过esp寄存器获得每个字符串的起始位置，最后在依次压入栈调用函数即可。</p>
 <p>注意，需要避免机器码中出现0x00，所以当push的值不足4字节的时候需要使用位移的方法<strong>。</strong></p>
 <p><strong>实验步骤：</strong></p>
 <p>在 mysh.s中用汇编代码完成对各个字符串的压栈和函数调用参数地址的压栈。</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119144909649.png" alt="image-20240119144909649"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119144909649.png" title="image-20240119144909649" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119144909649.png" alt="image-20240119144909649"></a></p>
 <p>重新编译运行：</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119144935385.png" alt="image-20240119144935385"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119144935385.png" title="image-20240119144935385" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119144935385.png" alt="image-20240119144935385"></a></p>
 <p>成功输出了当前目录下所有文件的信息，表明实验成功。</p>
 <h3 id="Task2-Using-Code-Segement"><a href="#Task2-Using-Code-Segement" class="headerlink" title="Task2. Using Code Segement"></a>Task2. Using Code Segement</h3><p>在Task 1中，都是通过动态地压入栈，通过esp获得数据的地址。</p>
 <p>但还有一种办法，即：将数据储存在代码区，并通过函数的调用机制获得其地址。Task 2就是介绍此方法。</p>
 <p>Task 2 中的mysh2.s汇编代码如下：</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119145019487.png" alt="image-20240119145019487.png"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119145019487.png" title="image-20240119145019487.png" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119145019487.png" alt="image-20240119145019487.png"></a></p>
 <p>（1）  从第七行开始逐行解释代码</p>
 <p>第7行：将当前栈顶的值弹出，赋给ebp。因为运行call之后，操作系统会自动将call的下一条指令的地址压入栈，而该地址正好是字符串的地址，通过第7行代码将字符串的地址传入ebp，以便进行下一步操作。</p>
 <p>第8行：将eax置零。</p>
@@ -197,22 +406,27 @@
 <p>（2）  实现&#x2F;usr&#x2F;bin&#x2F;env并打印a&#x3D;11 b&#x3D;22</p>
 <p><strong>思路：</strong></p>
 <p>要实现该功能的命令为：&#x2F;usr&#x2F;bin&#x2F;env – a&#x3D;11 b&#x3D;22</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119145105712.png" alt="image-20240119145105712"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119145105712.png" title="image-20240119145105712" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119145105712.png" alt="image-20240119145105712"></a></p>
 <p>所以我们的目的就是将execve函数中的argv[]参数，设置为&#x2F;usr&#x2F;bin&#x2F;env – a&#x3D;11 b&#x3D;22。那么argv数组将会有五个元素（最后一个为Null）。</p>
 <p>所以我们这样设计：</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119145123562.png" alt="image-20240119145123562"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119145123562.png" title="image-20240119145123562" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119145123562.png" alt="image-20240119145123562"></a></p>
 <p><strong>AAAA存放<code>usr/bin/env</code>的地址，BBBB存放<code>-</code>的地址，CCCC存放<code>a=11</code>的地址，DDDD存放<code>b=22</code>的地址，EEEE置0，表示Null，表示argv数组结尾。</strong></p>
 <p>然后还要把ecx设为&amp;argv[0]，满足对execve函数传参的时候；将edx设置为0，表示没有环境变量。</p>
 <p><strong>实验操作：</strong></p>
 <p>修改mysh2.s代码，通过汇编代码实现思路。</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119145231961.png" alt="sss"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119145231961.png" title="sss" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119145231961.png" alt="sss"></a></p>
 <p>编译成二进制文件运行：</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119145249887.png" alt="123"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119145249887.png" title="123" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119145249887.png" alt="123"></a></p>
 <p>查看机器码，有无0x00：</p>
-<p><img src="/../img/Shellcode-Development-Lab/image-20240119145306513.png" alt="233"></p>
+<p><a href="/../img/Shellcode-Development-Lab/image-20240119145306513.png" title="233" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Shellcode-Development-Lab/image-20240119145306513.png" alt="233"></a></p>
 <p>经检验，能正常满足任务要求，并且机器码中无0x00。</p>
 <p>Task 2完成。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -253,6 +467,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -285,26 +506,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -316,12 +519,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -335,7 +553,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

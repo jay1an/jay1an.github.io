@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="DNS Attack Lab" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,36 +332,36 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#DNS-Attack-Lab"><span class="post-toc-text">DNS Attack Lab</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Local-DNS-Attack-Lab"><span class="post-toc-text">Local DNS Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lab-Environment-Setup-Task"><span class="post-toc-text">Lab Environment Setup Task</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Testing-the-DNS-Setup"><span class="post-toc-text">Testing the DNS Setup</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Get-the-IP-address-of-ns-attacker32-com"><span class="post-toc-text">Get the IP address of ns.attacker32.com</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Get-the-IP-address-of-www-example-com"><span class="post-toc-text">Get the IP address of www.example.com</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-Attack-Tasks"><span class="post-toc-text">The Attack Tasks</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-Directly-Spoofing-Response-to-User"><span class="post-toc-text">Task1. Directly Spoofing Response to User</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-DNS-Cache-Poisoning-Attack-Spoofing-Answers"><span class="post-toc-text">Task2. DNS Cache Poisoning Attack - Spoofing Answers</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-Spoofing-NS-Records"><span class="post-toc-text">Task3. Spoofing NS Records</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task4-Spoofing-NS-Records-For-Another-Domain"><span class="post-toc-text">Task4. Spoofing NS Records For Another Domain</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task5-Spoofing-Records-in-the-Additional-Section"><span class="post-toc-text">Task5. Spoofing Records in the Additional  Section</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#The-Kaminsky-Attack-Lab"><span class="post-toc-text">The Kaminsky Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lab-Environment-Setup-Task-1"><span class="post-toc-text">Lab Environment Setup Task</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-Attack-Tasks-1"><span class="post-toc-text">The Attack Tasks</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-How-Kaminsky-Attack-Works"><span class="post-toc-text">Task1. How Kaminsky Attack Works</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Construct-DNS-request"><span class="post-toc-text">Construct DNS request</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-Spoof-DNS-Replies"><span class="post-toc-text">Task3. Spoof DNS Replies</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task4-Launch-the-Kaminsky-Attack"><span class="post-toc-text">Task4. Launch the Kaminsky Attack</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task5-Result-Verification"><span class="post-toc-text">Task5. Result Verification</span></a></li></ol></li></ol></li></ol></li></ol>
             
         
-        <h1 id="DNS-Attack-Lab"><a href="#DNS-Attack-Lab" class="headerlink" title="DNS Attack Lab"></a>DNS Attack Lab</h1><p>DNS就像是互联网中的电话簿，可以将域名转换为对应的IP地址（反之亦可）。这是通过DNS解析进行的，通常发生在幕后。DNS攻击用各种方式影响这种地址解析，尝试将用户误导到其他的恶意地址。本次实验的目的就是理解DNS攻击是如何进行的。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="DNS-Attack-Lab"><a href="#DNS-Attack-Lab" class="headerlink" title="DNS Attack Lab"></a>DNS Attack Lab</h1><p>DNS就像是互联网中的电话簿，可以将域名转换为对应的IP地址（反之亦可）。这是通过DNS解析进行的，通常发生在幕后。DNS攻击用各种方式影响这种地址解析，尝试将用户误导到其他的恶意地址。本次实验的目的就是理解DNS攻击是如何进行的。</p>
 <p>对远程DNS服务器和本地DNS服务器的攻击难度大不相同，因此，seedlabs提供了两个labs，其中一个关注于本地的DNS攻击，另外一个关注远程DNS攻击。</p>
 <p>实验资(Local)：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/Networking/DNS/DNS_Local/">https://seedsecuritylabs.org/Labs_20.04/Networking/DNS/DNS_Local/</a></p>
 <p>试验资料(remote)：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/Networking/DNS/DNS_Remote/">https://seedsecuritylabs.org/Labs_20.04/Networking/DNS/DNS_Remote/</a></p>
 <h1 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h1><h2 id="Local-DNS-Attack-Lab"><a href="#Local-DNS-Attack-Lab" class="headerlink" title="Local DNS Attack Lab"></a>Local DNS Attack Lab</h2><h3 id="Lab-Environment-Setup-Task"><a href="#Lab-Environment-Setup-Task" class="headerlink" title="Lab Environment Setup Task"></a>Lab Environment Setup Task</h3><p>DNS cache poisoning的主要目标是本地DNS服务器。显然，攻击真实服务器是违法的，所以我们需要建立自己的DNS服务器来进行攻击实验。实验室环境需要四台独立的机器：一台用于受害者，一台用于本地DNS服务器，两台用于攻击者。实验室环境设置如下图所示。这个实验室专注于本地攻击，所以我们把所有这些机器都放在同一个局域网上。</p>
-<p><img src="/../img/DNS-Attack-Lab/1.png" alt="1"></p>
+<p><a href="/../img/DNS-Attack-Lab/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/1.png" alt="1"></a></p>
 <h4 id="Testing-the-DNS-Setup"><a href="#Testing-the-DNS-Setup" class="headerlink" title="Testing the DNS Setup"></a>Testing the DNS Setup</h4><p>在user container中运行一系列命令，以确保实验配置成功。</p>
 <h5 id="Get-the-IP-address-of-ns-attacker32-com"><a href="#Get-the-IP-address-of-ns-attacker32-com" class="headerlink" title="Get the IP address of ns.attacker32.com"></a>Get the IP address of <em>ns.attacker32.com</em></h5><p>当我们运行以下dig命令时，由于forward zone entry添加到本地DNS服务器的conf文件中，本地DNS服务器将向攻击者名称服务器转发请求。因此，回复应该来自我们在攻击者名称服务器上设置的区域文件（attacker32.com.zone）。</p>
-<p><img src="/../img/DNS-Attack-Lab/2.png" alt="2"></p>
+<p><a href="/../img/DNS-Attack-Lab/2.png" title="2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/2.png" alt="2"></a></p>
 <h5 id="Get-the-IP-address-of-www-example-com"><a href="#Get-the-IP-address-of-www-example-com" class="headerlink" title="Get the IP address of www.example.com"></a>Get the IP address of <em><a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a></em></h5><p>目前可以通过两个nameserver都可以查询example.com的地址，一个是官方的nameserver，另一个是attacker的nameserver。我们对这俩个nameservers分别查询，查看结果有什么不同。</p>
 <p><strong>通过官方nameserver：</strong></p>
 <p>首先，container会将此查询发送至local DNS server，然后local DNS server会将此查询发送至example’s official nameserver，所以这个结果是example’s official nameserver返回的。返回了正确的IP地址和其他相关信息。</p>
-<p><img src="/../img/DNS-Attack-Lab/3.png" alt="3"></p>
+<p><a href="/../img/DNS-Attack-Lab/3.png" title="3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/3.png" alt="3"></a></p>
 <p><strong>通过attacker nameserver：</strong></p>
 <p>这会直接将查询发送到attacker nameserver，它并不会将查询进一步传递到下一个nameserver，而是自己解析返回给用户。所以，得到的IP地址是错误的。</p>
-<p><img src="/../img/DNS-Attack-Lab/4.png" alt="4"></p>
+<p><a href="/../img/DNS-Attack-Lab/4.png" title="4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/4.png" alt="4"></a></p>
 <p>但是，显然用户不会向一个非法的nameserver查询域名的IP地址，他们总是会请求通过官方的nameserver查询。DNS cache poisoning 攻击的目的就是让受害者通过攻击者的nameserver查询example.com的IP地址，而不是官方的nameserver。即，如果攻击成功，我们只需要使用dig命令（不指定nameserver），会得到来自攻击者的nameserver给出的假的结果。</p>
 <h3 id="The-Attack-Tasks"><a href="#The-Attack-Tasks" class="headerlink" title="The Attack Tasks"></a>The Attack Tasks</h3><p>DNS攻击的主要目标就是使得用户尝试使用A域名登录A网站的时候，被定位到B网站。例如，当用户访问网上银行时，如果攻击者能够将用户重定向到一个看起来很像银行主网站的恶意网站，用户可能会受骗，并泄露其网上银行账户的密码。</p>
 <h4 id="Task1-Directly-Spoofing-Response-to-User"><a href="#Task1-Directly-Spoofing-Response-to-User" class="headerlink" title="Task1. Directly Spoofing Response to User"></a>Task1. Directly Spoofing Response to User</h4><p>当一个用户在浏览器中输入某个网站的域名时，用户的电脑会先向本地的DNS服务器查询该域名的IP地址。这时，如果攻击者可以嗅探到DNS request消息，攻击者可以立即伪造并发回一个虚假的DNS response，如果这个虚假的response比真正的更快到达用户的电脑，那么这个虚假的response就会被用户的电脑所接受。如下图。</p>
-<p><img src="/../img/DNS-Attack-Lab/5.png" alt="5"></p>
+<p><a href="/../img/DNS-Attack-Lab/5.png" title="5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/5.png" alt="5"></a></p>
 <p>本次task的目标就是模拟攻击者发起这样的攻击。</p>
 <p>当攻击程序运行时，可以在用户电脑上代表用户运行dig命令。此命会使得用户机器向本地DNS服务器发送DNS request，本地DNS服务器最终将向example.com域的权威名称服务器发送DNS request（如果cache中不包含该域的IP）。如果攻击成功，应该能够在回复中看到伪造的信息。比较攻击前后获得的结果。</p>
 <p><strong>实验步骤：</strong></p>
 <p>修改volumes文件夹下的dns_sniff_spoof.py,然后以管理员权限运行，同时在user container中使用dig命令发送DNS request。</p>
-<p><img src="/../img/DNS-Attack-Lab/6.png" alt="6"></p>
+<p><a href="/../img/DNS-Attack-Lab/6.png" title="6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/6.png" alt="6"></a></p>
 <p>发现返回的DNS response是py代码中伪造的数据包。</p>
-<p><img src="/../img/DNS-Attack-Lab/7.png" alt="7"></p>
+<p><a href="/../img/DNS-Attack-Lab/7.png" title="7" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/7.png" alt="7"></a></p>
 <p><strong>为什么user container执行dig命令之后，嗅探程序会发送两个spoof包？</strong>因为，本地的DNS服务器中没有此域名的缓存，那么它就会向下一个的DNS服务器发送查询，所以在这两个spoof包中，其中一个是发送给user container的，另外一个是发送给本地DNS服务器的。（后者实现了DNS cache poisoning攻击）</p>
 <p>将嗅探程序关闭并且在本地DNS服务器清楚缓存之后，再次执行dig指令：</p>
-<p><img src="/../img/DNS-Attack-Lab/8.png" alt="8"></p>
+<p><a href="/../img/DNS-Attack-Lab/8.png" title="8" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/8.png" alt="8"></a></p>
 <p>发现就可以得到正确的IP地址，并且query time为1631毫秒。通常，如果结果来自本地缓存，响应时间会非常短。</p>
 <h4 id="Task2-DNS-Cache-Poisoning-Attack-Spoofing-Answers"><a href="#Task2-DNS-Cache-Poisoning-Attack-Spoofing-Answers" class="headerlink" title="Task2. DNS Cache Poisoning Attack - Spoofing Answers"></a>Task2. DNS Cache Poisoning Attack - Spoofing Answers</h4><p>在上次的task中，攻击是针对用户的电脑的。为了达到持续攻击的效果，每一次用户的电脑发送对<em><a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a></em>域名的DNS query，攻击者的程序就必须发送一个伪造的DNS response。这并不是那么有效率，一个更好的办法是将攻击目标从用户的电脑转移到DNS服务器。</p>
 <p>当本地的DNS服务器接收到DNS query时，它会先从缓存中查看是否有answer。如果有，那么DNS会直接将缓存中的answer发送；如果没有，本地DNS服务器就会尝试向其他DNS服务器询问，当本地DNS服务器得到了answer时，它会先将answer存入本地的缓存，以便下一次直接从缓存中取出。</p>
@@ -160,80 +369,80 @@
 <p><strong>实验步骤：</strong></p>
 <p>在DNS container中运行rndc flush命令清除缓存。</p>
 <p>然后运行嗅探程序，同时使得本地DNS服务器向下一个DNS服务器发送query。</p>
-<p><img src="/../img/DNS-Attack-Lab/9.png" alt="9"></p>
-<p><img src="/../img/DNS-Attack-Lab/10.png" alt="10"></p>
+<p><a href="/../img/DNS-Attack-Lab/9.png" title="9" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/9.png" alt="9"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/10.png" title="10" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/10.png" alt="10"></a></p>
 <p>查看本地DNS服务器的缓存，发现缓存中的信息已经是spoof数据包中的虚假信息。</p>
-<p><img src="/../img/DNS-Attack-Lab/11.png" alt="11"></p>
+<p><a href="/../img/DNS-Attack-Lab/11.png" title="11" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/11.png" alt="11"></a></p>
 <p>此时，关闭嗅探程序，再使用user container发送DNS query，发现得到的是虚假的地址。</p>
-<p><img src="/../img/DNS-Attack-Lab/12.png" alt="12"></p>
+<p><a href="/../img/DNS-Attack-Lab/12.png" title="12" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/12.png" alt="12"></a></p>
 <h4 id="Task3-Spoofing-NS-Records"><a href="#Task3-Spoofing-NS-Records" class="headerlink" title="Task3. Spoofing NS Records"></a>Task3. Spoofing NS Records</h4><p>在上一个task中，我们的攻击只影响了一个hostname:<em><a target="_blank" rel="noopener" href="http://www.example.com.*如果用户们想要得到这个域名下的其他ip地址,比如*mail.example.com,/">www.example.com.*如果用户们想要得到这个域名下的其他IP地址，比如*mail.example.com，</a></em>我们就需要再次发起攻击。如果，只需要发起一次攻击就可以影响整个<em>example.com</em>域，那么效率就会高很多。</p>
 <p>实现这个目的需要用到DNS reply中的Authority section。当我们伪造一个DNS reply的时候，除了伪造Answer section的answer部分，还可以向Authority section加入内容。当这一项被储存在本地的DNS服务器上时，ns.attacker32.com将作用将来查询example.com域中任何hostname的nameserver。如果ns.attacker32.com是一个被攻击者所掌控的服务器，那么它就可以发送任意的DNS reply以欺骗用户。</p>
-<p><img src="/../img/DNS-Attack-Lab/13.png" alt="13"></p>
+<p><a href="/../img/DNS-Attack-Lab/13.png" title="13" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/13.png" alt="13"></a></p>
 <p>本次task的目标是在的嗅探程序中添加一个伪造的NS record，然后发起攻击。在进行攻击之前，请记住首先清除本地DNS服务器上的缓存。如果攻击成功，当user container对example.com域中的任何主机名运行dig命令时，将获得ns.attacker32.com提供的假IP地址。还请检查本地DNS服务器上的缓存，看看伪造的ns记录是否在缓存中。</p>
 <p><strong>实验步骤：</strong></p>
 <p>修改dns_sniff_spoof.py代码，修改Authority Section部分。</p>
-<p><img src="/../img/DNS-Attack-Lab/14.png" alt="14"></p>
+<p><a href="/../img/DNS-Attack-Lab/14.png" title="14" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/14.png" alt="14"></a></p>
 <p>使用管理员权限运行py程序，同时在user container中使用dig命令发送DNS query。</p>
-<p><img src="/../img/DNS-Attack-Lab/15.png" alt="15"></p>
+<p><a href="/../img/DNS-Attack-Lab/15.png" title="15" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/15.png" alt="15"></a></p>
 <p>然后查看本地DNS服务器的缓存。</p>
-<p><img src="/../img/DNS-Attack-Lab/16.png" alt="16"></p>
+<p><a href="/../img/DNS-Attack-Lab/16.png" title="16" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/16.png" alt="16"></a></p>
 <p>此时，关闭嗅探程序，在user container中执行<code>dig mail.example.com</code>，那么用户会将此query发送至本地DNS服务器，本地DNS服务器发现这是example.com域下的hostname，并且缓存中有对应的NS(Name Server，用于指定域名的权威DNS服务器)类型的记录，所以本地DNS服务器会将此query转发给ns.attacker32.com，也就是攻击者控制的nameserver，返回的数据也由攻击者的nameserver给出。</p>
-<p><img src="/../img/DNS-Attack-Lab/17.png" alt="17"></p>
+<p><a href="/../img/DNS-Attack-Lab/17.png" title="17" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/17.png" alt="17"></a></p>
 <p>返回的answer表明IP地址为1.2.3.6，这是由ns.attacker32.com服务器配置文件定义的。</p>
-<p><img src="/../img/DNS-Attack-Lab/18.png" alt="18"></p>
+<p><a href="/../img/DNS-Attack-Lab/18.png" title="18" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/18.png" alt="18"></a></p>
 <p>@ IN A 1.2.3.4: 将当前域名（Zone 文件的起始部分，通常表示为 example.com）解析为 IPv4 地址 1.2.3.4。</p>
 <p>www IN A 1.2.3.5: 将 <a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a> 解析为 IPv4 地址 1.2.3.5。</p>
 <p>ns IN A 10.9.0.153: 将 ns.example.com 解析为 IPv4 地址 10.9.0.153。</p>
 <p>* IN A 1.2.3.6: 将所有其他未指定的主机名解析为 IPv4 地址 1.2.3.6。* 通常代表通配符，表示匹配所有其他未明确列出的主机名。</p>
 <h4 id="Task4-Spoofing-NS-Records-For-Another-Domain"><a href="#Task4-Spoofing-NS-Records-For-Another-Domain" class="headerlink" title="Task4. Spoofing NS Records For Another Domain"></a>Task4. Spoofing NS Records For Another Domain</h4><p>在task3中的DNS cache poisoning攻击使得ns.attacker32.com成为了example.com域的nameserver。受这次攻击成功的灵感，我们尝试将攻击影响扩大到其他域。也就是说，在上次task的伪造的数据包中的Authority部分添加其他的内容，使得ns.attacker32.com也被作用为google.com的nameserver.</p>
-<p><img src="/../img/DNS-Attack-Lab/19.png" alt="19"></p>
+<p><a href="/../img/DNS-Attack-Lab/19.png" title="19" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/19.png" alt="19"></a></p>
 <p><strong>实验步骤：</strong></p>
 <p>先清除本地DNS服务器的缓存。</p>
 <p>修改dns_sniff_spoof.py代码，修改Authority Section部分,使得ns.attacker32.com也被作用为google.com的nameserver.（记得修改DNS数据段的nscount）</p>
-<p><img src="/../img/DNS-Attack-Lab/20.png" alt="20"></p>
+<p><a href="/../img/DNS-Attack-Lab/20.png" title="20" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/20.png" alt="20"></a></p>
 <p>以root权限运行此嗅探程序，同时在user container中运行dig命令，发送DNS query。</p>
 <p>user container中收到的消息显示伪造的DNS reply包中的Authority section部分是有刚才添加的google.com域的nameserver相关信息的。</p>
-<p><img src="/../img/DNS-Attack-Lab/21.png" alt="21"></p>
+<p><a href="/../img/DNS-Attack-Lab/21.png" title="21" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/21.png" alt="21"></a></p>
 <p>此时查看本地DNS服务器中的缓存，却发现没有google.com域的相关那么server信息，只有example.com域的nameserver信息。</p>
-<p><img src="/../img/DNS-Attack-Lab/22.png" alt="22"></p>
+<p><a href="/../img/DNS-Attack-Lab/22.png" title="22" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/22.png" alt="22"></a></p>
 <p>说明本地的DNS服务器不会接收这个多余的Authority section。</p>
 <p><strong>所以是不是只接受第一个NS呢？</strong></p>
 <p>把第一个NS和第二个NS交换位置，再次实验：</p>
-<p><img src="/../img/DNS-Attack-Lab/23.png" alt="23"></p>
-<p><img src="/../img/DNS-Attack-Lab/24.png" alt="24"></p>
+<p><a href="/../img/DNS-Attack-Lab/23.png" title="23" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/23.png" alt="23"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/24.png" title="24" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/24.png" alt="24"></a></p>
 <p>发现第二个NS被缓存了，第一个没有被缓存。所以，DNS服务器并不是无脑缓存Authority Section中的第一个NS。</p>
 <blockquote>
 <p>DNS服务器会考虑Zone，根据Zone的情况来判断是否接受</p>
 </blockquote>
 <p><strong>是不是只能接受Authority Section中的第一个项呢？</strong></p>
 <p>我将Authority Section中的两个项的域名都改为example.com</p>
-<p><img src="/../img/DNS-Attack-Lab/25.png" alt="25"></p>
+<p><a href="/../img/DNS-Attack-Lab/25.png" title="25" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/25.png" alt="25"></a></p>
 <p>在缓存中发现这两项都被存入了缓存。</p>
-<p><img src="/../img/DNS-Attack-Lab/26.png" alt="26"></p>
+<p><a href="/../img/DNS-Attack-Lab/26.png" title="26" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/26.png" alt="26"></a></p>
 <p>所以我认为，Authority Section中的项被存入缓存的条件为：NS的网域必须包含查询的子域名。</p>
 <h4 id="Task5-Spoofing-Records-in-the-Additional-Section"><a href="#Task5-Spoofing-Records-in-the-Additional-Section" class="headerlink" title="Task5. Spoofing Records in the Additional  Section"></a>Task5. Spoofing Records in the Additional  Section</h4><p>在DNS reply中，还有一个Additional Section，这是用于提供附加信息的。在实践中，它主要用于为某些hostname提供IP地址，特别是哪些出现在Authority section中的hostname。</p>
 <p>本次task的目标就是伪造Additional Section中的项，查看它们是否被成功缓存到本地的DNS服务器中。</p>
 <p><strong>实验步骤：</strong></p>
 <p>先清除本地DNS服务器的缓存。</p>
 <p>然后修改dns_sniff_spoof.py代码，在Additional Section中添加三个项。</p>
-<p><img src="/../img/DNS-Attack-Lab/27.png" alt="27"></p>
+<p><a href="/../img/DNS-Attack-Lab/27.png" title="27" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/27.png" alt="27"></a></p>
 <p>其中，第一条和第二条都与Authority Section中的hostname相关，第三条与reply中的hostname都没有关系。待会儿Addition Section中哪些项被缓存了，哪些没有。</p>
 <p>以root权限运行该py程序，同时在user container中使用dig命令发送DNS query。</p>
 <p>在user container中dig命令返回的消息中，可以看见Addition Section中的这三个项：</p>
-<p><img src="/../img/DNS-Attack-Lab/28.png" alt="28"></p>
+<p><a href="/../img/DNS-Attack-Lab/28.png" title="28" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/28.png" alt="28"></a></p>
 <p>然后查看本地DNS服务器的缓存。</p>
-<p><img src="/../img/DNS-Attack-Lab/29.png" alt="29"></p>
-<p><img src="/../img/DNS-Attack-Lab/30.png" alt="30"></p>
+<p><a href="/../img/DNS-Attack-Lab/29.png" title="29" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/29.png" alt="29"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/30.png" title="30" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/30.png" alt="30"></a></p>
 <p>只发现Authority Section中的两项被缓存了，Additional Section中的三项都没有被缓存。</p>
 <p><strong>为什么？</strong></p>
 <p>因为DNS服务器只存和Authority Section里的域名有关的IP。</p>
 <p>NSsec.rdata &#x3D; Addsec.rrname</p>
-<p><img src="/../img/DNS-Attack-Lab/31.png" alt="31"></p>
+<p><a href="/../img/DNS-Attack-Lab/31.png" title="31" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/31.png" alt="31"></a></p>
 <p>但是我把Additional Section项再做修改，改成下图中的内容：第二项中的rrname&#x3D;ns.example.com，与Authority Section中的第二项的rrdata相同；第三项改为Authority Section中的rrname的子域：</p>
-<p><img src="/../img/DNS-Attack-Lab/32.png" alt="32"></p>
+<p><a href="/../img/DNS-Attack-Lab/32.png" title="32" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/32.png" alt="32"></a></p>
 <p>再重新攻击测试，重新查看本地DNS的缓存：</p>
 <p>发现Additional Section中的第二项被存入了缓存。</p>
-<p><img src="/../img/DNS-Attack-Lab/33.png" alt="33"></p>
+<p><a href="/../img/DNS-Attack-Lab/33.png" title="33" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/33.png" alt="33"></a></p>
 <p>我认为应该是Additional Section中的项，只有与Authority Section中的域名(rdata)相同才能被存入缓存，而且如果Authority Section中的域名如果已经有解析的IP地址(ns.attacker32.com被写入了配置文件)，那么与之相关的Additional Section也不会被存入缓存。</p>
 <p>如果缓存机制中没有针对Additional Section中的项作限制，那么会使得攻击者一次性注入很多恶意的信息。所以，这样是比较合理的。</p>
 <p><strong>到这里Local DNS Attack的实验就结束了。</strong>在以上的所有task中，都假设DNS服务器和攻击者在同一个LAN下，这样攻击者就可以窃听到DNS query的数据包。但是，当攻击者和DNS服务器不在同一个LAN下的时候，cache poisoning attack就变得非常困难了。</p>
@@ -242,7 +451,7 @@
 <h3 id="Lab-Environment-Setup-Task-1"><a href="#Lab-Environment-Setup-Task-1" class="headerlink" title="Lab Environment Setup Task"></a>Lab Environment Setup Task</h3><p>同Local DNS Attack Lab。</p>
 <h3 id="The-Attack-Tasks-1"><a href="#The-Attack-Tasks-1" class="headerlink" title="The Attack Tasks"></a>The Attack Tasks</h3><p>本次攻击的目标是对本地DNS服务区发起DNS cache poisoning攻击，使得当用户尝试使用dig命令的到<em><a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a></em>的IP地址的时候，本地的DNS服务器会去询问攻击者的nameserver，ns.attacker32.com而不是去询问官方的nameserver。这样，攻击者就可以修改返回的IP地址，使得用户被访问到攻击者设计的网站，而不是真正的<em><a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a>.</em></p>
 <p>一个完整的DNS查询过程（迭代查询）如下图：</p>
-<p><img src="/../img/DNS-Attack-Lab/34.png" alt="34"></p>
+<p><a href="/../img/DNS-Attack-Lab/34.png" title="34" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/34.png" alt="34"></a></p>
 <h4 id="Task1-How-Kaminsky-Attack-Works"><a href="#Task1-How-Kaminsky-Attack-Works" class="headerlink" title="Task1. How Kaminsky Attack Works"></a>Task1. How Kaminsky Attack Works</h4><p>在该实验中，攻击者向受害者DNS服务器（Apollo）发送DNS查询请求，从而触发Apollo的DNS查询。查询可以通过一个root DNS服务器，.COM的DNS服务器，最终结果将从example.com的DNS服务器返回。如上图所示。如果example.com的nameserver信息已经被Apollo缓存，那么查询将不会通过root或.COM服务器。</p>
 <p>当Apollo等待example.com nameserver的DNS reply时，攻击者可以向Apollo发送伪造的reply，假装这些reply来自example.com的nameserver。如果这些伪造的reply比真正的reply先到达，那么Apollo就会接收这个伪造的reply，攻击就算成功。</p>
 <p>但是在本次实验中，攻击者将无法嗅探，无法获得数据包的信息。所以较于Local DNS Attack，本次实验的难度主要是由于DNS reply数据包中的事务ID必须与query数据包中的ID匹配。由于query中的事务ID通常是随机生成的，在无法查看数据包的情况下，攻击者不容易获得正确的ID。</p>
@@ -250,7 +459,7 @@
 <p>然而，上述假设的攻击没有考虑到cache。事实上，如果攻击者没有足够的运气在合法的response抵达之前做出正确的猜测，那么正确的信息将会被DNS服务器缓存一段时间。cache机制使得攻击者无法伪造关于同一hostname的另一个响应，因为在cache超时之前，本地DNS服务器不会再发送此hostname的另一个DNS query，这意味着攻击者必须等待cache超时。</p>
 <p><strong>The Kaminsky Attack</strong></p>
 <p>Dan Kaminsky提出了一个非常优雅的技术来克服cache效应。通过Kaminsky攻击，攻击者将能够连续攻击域名上的DNS服务器，而无需等待，因此攻击可以在很短的时间内成功。</p>
-<p><img src="/../img/DNS-Attack-Lab/35.png" alt="35"></p>
+<p><a href="/../img/DNS-Attack-Lab/35.png" title="35" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/35.png" alt="35"></a></p>
 <p>如图所示：</p>
 <ol>
 <li><p>攻击者向DNS服务器Apollo查询一个example.com域下的一个不存在的子域名，例如twysw.example.com。</p>
@@ -268,79 +477,84 @@
 <p>发送DNS request的频率要求不高，所以使用C或者Python语言均可。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编写send_dns_request.py程序，实现DNS request包的发送。</p>
-<p><img src="/../img/DNS-Attack-Lab/36.png" alt="36"></p>
+<p><a href="/../img/DNS-Attack-Lab/36.png" title="36" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/36.png" alt="36"></a></p>
 <p>使用root全新执行py文件，并使用wireshark抓取数据包。</p>
-<p><img src="/../img/DNS-Attack-Lab/37.png" alt="37"></p>
-<p><img src="/../img/DNS-Attack-Lab/38.png" alt="38"></p>
+<p><a href="/../img/DNS-Attack-Lab/37.png" title="37" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/37.png" alt="37"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/38.png" title="38" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/38.png" alt="38"></a></p>
 <h4 id="Task3-Spoof-DNS-Replies"><a href="#Task3-Spoof-DNS-Replies" class="headerlink" title="Task3. Spoof DNS Replies"></a>Task3. Spoof DNS Replies</h4><p>在这个task中，我们需要在Kaminsky攻击中伪造DNS reply。由于我们的目标是example.com，所以我们需要伪造来自该域名服务器的回复。</p>
 <p>可以使用python中的scapy库来完成该任务。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编写send_dns_response.py程序，实现发送伪造的DNS response。</p>
-<p><img src="/../img/DNS-Attack-Lab/39.png" alt="39"></p>
+<p><a href="/../img/DNS-Attack-Lab/39.png" title="39" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/39.png" alt="39"></a></p>
 <p>要注意端口号和Answer Section和Authority Section（在这里实现污染）的值。</p>
 <p>使用root权限执行该程序，同时使用wireshark进行抓包。</p>
-<p><img src="/../img/DNS-Attack-Lab/40.png" alt="40"></p>
-<p><img src="/../img/DNS-Attack-Lab/41.png" alt="41"></p>
+<p><a href="/../img/DNS-Attack-Lab/40.png" title="40" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/40.png" alt="40"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/41.png" title="41" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/41.png" alt="41"></a></p>
 <p>成功抓包，信息表明这就是我们发送的伪造的DNS response，因为没有与之对应的DNS request，所以该数据包不会有任何作用。</p>
 <h4 id="Task4-Launch-the-Kaminsky-Attack"><a href="#Task4-Launch-the-Kaminsky-Attack" class="headerlink" title="Task4. Launch the Kaminsky Attack"></a>Task4. Launch the Kaminsky Attack</h4><p>现在我们可以把所有的东西放在一起发动卡明斯基袭击了。在攻击中，我们需要发送许多伪造的DNS回复，希望其中一个response命中正确的事务ID，并比合法response更早到达。因此，速度是至关重要的：我们可以发送的数据包越多，成功率就越高。如果我们像以前的task一样使用Scapy发送伪造的DNS response，成功率太低。</p>
 <p>所以我们需要使用混合的方法，我们首先使用Scapy生成一个DNS数据包模板，该模板存储在一个文件中。然后，我们将这个模板加载到C程序中，对一些字段进行一些小的更改，然后发送数据包。</p>
 <p>要检查攻击是否成功，我们需要检查dump.db文件，看看我们伪造的DNS响应是否已被DNS服务器成功接受。</p>
-<p><img src="/../img/DNS-Attack-Lab/42.png" alt="42"></p>
+<p><a href="/../img/DNS-Attack-Lab/42.png" title="42" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/42.png" alt="42"></a></p>
 <p><strong>实验步骤：</strong></p>
 <p>需要生成二进制数据包文件，以便待会儿C程序读取使用。</p>
-<p><img src="/../img/DNS-Attack-Lab/43.png" alt="43"></p>
+<p><a href="/../img/DNS-Attack-Lab/43.png" title="43" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/43.png" alt="43"></a></p>
 <p>编写C程序，实现Kaminsky Attack。</p>
 <p>线分析二进制数据包的结构：</p>
 <p>事务ID的位置：</p>
-<p><img src="/../img/DNS-Attack-Lab/44.png" alt="44"></p>
+<p><a href="/../img/DNS-Attack-Lab/44.png" title="44" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/44.png" alt="44"></a></p>
 <p>查询子域名的位置：</p>
 <p>Request包：</p>
-<p><img src="/../img/DNS-Attack-Lab/45.png" alt="45"></p>
+<p><a href="/../img/DNS-Attack-Lab/45.png" title="45" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/45.png" alt="45"></a></p>
 <p>Response包：</p>
-<p><img src="/../img/DNS-Attack-Lab/46.png" alt="46"></p>
+<p><a href="/../img/DNS-Attack-Lab/46.png" title="46" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/46.png" alt="46"></a></p>
 <p>构建attack.c代码：</p>
-<p><img src="/../img/DNS-Attack-Lab/47.png" alt="47"></p>
-<p><img src="/../img/DNS-Attack-Lab/48.png" alt="48"></p>
+<p><a href="/../img/DNS-Attack-Lab/47.png" title="47" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/47.png" alt="47"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/48.png" title="48" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/48.png" alt="48"></a></p>
 <p>（注释掉printf是为了更快地发送数据包）</p>
 <p>编译attack.c文件，使用root权限运行，同时在开设本地DNS服务的container中使用命令查看本地的缓存情况。</p>
-<p><img src="/../img/DNS-Attack-Lab/49.png" alt="49"></p>
-<p><img src="/../img/DNS-Attack-Lab/50.png" alt="50"></p>
+<p><a href="/../img/DNS-Attack-Lab/49.png" title="49" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/49.png" alt="49"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/50.png" title="50" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/50.png" alt="50"></a></p>
 <p>发现缓存中已经将攻击者控制的DNS服务器作为example.com的权威服务器了。</p>
-<p><img src="/../img/DNS-Attack-Lab/51.png" alt="51"></p>
+<p><a href="/../img/DNS-Attack-Lab/51.png" title="51" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/51.png" alt="51"></a></p>
 <p>在我们的生成DNS回复数据包中，Answer Section中对查询的子域名的答案永远是固定值1.2.3.4，哪些在本地DNS缓存中看到aadhc.example.com等子域名对应的IP为1.2.3.6的缓存是来自ns.attacker32.com的，也可以证明DNS 缓存被成功污染了。</p>
 <p>如果想知道我们的攻击程序在哪一个子域名回复的数据包猜中了，可以在缓存中查找1.2.3.4</p>
-<p><img src="/../img/DNS-Attack-Lab/52.png" alt="52"></p>
+<p><a href="/../img/DNS-Attack-Lab/52.png" title="52" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/52.png" alt="52"></a></p>
 <p>如图。那么本地DNS服务器就是先发送了对qxzdq.example.com的DNS查询，但是伪造的对qxzdq.example.com查询的DNS回复比官方的回复更早抵达，并且携带着正确的事务ID，所以本地DNS服务器就接收了该数据包，并且把数据包中的恶意nameserver写入了缓存，即攻击成功。</p>
 <p><strong>在实验中遇到的一些问题：</strong></p>
 <p>起初，我运行攻击代码，发现很久都没有攻击成功的迹象，然后又反复操作了很多遍，也还是无法成功。</p>
 <p>最终，在确定attack.c代码没有逻辑问题后，我开始研究二进制数据包。</p>
 <p><strong>发现实验不成功的问题就在二进制数据包的chksum！！</strong></p>
 <p>在使用生成数据包的时候，如果不指定chksum为0，那么scapy会自动计算chksum然后填入数据包。</p>
-<p><img src="/../img/DNS-Attack-Lab/53.png" alt="53"></p>
+<p><a href="/../img/DNS-Attack-Lab/53.png" title="53" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/53.png" alt="53"></a></p>
 <p>scapy在构成数据包的时候，如果没有指定chksum的值，那么chksum为None，scapy会根据数据包的内容自动生成chksum。</p>
-<p><img src="/../img/DNS-Attack-Lab/54.png" alt="54"></p>
-<p><img src="/../img/DNS-Attack-Lab/55.png" alt="55"></p>
+<p><a href="/../img/DNS-Attack-Lab/54.png" title="54" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/54.png" alt="54"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/55.png" title="55" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/55.png" alt="55"></a></p>
 <p>但是，如果指定UDP报文中的chksum为0，那么该scapy会使其为0，不会自动计算。</p>
-<p><img src="/../img/DNS-Attack-Lab/56.png" alt="56"></p>
-<p><img src="/../img/DNS-Attack-Lab/57.png" alt="57"></p>
+<p><a href="/../img/DNS-Attack-Lab/56.png" title="56" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/56.png" alt="56"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/57.png" title="57" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/57.png" alt="57"></a></p>
 <p>当UDP头部的校验和为0时，代表着对方没有进行校验和计算（可能是为了调试，或者是更高层的协议并不关心此校验和）。</p>
 <p>Form: <a target="_blank" rel="noopener" href="https://www.ietf.org/rfc/rfc768.txt"><em>RFC 768, User Datagram Protocol</em></a></p>
-<p><img src="/../img/DNS-Attack-Lab/58.png" alt="58"></p>
+<p><a href="/../img/DNS-Attack-Lab/58.png" title="58" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/58.png" alt="58"></a></p>
 <p><strong>经过多次尝试，发现如果事先在gen_dns_response.py代码中指定生成的数据包中的UDP chksum的值为0，那么攻击很快就成功了；</strong>如果没有指定UDP chksum的值，让scapy根据数据包自己生成对应的chksum，那么攻击一直无法成功。</p>
 <p>所以我觉得刚开始攻击一直不成功的原因就在于我没有指定UDP chksum的值为0，让scapy根据最初的数据包生成UDP chksum。因为UDP头部的chksum的计算是涉及到payload的一部分的，而我们这次实验会使得payload也改变（随机生成子域名的值），这会导致UDP 头部的合法chksum改变，而数据包中的UDP chksum是根据最初的payload计算的，那么必然会不符合其他数据包的情况。所以DNS服务器在收到数据包后，发现DNS chksum不正确，认为是数据包受损了，就将数据包置之不理了。 但是为什么将UDP chksum设置为0可以使得攻击成功呢？应该是DNS服务器发现此数据包的chksum为0，以为对面没有计算chksum，这时服务器不确定数据包是否受损，但是还是会接受数据包，所以攻击可以成功。</p>
 <p>对于IP报文中的chksum，通常情况下，操作系统会负责计算和填充。</p>
 <h4 id="Task5-Result-Verification"><a href="#Task5-Result-Verification" class="headerlink" title="Task5. Result Verification"></a>Task5. Result Verification</h4><p>攻击成功之后，在本地DNS服务器的DNS缓存中，example.com的NS记录将变为ns.attacker32.com。当该服务器接收到example.com域内任何主机名的DNS查询时，它将向ns.attack32.com发送查询，而不是发送到域的合法nameserver。</p>
 <p>可以通过在user container中使用dig命令发送example.com域下的子域名的DNS查询报文。</p>
 <p>要验证攻击是否成功，需要在user container中运行以下两个dig命令。在响应中，两个命令的<a target="_blank" rel="noopener" href="http://www.example.com的ip地址应该相同,并且应该是攻击者名称服务器上zone文件定义的地址./">www.example.com的IP地址应该相同，并且应该是攻击者名称服务器上zone文件定义的地址。</a></p>
-<p><img src="/../img/DNS-Attack-Lab/59.png" alt="59"></p>
-<p><img src="/../img/DNS-Attack-Lab/60.png" alt="60"></p>
+<p><a href="/../img/DNS-Attack-Lab/59.png" title="59" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/59.png" alt="59"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/60.png" title="60" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/60.png" alt="60"></a></p>
 <p>回复的结果相同。</p>
 <p>下面使用wireshark进行网络抓包。</p>
-<p><img src="/../img/DNS-Attack-Lab/61.png" alt="61"></p>
-<p><img src="/../img/DNS-Attack-Lab/62.png" alt="62"></p>
+<p><a href="/../img/DNS-Attack-Lab/61.png" title="61" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/61.png" alt="61"></a></p>
+<p><a href="/../img/DNS-Attack-Lab/62.png" title="62" class="gallery-item" style="box-shadow: none;"> <img src="/../img/DNS-Attack-Lab/62.png" alt="62"></a></p>
 <p>抓包结果表明了，本地DNS服务器在被攻击成功后会向攻击者的nameserver发起对应域下的DNS查询，而不是官方的nameserver。</p>
 <p>至此，简化的卡明斯基攻击实验就完成了。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -377,6 +591,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -409,26 +630,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -440,12 +643,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -459,7 +677,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

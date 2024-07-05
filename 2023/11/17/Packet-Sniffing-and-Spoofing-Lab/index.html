@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Packet Sniffing and Spoofing Lab" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Packet-Sniffing-and-Spoofing-Lab"><span class="post-toc-text">Packet Sniffing and Spoofing Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lab-Task-Set1-Using-Scapy-to-Sniff-and-Spoof-Packets"><span class="post-toc-text">Lab Task Set1. Using Scapy to  Sniff and Spoof Packets</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-1-Sniffing-Packets"><span class="post-toc-text">Task1.1 Sniffing Packets</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task1-1A"><span class="post-toc-text">Task1.1A.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task1-1B"><span class="post-toc-text">Task1.1B</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-2-Spoofing-ICMP-Packets"><span class="post-toc-text">Task1.2 Spoofing ICMP Packets</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-3-Traceroute"><span class="post-toc-text">Task1.3 Traceroute</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-4-Sniffing-and-then-Spoofing"><span class="post-toc-text">Task1.4 Sniffing and-then Spoofing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lab-Task-Set2-Writing-Programs-to-Sniff-and-Spoof-Packets"><span class="post-toc-text">Lab Task Set2. Writing Programs to Sniff and Spoof Packets</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-1-Writing-Packet-Sniffing-Program"><span class="post-toc-text">Task2.1 Writing Packet Sniffing Program</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-1A-Understanding-How-a-Sniffer-Works"><span class="post-toc-text">Task2.1A Understanding How a Sniffer Works</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-1B-Writing-Filters"><span class="post-toc-text">Task2.1B Writing Filters</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-1C-Sniffing-Passwords"><span class="post-toc-text">Task2.1C Sniffing Passwords</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-2-Spoofing"><span class="post-toc-text">Task2.2 Spoofing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-2A-Write-a-spoofing-program"><span class="post-toc-text">Task2.2A Write a spoofing program</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-2B-Spoofing-and-ICMP-Echo-Request"><span class="post-toc-text">Task2.2B Spoofing and ICMP Echo Request</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task-2-3-Sniff-and-then-Spoof"><span class="post-toc-text">Task 2.3 Sniff and then Spoof</span></a></li></ol></li></ol></li></ol></li></ol>
             
         
-        <h1 id="Packet-Sniffing-and-Spoofing-Lab"><a href="#Packet-Sniffing-and-Spoofing-Lab" class="headerlink" title="Packet Sniffing and Spoofing Lab"></a>Packet Sniffing and Spoofing Lab</h1><p><strong>Packet Sniffing (数据包嗅探)</strong>:</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Packet-Sniffing-and-Spoofing-Lab"><a href="#Packet-Sniffing-and-Spoofing-Lab" class="headerlink" title="Packet Sniffing and Spoofing Lab"></a>Packet Sniffing and Spoofing Lab</h1><p><strong>Packet Sniffing (数据包嗅探)</strong>:</p>
 <p>Packet sniffing是指截获和监视计算机网络上传输的数据包的过程。攻击者或网络管理员可以使用数据包嗅探工具来捕获通过网络传输的数据，从而获得敏感信息，例如用户名、密码、以及其他未加密的数据。合法的用途包括网络故障排除、性能分析和网络管理。然而，当恶意使用时，数据包嗅探可能导致隐私泄漏和安全漏洞。</p>
 <p><strong>Packet Spoofing (数据包欺骗)</strong>:</p>
 <p>Packet spoofing是指伪造或欺骗网络上的数据包，使其看起来好像来自于不同的源或目标。攻击者可能使用数据包欺骗来隐藏其真实的身份或执行欺骗攻击，例如欺骗过滤器或防火墙，或者执行中间人攻击。这种技术可能会导致对网络的伪装攻击，使得攻击者能够劫持通信、篡改数据包或执行其他恶意操作。</p>
@@ -142,18 +351,18 @@
 <p>在Task Set 1中，所有的任务都会使用到Scapy。</p>
 <h4 id="Task1-1-Sniffing-Packets"><a href="#Task1-1-Sniffing-Packets" class="headerlink" title="Task1.1 Sniffing Packets"></a>Task1.1 Sniffing Packets</h4><p>此Task的目的是学习如何使用Scapy在Python程序中进行数据包嗅探。</p>
 <p>实验说明中给出了一段Python示例代码：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/1.png" alt="1"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/1.png" alt="1"></a></p>
 <p>先查看本次实验所用到的network interface：br-81d37ad55414</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/2.png" alt="2"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/2.png" title="2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/2.png" alt="2"></a></p>
 <h5 id="Task1-1A"><a href="#Task1-1A" class="headerlink" title="Task1.1A."></a>Task1.1A.</h5><p>利用上面的示例程序抓取数据包，第一次使用root权限，第二次不使用root权限，观察两次运行结果并解释。</p>
 <p><strong>实验步骤：</strong></p>
 <p>先编写依照示例编写task1-1.py程序。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/3.png" alt="3"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/3.png" title="3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/3.png" alt="3"></a></p>
 <p>使用root权限编译运行：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/4.png" alt="4"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/4.png" title="4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/4.png" alt="4"></a></p>
 <p>发现可以成功接收到ICMP数据包，并且打印出了数据包头的详细信息。</p>
 <p>不使用root权限，直接运行：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/5.png" alt="5"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/5.png" title="5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/5.png" alt="5"></a></p>
 <p>发现无法成功运行，出现PermissionError。</p>
 <p><strong>分析：</strong></p>
 <p>在大多数情况下，嗅探网络流量需要系统的网络权限，而这通常需要root权限。这是因为嗅探网络流量可能涉及到底层的网络接口和数据包操作，这些需要更高的权限。</p>
@@ -163,41 +372,41 @@
 <p><strong>实验步骤：</strong></p>
 <p>①<strong>只捕捉ICMP数据包</strong></p>
 <p>修改sniff函数中filter参数的值。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/6.png" alt="6"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/6.png" title="6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/6.png" alt="6"></a></p>
 <p>运行python程序，发现捕捉到的全是ICMP包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/7.png" alt="7"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/7.png" title="7" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/7.png" alt="7"></a></p>
 <p>②<strong>只捕获来自某个特定IP地址，目标端口为23的TCP数据包</strong></p>
 <p>修改sniff函数中filter参数的值。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/8.png" alt="8"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/8.png" title="8" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/8.png" alt="8"></a></p>
 <p>再写一个发送数据包的python程序send.py：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/9.png" alt="9"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/9.png" title="9" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/9.png" alt="9"></a></p>
 <p>运行数据包嗅探程序，同时发送数据包，查看捕获的数据包的信息。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/10.png" alt="10"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/10.png" title="10" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/10.png" alt="10"></a></p>
 <p>发现捕获到的数据包都是符合代码中定义的过滤规则的。</p>
 <p>③<strong>只捕获某个子网范围内的数据包</strong></p>
 <p>修改sniff函数中filter参数的值。</p>
 <p>只捕获与123.123.123.0&#x2F;24子网下的IP有关的数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/11.png" alt="11"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/11.png" title="11" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/11.png" alt="11"></a></p>
 <p>运行数据包嗅探程序，同时使用python程序发送一些数据包，查看嗅探结果。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/12.png" alt="12"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/12.png" title="12" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/12.png" alt="12"></a></p>
 <p>捕获的数据包都是123.123.123.0&#x2F;24子网下的IP地址相关的数据包，表明filter过滤生效。</p>
 <h4 id="Task1-2-Spoofing-ICMP-Packets"><a href="#Task1-2-Spoofing-ICMP-Packets" class="headerlink" title="Task1.2 Spoofing ICMP Packets"></a>Task1.2 Spoofing ICMP Packets</h4><p>本次task的目标是通过Scapy构造ICMP echo request数据包并发送，同时使用Wireshark工具观察现象。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编写task1-2.py，发送spoofing数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/13.png" alt="13"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/13.png" title="13" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/13.png" alt="13"></a></p>
 <p>设置源ip地址为123.123.123.123，ttl值为111。</p>
 <p>发送数据包，并且在Wireshark里查看。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/14.png" alt="14"></p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/15.png" alt="15"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/14.png" title="14" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/14.png" alt="14"></a></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/15.png" title="15" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/15.png" alt="15"></a></p>
 <p>Wireshark已经捕捉到了刚刚发送的spoofing的数据包，以及10.9.0.6主机的回应的数据包。</p>
 <p>分析略。</p>
 <h4 id="Task1-3-Traceroute"><a href="#Task1-3-Traceroute" class="headerlink" title="Task1.3 Traceroute"></a>Task1.3 Traceroute</h4><p>本次task的目标是使用Scapy估计主机与目的主机之间的路由器的数量，即使用python代码实现traceroute工具所提供的功能。</p>
 <p><strong>思路：</strong>只需将一个数据包（任何类型）发送到目的地，首先将其TTL字段设置为1。这个数据包将被第一个路由器丢弃，它将向我们发送ICMP错误消息，告诉我们TTL已经结束。我们可以通过这个数据包获取第一个路由器的IP地址。然后，我们将TTL字段增加到2，发送另一个数据包，并获得第二个路由器的IP地址。我们将重复这个过程，直到我们的包裹最终到达目的地。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编写task1-3.py。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/16.png" alt="16"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/16.png" title="16" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/16.png" alt="16"></a></p>
 <p>将destination_ip设为baidu.com的地址，运行task1-3.py。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/17.png" alt="17"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/17.png" title="17" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/17.png" alt="17"></a></p>
 <p>发现程序成功打印出了从VM到110.242.68.66(baidu.com)所经过的路由器的IP地址。</p>
 <p><strong>分析：</strong></p>
 <p>该代码使用Scapy库实现了类似Traceroute的功能。在每次循环中，它构造一个具有递增TTL值的ICMP Echo请求数据包，并通过网络发送。当数据包到达路由器时，路由器根据TTL减小数据包的数值，并在TTL为零时返回ICMP Time Exceeded消息。程序捕获并解析响应，提取源IP地址和响应时间，打印这些信息。如果收到Echo Reply（ICMP类型为0），表示已经到达目标，程序结束。如果在规定的超时时间内未收到响应，输出”* * *”表示超时。</p>
@@ -205,17 +414,17 @@
 <p>这个程序监控LAN中的数据包，一旦发现有ICMP echo request的数据包，无论目标IP地址是多少，都要立刻发送一个echo relpy至源主机。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编写task1-4.py</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/18.png" alt="18"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/18.png" title="18" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/18.png" alt="18"></a></p>
 <p>在代码中我们将ttl值设置为111（作为Spoofing数据包的标识）。</p>
 <p>运行task1-4.py开始监听。</p>
 <p>同时进入container，分别对以下ip地址进行ping操作。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/19.png" alt="19"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/19.png" title="19" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/19.png" alt="19"></a></p>
 <p>ping 1.2.3.4 :</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120140234856.png" alt="image-20240120140234856"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120140234856.png" title="image-20240120140234856" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120140234856.png" alt="image-20240120140234856"></a></p>
 <p>ping 10.9.0.99:</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/21.png" alt="21"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/21.png" title="21" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/21.png" alt="21"></a></p>
 <p>ping 8.8.8.8:</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/22.png" alt="22"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/22.png" title="22" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/22.png" alt="22"></a></p>
 <p><strong>结果描述以及分析：</strong></p>
 <p>我们在VM上运行sniffing and-then spoofing程序之后，又在container中分别对Internet上不存在的主机、LAN中不存在的主机、Internet上存在的主机发送ICMP echo request数据包。</p>
 <p>发现：</p>
@@ -231,23 +440,23 @@
 <p>但是当LAN中不存在这个IP地址的时候，主机发送 ARP 请求，但是LAN内没有响应这个请求的主机，主机无法获得目标主机的MAC地址，那么这个数据包就会被丢弃。</p>
 <p>在我们观察到的结果中。</p>
 <p>对①的解释：目标IP地址不在LAN内，所以封装好的以太网帧的目标MAC地址就是默认网关的MAC地址，然后数据包就会发送至默认网关，也就是VM，途中会经过VM上程序监听的网络接口，所以程序会捕获到container发送的数据包并且发送对应的spoofing数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120140444390.png" alt="image-20240120140444390"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120140444390.png" title="image-20240120140444390" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120140444390.png" alt="image-20240120140444390"></a></p>
 <p>对②的解释：目标IP地址在LAN内，container会先发现cache中是没有对应的MAC地址，然后在LAN内发送ARP广播，询问谁有10.9.0.99的MAC地址，显然没有回应。所以该数据包将由于缺少目标MAC地址而未能组成，根本没有发送出去，更没有经过那个网络接口，所以监听程序无法捕获到任何数据包，container也收不到任何回应。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/24.png" alt="24"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/24.png" title="24" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/24.png" alt="24"></a></p>
 <p>上图是用Wireshark抓取到的询问MAC地址的ARP数据包。</p>
 <p>对③的解释：目标IP地址不在LAN中，那么由①的分析可以得出，数据包肯定会经过那个被监听的网络接口，所以监听程序会捕获到数据包，但是并没有对其作拦截操作，该数据包会正确到达目标主机，并且目标主机会返回echo reply数据包给container。这样container就会收到两种echo reply，一种是监听程序返回的spoofing数据包，另一种是正常的目标主机返回的echo reply数据包。</p>
 <h3 id="Lab-Task-Set2-Writing-Programs-to-Sniff-and-Spoof-Packets"><a href="#Lab-Task-Set2-Writing-Programs-to-Sniff-and-Spoof-Packets" class="headerlink" title="Lab Task Set2. Writing Programs to Sniff and Spoof Packets"></a>Lab Task Set2. Writing Programs to Sniff and Spoof Packets</h3><h4 id="Task2-1-Writing-Packet-Sniffing-Program"><a href="#Task2-1-Writing-Packet-Sniffing-Program" class="headerlink" title="Task2.1 Writing Packet Sniffing Program"></a>Task2.1 Writing Packet Sniffing Program</h4><h5 id="Task2-1A-Understanding-How-a-Sniffer-Works"><a href="#Task2-1A-Understanding-How-a-Sniffer-Works" class="headerlink" title="Task2.1A Understanding How a Sniffer Works"></a>Task2.1A Understanding How a Sniffer Works</h5><p>在这项task中，我们需要编写一个sniffer程序，打印出每个捕获数据包的源和目标IP地址。</p>
 <p><strong>实验步骤：</strong></p>
 <p>前提：在VBox的设置中将网卡的混杂模式开启：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/25.png" alt="25"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/25.png" title="25" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/25.png" alt="25"></a></p>
 <p>如果选择拒绝项，那么会使得即使开启了网卡混杂模式，也无法监听到LAN内其他网卡的数据包。</p>
 <p>然后参照实验说明所提供的资料，实现C程序task2-1.c。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/26.png" alt="26"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/26.png" title="26" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/26.png" alt="26"></a></p>
 <p>它可以使得enp0s3网卡开启混杂模式，使那些mac地址与enp0s3不匹配的数据包也将被enp0s3网卡接收，并且程序会调用自定义的回调函数将数据包的信息打印出来。</p>
 <p>为了测试，混杂模式的作用，我又新创建了一个虚拟机，使得新虚拟机的网口和原虚拟机的网口在同一LAN下。暂且称原虚拟机为VM1，新虚拟机为VM2。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/27.png" alt="27"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/27.png" title="27" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/27.png" alt="27"></a></p>
 <p>当我们在VM1（图左）中运行开启enp0s3混杂模式监听程序，在VM2（图右）中执行ping 8.8.8.8命令。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/28.png" alt="28"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/28.png" title="28" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/28.png" alt="28"></a></p>
 <p>结果表明我们的程序是可以成功抓包并且打印数据包的信息的。</p>
 <p><strong>回答问题：</strong></p>
 <p><strong>问题1：请用自己的语言描述整个监听流程。</strong></p>
@@ -255,15 +464,15 @@
 <p><strong>问题2：为什么执行该监听程序需要root权限？如果没有root权限，程序会运行到那一步失败？</strong></p>
 <p>因为该程序需要访问网络设备（网卡），只有具有root权限的用户才能进行访问，非root用户无法访问。</p>
 <p>如果没有root权限，那么程序应该会在访问网卡资源的步骤出错，也就是途中圈出的一步：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/29.png" alt="29"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/29.png" title="29" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/29.png" alt="29"></a></p>
 <p><strong>问题3：试着在监听程序中开启或者关闭网卡的混杂模式，可以证明网卡的混杂模式开与关下，程序的运行结果有什么不同吗？</strong></p>
 <p>当然可以证明。我们编译两个程序task2-1-on和task2-1-off，前者是开启混杂模式的，后者是未开启混杂模式的。</p>
 <p>VM1运行task2-1-on，尝试抓取VM2发送到8.8.8.8的ICMP数据包。发现是可以成功的。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/30.png" alt="30"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/30.png" title="30" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/30.png" alt="30"></a></p>
 <p>但是VM1运行task2-1-off，尝试抓取VM2发送到8.8.8.8的ICMP数据包，这样就无法抓到数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/31.png" alt="31"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/31.png" title="31" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/31.png" alt="31"></a></p>
 <p>只能抓到目的地是监听网口(ip&#x3D;10.0.2.5)的数据包：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/32.png" alt="32"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/32.png" title="32" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/32.png" alt="32"></a></p>
 <p>有关问题3的一些思考：</p>
 <p>其实一开始，我将监听的网卡设置为br开头的那个网卡（下文简称br网卡），也就是主机连接containers的那个网卡。我尝试开启混杂模式监听数据包，我期待可以监听到经过主机enp0s3网卡的数据包，但是试了很多遍都无法监听成功。我猜测原因应该是br网卡和enp0s3网卡不在一个局域网内，enp0s3所在的局域网中的数据包无法到达br网卡所在的局域网。</p>
 <p>之后我又尝试了新建一个虚拟机，实际上就是让两个网卡在同一局域网，然后在这个情况下对网卡进行混杂监听，看能不能符合预期<em>（我的预期就是：在网卡<strong>A</strong>上开启混杂模式后，网卡<strong>A</strong>能收目的地不是网卡<strong>A</strong>的数据包，如果关闭混杂模式就无法收到）</em>。测试结果如上，确实符合预期。</p>
@@ -274,17 +483,17 @@
 <p>实验步骤：</p>
 <p>① 捕获两个特定主机之间的ICMP数据包</p>
 <p>修改filter_exp[]为：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/33.png" alt="33"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/33.png" title="33" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/33.png" alt="33"></a></p>
 <p>编译，然后在attacker container中运行，同时发送多种数据包查看过滤情况：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/34.png" alt="34"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/34.png" title="34" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/34.png" alt="34"></a></p>
 <p>成功过滤了两个不符合规则的数据包：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/35.png" alt="35"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/35.png" title="35" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/35.png" alt="35"></a></p>
 <p>② 捕获目标端口在10-100之间的TCP数据包</p>
 <p>按如下设置：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/36.png" alt="36"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/36.png" title="36" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/36.png" alt="36"></a></p>
 <p>编译，然后在attacker container中运行，同时发送多种数据包查看过滤情况：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/37.png" alt="37"></p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/38.png" alt="38"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/37.png" title="37" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/37.png" alt="37"></a></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/38.png" title="38" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/38.png" alt="38"></a></p>
 <p>捕获了四个数据包，因为我们发送了3个TCP数据包，加上回应的数据包就有6个，因为dst port限定在10-100之间，所以有两个被过滤掉了。</p>
 <p>但是为什么三个回应的TCP数据包的des port都是20号端口（FTP）？ </p>
 <h5 id="Task2-1C-Sniffing-Passwords"><a href="#Task2-1C-Sniffing-Passwords" class="headerlink" title="Task2.1C Sniffing Passwords"></a>Task2.1C Sniffing Passwords</h5><p>尝试用监听程序捕获Telnet服务的数据包中的密码。</p>
@@ -308,14 +517,14 @@
 <p><strong>实验步骤：</strong></p>
 <p>编写task2-1-c.c代码：</p>
 <p>①  修改过滤表达式：使得程序可以过滤除telnet服务之外的数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/39.png" alt="39"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/39.png" title="39" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/39.png" alt="39"></a></p>
 <p>这不仅会捕获从客户端到服务端的数据包，还可以捕获服务端到数据端的数据包。</p>
 <p>②  修改回调函数，使其能够打印Telnet payload（TCP payload）的内容。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/40.png" alt="40"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/40.png" title="40" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/40.png" alt="40"></a></p>
 <p>③  编译运行，复制到attacker container中运行，同时在HostA container中使用telnt连接HostB，发现attacker可以成功嗅探到密码。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/41.png" alt="41"></p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/42.png" alt="42"></p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/43.png" alt="43"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/41.png" title="41" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/41.png" alt="41"></a></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/42.png" title="42" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/42.png" alt="42"></a></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/43.png" title="43" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/43.png" alt="43"></a></p>
 <p>由此可见，成功从数据包中窃取到用户名和密码，并且还能实时监控HostA与HostB的所有Telnet操作。</p>
 <p><strong>分析：</strong></p>
 <p>能抓取成功的主要原因就是：可以窃听到其他主机的通信，Telnet数据包通信采用明文形式。所以只需要取出TCP payload即可。</p>
@@ -326,11 +535,11 @@
 <ol>
 <li>创建一个原始套接字，使用socker()系统调用创建原始套接字。在创建原始套接字时，需要指定协议族为 AF_INET（IPv4）或 AF_INET6（IPv6），以及套接字类型为 SOCK_RAW。</li>
 </ol>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/44.png" alt="44"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/44.png" title="44" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/44.png" alt="44"></a></p>
 <ol start="2">
 <li>设置套接字选项，使用 setsockopt() 函数设置原始套接字的选项。设置原始套接字的选项是为了告诉操作系统我们将自己构造 IP 报文的头部，而不需要内核自动添加标准的 IP 头。</li>
 </ol>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/45.png" alt="45"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/45.png" title="45" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/45.png" alt="45"></a></p>
 <p>上述代码中，IP_HDRINCL 选项通知内核不要包含默认的 IP 头，而是允许我们自己构建 IP 头并添加到数据包中。</p>
 <ol start="3">
 <li><p>构造数据包，需要自己创建IP头和可能的传输层（TCP、UDP）头，并将有效载荷（payload）添加到数据包中。这涉及填写各个报文字段，如源和目标IP地址、协议类型、校验和等。</p>
@@ -338,35 +547,35 @@
 <li><p>通过原始套接字发送数据包，使用sendto()函数将构建好的数据包发送出去。</p>
 </li>
 </ol>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/46.png" alt="46"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/46.png" title="46" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/46.png" alt="46"></a></p>
 <p>packet_data 是构造好的数据包的指针，packet_length 是数据包的长度。</p>
 <h5 id="Task2-2A-Write-a-spoofing-program"><a href="#Task2-2A-Write-a-spoofing-program" class="headerlink" title="Task2.2A Write a spoofing program"></a>Task2.2A Write a spoofing program</h5><p>本次task的目标是编写一个可以发送欺骗数据包的C程序。</p>
 <p><strong>实验步骤：</strong></p>
 <p>在本次实验中，我将构造一个虚拟的ICMP echo request数据包，源IP为8.8.8.8，目的IP为10.9.0.5 (HostA)。如果欺骗成功，HostA应该返回一个ICMP echo reply数据包。</p>
 <p>编写一个ICMP Spoofing程序，使其可以构造随意的ICMP数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/47.png" alt="47"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/47.png" title="47" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/47.png" alt="47"></a></p>
 <p>打开Wireshark，监听br网卡的数据包，同时发送运行该程序，发送Spoofing数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/48.png" alt="48"></p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/49.png" alt="49"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/48.png" title="48" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/48.png" alt="48"></a></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/49.png" title="49" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/49.png" alt="49"></a></p>
 <p>从wireshark的抓包结果可以看出，HostA回应了我们发送的Spoofing数据包，证明Spoof程序是成功的。</p>
 <p>尝试发送虚假的TCP、UDP数据包（源IP地址为99.99.99.99）。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120141534555.png" alt="image-20240120141534555"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120141534555.png" title="image-20240120141534555" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/image-20240120141534555.png" alt="image-20240120141534555"></a></p>
 <p>发现HostA也对其做了响应。</p>
 <h5 id="Task2-2B-Spoofing-and-ICMP-Echo-Request"><a href="#Task2-2B-Spoofing-and-ICMP-Echo-Request" class="headerlink" title="Task2.2B Spoofing and ICMP Echo Request"></a>Task2.2B Spoofing and ICMP Echo Request</h5><p>本次task的目标是伪造ICMP Echo Request数据包。</p>
 <p>在本次实验中，代表HostA伪造ICMP echo Request数据包，即使用HostA的IP地址(10.9.0.5)作为其源IP地址，将该数据包发送至Internet上的活跃的计算机，同时打开wireshark抓包，如果欺骗成功了，应该可以收到Internet上主机的回复。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编写spoof_icmp.c代码。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/51.png" alt="51"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/51.png" title="51" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/51.png" alt="51"></a></p>
 <p>编译执行spoof_icmp，同时打开wireshark抓包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/52.png" alt="52"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/52.png" title="52" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/52.png" alt="52"></a></p>
 <p>成功收到来自Internet上活跃主机8.8.8.8的ICMP echo reply数据包，证明8.8.8.8被程序发送的数据包给欺骗了。</p>
 <p><strong>回答问题：</strong></p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/53.png" alt="53"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/53.png" title="53" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/53.png" alt="53"></a></p>
 <p><strong>问题4：可以将IP数据包的长度字段设为任意值，不管实际数据包有多大？</strong></p>
 <p>不可以，IP 数据包长度字段必须准确地表示整个数据包的长度，包括头部和数据。这个字段的大小是由协议定义的，如果设置了不正确的长度，可能会导致数据传输错误或丢包。</p>
 <p><strong>问题5：在使用raw socket编程时，是否要计算IP头部的校验和？</strong></p>
 <p>在我们的程序中，我们计算了ICMP header中的校验和：</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/54.png" alt="54"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/54.png" title="54" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/54.png" alt="54"></a></p>
 <p>但是对于IP header的校验和，程序中却没有显示计算，这是因为对于IP header，通常不需要手动计算校验和，应为在使用sendto函数发送数据包的时候，操作系统会检测到IP头的校验和字段是空的，会自动计算正确的校验和。</p>
 <p>这种自动校验和计算是现代网络栈的一个特性，旨在简化原始套接字的使用，因此在许多情况下，直接使用原始套接字发送 IP 数据包无需担心 IP 头的校验和计算。</p>
 <p><strong>问题6：为什么使用raw socket的程序需要root权限？如果没有root权限，程序会在哪里执行失败？</strong></p>
@@ -379,16 +588,21 @@
 <p>编写sniff_spoof_icmp.c程序，将上面实验中的sniff和spoof功能结合。</p>
 <p>值得注意的是：需要从原IP数据包中的源、目的IP取出，作为spoofing数据包的目的、源IP地址。</p>
 <p>首先，在main函数中完成设置过滤、创建原始套接字功能，并通过参数的形式将原始套接字传递给回调函数，在回调函数中发送spoofing数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/55.png" alt="55"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/55.png" title="55" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/55.png" alt="55"></a></p>
 <p>在回调函数中，先接收原始套接字，然后通过自定义函数send_echo_reply()发送欺骗数据包。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/56.png" alt="56"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/56.png" title="56" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/56.png" alt="56"></a></p>
 <p>在send_echo_reply()函数中，我们先获取原始的IP数据包，便于待会儿提取源、目的IP地址。然后构造ICMP echo reply数据包，再构造IP数据包（这里我们将TTL设为111便于检验），最后将构造好的数据包发送。</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/57.png" alt="57"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/57.png" title="57" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/57.png" alt="57"></a></p>
 <p>我们将编译好的程序放在attacker container中运行，同时使用hostA ping 123.123.123.123（一个无法ping通的主机）</p>
-<p><img src="/../img/Packet-Sniffing-and-Spoofing-Lab/58.png" alt="58"></p>
+<p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/58.png" title="58" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/58.png" alt="58"></a></p>
 <p>至此，实验结束。</p>
 <p>用C语言捕获和构造数据包需要考虑的地方更多，但是灵活性也更大，所以难度较大，需要多加练习。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -425,6 +639,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -457,26 +678,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -488,12 +691,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -507,7 +725,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

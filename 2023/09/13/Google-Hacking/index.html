@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Google Hacking" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Google-Hacking"><span class="post-toc-text">Google Hacking</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="post-toc-text">基本语法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2"><span class="post-toc-text">高级搜索</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="post-toc-text">实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B1%EF%BC%9Asite%E3%80%81filetype%E3%80%81intext-%E9%85%8D%E5%90%88"><span class="post-toc-text">实例1：site、filetype、intext 配合</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B2%EF%BC%9Agoogle%E6%90%9C%E7%B4%A2%E8%87%AA%E5%B7%B1%E7%9A%84blog%E6%98%AF%E5%90%A6%E8%A2%AB%E6%94%B6%E5%BD%95"><span class="post-toc-text">实例2：google搜索自己的blog是否被收录</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E2%80%93-%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7"><span class="post-toc-text">网络攻防技术课程实验–&gt;域名信息收集工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E8%A6%81%E6%B1%82"><span class="post-toc-text">实验要求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#python%E4%BB%A3%E7%A0%81%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="post-toc-text">python代码的实现</span></a></li></ol></li></ol>
             
         
-        <h3 id="Google-Hacking"><a href="#Google-Hacking" class="headerlink" title="Google Hacking"></a>Google Hacking</h3><p><strong>Google Hacking</strong>就是利用搜索引擎强大的搜索功能，选用搜索语法和特殊的搜索关键字，将隐藏在目标网站中的不恰当配置信息和后门信息找出来。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h3 id="Google-Hacking"><a href="#Google-Hacking" class="headerlink" title="Google Hacking"></a>Google Hacking</h3><p><strong>Google Hacking</strong>就是利用搜索引擎强大的搜索功能，选用搜索语法和特殊的搜索关键字，将隐藏在目标网站中的不恰当配置信息和后门信息找出来。</p>
 <h4 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h4><ul>
 <li>and ：逻辑与</li>
 <li>or ：；逻辑或</li>
@@ -157,75 +366,25 @@
 <p>• Rich Text Format (rtf)</p>
 <p>• Text (ans, txt)</p>
 </blockquote>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="实例1：site、filetype、intext-配合"><a href="#实例1：site、filetype、intext-配合" class="headerlink" title="实例1：site、filetype、intext 配合"></a>实例1：site、filetype、intext 配合</h4><pre><code class="json">site: scu.edu.cn filetype:xls intext:冯玮
-</code></pre>
-<p><img src="/../img/google-hacking/1.png" alt="1"></p>
-<h4 id="实例2：google搜索自己的blog是否被收录"><a href="#实例2：google搜索自己的blog是否被收录" class="headerlink" title="实例2：google搜索自己的blog是否被收录"></a>实例2：google搜索自己的blog是否被收录</h4><p><img src="/../img/google-hacking/2.png" alt="2"></p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="实例1：site、filetype、intext-配合"><a href="#实例1：site、filetype、intext-配合" class="headerlink" title="实例1：site、filetype、intext 配合"></a>实例1：site、filetype、intext 配合</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">site<span class="punctuation">:</span> scu.edu.cn filetype<span class="punctuation">:</span>xls intext<span class="punctuation">:</span>冯玮</span><br></pre></td></tr></table></figure>
+
+<p><a href="/../img/google-hacking/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/google-hacking/1.png" alt="1"></a></p>
+<h4 id="实例2：google搜索自己的blog是否被收录"><a href="#实例2：google搜索自己的blog是否被收录" class="headerlink" title="实例2：google搜索自己的blog是否被收录"></a>实例2：google搜索自己的blog是否被收录</h4><p><a href="/../img/google-hacking/2.png" title="2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/google-hacking/2.png" alt="2"></a></p>
 <h3 id="网络攻防技术课程实验–-域名信息收集工具"><a href="#网络攻防技术课程实验–-域名信息收集工具" class="headerlink" title="网络攻防技术课程实验–&gt;域名信息收集工具"></a>网络攻防技术课程实验–&gt;域名信息收集工具</h3><h4 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h4><ul>
 <li>支持百度搜索引擎的域名提取，其中从百度搜索引擎提取的域名需为真实域名，而非百度的域名跳转链接。</li>
 <li>可扩充其他功能，比如域名所在的标题等信息。</li>
 </ul>
-<h4 id="python代码的实现"><a href="#python代码的实现" class="headerlink" title="python代码的实现"></a>python代码的实现</h4><pre><code class="python">import requests                         
-from bs4 import BeautifulSoup            
-from urllib.parse import urlparse        
-import time
-import random
+<h4 id="python代码的实现"><a href="#python代码的实现" class="headerlink" title="python代码的实现"></a>python代码的实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests                         </span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup            </span><br><span class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> urlparse        </span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="comment"># made by jay1an 2023/9/12</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">baidu_search</span>(<span class="params">pages</span>):</span><br><span class="line">    Subdomains = []</span><br><span class="line">    Subdomains_dict = &#123;&#125;    <span class="comment"># 字典存储网域和标题</span></span><br><span class="line">    <span class="comment"># site:[域名]           eg. site:qq.com</span></span><br><span class="line">    hearders = &#123;                                                                 <span class="comment"># 在这种情况下 仅加User-Agent即可正常获得数据</span></span><br><span class="line">        <span class="string">&#x27;user-agent&#x27;</span>:<span class="string">&#x27;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> start <span class="keyword">in</span> <span class="built_in">range</span>(pages):</span><br><span class="line">        url=<span class="string">f&#x27;https://www.baidu.com/s?wd=site%3Adouban.com&amp;pn=<span class="subst">&#123;start*<span class="number">10</span>&#125;</span>&#x27;</span>  <span class="comment"># 改变参数实现翻页        # 该url为示例，爬取的是douban.com域名下的子域名</span></span><br><span class="line">        resp = requests.get(url,headers=hearders)</span><br><span class="line">        time.sleep(random.uniform(<span class="number">0.5</span>,<span class="number">1.5</span>))                                    <span class="comment"># 加入随机延迟 模拟真实点击 (important)</span></span><br><span class="line">        soup = BeautifulSoup(resp.content,<span class="string">&#x27;html.parser&#x27;</span>)                       <span class="comment"># 使用BeautifulSoup对网页结果进行解析</span></span><br><span class="line">        class_name = <span class="string">&quot;result c-container xpath-log new-pmd&quot;</span></span><br><span class="line">        div_elements = soup.find_all(<span class="string">&#x27;div&#x27;</span>, class_=class_name)                 <span class="comment"># 找出class的值为result c-container xpath-log new-pmd的div块</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> div_elements:                                                 <span class="comment"># 从div块中提取出url和title</span></span><br><span class="line">            link = i.get(<span class="string">&#x27;mu&#x27;</span>)                                                 </span><br><span class="line">            domain = <span class="built_in">str</span>(urlparse(link).scheme + <span class="string">&quot;://&quot;</span> + urlparse(link).netloc)</span><br><span class="line">            <span class="keyword">if</span> domain <span class="keyword">in</span> Subdomains:                                           <span class="comment"># 去重</span></span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                Subdomains.append(domain)</span><br><span class="line">                Subdomains_dict[domain] = i.h3.a.get_text()</span><br><span class="line">    <span class="keyword">return</span> Subdomains_dict                                                     <span class="comment"># 返回值为字典，&#x27;domain&#x27; : &#x27;title&#x27; </span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># bing_search()</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">dict</span> = baidu_search(<span class="number">10</span>)           <span class="comment"># 爬取10页的结果</span></span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> <span class="built_in">dict</span>.items():   <span class="comment"># 输出爬取的结果</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;key&#125;</span>: <span class="subst">&#123;value&#125;</span>&#x27;</span>)      <span class="comment"># eg. &quot;https://www.qq.com: 腾讯网&quot;</span></span><br></pre></td></tr></table></figure>
 
-# made by jay1an 2023/9/12
-def baidu_search(pages):
-    Subdomains = []
-    Subdomains_dict = &#123;&#125;    # 字典存储网域和标题
-    # site:[域名]           eg. site:qq.com
-    hearders = &#123;                                                                 # 在这种情况下 仅加User-Agent即可正常获得数据
-        &#39;user-agent&#39;:&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36 Edg/90.0.818.56&#39;,
-    &#125;
-    for start in range(pages):
-        url=f&#39;https://www.baidu.com/s?wd=site%3Adouban.com&amp;pn=&#123;start*10&#125;&#39;  # 改变参数实现翻页        # 该url为示例，爬取的是douban.com域名下的子域名
-        resp = requests.get(url,headers=hearders)
-        time.sleep(random.uniform(0.5,1.5))                                    # 加入随机延迟 模拟真实点击 (important)
-        soup = BeautifulSoup(resp.content,&#39;html.parser&#39;)                       # 使用BeautifulSoup对网页结果进行解析
-        class_name = &quot;result c-container xpath-log new-pmd&quot;
-        div_elements = soup.find_all(&#39;div&#39;, class_=class_name)                 # 找出class的值为result c-container xpath-log new-pmd的div块
-        for i in div_elements:                                                 # 从div块中提取出url和title
-            link = i.get(&#39;mu&#39;)                                                 
-            domain = str(urlparse(link).scheme + &quot;://&quot; + urlparse(link).netloc)
-            if domain in Subdomains:                                           # 去重
-                pass
-            else:
-                Subdomains.append(domain)
-                Subdomains_dict[domain] = i.h3.a.get_text()
-    return Subdomains_dict                                                     # 返回值为字典，&#39;domain&#39; : &#39;title&#39; 
-
-
-# bing_search()
-
-dict = baidu_search(10)           # 爬取10页的结果
-for key, value in dict.items():   # 输出爬取的结果
-    print(f&#39;&#123;key&#125;: &#123;value&#125;&#39;)      # eg. &quot;https://www.qq.com: 腾讯网&quot;
-</code></pre>
 <p>运行结果：</p>
-<pre><code class="json">https://help.douban.com: 帮助中心
-https://www.douban.com: 豆瓣电影
-https://movie.douban.com: 豆瓣电影
-http://group.douban.com: 讨论精选 (豆瓣)
-https://book.douban.com: 豆瓣读书
-http://mobilestore.douban.com: 登录豆瓣
-https://m.douban.com: 豆瓣电影
-https://frodo.douban.com: 豆瓣App
-https://jobs.douban.com: 在豆瓣工作
-https://beijing.douban.com: 豆瓣同城_北京
-https://blog.douban.com: 豆瓣blog
-https://market.douban.com: 豆瓣豆品
-https://music.douban.com: 豆瓣音乐
-https://read.douban.com: 电子图书 | 豆瓣阅读
-https://dongxi.douban.com: 豆瓣
-http://talion.douban.com: 豆瓣(手机版)
-http://douban.com: 豆瓣
-http://shuo.douban.com: 豆瓣
-https://site.douban.com: 豆瓣
-https://accounts.douban.com: 登录豆瓣
-</code></pre>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">https<span class="punctuation">:</span><span class="comment">//help.douban.com: 帮助中心</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//www.douban.com: 豆瓣电影</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//movie.douban.com: 豆瓣电影</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//group.douban.com: 讨论精选 (豆瓣)</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//book.douban.com: 豆瓣读书</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//mobilestore.douban.com: 登录豆瓣</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//m.douban.com: 豆瓣电影</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//frodo.douban.com: 豆瓣App</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//jobs.douban.com: 在豆瓣工作</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//beijing.douban.com: 豆瓣同城_北京</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//blog.douban.com: 豆瓣blog</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//market.douban.com: 豆瓣豆品</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//music.douban.com: 豆瓣音乐</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//read.douban.com: 电子图书 | 豆瓣阅读</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//dongxi.douban.com: 豆瓣</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//talion.douban.com: 豆瓣(手机版)</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//douban.com: 豆瓣</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//shuo.douban.com: 豆瓣</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//site.douban.com: 豆瓣</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//accounts.douban.com: 登录豆瓣</span></span><br></pre></td></tr></table></figure>
 
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -258,6 +417,13 @@ https://accounts.douban.com: 登录豆瓣
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -290,26 +456,8 @@ https://accounts.douban.com: 登录豆瓣
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -321,12 +469,27 @@ https://accounts.douban.com: 登录豆瓣
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -340,7 +503,13 @@ https://accounts.douban.com: 登录豆瓣
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Spectre Attack Lab" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Spectre-Attack-Lab"><span class="post-toc-text">Spectre Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-2-Side-Channel-Attacks-via-CPU-Caches"><span class="post-toc-text">Task1&amp;2. Side Channel Attacks via CPU Caches</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-Reading-from-Cache-versus-from-Memory"><span class="post-toc-text">Task1. Reading from Cache versus from Memory</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-Using-Cache-as-a-Side-Channel"><span class="post-toc-text">Task2. Using Cache as a Side Channel</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Out-of-Order-Execution-and-Branch-Prediction"><span class="post-toc-text">Task3. Out-of-Order Execution and Branch Prediction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Out-Of-Order-Execution"><span class="post-toc-text">Out-Of-Order Execution</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-Experiment"><span class="post-toc-text">The Experiment</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3"><span class="post-toc-text">Task3</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-The-Spectre-Attack"><span class="post-toc-text">Task4. The Spectre Attack</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-Setup-for-the-Experiment"><span class="post-toc-text">The Setup for the Experiment</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-Program-Used-in-the-Experiment"><span class="post-toc-text">The Program Used in the Experiment</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Improve-the-Attack-Accuracy"><span class="post-toc-text">Task5. Improve the Attack Accuracy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-Steal-the-Entire-Secret-String"><span class="post-toc-text">Task6. Steal the Entire Secret String</span></a></li></ol></li></ol></li></ol>
             
         
-        <h1 id="Spectre-Attack-Lab"><a href="#Spectre-Attack-Lab" class="headerlink" title="Spectre Attack Lab"></a>Spectre Attack Lab</h1><p>幽灵攻击通过利用现代处理器的漏洞实施，可以使得进程间隔离和进程内隔离失效，进而使得恶意程序可以读取它本不该读到的数据。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Spectre-Attack-Lab"><a href="#Spectre-Attack-Lab" class="headerlink" title="Spectre Attack Lab"></a>Spectre Attack Lab</h1><p>幽灵攻击通过利用现代处理器的漏洞实施，可以使得进程间隔离和进程内隔离失效，进而使得恶意程序可以读取它本不该读到的数据。</p>
 <p>实验资料：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/System/Spectre_Attack/">https://seedsecuritylabs.org/Labs_20.04/System/Spectre_Attack/</a></p>
 <blockquote>
 <p>此实验仅在一些旧的CPU上可以成功</p>
@@ -131,19 +340,19 @@
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><h3 id="Task1-2-Side-Channel-Attacks-via-CPU-Caches"><a href="#Task1-2-Side-Channel-Attacks-via-CPU-Caches" class="headerlink" title="Task1&amp;2. Side Channel Attacks via CPU Caches"></a>Task1&amp;2. Side Channel Attacks via CPU Caches</h3><p>幽灵攻击和熔断攻击都使用CPU cache作为侧信道以盗取被保护的秘密信息。在侧信道攻击用到的技术为FLUSH+RELOAD。</p>
 <p>CPU cache是用于减少计算机从主存获取信息的平均耗时的，从CPU cache里读取数据比从主存中读取快得多。现代的CPU基本都有缓存功能。</p>
 <h4 id="Task1-Reading-from-Cache-versus-from-Memory"><a href="#Task1-Reading-from-Cache-versus-from-Memory" class="headerlink" title="Task1. Reading from Cache versus from Memory"></a>Task1. Reading from Cache versus from Memory</h4><p>缓存使得处理器可以快速地获取数据。在本次实验中的CacheTime.c程序中，设置了一个大小为4096<em>10的数组。我们先访问它的array [3</em>4096]和array[7<em>4096]。这样携带两个元素的页就会被缓存，然后我们从array [0</em>4096]读到array [9*4096]，记录读取所花费的时间。</p>
-<p><img src="/../img/Spectre-Attack-Lab/1.png" alt="1"></p>
+<p><a href="/../img/Spectre-Attack-Lab/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/1.png" alt="1"></a></p>
 <p><strong>实验步骤：</strong></p>
 <p>编译并执行CacheTime.c</p>
-<p><img src="/../img/Spectre-Attack-Lab/2.png" alt="2"></p>
+<p><a href="/../img/Spectre-Attack-Lab/2.png" title="2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/2.png" alt="2"></a></p>
 <p>从结果发现，访问已经缓存过的array [3<em>4096]与array [7</em>4096]耗时比访问其他位置耗时短得多。</p>
 <p>再重新运行该程序：</p>
-<p><img src="/../img/Spectre-Attack-Lab/3.png" alt="3"></p>
+<p><a href="/../img/Spectre-Attack-Lab/3.png" title="3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/3.png" alt="3"></a></p>
 <p><strong>分析：</strong></p>
 <p>可以看到，通过CPU cache取得数据所花费的时间大概为20-50个CPU时钟，而通过RAM获取数据需要花费至少100多个CPU时钟，大部分情况是200多个CPU时钟，也偶尔有1000多CPU时钟的情况，可能是触发了其他的内存操作，或者那个数据需要在更下层的存储结构中寻找。</p>
 <p>所以可以将阈值确定为80左右个CPU时间，访问时间大于阈值的内存块没有被缓存，访问时间小于阈值的内存块大概率是提前被缓存了。</p>
 <h4 id="Task2-Using-Cache-as-a-Side-Channel"><a href="#Task2-Using-Cache-as-a-Side-Channel" class="headerlink" title="Task2. Using Cache as a Side Channel"></a>Task2. Using Cache as a Side Channel</h4><p>本次task的目的是使用侧信道提取被攻击函数中的秘密值。假设有一个函数（称之为victim函数）将一个秘密的值作为索引从数组中读取数据，并且这个秘密值不能被外界所知。我们的目标就是通过侧信道获得这个秘密值。</p>
 <p>所使用到的技术被称为FLUSH+RELOAD。下图展示了这项技术的关键步骤：</p>
-<p><img src="/../img/Spectre-Attack-Lab/4.png" alt="4"></p>
+<p><a href="/../img/Spectre-Attack-Lab/4.png" title="4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/4.png" alt="4"></a></p>
 <ol>
 <li><p>将整个数组从缓存中FLUSH掉</p>
 </li>
@@ -157,96 +366,96 @@
 <p>由于array[0<em>4096] 可能与相邻内存中的变量落入同一个缓存块，因此可能会由于这些变量的缓存而被意外缓存。因此，我们应该避免在FLUSH+RELOAD方法中使用array[0</em>4096]（对于其他索引k，array[k<em>4096]没有问题）。为了在程序中保持一致，我们对所有 k 值使用 array[k</em>4096 + DELTA]，其中 DELTA 定义为常量 1024。</p>
 <p><strong>实验步骤：</strong></p>
 <p>分析FlushReload.c：</p>
-<p><img src="/../img/Spectre-Attack-Lab/5.png" alt="5"></p>
+<p><a href="/../img/Spectre-Attack-Lab/5.png" title="5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/5.png" alt="5"></a></p>
 <p>程序首先调用flushSideChannel函数，定义好数组并且将缓存清理掉。</p>
 <p>然后调用victim函数，访问了以secret作为索引的一部分访问了数组元素。</p>
 <p>最后调用reloadSideChannel函数，重新访问数组，目的是找出那一个内存块被缓存了，然后根据索引推断出secret。</p>
 <p>在代码中，定义的阈值为80个CPU时钟。</p>
-<p><img src="/../img/Spectre-Attack-Lab/6.png" alt="6"></p>
+<p><a href="/../img/Spectre-Attack-Lab/6.png" title="6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/6.png" alt="6"></a></p>
 <p>Secret&#x3D;94，与C程序里定义的一致，实验成功。</p>
 <p><strong>分析：</strong></p>
 <p>原理同Task1，这种攻击利用了 CPU 缓存行的行为，在攻击者预先清空缓存后，根据访问某些敏感数据的时间来推断数据是否在缓存中，从而暴露了数据的敏感性</p>
 <h3 id="Task3-Out-of-Order-Execution-and-Branch-Prediction"><a href="#Task3-Out-of-Order-Execution-and-Branch-Prediction" class="headerlink" title="Task3. Out-of-Order Execution and Branch Prediction"></a>Task3. Out-of-Order Execution and Branch Prediction</h3><p>此task的目标是了解CPU的乱序执行。</p>
 <h4 id="Out-Of-Order-Execution"><a href="#Out-Of-Order-Execution" class="headerlink" title="Out-Of-Order Execution"></a>Out-Of-Order Execution</h4><p>首先必须要了解CPU的一个非常重要的机制。</p>
-<p><img src="/../img/Spectre-Attack-Lab/7.png" alt="7"></p>
+<p><a href="/../img/Spectre-Attack-Lab/7.png" title="7" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/7.png" alt="7"></a></p>
 <p>这段代码先检查x是否小于size，如果为ture，那么data的值会更新。假设size&#x3D;10，x&#x3D;15，那么第三行代码不会被执行。</p>
 <p>不考虑CPU内部的情况下，上面对代码的描述是正确的。然而，在CPU内，当我们考虑到微架构级别的执行顺序时，上面的描述就不一定正确了。</p>
 <p>考虑CPU内部的微架构级别的执行顺序，我们会发现即使x的值大于size，第三行代码仍然是被执行了。这是因为现代CPU采用了一项重要的优化技术，被称作乱序执行。</p>
 <p>乱序执行使得CPU可以最大限度地利用它的执行单元。一旦所有必需的资源可用，CPU 就会并行执行指令，而不是严格按顺序处理指令。当当前操作的执行单元被占用时，其他执行单元可以先行运行。</p>
 <p>在上面的代码示例中，在微架构级别，第 2 行代码涉及两个操作：从内存中加载 size 的值，并将该值与 x 进行比较。如果大小不在 CPU 缓存中，则可能需要数百个 CPU 时钟周期才能读取该值。现代 CPU 不会闲置，而是尝试预测比较的结果，并根据估计推测性地执行分支。由于这种执行在比较完成之前就开始了，因此这种执行称为乱序执行。在执行乱序执行之前，CPU 会存储其当前状态和寄存器值。当size的值最终到达时，CPU将检查实际结果。如果预测为真，则将提交推测执行的执行，并且会显着提高性能。如果预测错误，CPU将恢复到其保存的状态，因此乱序执行产生的所有结果都将被丢弃，就像从未发生过一样。这就是为什么从外部我们看到 3 行代码从未执行过。</p>
-<p><img src="/../img/Spectre-Attack-Lab/8.png" alt="8"></p>
+<p><a href="/../img/Spectre-Attack-Lab/8.png" title="8" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/8.png" alt="8"></a></p>
 <p>Intel和几家CPU制造商在乱序执行的设计上犯了一个严重的错误。如果预测的分支不应该被执行，它们会消除乱序执行对寄存器和内存的影响，因此执行不会导致任何<strong>可见</strong>的影响。然而，他们忘记了一件事，即对 CPU 缓存的影响。在乱序执行期间，引用的内存被提取到寄存器中，并且也存储在高速缓存中。如果预测分支的结果必须被丢弃，那么执行造成的缓存也应该被丢弃。不幸的是，大多数 CPU 并非如此。因此，它产生了可观察到的效果。使用任务 1 和 2 中描述的侧信道技术，我们可以观察到这样的效果。 幽灵攻击巧妙地利用这种可观察到的效应来找出受保护的秘密值。</p>
 <h4 id="The-Experiment"><a href="#The-Experiment" class="headerlink" title="The Experiment"></a>The Experiment</h4><p>在本次实验中，我们使用下面的例子（SpectreExperiment.c）来证明乱序执行的效果。</p>
-<p><img src="/../img/Spectre-Attack-Lab/9.png" alt="9"></p>
-<p><img src="/../img/Spectre-Attack-Lab/image-20240120151701504.png" alt="image-20240120151701504"></p>
+<p><a href="/../img/Spectre-Attack-Lab/9.png" title="9" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/9.png" alt="9"></a></p>
+<p><a href="/../img/Spectre-Attack-Lab/image-20240120151701504.png" title="image-20240120151701504" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/image-20240120151701504.png" alt="image-20240120151701504"></a></p>
 <p>对于执行预测分支的 CPU，它们会预测 if 条件的结果。 CPU 保留过去采用的分支的记录，然后使用这些过去的结果来预测在推测执行中应采用哪个分支。因此，如果我们希望CPU在预测分支中采取特定的分支，我们应该训练CPU，以便我们选择的分支可以成为预测结果。训练是在从③行开始的 for 循环中完成的。在循环内部，我们使用一个小参数（从 0 到 9）调用victim()。这些值小于size，因此CPU会采用第①行中 if 条件的 true 分支。这是训练阶段，本质上是训练 CPU 期望 if 条件为 true。</p>
 <p>CPU 训练完毕后，我们将一个较大的值 (97) 传递给victim() 函数（第⑤行）。该值大于size，因此在实际执行中将采用victim()内if条件的False分支，而不是Ture分支。但是，我们已经从内存中刷新了变量大小，因此从内存中获取其值可能需要一段时间。这是CPU将做出预测并开始推测执行的时间。</p>
 <h4 id="Task3"><a href="#Task3" class="headerlink" title="Task3"></a>Task3</h4><p><strong>实验步骤：</strong></p>
 <p>编译并运行SpectreExperiment.c，描述程序运行结果。由于CPU缓存了额外的东西，这里可能会在侧通道中产生一些噪音，在后续的实验中会减少噪音，但现在可以多次执行任务来观察效果。</p>
-<p><img src="/../img/Spectre-Attack-Lab/11.png" alt="11"></p>
+<p><a href="/../img/Spectre-Attack-Lab/11.png" title="11" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/11.png" alt="11"></a></p>
 <p><strong>分析：</strong></p>
 <p>从结果来看，大多数情况下，CPU访问array [97<em>4096+1024]所花费的CPU时钟周期少于我们所设定的阈值(80)，即array [97</em>4096+1024]是在CPU缓存中的。</p>
 <p>即使从宏观上看，victim(97)不会运行第③行代码，但是由于CPU的乱序执行机制，CPU仍然执行了第③行代码，只是得到if的结果之后发现预测错误，就将结果回滚了，但是没有清除CPU缓存，这使得下一次访问数组该位置时所花费的CPU时钟周期比较少。</p>
 <p>所以当执行victim(97)函数的时候，第②行代码实际上是被执行了。</p>
 <p><strong>将标有行☆号的那一行代码注释掉，即从CPU缓存中清除size，再执行程序，查看结果。</strong></p>
-<p><img src="/../img/Spectre-Attack-Lab/12.png" alt="12"></p>
+<p><a href="/../img/Spectre-Attack-Lab/12.png" title="12" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/12.png" alt="12"></a></p>
 <p><strong>分析：</strong></p>
 <p>从结果来看，发现array[97*4096+1024]并没有在CPU缓存中，即在运行victim(97)的时候，并没有执行第③行代码。可能是在清除了关于size的缓存后，CPU在执行victim(97)函数时，需要额外的开销来获取size的值，这就使得CPU没有计算空间运行预测分支了。</p>
 <p><strong>取消注释，并将第④行替换为victim(i+20)，重新编译运行代码：</strong></p>
-<p><img src="/../img/Spectre-Attack-Lab/13.png" alt="13"></p>
+<p><a href="/../img/Spectre-Attack-Lab/13.png" title="13" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/13.png" alt="13"></a></p>
 <p><strong>分析：</strong></p>
 <p>从结果分析，array [97<em>4096+1024]也不在CPU缓存中。因为这样做之后使得对CPU倾向于将if判断结果预测为False，所以就不会执行victim(97)中的第三行代码（Ture分支），也就不会访问array [97</em>4096+1024]，所以它不在CPU缓存中。</p>
 <h3 id="Task4-The-Spectre-Attack"><a href="#Task4-The-Spectre-Attack" class="headerlink" title="Task4. The Spectre Attack"></a>Task4. The Spectre Attack</h3><p>正如我们在前几次task中所实现的，即使if判断的条件为False，我们也可以使CPU执行if判断下的Ture分支。如果这种乱序执行不会造成任何明显的影响，那么这不是问题。然而，大多数具有此功能的CPU不会清理缓存，因此会留下一些乱序执行的痕迹。 幽灵攻击就是利用这些痕迹窃取受保护的秘密。</p>
 <p>这些秘密可以是另一个进程中的数据或同一进程中的数据。如果秘密数据在另一个进程中，则硬件级别的进程隔离可以防止一个进程从另一个进程窃取数据。如果数据在同一个进程中，通常是通过软件来进行保护，比如沙箱机制。幽灵攻击可以针对这两种类型的秘密发起。然而，从另一个进程窃取数据比从同一进程窃取数据要困难得多。为了简单起见，本lab仅关注从同一进程窃取数据。</p>
 <p>当在浏览器中打开来自不同服务器的网页时，它们通常是在同一进程中打开的。浏览器内部实现的沙箱将为这些页面提供一个隔离的环境，因此一个页面将无法访问另一页面的数据。大多数软件保护依靠条件检查来决定是否应授予访问权限。通过 Spectre 攻击，即使条件检查失败，我们也可以让 CPU 执行（无序）受保护的代码分支，从而实质上破坏了访问检查。</p>
-<h4 id="The-Setup-for-the-Experiment"><a href="#The-Setup-for-the-Experiment" class="headerlink" title="The Setup for the Experiment"></a>The Setup for the Experiment</h4><p><img src="/../img/Spectre-Attack-Lab/14.png" alt="14"></p>
+<h4 id="The-Setup-for-the-Experiment"><a href="#The-Setup-for-the-Experiment" class="headerlink" title="The Setup for the Experiment"></a>The Setup for the Experiment</h4><p><a href="/../img/Spectre-Attack-Lab/14.png" title="14" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/14.png" alt="14"></a></p>
 <p>上图展示了本次Task的环境。在本环境中，有两种区域：隔离区和非隔离区。隔离是通过在下面描述的沙箱函数中实现的 if 条件来实现的。仅当x位于缓冲区的下限和上限之间时，沙箱函数才会返回buffer[x]。因此正常用户永远不可能访问到限制区的内容。</p>
-<p><img src="/../img/Spectre-Attack-Lab/15.png" alt="15"></p>
+<p><a href="/../img/Spectre-Attack-Lab/15.png" title="15" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/15.png" alt="15"></a></p>
 <p>限制区（缓冲区上方或者下方）存在一个秘密值，攻击者知道该秘密的地址，但攻击者无法直接访问保存该秘密值的内存。访问秘密的唯一方法是通过上述沙箱功能。在前面的task中我们发现，虽然如果 x 大于缓冲区大小，则 True 分支永远不会被执行，但在微架构级别，它可以被执行，并且当执行恢复时可以留下一些痕迹（CPU cache）。</p>
 <h4 id="The-Program-Used-in-the-Experiment"><a href="#The-Program-Used-in-the-Experiment" class="headerlink" title="The Program Used in the Experiment"></a>The Program Used in the Experiment</h4><p>基本 Spectre 攻击的代码如下所示。在此代码中，第一行定义了一个秘密。假设我们无法直接访问秘密、边界下面或边界上面的变量（我们假设可以刷新缓存）。我们的目标是使用 Spectre 攻击打印出秘密。下面的代码仅窃取秘密的第一个字节。</p>
-<p><img src="/../img/Spectre-Attack-Lab/16.png" alt="16"></p>
-<p><img src="/../img/Spectre-Attack-Lab/17.png" alt="17"></p>
+<p><a href="/../img/Spectre-Attack-Lab/16.png" title="16" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/16.png" alt="16"></a></p>
+<p><a href="/../img/Spectre-Attack-Lab/17.png" title="17" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/17.png" alt="17"></a></p>
 <p>最重要的部分为第②、③和④行。第④行代码计算秘密相对于buffer开头的偏移量。偏移量肯定超出了缓冲区的范围，大于缓冲区的上限或小于缓冲区的下限（即负数）。该偏移量被输入到restrictedAccess()函数中。由于我们已经训练CPU在restrictedAccess()中获取true分支，CPU将在乱序执行中返回buffer[index Beyond]，其中包含秘密的值。然后，秘密值会导致 array[] 中的相应元素加载到缓存中。所有这些步骤最终都会被恢复，因此从外部来看，restrictedAccess() 只返回零，而不是秘密的值。但是，CPU缓存并没有被清理，array[s*4096 + DELTA]仍然保留在缓存中。现在，我们只需要使用侧信道技术来找出 array[] 的哪个元素在缓存中。</p>
 <p><strong>实验要求：</strong>请编译并执行SpectreAttack.c。描述运行结果并思考能否窃取秘密值。如果侧信道中有大量噪声，可能无法每次都获得一致的结果。为了克服这个问题，您应该多次执行该程序，看看是否可以获得秘密值。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编译并执行SpectreAttack.c</p>
-<p><img src="/../img/Spectre-Attack-Lab/18.png" alt="18"></p>
+<p><a href="/../img/Spectre-Attack-Lab/18.png" title="18" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/18.png" alt="18"></a></p>
 <p><strong>分析：</strong></p>
 <p>运行结果显示Secret被成功读取到了（一个字节）：S。</p>
 <p>83为S的ASCII编码值。</p>
 <p><strong>但是为什么array[0*4096+1024]也会在CPU缓存中呢？</strong></p>
 <p><strong>原因如下：</strong></p>
-<p><img src="/../img/Spectre-Attack-Lab/19.png" alt="19"></p>
+<p><a href="/../img/Spectre-Attack-Lab/19.png" title="19" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/19.png" alt="19"></a></p>
 <p>当CPU首先执行了分支预测的时候，返回的s值为index_beyond地址上的值，如果这时还未回滚，那么 array[s*4096+1024]将被访问，也就是说它会被存入CPU缓存，我们可以通过侧信道的方式读取到它。</p>
 <p>但是由于index_beyond始终都在buffer的合法访问之外，所以CPU始终都会回滚，也就是说，s最终都会返回0，array[0*4096+1024]始终都会被CPU访问。这也是Task5中的初始的代码出问题的原因，scorces[0]的值每一次都会+1。</p>
 <p>如果在正确结果回滚之前，CPU没有对array[s<em>4096+1024]进行访问，那么只有array[0</em>4096+1024]会被写入缓存，攻击程序无法读取到正确的secret。</p>
-<p><img src="/../img/Spectre-Attack-Lab/20.png" alt="20"></p>
+<p><a href="/../img/Spectre-Attack-Lab/20.png" title="20" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/20.png" alt="20"></a></p>
 <h3 id="Task5-Improve-the-Attack-Accuracy"><a href="#Task5-Improve-the-Attack-Accuracy" class="headerlink" title="Task5. Improve the Attack Accuracy"></a>Task5. Improve the Attack Accuracy</h3><p>在之前的task中，可能会观察到结果确实存在一些噪音，并且结果并不总是准确的。这是因为 CPU 有时会在缓存中加载额外的值，希望稍后会使用它，或者阈值不是很准确。缓存中的噪音会影响我们的攻击结果。我们需要多次执行攻击；我们可以使用以下代码自动执行任务，而不是手动执行。</p>
 <p><strong>我们使用统计技术。这个想法是创建一个大小为 256 的分数数组，每个可能的秘密值都有一个元素。</strong>然后我们多次进行攻击。每次，如果我们的攻击程序说 k 是秘密（这个结果可能是假的），我们就会在 scores[k] 上加 1。在多次运行攻击后，我们使用<strong>得分最高的 k 值作为我们对秘密的最终估计。</strong>这将产生比基于单次运行的估计更可靠的估计。修改后的代码如下所示。</p>
-<p><img src="/../img/Spectre-Attack-Lab/21.png" alt="21"></p>
-<p><img src="/../img/Spectre-Attack-Lab/22.png" alt="22"></p>
+<p><a href="/../img/Spectre-Attack-Lab/21.png" title="21" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/21.png" alt="21"></a></p>
+<p><a href="/../img/Spectre-Attack-Lab/22.png" title="22" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/22.png" alt="22"></a></p>
 <p><strong>实验步骤：</strong></p>
 <p>编译并运行SpectreAttackImporved.c，并且完成下列小task：</p>
 <p><strong>1.</strong> <strong>直接编译运行程序后，会发现scores数组中scores[0]的值是最大的，请解释原因，并且修改上面的代码，使得程序打印出真正的秘密值。</strong></p>
 <p>运行程序，输出结果：</p>
-<p><img src="/../img/Spectre-Attack-Lab/23.png" alt="23"></p>
+<p><a href="/../img/Spectre-Attack-Lab/23.png" title="23" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/23.png" alt="23"></a></p>
 <p><strong>原因：</strong></p>
 <p>因为对buffer[index_beyond]的访问最终都会失败的。</p>
-<p><img src="/../img/Spectre-Attack-Lab/24.png" alt="24"></p>
+<p><a href="/../img/Spectre-Attack-Lab/24.png" title="24" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/24.png" alt="24"></a></p>
 <p>函数返回的值最终还是为0，也就是说，array[0<em>4096+1024]永远都会被放入CPU缓存，对*<em>scores</em></em> [0]计数是无意义的（除非秘密值为0）。</p>
 <p><strong>修改代码：</strong></p>
 <p>在寻找<strong>scores</strong>数组中最大值索引的时候忽略0索引。</p>
-<p><img src="/../img/Spectre-Attack-Lab/25.png" alt="25"></p>
+<p><a href="/../img/Spectre-Attack-Lab/25.png" title="25" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/25.png" alt="25"></a></p>
 <p>重新编译运行：</p>
-<p><img src="/../img/Spectre-Attack-Lab/26.png" alt="26"></p>
-<p><img src="/../img/Spectre-Attack-Lab/27.png" alt="27"></p>
+<p><a href="/../img/Spectre-Attack-Lab/26.png" title="26" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/26.png" alt="26"></a></p>
+<p><a href="/../img/Spectre-Attack-Lab/27.png" title="27" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/27.png" alt="27"></a></p>
 <p>发现可以得到正确的secret。</p>
 <p><strong>2.</strong> <strong>第①行看起来没用，但从实验作者说在 SEED Ubuntu 20.04 上的经验来看，如果没有这一行，攻击将无法进行。在 SEED Ubuntu 16.04 VM 上，不需要此行。暂时还没有弄清楚确切的原因。请运行带有或不带有此行的程序，并描述您的观察结果。</strong></p>
 <p><strong>实验步骤：</strong></p>
 <p>刚才已经运行了没注释第①行的程序，并且给出了运行结果。</p>
 <p>下面是注释掉之后的程序运行结果。</p>
-<p><img src="/../img/Spectre-Attack-Lab/28.png" alt="28"></p>
-<p><img src="/../img/Spectre-Attack-Lab/29.png" alt="29"></p>
+<p><a href="/../img/Spectre-Attack-Lab/28.png" title="28" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/28.png" alt="28"></a></p>
+<p><a href="/../img/Spectre-Attack-Lab/29.png" title="29" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/29.png" alt="29"></a></p>
 <p>scores数组中的每一个数（除了scores[0]）都是0，即CPU并没有执行那一条分支预测。我也不知道原因。</p>
 <p><strong>3.</strong> <strong>第②行使得程序休眠10微妙，程序休眠的时间长短确实会影响攻击的成功率。请尝试其他几个值，并描述观察结果。</strong></p>
 <p><strong>实验步骤：</strong></p>
@@ -255,22 +464,27 @@
 <p>休眠10000微妙（0.01秒），尝试3次成功3次。</p>
 <p>休眠50000微妙（0.05秒），尝试3次成功3次。</p>
 <p>在尝试的修改休眠时间的过程中，我同时打印了scores[83]的值，发现当休眠时间增加之后，scores[83]的值就普遍变得比较小了，当休眠时间再增加，可能成功率就会减小。</p>
-<p><img src="/../img/Spectre-Attack-Lab/30.png" alt="30"></p>
-<p><img src="/../img/Spectre-Attack-Lab/31.png" alt="31"></p>
-<p><img src="/../img/Spectre-Attack-Lab/32.png" alt="32"></p>
+<p><a href="/../img/Spectre-Attack-Lab/30.png" title="30" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/30.png" alt="30"></a></p>
+<p><a href="/../img/Spectre-Attack-Lab/31.png" title="31" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/31.png" alt="31"></a></p>
+<p><a href="/../img/Spectre-Attack-Lab/32.png" title="32" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/32.png" alt="32"></a></p>
 <h3 id="Task6-Steal-the-Entire-Secret-String"><a href="#Task6-Steal-the-Entire-Secret-String" class="headerlink" title="Task6. Steal the Entire Secret String"></a>Task6. Steal the Entire Secret String</h3><p>在上一个task中，我们只读取秘密字符串的第一个字符。在此任务中，我们需要使用 Spectre 攻击打印出整个字符串。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编写task6.c：</p>
 <p>修改一个新的secret：</p>
-<p><img src="/../img/Spectre-Attack-Lab/33.png" alt="33"></p>
+<p><a href="/../img/Spectre-Attack-Lab/33.png" title="33" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/33.png" alt="33"></a></p>
 <p>在SpectreAttackImproved.c的逻辑基础上进行改造，它可以实现读取秘密字符串中的第一个字符，既然要读取所秘密字符串的所有值，那就写一个循环，依次下一个字符。</p>
 <p>在task6.c中，我定义了一个res字符串数组，可用长度为20，用于存放攻击程序读取到的字符串。</p>
-<p><img src="/../img/Spectre-Attack-Lab/34.png" alt="34"></p>
+<p><a href="/../img/Spectre-Attack-Lab/34.png" title="34" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/34.png" alt="34"></a></p>
 <p>然后循环读取秘密字符串中的字符，读取20个，记得清空scoress数组。</p>
 <p>循环结束之后打印res数组即可。</p>
 <p><strong>执行效果：</strong></p>
-<p><img src="/../img/Spectre-Attack-Lab/35.png" alt="35"></p>
-
+<p><a href="/../img/Spectre-Attack-Lab/35.png" title="35" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/35.png" alt="35"></a></p>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -303,6 +517,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -335,26 +556,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -366,12 +569,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -385,7 +603,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

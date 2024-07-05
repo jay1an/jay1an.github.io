@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="markdown语法" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,12 +332,12 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="post-toc-text">基础语法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95"><span class="post-toc-text">拓展语法</span></a></li></ol>
             
         
-        <h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><ul>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><ul>
 <li>标题语法</li>
 </ul>
 <p>添加 # 号，# 的数量代表标题的级别，以三级标题为例：</p>
-<pre><code class="markdown">### title
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">### title</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>段落语法</li>
 </ul>
@@ -138,8 +347,8 @@
 <li>换行语法</li>
 </ul>
 <p>可以使用专门的换行标签，同html。</p>
-<pre><code class="markdown">&lt;br&gt;
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
 <p>例：小草偷偷地从土里钻出来，嫩嫩的，绿绿的。<br>园子里，田野里，瞧去，一大片一大片满是的。坐着，躺着，打两个滚，踢几脚球，赛几趟跑，捉几回迷藏。风轻悄悄的,草软绵绵的。</p>
 <p>注：与直接按Enter不同。( But Shift+Enter is alright. )</p>
 <ul>
@@ -149,8 +358,8 @@
 <p>斜体：使用 * 包围文本。</p>
 <p>加粗和斜体：使用 *** 包围文本。</p>
 <p>eg: hello I am jay1an –&gt; <em>hello</em> <strong>I</strong> am <em><strong>jay1an</strong></em>.</p>
-<pre><code class="markdown">*hello* **I** am ***jay1an***
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*hello*</span> <span class="strong">**I**</span> am <span class="strong">**<span class="emphasis">*jay1an*</span>**</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>引用语法</li>
 </ul>
@@ -158,8 +367,8 @@
 <blockquote>
 <p>hello I am jay1an</p>
 </blockquote>
-<pre><code class="markdown">&gt; hello I am jay1an
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; hello I am jay1an</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>列表语法</p>
 <ul>
@@ -185,20 +394,15 @@
 <li><p>And here’s the third list item.</p>
 </li>
 </ul>
-<pre><code class="markdown">*   This is the first list item.
-*   Here&#39;s the second list item.
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">*</span>   This is the first list item.</span><br><span class="line"><span class="bullet">*</span>   Here&#x27;s the second list item.</span><br><span class="line"></span><br><span class="line"><span class="code">    &gt; A blockquote would look great below the second list item.</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="bullet">*</span>   And here&#x27;s the third list item.</span><br></pre></td></tr></table></figure>
 
-    &gt; A blockquote would look great below the second list item.
-
-*   And here&#39;s the third list item.
-</code></pre>
 <ul>
 <li>代码语法</li>
 </ul>
 <p>使用反引号 &#96; </p>
 <p><code>hello I am jay1an</code></p>
-<pre><code class="markdown">`hello I am jay1an`
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`hello I am jay1an`</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>分割线语法</li>
 </ul>
@@ -207,10 +411,8 @@
 <hr>
 <hr>
 <p>效果一致</p>
-<pre><code class="markdown">---
-***
-___
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong">__<span class="emphasis">_</span></span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>链接语法</li>
 </ul>
@@ -218,23 +420,23 @@ ___
 <p>超链接Markdown语法代码：<code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code> </p>
 <p>注：地址之后有一个空格</p>
 <p><a href="https://jay1an.github.io/" title="I am title">jay1an</a></p>
-<pre><code class="markdown">[jay1an](https://jay1an.github.io/ &quot;I am title&quot;)
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">jay1an</span>](<span class="link">https://jay1an.github.io/ &quot;I am title&quot;</span>)</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>图片语法</li>
 </ul>
 <p>插入图片Markdown语法代码：<code>![图片alt](图片链接 &quot;图片title&quot;)</code></p>
 <p>方括号增加替代文本，title可选。</p>
-<p><img src="https://jay1an.github.io/img/favicon.webp" alt="jay1an&#39;s pic" title="I am title"></p>
-<pre><code class="markdown">![jay1an&#39;s pic](https://jay1an.github.io/img/favicon.webp &quot;I am title&quot;)
-</code></pre>
+<p><a href="https://jay1an.github.io/img/favicon.webp" title="jay1an&#39;s pic" class="gallery-item" style="box-shadow: none;"> <img src="https://jay1an.github.io/img/favicon.webp" alt="jay1an&#39;s pic" title="I am title"></a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">jay1an&#x27;s pic</span>](<span class="link">https://jay1an.github.io/img/favicon.webp &quot;I am title&quot;</span>)</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>转义语法</li>
 </ul>
 <p>在需要转义的字符前加上 \</p>
 <p>## this is should be a title</p>
-<pre><code class="markdown">\## this is should be a title
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\## this is should be a title</span><br></pre></td></tr></table></figure>
+
 <p>还有一些 	&amp; –&gt; &amp;amp; 	&lt; –&gt; &amp;lt;        （查阅官方文档<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/escaping-characters.html">Markdown 转义字符语法 | Markdown 官方教程</a>） </p>
 <h3 id="拓展语法"><a href="#拓展语法" class="headerlink" title="拓展语法"></a>拓展语法</h3><ul>
 <li><p>制表</p>
@@ -257,18 +459,12 @@ ___
 <p>若使用Typora直接用管道分割即可生成表格，如上。</p>
 <p>如果使用编译器，语法如下：</p>
 <p>—代表分割，:代表对齐</p>
-<pre><code class="markdown">| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here&#39;s this   |
-| Paragraph   | Text        | And more      |
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| Syntax      | Description | Test Text     |</span><br><span class="line">| :---        |    :----:   |          ---: |</span><br><span class="line">| Header      | Title       | Here&#x27;s this   |</span><br><span class="line">| Paragraph   | Text        | And more      |</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>围栏代码块</p>
 <p>使用 3个反引号&#96;&#96;&#96;，或者3个波浪号~~~</p>
 <p>空格后加上语言名实现语法高亮</p>
-<pre><code class="markdown">​~~~ markdown
-``` markdown
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">​<span class="code">~~~ markdown</span></span><br><span class="line"><span class="code">``` markdown</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>脚注</p>
 <p>可以单击链接以跳至页面底部的脚注内容。</p>
@@ -276,16 +472,16 @@ ___
 </li>
 </ul>
 <p>[^footnote]: this is a simple footnore</p>
-<pre><code class="markdown">[^footnore]: this is a simple footnote
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">^footnore</span>]: <span class="link">this is a simple footnote</span></span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><p>删除线</p>
 <p>2个波浪号 ~~包围单词 </p>
 <p><del>I am not jay1an</del></p>
 </li>
 </ul>
-<pre><code class="markdown">~~I am not jay1an~~
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~I am not jay1an~~</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li>任务列表语法<ul>
 <li><input checked="" disabled="" type="checkbox"> study</li>
@@ -294,11 +490,14 @@ ___
 </ul>
 </li>
 </ul>
-<pre><code class="markdown">- [x] study
-- [ ] eat
-- [ ] sleep
-</code></pre>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [x] study</span><br><span class="line"><span class="bullet">-</span> [ ] eat</span><br><span class="line"><span class="bullet">-</span> [ ] sleep</span><br></pre></td></tr></table></figure>
 
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -335,6 +534,13 @@ ___
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -367,26 +573,8 @@ ___
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -398,12 +586,27 @@ ___
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -417,7 +620,13 @@ ___
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

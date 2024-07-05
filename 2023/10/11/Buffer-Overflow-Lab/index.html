@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Buffer Overflow Lab" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Buffer-Overflow"><span class="post-toc-text">Buffer Overflow</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Get-Familiar-with-the-Shellcode"><span class="post-toc-text">Task1. Get Familiar with the Shellcode</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Level-1-Attack"><span class="post-toc-text">Task2. Level-1 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Level-2-Attack"><span class="post-toc-text">Task3. Level-2 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Level-3-Attack"><span class="post-toc-text">Task4. Level-3 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Level-4-Attack"><span class="post-toc-text">Task5. Level-4 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-Experimenting-with-the-Address-Randomization"><span class="post-toc-text">Task6. Experimenting with the Address Randomization</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-Experimenting-with-Other-Countermeasures"><span class="post-toc-text">Task7. Experimenting with Other Countermeasures</span></a></li></ol></li></ol></li></ol>
             
         
-        <h1 id="Buffer-Overflow"><a href="#Buffer-Overflow" class="headerlink" title="Buffer Overflow"></a>Buffer Overflow</h1><p>缓冲区溢出是一种软件漏洞类型，发生在程序向内存块（缓冲区）写入的数据超过了为其分配的空间。这可能导致各种问题，包括崩溃、意外行为，有时还包括安全漏洞，攻击者可以利用这些漏洞。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Buffer-Overflow"><a href="#Buffer-Overflow" class="headerlink" title="Buffer Overflow"></a>Buffer Overflow</h1><p>缓冲区溢出是一种软件漏洞类型，发生在程序向内存块（缓冲区）写入的数据超过了为其分配的空间。这可能导致各种问题，包括崩溃、意外行为，有时还包括安全漏洞，攻击者可以利用这些漏洞。</p>
 <p>以下是与缓冲区溢出相关的关键概念的简要概述：</p>
 <ol>
 <li><strong>缓冲区</strong>：缓冲区是计算机内存中的临时存储区域。缓冲区通常用于保存从文件、网络连接或其他I&#x2F;O操作读取或写入的数据。</li>
@@ -149,107 +358,112 @@
 <p>实验资料网址：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/Software/Buffer_Overflow_Server/">https://seedsecuritylabs.org/Labs_20.04/Software/Buffer_Overflow_Server/</a></p>
 <h3 id="Task1-Get-Familiar-with-the-Shellcode"><a href="#Task1-Get-Familiar-with-the-Shellcode" class="headerlink" title="Task1. Get Familiar with the Shellcode"></a>Task1. Get Familiar with the Shellcode</h3><p>实验要求：请修改 shellcode，可以使用它来删除文件。</p>
 <p>先修改shellcode_32.py中的代码：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/1.png" alt="1"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/1.png" alt="1"></a></p>
 <p>我们想让shellcode运行一些其他命令，我们只需要修改特定的命令字符串即可。但是，在进行更改时，我们需要确保不要更改该字符串的长度。如果我们改变长度，我们需要修改二进制部分。要使该字符串末尾的星号保持在同一位置，可以添加或删除空格。</p>
 <p>我们要shellcode执行的命令为：删除当前目录的jay1an_test文件。</p>
 <p>生成codefile_32，运行a32.out查看结果：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/2.png" alt="233"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/2.png" title="233" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/2.png" alt="233"></a></p>
 <p>发现第二次的ls命令的返回结果中没有了test_jay1an文件，证明我们成功实现了文件删除的功能。</p>
 <p>在进行Task 2\3\4\5之前，将Linux的地址随机化对策关闭：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/3.png" alt="3"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/3.png" title="3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/3.png" alt="3"></a></p>
 <h3 id="Task2-Level-1-Attack"><a href="#Task2-Level-1-Attack" class="headerlink" title="Task2. Level-1 Attack"></a>Task2. Level-1 Attack</h3><p>先修改attack-code文件夹中的exploit.py文件：</p>
-<p><strong>修改shellcode</strong>，复制task1中的shellcode，将执行的命令换为反弹shell的命令，模拟攻击者将服务器的shell反弹到本机上。<img src="/../img/Buffer_Overflow_Lab/4.png" alt="4"></p>
+<p><strong>修改shellcode</strong>，复制task1中的shellcode，将执行的命令换为反弹shell的命令，模拟攻击者将服务器的shell反弹到本机上。<a href="/../img/Buffer_Overflow_Lab/4.png" title="4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/4.png" alt="4"></a></p>
 <p><strong>修改start、ret、offset值：</strong></p>
-<p>通过正常的传参测试发现 &amp;bof()&#x3D;0xffffd348，&amp;buffer&#x3D;0xffffd2d8，所以二者的差 &amp;bof()-&amp;buffer&#x3D;0x348-0x2d8&#x3D;112<img src="/../img/Buffer_Overflow_Lab/5.png" alt="5"></p>
-<p>所以我们将offset的值设为112+4，并且把shellcode放在content数组的后面，也就是badfile的尾部。<img src="/../img/Buffer_Overflow_Lab/6.png" alt="6"></p>
+<p>通过正常的传参测试发现 &amp;bof()&#x3D;0xffffd348，&amp;buffer&#x3D;0xffffd2d8，所以二者的差 &amp;bof()-&amp;buffer&#x3D;0x348-0x2d8&#x3D;112<a href="/../img/Buffer_Overflow_Lab/5.png" title="5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/5.png" alt="5"></a></p>
+<p>所以我们将offset的值设为112+4，并且把shellcode放在content数组的后面，也就是badfile的尾部。<a href="/../img/Buffer_Overflow_Lab/6.png" title="6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/6.png" alt="6"></a></p>
 <p><strong>检测结果：</strong></p>
 <p>在“本机“ 12345端口打开nc监听。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/7.png" alt="7"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/7.png" title="7" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/7.png" alt="7"></a></p>
 <p>生成badfile并发送至server-1，实施攻击。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/8.png" alt="8"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/8.png" title="8" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/8.png" alt="8"></a></p>
 <p>在本机nc监听成功。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/9.png" alt="9"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/9.png" title="9" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/9.png" alt="9"></a></p>
 <p><strong>分析：</strong></p>
 <p><strong>为什么start&#x3D;512-len(shellcode)，ret&#x3D;&amp;bof + 20，offset &#x3D; &amp;bof-&amp;buffer+4?</strong></p>
 <p>这样设置start的值，目的是让shellcode在badfile的最后部，<strong>即shellcode和RET之间的NOP指令尽可能多</strong>。</p>
 <p>那么该程序的结构大致如下：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/10.jpg" alt="234"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/10.jpg" title="234" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/10.jpg" alt="234"></a></p>
 <p>因为输入的517bytes的内容大于函数bof()给buffer数组分配的空间，也就是说，多余的会超出buffer所享有空间，而这多余的部分会覆盖EBP和RET，导致bof()函数结束后会跳转到某个未知的地址，而这个地址就是被覆盖后原RET位置上的值。</p>
 <p>我们可以构造badfile函数的内容，使得函数结束后跳转到我们预想的地方。那么我们就需要知道修改badfile内容中的哪一个部分才能精准覆盖RET。<strong>根据前面server返回的信息可以算出&amp;bof-&amp;buffer&#x3D;112，所以offset应该为112+4，因为EBP的上一个值是RET</strong>。</p>
 <p>那么ret的值怎么定呢？ret的值只要是shellcode和RET之间的任意一个NOP指令即可，所以*<em>ret的值应该为&amp;bof加上一个值，这个值的最小值为8(4</em>2)**，也就是说，一定要跨越EBP和RET。</p>
 <h3 id="Task3-Level-2-Attack"><a href="#Task3-Level-2-Attack" class="headerlink" title="Task3. Level-2 Attack"></a>Task3. Level-2 Attack</h3><p><strong>分析：</strong></p>
 <p>Level-2 Attack比Level-1 Attack不同的就是：在server输出端隐藏了&amp;bof的值，只给出了&amp;buffer的值。 </p>
 <p>意味着，现在攻击者不知道buffer的size具体有多大，那么就不能“精确“地覆盖RET了，但是由于在栈中（32bits程序），每一帧的size都是4bytes，<strong>所以攻击者可以将从&amp;buffer起的栈帧都填成精心设定的ret</strong>，比如说，我们将从&amp;buffer起的60个栈帧(60<em>4&#x3D;240byets)都填成精心设定的ret，只要真正的RET位置在这240bytes内，那么当bof()函数结束后，仍然会返回我们精心设定的ret值。*<em>这样我们只需要保证ret值在shellcode和RET中间的NOP指令上即可。</em></em></p>
-<p><img src="/../img/Buffer_Overflow_Lab/11.png" alt="11"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/11.png" title="11" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/11.png" alt="11"></a></p>
 <p><strong>实验过程：</strong></p>
 <p>正常输入，发现 &amp;buffer&#x3D;0xffffd288</p>
-<p><img src="/../img/Buffer_Overflow_Lab/12.png" alt="12"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/12.png" title="12" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/12.png" alt="12"></a></p>
 <p>根据上面的分析修改exploit.py代码：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/13.png" alt="13"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/13.png" title="13" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/13.png" alt="13"></a></p>
 <p>测试结果：</p>
 <p>在本机上监听。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/14.png" alt="14"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/14.png" title="14" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/14.png" alt="14"></a></p>
 <p>生成badfile，攻击server-2.</p>
-<p><img src="/../img/Buffer_Overflow_Lab/15.png" alt="15"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/15.png" title="15" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/15.png" alt="15"></a></p>
 <p>本机上监听成功。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/16.png" alt="16"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/16.png" title="16" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/16.png" alt="16"></a></p>
 <p>实验成功。</p>
 <h3 id="Task4-Level-3-Attack"><a href="#Task4-Level-3-Attack" class="headerlink" title="Task4. Level-3 Attack"></a>Task4. Level-3 Attack</h3><p>Server-3给出了&amp;buffer和&amp;bof的值，只是变成了64位程序。</p>
 <p><strong>实验步骤：</strong></p>
 <p>正常输入，查看&amp;buffer和&amp;bof。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/17.png" alt="17"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/17.png" title="17" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/17.png" alt="17"></a></p>
 <p>根据&amp;buffer和&amp;bof的值修改exploit.py文件。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/18.png" alt="18"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/18.png" title="18" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/18.png" alt="18"></a></p>
 <p>结果检测：</p>
 <p>在本机上12345端口上监听。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/19.png" alt="19"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/19.png" title="19" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/19.png" alt="19"></a></p>
 <p>生成badfile文件，攻击server3。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/20.png" alt="20"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/20.png" title="20" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/20.png" alt="20"></a></p>
 <p>本机成功连接到server-3.</p>
-<p><img src="/../img/Buffer_Overflow_Lab/21.png" alt="21"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/21.png" title="21" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/21.png" alt="21"></a></p>
 <p><strong>分析：</strong></p>
 <p>由于64位程序的特性**(0x41à0x0041，strcmp函数会在00处终止，故无法用NOP过渡)**，我们将shellcode的位置从badfile的末尾调到了badfile的头部，也就是把start的值改为0。</p>
 <p>那么程序的结构大致如下：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/22.png" alt="22"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/22.png" title="22" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/22.png" alt="22"></a></p>
 <p>这样，ret值设置为&amp;buffer，offser设置为&amp;bof-&amp;buffer+8，就会使得RET被覆盖为ret，即函数结束时电脑会执行地址为ret的代码，正是我们设置的shellcode。</p>
 <h3 id="Task5-Level-4-Attack"><a href="#Task5-Level-4-Attack" class="headerlink" title="Task5. Level-4 Attack"></a>Task5. Level-4 Attack</h3><p>Server-4的buffer数组太小，不能使用Task4的方法，不能将shellcode放在&amp;buffer和&amp;bof之间了。</p>
 <p><strong>分析：</strong>但是shellcode是在main函数中，作为参数传给bof函数，所以shellcode在main函数的代码段中仍然存在，可以<strong>使得<strong><strong>bof</strong></strong>函数结束后直接跳转到<strong><strong>main</strong></strong>函数中的<strong><strong>shellcode</strong></strong>地址</strong>。</p>
 <p>那么程序的结构因该大致如下：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/23.png" alt="23"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/23.png" title="23" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/23.png" alt="23"></a></p>
 <p>设置offset为&amp;bof-&amp;buffer+8，ret设置为main函数中的shellcode的地址，使程序结束后执行main函数中的shellcode<strong>。</strong></p>
 <p><strong>实验步骤：</strong></p>
 <p>正常输入得到&amp;buffer和&amp;bof的值。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/24.png" alt="24"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/24.png" title="24" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/24.png" alt="24"></a></p>
 <p>根据&amp;buffer和&amp;bof的值修改exploit.py中的start、ret、offset。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/25.png" alt="25"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/25.png" title="25" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/25.png" alt="25"></a></p>
 <p>结果检验：</p>
 <p>本机12345端口开启nc监听：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/26.png" alt="26"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/26.png" title="26" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/26.png" alt="26"></a></p>
 <p>生成badfile并发送至server-4进行攻击：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/27.png" alt="27"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/27.png" title="27" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/27.png" alt="27"></a></p>
 <p>本机成功收到server-4反弹的shell。</p>
-<p><img src="/../img/Buffer_Overflow_Lab/28.png" alt="28"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/28.png" title="28" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/28.png" alt="28"></a></p>
 <p><strong>为什么ret &#x3D; &amp;bof + 1234 ?</strong></p>
 <p><strong>因为dummy函数中的数组是1000bytes，在main函数中NOP指令是可以奏效，只需要大致定位到main函数中的517字节的数据块即可，简单尝试几次即可。</strong></p>
 <h3 id="Task6-Experimenting-with-the-Address-Randomization"><a href="#Task6-Experimenting-with-the-Address-Randomization" class="headerlink" title="Task6. Experimenting with the Address Randomization"></a>Task6. Experimenting with the Address Randomization</h3><p>实验步骤：</p>
 <p>开启地址随机化：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/29.png" alt="29"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/29.png" title="29" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/29.png" alt="29"></a></p>
 <p>测试：</p>
 <p>server-1：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/30.png" alt="30"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/30.png" title="30" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/30.png" alt="30"></a></p>
 <p>server-3：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/31.png" alt="31"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/31.png" title="31" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/31.png" alt="31"></a></p>
 <p>发现这三次的&amp;bof和&amp;buffer的地址都发生了变化，这意味着我们不能用原来的办法，不能用固定的内存地址去指定溢出内存地址，这无疑增加了栈溢出攻击的难度。</p>
 <p><strong>使用自带的爆破工具对32位server-1进行爆破：</strong></p>
 <p><strong>原理：因为32位程序所使用的随机位数不多，所以可以通过暴力遍历的方式实现攻击。</strong></p>
 <p>先在本机上的端口开启监听，然后运行爆破程序：</p>
-<p><img src="/../img/Buffer_Overflow_Lab/32.png" alt="32"></p>
-<p><img src="/../img/Buffer_Overflow_Lab/33.png" alt="33"></p>
+<p><a href="/../img/Buffer_Overflow_Lab/32.png" title="32" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/32.png" alt="32"></a></p>
+<p><a href="/../img/Buffer_Overflow_Lab/33.png" title="33" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Buffer_Overflow_Lab/33.png" alt="33"></a></p>
 <p>正常来说，几分钟后即可成功。</p>
 <h3 id="Task7-Experimenting-with-Other-Countermeasures"><a href="#Task7-Experimenting-with-Other-Countermeasures" class="headerlink" title="Task7. Experimenting with Other Countermeasures"></a>Task7. Experimenting with Other Countermeasures</h3><p>进入 server-code 文件夹，去除 -fno-stack-protector 编译 stack.c，并将 badfile 作为输入。</p>
 <p>然后系统会检测到stack smashing，会终止该进程。</p>
 <p>在shellcode文件夹下，去除-z execstack，再编译call_shellcode.c，执行生成的out文件会出现Segmentation fault，栈不再运行了。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -286,6 +500,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -318,26 +539,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -349,12 +552,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -368,7 +586,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

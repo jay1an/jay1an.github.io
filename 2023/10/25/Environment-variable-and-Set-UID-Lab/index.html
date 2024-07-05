@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Environment variable and Set-UID Lab" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,11 +332,11 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Environment-Variable-and-Set-UID-Lab"><span class="post-toc-text">Environment Variable and Set-UID Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="post-toc-text">环境变量</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Set-UID"><span class="post-toc-text">Set-UID</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Manipulating-Environment-Variables"><span class="post-toc-text">Task1. Manipulating Environment Variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Passing-Environment-Variables-from-Parent-Process-to-Child-Process"><span class="post-toc-text">Task2. Passing Environment Variables from Parent Process to Child Process</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Enviroment-Variables-and-execve"><span class="post-toc-text">Task3. Enviroment Variables and execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Environment-Varibales-and-systems"><span class="post-toc-text">Task4. Environment Varibales and systems()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task5. Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-The-PATH-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task6. The PATH Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-The-LD-PRELOAD-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task7. The LD PRELOAD Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task8-Invoking-External-Programs-Using-system-versus-execve"><span class="post-toc-text">Task8. Invoking External Programs Using system() versus execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task9-Capability-Leaking"><span class="post-toc-text">Task9. Capability Leaking</span></a></li></ol></li></ol></li></ol>
             
         
-        <h1 id="Environment-Variable-and-Set-UID-Lab"><a href="#Environment-Variable-and-Set-UID-Lab" class="headerlink" title="Environment Variable and Set-UID Lab"></a>Environment Variable and Set-UID Lab</h1><h5 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h5><p><strong>环境变量 (Environment Variables)</strong> 是在操作系统中存储配置信息和系统状态的动态值。它们为操作系统和应用程序提供了一种在运行时传递信息的方式。每个进程都可以有自己的环境变量，允许它们在不同的上下文中运行。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Environment-Variable-and-Set-UID-Lab"><a href="#Environment-Variable-and-Set-UID-Lab" class="headerlink" title="Environment Variable and Set-UID Lab"></a>Environment Variable and Set-UID Lab</h1><h5 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h5><p><strong>环境变量 (Environment Variables)</strong> 是在操作系统中存储配置信息和系统状态的动态值。它们为操作系统和应用程序提供了一种在运行时传递信息的方式。每个进程都可以有自己的环境变量，允许它们在不同的上下文中运行。</p>
 <p>例：</p>
 <p><strong>PATH：</strong> <code>PATH</code> 是一个非常常见的环境变量，它包含了系统用于查找可执行文件的路径列表。当您在命令行中输入一个命令时，系统将在 <code>PATH</code> 中列出的路径中查找该命令的可执行文件。</p>
-<pre><code class="bash">PATH=/usr/local/bin:/usr/bin:/bin
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH=/usr/local/bin:/usr/bin:/bin</span><br></pre></td></tr></table></figure>
+
 <h5 id="Set-UID"><a href="#Set-UID" class="headerlink" title="Set-UID"></a>Set-UID</h5><p><strong>set-uid (Set User ID)</strong> 是一种在 Unix 和类 Unix 操作系统中用于设置进程特权级别的机制。通过设置 set-uid 位，一个可执行文件将在执行时获得文件所有者的权限，而不是执行者的权限。这意味着普通用户可以以具有文件所有者权限的身份执行该程序，通常这是超出用户普通权限的操作。</p>
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
 <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The learning objective of this lab is for students to understand how environment variables affect program<br>and system behaviors. Environment variables are a set of dynamic named values that can affect the way<br>running processes will behave on a computer. They are used by most operating systems, since they were<br>introduced to Unix in 1979. Although environment variables affect program behaviors, how they achieve<br>that is not well understood by many programmers. As a result, if a program uses environment variables, but<br>the programmer does not know that they are used, the program may have vulnerabilities.</p>
@@ -137,22 +346,22 @@
 <p>实验要求见实验说明PDF。</p>
 <h3 id="Task1-Manipulating-Environment-Variables"><a href="#Task1-Manipulating-Environment-Variables" class="headerlink" title="Task1. Manipulating Environment Variables"></a>Task1. Manipulating Environment Variables</h3><p>简单操作环境变量。</p>
 <p>输入printenv或者env命令查看环境变量：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/1.png" alt="1"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/1.png" alt="1"></a></p>
 <p>使用export和unset命令设置环境变量。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/2.png" alt="2"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/2.png" title="2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/2.png" alt="2"></a></p>
 <h3 id="Task2-Passing-Environment-Variables-from-Parent-Process-to-Child-Process"><a href="#Task2-Passing-Environment-Variables-from-Parent-Process-to-Child-Process" class="headerlink" title="Task2. Passing Environment Variables from Parent Process to Child Process"></a>Task2. Passing Environment Variables from Parent Process to Child Process</h3><p>验证环境变量会不会传递到子进程。</p>
 <p>实验步骤：</p>
 <p><strong>第一步：</strong>先编译Labsetup中的myprintenv.c文件。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/3.png" alt="3"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/3.png" title="3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/3.png" alt="3"></a></p>
 <p>这个程序在子进程和父进程中验证各自的环境变量是否相同，但父进程只是创建后就退出，没有打印环境变量，而子进程打印了环境变量后也退出。</p>
 <p><strong>第二步：</strong>将子进程输出的环境变量保存至child.txt文件。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/4.png" alt="4"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/4.png" title="4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/4.png" alt="4"></a></p>
 <p><strong>第三步：</strong>修改代码，重新编译c文件，使这一次打印父进程的环境变量。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/5.png" alt="5"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/5.png" title="5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/5.png" alt="5"></a></p>
 <p><strong>第四步：</strong>将父进程输出的环境变量保存至parent.txt文件。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/6.png" alt="6"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/6.png" title="6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/6.png" alt="6"></a></p>
 <p><strong>第五步：</strong>比较child.txt和parent.txt。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/7.png" alt="7"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/7.png" title="7" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/7.png" alt="7"></a></p>
 <p>diff和cmp都没有输出，表明这两个文件内容是一样的。</p>
 <p>即在这段代码中，子进程和父进程的环境变量是一样的。当子进程被创建时，它会继承父进程的环境变量。这意味着子进程将具有与父进程相同的环境变量，包括相同的变量名称和值。因为 fork() 函数会复制父进程的环境，包括环境变量。</p>
 <p><strong>关于environ：</strong></p>
@@ -165,15 +374,15 @@
 <p>实验步骤：</p>
 <p><strong>第一步：</strong>编译初始的myenv.c文件并运行。</p>
 <p>初始的myenv.c内容：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/8.png" alt="8"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/8.png" title="8" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/8.png" alt="8"></a></p>
 <p>编译运行：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/9.png" alt="9"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/9.png" title="9" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/9.png" alt="9"></a></p>
 <p><strong>分析：</strong></p>
 <p>将 envp 参数设置为 NULL，execve() 在执行新程序时会清空环境变量，这导致了没有输出。</p>
 <p><strong>第二步：</strong>将execve()函数中的第三个参数envp设为全局变量environ。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/10.png" alt="10"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/10.png" title="10" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/10.png" alt="10"></a></p>
 <p>重新编译并执行：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/11.png" alt="11"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/11.png" title="11" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/11.png" alt="11"></a></p>
 <p>分析：</p>
 <p>传入了 environ 变量作为 envp 参数，因此 &#x2F;usr&#x2F;bin&#x2F;env 将继承当前进程的环境变量。在这种情况下，environ 包含当前进程的环境变量，所以 &#x2F;usr&#x2F;bin&#x2F;env 将使用当前进程的环境变量。</p>
 <p><strong>第三步：</strong>对新程序的环境变量的总结</p>
@@ -186,11 +395,11 @@
 <h3 id="Task4-Environment-Varibales-and-systems"><a href="#Task4-Environment-Varibales-and-systems" class="headerlink" title="Task4. Environment Varibales and systems()"></a>Task4. Environment Varibales and systems()</h3><p>本次task探究通过system()函数执行命令的环境变量。</p>
 <p><strong>实验步骤：</strong></p>
 <p>编译以下代码并运行：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/12.png" alt="12"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/12.png" title="12" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/12.png" alt="12"></a></p>
 <p>运行a.out发现打印出了当前程序的环境变量，并且在system()函数结束后执行了下面的printf代码，这与execve()不同。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/13.png" alt="13"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/13.png" title="13" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/13.png" alt="13"></a></p>
 <p>……</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/14.png" alt="14"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/14.png" title="14" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/14.png" alt="14"></a></p>
 <p><strong>分析：</strong></p>
 <p>system 函数是一个高级接口，它允许执行一个外部命令，并等待该命令完成。</p>
 <p>在system函数的内部，使用了fork创建子进程，然后在子进程中调用execl函数，execl进而调用execve函数，同时把环境变量传递给execve，因为子进程是fork出来的，<strong>所以环境变量与原进程是相同的。</strong>并且父进程也会继续执行，所以printf语句会被执行。</p>
@@ -200,15 +409,15 @@
 <p>本次task的目的就是探究Set-UID程序的环境变量。</p>
 <p>实验步骤：</p>
 <p><strong>第一步：</strong>编写一个可以print当前程序的环境变量的c程序</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/15.png" alt="15"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/15.png" title="15" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/15.png" alt="15"></a></p>
 <p><strong>第二步：</strong>编译c文件，将拥有者设为root，使其变成一个Set-UID程序</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/16.png" alt="16"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/16.png" title="16" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/16.png" alt="16"></a></p>
 <p><strong>第三步：</strong>在普通用户的shell中，使用export命令设置以下的环境变量：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/17.png" alt="17"></p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/18.png" alt="18"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/17.png" title="17" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/17.png" alt="17"></a></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/18.png" title="18" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/18.png" alt="18"></a></p>
 <p>最后编译运行task5这个Set-UID程序，shell会fork一个子进程，由子进程来运行这个程序。该程序会打印出子进程的环境变量。</p>
 <p>但是使用grep命令查找刚才修改过的三个环境变量，发现LD_LIBTATY_PATH没有被继承，但是其余两个都成功被继承了：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/19.png" alt="19"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/19.png" title="19" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/19.png" alt="19"></a></p>
 <p>分析：</p>
 <p>当运行一个 Set-UID 程序时，环境变量 LD_LIBRARY_PATH 通常不会被继承。这是因为 Set-UID 程序是以文件所有者的权限来执行的，而不是调用者的权限，为了增加安全性，系统通常会限制一些环境变量的继承，以避免潜在的滥用和安全漏洞。</p>
 <p>特别是，LD_LIBRARY_PATH 是一个环境变量，用于指定动态链接器查找共享库的路径。如果它被继承，那么恶意用户可能会设置一个恶意的 LD_LIBRARY_PATH，以引导程序加载恶意共享库，从而引发安全漏洞。</p>
@@ -217,89 +426,89 @@
 <p>本次task的目标就是通过修改环境变量来实现对Set-UID程序的攻击。</p>
 <p><strong>实验步骤：</strong></p>
 <p><strong>第一步：</strong>编写c程序，使用system函数执行ls功能，编译并使其成为Set-UID程序。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/20.png" alt="20"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/20.png" title="20" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/20.png" alt="20"></a></p>
 <p>编译并修改为Set-UID程序：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/21.png" alt="21"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/21.png" title="21" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/21.png" alt="21"></a></p>
 <p>运行效果：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/22.png" alt="22"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/22.png" title="22" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/22.png" alt="22"></a></p>
 <p><strong>第二步：</strong>修改环境变量，改变程序行为。</p>
 <p>使用export PATH&#x3D;’.’:$PATH将当前目录放在PATH的最前面。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/23.png" alt="23"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/23.png" title="23" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/23.png" alt="23"></a></p>
 <p>这样system(“ls”)函数就会先从当前目录寻找。</p>
 <p>如果我们在当前目录下创建一个ls可执行文件，那么系统就会执行我们所创建的ls文件，这样就可以控制程序的行为了。</p>
 <p>创建ls.c并编译为名为ls的可执行文件：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/24.png" alt="24"></p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/25.png" alt="25"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/24.png" title="24" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/24.png" alt="24"></a></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/25.png" title="25" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/25.png" alt="25"></a></p>
 <p>由于直接修改了PATH，我们在当前shell运行ls命令，也会定位到当前目录的ls可执行文件，并不会打印当前的目录信息。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/26.png" alt="26"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/26.png" title="26" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/26.png" alt="26"></a></p>
 <p>那么此时，我们执行Set-UID程序task6，发现它的程序行为也发生了改变。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/27.png" alt="27"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/27.png" title="27" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/27.png" alt="27"></a></p>
 <p><strong>分析：</strong></p>
 <p>因为system()函数运行的命令的环境变量与原程序相同，所以改变原程序的PATH可以影响system()函数的运行环境，进而改变程序的行为。</p>
 <p>当运行 ls 命令时，系统会在 PATH 中指定的目录中查找 ls 命令的可执行文件。如果 ls 可执行文件存在于 PATH 中的某个目录中，系统就会执行该文件。在本次task中，PATH中的第一个值是当前目录，那么系统就会先在当前目录寻找ls，所以系统会执行当前目录下的ls，而不会执行&#x2F;usr&#x2F;bin&#x2F;ls。</p>
 <p><strong>获得ROOT权限：</strong></p>
 <p>先执行命令：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/28.png" alt="28"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/28.png" title="28" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/28.png" alt="28"></a></p>
 <p>修改 task6.c的代码，使用system()函数打开一个shell，由于task6是一个Set-UID程序，由task6打开的shell权限必然也是root的。</p>
 <p>task6.c内容：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/29.png" alt="29"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/29.png" title="29" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/29.png" alt="29"></a></p>
 <p>编译运行，验证是否为ROOT：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/30.png" alt="30"></p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/31.png" alt="31"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/30.png" title="30" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/30.png" alt="30"></a></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/31.png" title="31" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/31.png" alt="31"></a></p>
 <p>运行task6发现打开了一个新的shell，并且是root权限，表明我们成功通过Set-UID程序打开了ROOT shell。</p>
 <h3 id="Task7-The-LD-PRELOAD-Environment-Variable-and-Set-UID-Programs"><a href="#Task7-The-LD-PRELOAD-Environment-Variable-and-Set-UID-Programs" class="headerlink" title="Task7. The LD PRELOAD Environment Variable and Set-UID Programs"></a>Task7. The <code>LD PRELOAD</code> Environment Variable and <code>Set-UID</code> Programs</h3><p>本次task仍然继续探究Set-UID程序是如何处理环境变量的，主要探究有关动态链接的LD_PRELOAD。</p>
 <p>实验步骤：</p>
 <p><strong>第一步：</strong>探究LD_PRELOAD如何影响动态链接器。</p>
 <p>创建以下的程序，并命名为mylib.c，它覆盖了sleep的功能。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/32.png" alt="32"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/32.png" title="32" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/32.png" alt="32"></a></p>
 <p>编译该程序，生成动态链接库</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/33.png" alt="33"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/33.png" title="33" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/33.png" alt="33"></a></p>
 <p>设置LD_PRELOAD的值</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/34.png" alt="34"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/34.png" title="34" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/34.png" alt="34"></a></p>
 <p>最后，编译并运行一个带有sleep()函数的C文件</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/35.png" alt="35"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/35.png" title="35" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/35.png" alt="35"></a></p>
 <p>运行：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/36.png" alt="36"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/36.png" title="36" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/36.png" alt="36"></a></p>
 <p>发现运行的sleep函数是我们刚自定义的sleep函数。</p>
 <p><strong>第二步：</strong>在不同的条件下运行mysleep程序</p>
 <p>① mysleep作为普通程序，在普通用户权限下运行。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/37.png" alt="37"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/37.png" title="37" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/37.png" alt="37"></a></p>
 <p>② mysleep作为Set-UID程序，在普通用户权限下运行</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/38.png" alt="38"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/38.png" title="38" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/38.png" alt="38"></a></p>
 <p>发现其并没有运行我们自定义的sleep函数，即LD_PRELOAD没有被继承到Set-UID程序的运行环境中。</p>
 <p>③mysleep作为Set-UID程序，在管理员权限下重新export LD_PRELOAD并运行mysleep</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/39.png" alt="39"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/39.png" title="39" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/39.png" alt="39"></a></p>
 <p>在ROOT用户下，mysleep运行的是自定义的sleep函数，即LD_PRELOAD起作用了。 </p>
 <p>④ mysleep作为Set-UID程序，但是owner为user1，现使用user2(非ROOT)重新export LD_PRELOAD并运行mysleep</p>
 <p>创建新用户jay1an：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/40.png" alt="40"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/40.png" title="40" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/40.png" alt="40"></a></p>
 <p>将mysleep的owner改为jay1an，并重设为Set-UID程序：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/41.png" alt="41"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/41.png" title="41" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/41.png" alt="41"></a></p>
 <p>以seed的身份执行mysleep程序：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/42.png" alt="42"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/42.png" title="42" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/42.png" alt="42"></a></p>
 <p>显然，并没有执行我们自定义的sleep函数，即LD_PRELOAD未起作用。</p>
 <p><strong>第三步：</strong>思考第二步中为什么运行同一个程序，但是却出现了不同的结果。</p>
 <p>未成功调用我们自定义的sleep函数的原因就是LD_PRELOAD并没有继承到子程序中。</p>
 <h3 id="Task8-Invoking-External-Programs-Using-system-versus-execve"><a href="#Task8-Invoking-External-Programs-Using-system-versus-execve" class="headerlink" title="Task8. Invoking External Programs Using system() versus execve()"></a>Task8. Invoking External Programs Using <code>system()</code> versus <code>execve()</code></h3><p>虽然system()和execve()都可以用来运行新程序，但是如果在特权程序中使用system()是相当危险的，例如Set-UID程序。我们已经看到 PATH 环境变量如何影响 system() 的行为，因为PATH会影响 shell 的工作方式。 execve() 就没有问题，因为它不调用 shell。调用 shell 还有另一个危险的后果，这次，它与环境变量无关。</p>
 <p>实验步骤：</p>
 <p><strong>第一步：</strong>编译catall.c文件</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/43.png" alt="43"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/43.png" title="43" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/43.png" alt="43"></a></p>
 <p>如果catall 是普通程序，那么无法通过其查看有root权限的文件。</p>
 <p><strong>第二步：</strong>设置为Set-UID程序</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/44.png" alt="44"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/44.png" title="44" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/44.png" alt="44"></a></p>
 <p>这样就可以访问需要ROOT权限的文件了。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/45.png" alt="45"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/45.png" title="45" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/45.png" alt="45"></a></p>
 <p><strong>第三步：</strong>尝试仅使用catall修改系统文件，跨权限修改或者删除一些文件</p>
 <p>先创建一个仅能root用户读写的文件zzrootfile作为测试：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/46.png" alt="46"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/46.png" title="46" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/46.png" alt="46"></a></p>
 <p>但是我们阅读代码会发现，主要问题在于这段代码使用 sprintf 将命令构建为一个字符串，而没有对参数进行任何验证或过滤。</p>
 <p>我们可以提供提供恶意的文件名，比如使用分号或者管道符号，使得程序可以执行我们指定的命令。例如获得ROOT shell。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/47.png" alt="47"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/47.png" title="47" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/47.png" alt="47"></a></p>
 <p>使用分号将&#x2F;bin&#x2F;zsh命令隔开，system也会处理&#x2F;bin&#x2F;zsh命令，唤起一个shell，又因为catall程序是一个Set-UID程序，所以可以唤起一个ROOT shell，这样即可随意对系统文件进行修改。</p>
 <p><strong>第四步：</strong>修改catall.c，注释掉system函数，使用execve函数执行命令，并尝试第三步中的行为还能否成功实施攻击。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/48.png" alt="48"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/48.png" title="48" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/48.png" alt="48"></a></p>
 <p>重新将其设为Set-UID程序：</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/49.png" alt="49"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/49.png" title="49" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/49.png" alt="49"></a></p>
 <p>结果表明这种方法已经不能奏效。</p>
 <p><strong>为什么不奏效：</strong></p>
 <p>system(command) 使用一个字符串变量 command 来构建整个命令行，这意味着可以在 command 中编写完整的命令，包括命令和参数。这使得 system 更容易使用，但也更容易受到命令注入攻击的威胁。</p>
@@ -313,17 +522,22 @@
 <p>本次task介绍了”capability leaking” 的漏洞。这种漏洞发生在权限降级时，可能导致程序仍然保留了一些特权能力。尽管EUID 已降级为非特权用户，但由于特权能力未被清理，程序仍然具有特权。</p>
 <p>实验步骤：</p>
 <p><strong>第一步：</strong>创建&#x2F;etc&#x2F;zzz文件，并将权限设置为0644</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/50.png" alt="50"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/50.png" title="50" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/50.png" alt="50"></a></p>
 <p><strong>第二步：</strong>编译cap_leak.c文件，owner设为root并将其改为Set-UID程序</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/51.png" alt="51"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/51.png" title="51" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/51.png" alt="51"></a></p>
 <p><strong>第三步：</strong>执行cap_leak程序，理解特权泄露漏洞</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/52.png" alt="52"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/52.png" title="52" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/52.png" alt="52"></a></p>
 <p>根据代码分析，我们成功用root权限打开了&#x2F;etc&#x2F;zzz文件，但又立即收回了特权，降级为普通用户，所以后来打开的shell是普通用户权限下的shell。</p>
 <p>由于程序在打开 &#x2F;etc&#x2F;zzz 文件后并没有关闭文件描述符 fd，因此在新的 &#x2F;bin&#x2F;sh shell 中，可以继续使用 fd 来修改 &#x2F;etc&#x2F;zzz 文件，因为文件描述符是可以在同一进程中传递的。</p>
 <p>在这个情况下，fd 在新的 &#x2F;bin&#x2F;sh shell 中仍然保持打开状态，所以尽管程序已经禁用了特权。但仍然可以使用 &#x2F;bin&#x2F;sh shell 来执行针对fd&#x3D;3的文件操作，即随意写入数据到&#x2F;etc&#x2F;zzz文件，而不需要特权。</p>
-<p><img src="/../img/Environment-variable-and-Set-UID-Lab/53.png" alt="53"></p>
+<p><a href="/../img/Environment-variable-and-Set-UID-Lab/53.png" title="53" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/53.png" alt="53"></a></p>
 <p>这个漏洞强调了正确的权限管理的重要性，尤其是在使用 Set-UID 程序时，开发者必须小心确保特权和文件描述符等资源受到适当的限制和控制。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -360,6 +574,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -392,26 +613,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -423,12 +626,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -442,7 +660,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

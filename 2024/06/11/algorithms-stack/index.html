@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Stack" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%A0%88"><span class="post-toc-text">基础算法 - 栈</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LeetCode-%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">LeetCode 相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#20-%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">20. 有效的括号 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#155-%E6%9C%80%E5%B0%8F%E6%A0%88-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">155. 最小栈 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#394-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E7%A0%81-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">394. 字符串解码 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#739-%E6%AF%8F%E6%97%A5%E6%B8%A9%E5%BA%A6-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">739. 每日温度 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#496-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0-I-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">496. 下一个更大元素 I - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#503-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0-II-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">503. 下一个更大元素 II - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#556-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E5%85%83%E7%B4%A0-III-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">556. 下一个更大元素 III - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#31-%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">31. 下一个排列 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#84-%E6%9F%B1%E7%8A%B6%E5%9B%BE%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%9A%84%E7%9F%A9%E5%BD%A2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">84. 柱状图中最大的矩形 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#316-%E5%8E%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E5%AD%97%E6%AF%8D-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">316. 去除重复字母 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#402-%E7%A7%BB%E6%8E%89-K-%E4%BD%8D%E6%95%B0%E5%AD%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">402. 移掉 K 位数字 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1019-%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%9B%B4%E5%A4%A7%E8%8A%82%E7%82%B9-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">1019. 链表中的下一个更大节点 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
             
         
-        <h1 id="基础算法-栈"><a href="#基础算法-栈" class="headerlink" title="基础算法 - 栈"></a>基础算法 - 栈</h1><p>在计算机科学中，数据结构是算法和程序设计的基石。栈（Stack）作为其中一种重要的数据结构，以其独特的“后进先出”（Last In First Out, LIFO）特性，在各种应用中扮演着关键角色。从函数调用栈到表达式求值，栈的应用无处不在。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-栈"><a href="#基础算法-栈" class="headerlink" title="基础算法 - 栈"></a>基础算法 - 栈</h1><p>在计算机科学中，数据结构是算法和程序设计的基石。栈（Stack）作为其中一种重要的数据结构，以其独特的“后进先出”（Last In First Out, LIFO）特性，在各种应用中扮演着关键角色。从函数调用栈到表达式求值，栈的应用无处不在。</p>
 <p>在开始之前，我们先来回顾一下栈的定义和特点。栈是一种线性数据结构，具有以下两个主要操作：</p>
 <ol>
 <li><strong>压栈（Push）</strong>：将元素添加到栈的顶端。</li>
@@ -132,35 +341,8 @@
 <p>通过这些基本操作，栈能够高效地管理数据的存取顺序。接下来，我们将详细介绍栈的实现方法和应用场景。</p>
 <p>此篇记录使用栈解题的思路。</p>
 <h2 id="LeetCode-相关题目"><a href="#LeetCode-相关题目" class="headerlink" title="LeetCode 相关题目"></a>LeetCode 相关题目</h2><h3 id="20-有效的括号-力扣（LeetCode）"><a href="#20-有效的括号-力扣（LeetCode）" class="headerlink" title="20. 有效的括号 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked">20. 有效的括号 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
-<pre><code class="java">class Solution &#123;
-    public boolean isValid(String s) &#123;
-        LinkedList&lt;Character&gt; stack = new LinkedList&lt;&gt;();
-        
-        char[] sChars = s.toCharArray();
-        
-        for(char ch: sChars)&#123;
-            if(stack.isEmpty())&#123;   // 如果当前栈为空，入栈的是下面这三个闭合括号，直接返回false
-                if(ch==&#39;)&#39;||ch==&#39;]&#39;||ch==&#39;&#125;&#39;)
-                    return false;
-                else
-                    stack.push(ch);
-            &#125;else&#123;
-                char peek = stack.peek();   // 相同的相互抵消
-                if(ch==&#39;)&#39;&amp;&amp;peek==&#39;(&#39;)
-                    stack.pop();
-                else if(ch==&#39;]&#39;&amp;&amp;peek==&#39;[&#39;)
-                    stack.pop();
-                else if(ch==&#39;&#125;&#39;&amp;&amp;peek==&#39;&#123;&#39;)
-                    stack.pop();
-                else stack.push(ch);
-            &#125;
-        &#125;
-        if(stack.isEmpty())
-            return true;
-        else return false;
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        LinkedList&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="type">char</span>[] sChars = s.toCharArray();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> ch: sChars)&#123;</span><br><span class="line">            <span class="keyword">if</span>(stack.isEmpty())&#123;   <span class="comment">// 如果当前栈为空，入栈的是下面这三个闭合括号，直接返回false</span></span><br><span class="line">                <span class="keyword">if</span>(ch==<span class="string">&#x27;)&#x27;</span>||ch==<span class="string">&#x27;]&#x27;</span>||ch==<span class="string">&#x27;&#125;&#x27;</span>)</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    stack.push(ch);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="type">char</span> <span class="variable">peek</span> <span class="operator">=</span> stack.peek();   <span class="comment">// 相同的相互抵消</span></span><br><span class="line">                <span class="keyword">if</span>(ch==<span class="string">&#x27;)&#x27;</span>&amp;&amp;peek==<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">                    stack.pop();</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">&#x27;]&#x27;</span>&amp;&amp;peek==<span class="string">&#x27;[&#x27;</span>)</span><br><span class="line">                    stack.pop();</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(ch==<span class="string">&#x27;&#125;&#x27;</span>&amp;&amp;peek==<span class="string">&#x27;&#123;&#x27;</span>)</span><br><span class="line">                    stack.pop();</span><br><span class="line">                <span class="keyword">else</span> stack.push(ch);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(stack.isEmpty())</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p><strong>为什么使用栈？</strong></p>
 <p>栈的特点使得它非常适合处理成对出现的匹配问题。具体来说：</p>
 <ol>
@@ -168,82 +350,14 @@
 <li><strong>开括号和闭括号的顺序</strong>：栈能帮助我们记录未匹配的开括号，当遇到闭括号时，直接检查栈顶的开括号是否匹配。如果匹配，则弹出栈顶元素，表示这一对括号已经匹配。</li>
 </ol>
 <h3 id="155-最小栈-力扣（LeetCode）"><a href="#155-最小栈-力扣（LeetCode）" class="headerlink" title="155. 最小栈 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/min-stack/description/?envType=study-plan-v2&envId=top-100-liked">155. 最小栈 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
-<pre><code class="java">class MinStack &#123;
-    
-    LinkedList&lt;Integer&gt; stack;
-    LinkedList&lt;Integer&gt; min;
-    
-    public MinStack() &#123;  // 初始化
-        stack = new LinkedList&lt;&gt;();
-        min = new LinkedList&lt;&gt;();
-    &#125;
-    
-    public void push(int val) &#123;
-        stack.push(val);
-        if(min.isEmpty())&#123;
-            min.push(val);
-        &#125;else&#123;
-            int peek = min.peek();   // min栈顶同步更新stack中最小值
-            if(peek&lt;val)&#123;
-                min.push(peek);
-            &#125;else&#123;
-                min.push(val);
-            &#125;
-        &#125;
-    &#125;
-    
-    public void pop() &#123;
-        stack.pop();
-        min.pop();
-    &#125;
-    
-    public int top() &#123;
-        return stack.peek();
-    &#125;
-    
-    public int getMin() &#123;  // 直接从min栈中取即可
-        return min.peek();
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MinStack</span> &#123;</span><br><span class="line">    </span><br><span class="line">    LinkedList&lt;Integer&gt; stack;</span><br><span class="line">    LinkedList&lt;Integer&gt; min;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MinStack</span><span class="params">()</span> &#123;  <span class="comment">// 初始化</span></span><br><span class="line">        stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        min = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">push</span><span class="params">(<span class="type">int</span> val)</span> &#123;</span><br><span class="line">        stack.push(val);</span><br><span class="line">        <span class="keyword">if</span>(min.isEmpty())&#123;</span><br><span class="line">            min.push(val);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">peek</span> <span class="operator">=</span> min.peek();   <span class="comment">// min栈顶同步更新stack中最小值</span></span><br><span class="line">            <span class="keyword">if</span>(peek&lt;val)&#123;</span><br><span class="line">                min.push(peek);</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                min.push(val);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">pop</span><span class="params">()</span> &#123;</span><br><span class="line">        stack.pop();</span><br><span class="line">        min.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">top</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> stack.peek();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getMin</span><span class="params">()</span> &#123;  <span class="comment">// 直接从min栈中取即可</span></span><br><span class="line">        <span class="keyword">return</span> min.peek();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>为了在常数时间内获取最小值，我们引入了一个辅助栈 <code>min</code>。辅助栈 <code>min</code> 的每个元素对应于主栈 <code>stack</code> 中的元素，使得 <code>min</code> 栈顶始终保持当前栈的最小值。因此，通过同步更新 <code>min</code> 栈，我们可以在 <code>O(1)</code> 时间复杂度内获取栈中的最小值。</p>
 <h3 id="394-字符串解码-力扣（LeetCode）"><a href="#394-字符串解码-力扣（LeetCode）" class="headerlink" title="394. 字符串解码 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/decode-string/?envType=study-plan-v2&envId=top-100-liked">394. 字符串解码 - 力扣（LeetCode）</a></h3><p>难度：中等（中等偏上）</p>
 <p>嵌套括号是本题的难点</p>
-<pre><code class="java">class Solution &#123;
-    
-    LinkedList&lt;String&gt; Sstack; // 存储字符串的栈
-    LinkedList&lt;Integer&gt; Istack; // 存储倍数的栈
-    String tmp = &quot;&quot;; // 临时存储当前的子字符串
-    int k = 0; // 临时存储当前的倍数
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    </span><br><span class="line">    LinkedList&lt;String&gt; Sstack; <span class="comment">// 存储字符串的栈</span></span><br><span class="line">    LinkedList&lt;Integer&gt; Istack; <span class="comment">// 存储倍数的栈</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">tmp</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>; <span class="comment">// 临时存储当前的子字符串</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 临时存储当前的倍数</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">decodeString</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        Sstack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        Istack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> ch : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (Character.isDigit(ch)) &#123; <span class="comment">// 如果是数字</span></span><br><span class="line">                k = k * <span class="number">10</span> + ch - <span class="string">&#x27;0&#x27;</span>; <span class="comment">// 计算倍数</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ch == <span class="string">&#x27;[&#x27;</span>) &#123; <span class="comment">// 遇到 &#x27;[&#x27;，保存状态</span></span><br><span class="line">                Istack.push(k); <span class="comment">// 保存当前倍数</span></span><br><span class="line">                k = <span class="number">0</span>; <span class="comment">// 重置倍数</span></span><br><span class="line">                Sstack.push(tmp); <span class="comment">// 保存当前字符串</span></span><br><span class="line">                tmp = <span class="string">&quot;&quot;</span>; <span class="comment">// 重置当前字符串</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (ch == <span class="string">&#x27;]&#x27;</span>) &#123; <span class="comment">// 遇到 &#x27;]&#x27;</span></span><br><span class="line">                <span class="type">StringBuffer</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>(Sstack.pop()); <span class="comment">// 取出之前保存的字符串</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">times</span> <span class="operator">=</span> Istack.pop(); <span class="comment">// 取出倍数</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; times; i++) &#123;</span><br><span class="line">                    sb.append(tmp); <span class="comment">// 拼接当前子字符串多次</span></span><br><span class="line">                &#125;</span><br><span class="line">                tmp = sb.toString(); <span class="comment">// 更新当前字符串</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123; <span class="comment">// 普通字符，直接累加到当前字符串</span></span><br><span class="line">                tmp += ch;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> tmp; <span class="comment">// 返回最终解码后的字符串</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    public String decodeString(String s) &#123;
-        Sstack = new LinkedList&lt;&gt;();
-        Istack = new LinkedList&lt;&gt;();
-
-        for (char ch : s.toCharArray()) &#123;
-            if (Character.isDigit(ch)) &#123; // 如果是数字
-                k = k * 10 + ch - &#39;0&#39;; // 计算倍数
-            &#125; else if (ch == &#39;[&#39;) &#123; // 遇到 &#39;[&#39;，保存状态
-                Istack.push(k); // 保存当前倍数
-                k = 0; // 重置倍数
-                Sstack.push(tmp); // 保存当前字符串
-                tmp = &quot;&quot;; // 重置当前字符串
-            &#125; else if (ch == &#39;]&#39;) &#123; // 遇到 &#39;]&#39;
-                StringBuffer sb = new StringBuffer(Sstack.pop()); // 取出之前保存的字符串
-                int times = Istack.pop(); // 取出倍数
-                for (int i = 0; i &lt; times; i++) &#123;
-                    sb.append(tmp); // 拼接当前子字符串多次
-                &#125;
-                tmp = sb.toString(); // 更新当前字符串
-            &#125; else &#123; // 普通字符，直接累加到当前字符串
-                tmp += ch;
-            &#125;
-        &#125;
-        return tmp; // 返回最终解码后的字符串
-    &#125;
-&#125;
-</code></pre>
-<p><img src="/../img/basic_algorithms/e7c91ad3adf0af47d98f38be9ad1541b.jpg" alt="e7c91ad3adf0af47d98f38be9ad1541b"></p>
+<p><a href="/../img/basic_algorithms/e7c91ad3adf0af47d98f38be9ad1541b.jpg" title="e7c91ad3adf0af47d98f38be9ad1541b" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/e7c91ad3adf0af47d98f38be9ad1541b.jpg" alt="e7c91ad3adf0af47d98f38be9ad1541b"></a></p>
 <p><strong>为什么用栈</strong></p>
 <p>在处理嵌套的结构（如括号中的括号）时，栈是一种非常自然且有效的数据结构。对于这道题目，使用栈的关键作用如下：</p>
 <ol>
@@ -252,365 +366,46 @@
 <li><strong>简化操作</strong>：通过栈，我们可以很方便地进行字符串的累积和倍数的计算，不需要额外的复杂数据结构或逻辑。</li>
 </ol>
 <h3 id="739-每日温度-力扣（LeetCode）"><a href="#739-每日温度-力扣（LeetCode）" class="headerlink" title="739. 每日温度 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/daily-temperatures/?envType=study-plan-v2&envId=top-100-liked">739. 每日温度 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
-<pre><code class="java">class Solution &#123;
-    public int[] dailyTemperatures(int[] temperatures) &#123;
-        int len = temperatures.length;
-        int[] res =  new int[len];
-        // stack
-        LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();
-        int p = 0;
-        while(p&lt;len)&#123;
-            if(stack.isEmpty())&#123;
-                stack.push(p);
-                p++;
-            &#125;else&#123;
-                // 使得这个栈的，栈底&gt;栈顶
-                if(temperatures[stack.peek()]&gt;=temperatures[p]) &#123;
-                    stack.push(p);
-                    p++;
-                &#125;else&#123;
-                    // 如果新的大元素来了，依次pop，并更新res数组
-                    while (!stack.isEmpty()&amp;&amp;temperatures[stack.peek()]&lt;temperatures[p])&#123;
-                        int tmp = stack.pop();
-                        res[tmp] = p-tmp;
-                    &#125;
-                &#125;
-            &#125;
-        &#125;
-        return res;
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] dailyTemperatures(<span class="type">int</span>[] temperatures) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> temperatures.length;</span><br><span class="line">        <span class="type">int</span>[] res =  <span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">        <span class="comment">// stack</span></span><br><span class="line">        LinkedList&lt;Integer&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(p&lt;len)&#123;</span><br><span class="line">            <span class="keyword">if</span>(stack.isEmpty())&#123;</span><br><span class="line">                stack.push(p);</span><br><span class="line">                p++;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="comment">// 使得这个栈的，栈底&gt;栈顶</span></span><br><span class="line">                <span class="keyword">if</span>(temperatures[stack.peek()]&gt;=temperatures[p]) &#123;</span><br><span class="line">                    stack.push(p);</span><br><span class="line">                    p++;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="comment">// 如果新的大元素来了，依次pop，并更新res数组</span></span><br><span class="line">                    <span class="keyword">while</span> (!stack.isEmpty()&amp;&amp;temperatures[stack.peek()]&lt;temperatures[p])&#123;</span><br><span class="line">                        <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> stack.pop();</span><br><span class="line">                        res[tmp] = p-tmp;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这个题挺简单的，就是利用栈的特性，维护一个从栈底到栈顶是 大-&gt;小的顺序，如果新来的下一个元素比当前的栈顶大，那么就依次pop，pop的同时更新res数组，因为这个新来的大元素就是栈中小元素的”下一个”大元素。</p>
 <p>为了方便起见，我们在栈中存放的是index</p>
 <h3 id="496-下一个更大元素-I-力扣（LeetCode）"><a href="#496-下一个更大元素-I-力扣（LeetCode）" class="headerlink" title="496. 下一个更大元素 I - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-i/description/">496. 下一个更大元素 I - 力扣（LeetCode）</a></h3><p>难度：简单</p>
-<pre><code class="java">class Solution &#123;
-    public int[] nextGreaterElement(int[] nums1, int[] nums2) &#123;
-        LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();
-        int[] help = new int[10001];
-        // help[i]=j表示，值为i的元素下一个更大的是j，如果没有下一个更大的，那么j为0
-        // 维护栈：栈底 &gt; 栈顶
-        for(int i=0;i&lt;nums2.length;i++)&#123;
-            if(!stack.isEmpty())&#123;
-                int peek = stack.peek();
-                while(peek&lt;nums2[i])&#123;
-                    help[stack.pop()] = nums2[i];
-                    if(stack.isEmpty()) break;
-                    peek = stack.peek();
-                &#125;
-            &#125;
-            stack.push(nums2[i]);
-        &#125;
-        // 根据help数组中的值得到最终返回数组res
-        int[] res = new int[nums1.length];
-        for(int i=0;i&lt;nums1.length;i++)&#123;
-            res[i] = (help[nums1[i]]==0)?-1:help[nums1[i]];
-        &#125;
-        return res;
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] nextGreaterElement(<span class="type">int</span>[] nums1, <span class="type">int</span>[] nums2) &#123;</span><br><span class="line">        LinkedList&lt;Integer&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span>[] help = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10001</span>];</span><br><span class="line">        <span class="comment">// help[i]=j表示，值为i的元素下一个更大的是j，如果没有下一个更大的，那么j为0</span></span><br><span class="line">        <span class="comment">// 维护栈：栈底 &gt; 栈顶</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums2.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!stack.isEmpty())&#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">peek</span> <span class="operator">=</span> stack.peek();</span><br><span class="line">                <span class="keyword">while</span>(peek&lt;nums2[i])&#123;</span><br><span class="line">                    help[stack.pop()] = nums2[i];</span><br><span class="line">                    <span class="keyword">if</span>(stack.isEmpty()) <span class="keyword">break</span>;</span><br><span class="line">                    peek = stack.peek();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(nums2[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 根据help数组中的值得到最终返回数组res</span></span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[nums1.length];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums1.length;i++)&#123;</span><br><span class="line">            res[i] = (help[nums1[i]]==<span class="number">0</span>)?-<span class="number">1</span>:help[nums1[i]];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这一题与 [每日温度](#<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/daily-temperatures/?envType=study-plan-v2&envId=top-100-liked">739. 每日温度 - 力扣（LeetCode）</a>) 很像，都是通过维护单调栈得到下一个更大的元素的值或者下标。</p>
 <h3 id="503-下一个更大元素-II-力扣（LeetCode）"><a href="#503-下一个更大元素-II-力扣（LeetCode）" class="headerlink" title="503. 下一个更大元素 II - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-ii/">503. 下一个更大元素 II - 力扣（LeetCode）</a></h3><p>难度：中等</p>
 <p>与 [下一个更大元素 Ⅰ](#<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-i/description/">496. 下一个更大元素 I - 力扣（LeetCode）</a>) 相比，这里的数组是循环数组，这意味着最后一个元素的下一个是第一个元素。所以，进行两次数组的出栈入栈操作即可。</p>
-<pre><code class="java">class Solution &#123;
-    public int[] nextGreaterElements(int[] nums) &#123;
-        int n = nums.length;
-        int[] result = new int[n];
-        Arrays.fill(result, -1); // 初始化结果数组，默认为 -1
-        Stack&lt;Integer&gt; stack = new Stack&lt;&gt;(); // 栈用于存储索引
-        
-        // 遍历数组，找出每个元素的下一个更大元素
-        for (int i = 0; i &lt; n; i++) &#123;
-            while (!stack.isEmpty() &amp;&amp; nums[stack.peek()] &lt; nums[i]) &#123;
-                result[stack.pop()] = nums[i]; // 更新结果数组中相应位置的值
-            &#125;
-            stack.push(i); // 当前索引入栈x
-        &#125;
-        
-        // 再次遍历数组，处理循环数组的情况
-        for (int i = 0; i &lt; n; i++) &#123;
-            while (!stack.isEmpty() &amp;&amp; nums[stack.peek()] &lt; nums[i]) &#123;
-                result[stack.pop()] = nums[i]; // 更新结果数组中相应位置的值
-            &#125;
-        &#125;
-        
-        return result; // 返回结果数组
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] nextGreaterElements(<span class="type">int</span>[] nums) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="type">int</span>[] result = <span class="keyword">new</span> <span class="title class_">int</span>[n];</span><br><span class="line">        Arrays.fill(result, -<span class="number">1</span>); <span class="comment">// 初始化结果数组，默认为 -1</span></span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;(); <span class="comment">// 栈用于存储索引</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历数组，找出每个元素的下一个更大元素</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; nums[stack.peek()] &lt; nums[i]) &#123;</span><br><span class="line">                result[stack.pop()] = nums[i]; <span class="comment">// 更新结果数组中相应位置的值</span></span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(i); <span class="comment">// 当前索引入栈x</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 再次遍历数组，处理循环数组的情况</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; nums[stack.peek()] &lt; nums[i]) &#123;</span><br><span class="line">                result[stack.pop()] = nums[i]; <span class="comment">// 更新结果数组中相应位置的值</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> result; <span class="comment">// 返回结果数组</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h3 id="556-下一个更大元素-III-力扣（LeetCode）"><a href="#556-下一个更大元素-III-力扣（LeetCode）" class="headerlink" title="556. 下一个更大元素 III - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-element-iii/description/">556. 下一个更大元素 III - 力扣（LeetCode）</a></h3><p>难度：中等</p>
 <p>这个题与栈没关系了。更像 [下一个排列](#<a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-permutation/description/">31. 下一个排列 - 力扣（LeetCode）</a>)</p>
-<pre><code class="java">class Solution &#123;
-    public int nextGreaterElement(int n) &#123;
-        char[] con = Integer.toString(n).toCharArray();
-        int len = con.length;
-        int p = len-1;
-        for(;p&gt;=1;p--)&#123;
-            if(con[p-1]&lt;con[p])break;
-        &#125;
-        // 表明全是降序
-        if(p==0)return -1;
-        // 寻找交换的数
-        int q = len-1;
-        for(;q&gt;=p;q--)&#123;
-            if(con[q]&gt;con[p-1])break;
-        &#125;
-        // swap
-        char tmp = con[q];
-        con[q] = con[p-1];
-        con[p-1] = tmp;
-        // reverse
-        reverse(con,p,len-1);
-        
-        System.out.println(Arrays.toString(con));
-        long ans =  Long.parseLong(String.valueOf(con));
-        if(ans&gt;Integer.MAX_VALUE) return -1;  // 不满足32位整数也返回-1
-        return (int)ans;
-    &#125;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">nextGreaterElement</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] con = Integer.toString(n).toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> con.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> len-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(;p&gt;=<span class="number">1</span>;p--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(con[p-<span class="number">1</span>]&lt;con[p])<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 表明全是降序</span></span><br><span class="line">        <span class="keyword">if</span>(p==<span class="number">0</span>)<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 寻找交换的数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">q</span> <span class="operator">=</span> len-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(;q&gt;=p;q--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(con[q]&gt;con[p-<span class="number">1</span>])<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// swap</span></span><br><span class="line">        <span class="type">char</span> <span class="variable">tmp</span> <span class="operator">=</span> con[q];</span><br><span class="line">        con[q] = con[p-<span class="number">1</span>];</span><br><span class="line">        con[p-<span class="number">1</span>] = tmp;</span><br><span class="line">        <span class="comment">// reverse</span></span><br><span class="line">        reverse(con,p,len-<span class="number">1</span>);</span><br><span class="line">        </span><br><span class="line">        System.out.println(Arrays.toString(con));</span><br><span class="line">        <span class="type">long</span> <span class="variable">ans</span> <span class="operator">=</span>  Long.parseLong(String.valueOf(con));</span><br><span class="line">        <span class="keyword">if</span>(ans&gt;Integer.MAX_VALUE) <span class="keyword">return</span> -<span class="number">1</span>;  <span class="comment">// 不满足32位整数也返回-1</span></span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>)ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">reverse</span><span class="params">(<span class="type">char</span>[] con,<span class="type">int</span> start,<span class="type">int</span> end)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=start,j=end;i&lt;j;i++,j--)&#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">tmp</span> <span class="operator">=</span> con[i];</span><br><span class="line">            con[i] = con[j];</span><br><span class="line">            con[j] = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    private void reverse(char[] con,int start,int end)&#123;
-        for(int i=start,j=end;i&lt;j;i++,j--)&#123;
-            char tmp = con[i];
-            con[i] = con[j];
-            con[j] = tmp;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
 <h3 id="31-下一个排列-力扣（LeetCode）"><a href="#31-下一个排列-力扣（LeetCode）" class="headerlink" title="31. 下一个排列 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-permutation/description/">31. 下一个排列 - 力扣（LeetCode）</a></h3><p><strong>数组 双指针</strong></p>
 <p>主要还是弄懂题目的解法步骤，如何去拆分成可以被程序表达的步骤</p>
-<p><img src="/../img/basic_algorithms/image-20240523111929453.png" alt="image-20240523111929453"></p>
-<pre><code class="java">class Solution &#123;
-    public void nextPermutation(int[] nums) &#123;
-        int len = nums.length;
-        int p = len-1;
-        for(;p&gt;=1;p--)&#123;
-            if(nums[p-1]&lt;nums[p])break;
-        &#125;
-        // 如果p==0表明nums全是降序的
-        if(p==0)&#123;
-            reverse(nums,0,len-1);
-            return;
-        &#125;
-        int q=len-1;
-        for(;q&gt;p-1;q--)&#123;
-            if(nums[p-1]&lt;nums[q])break;
-        &#125;
-        //swap
-        int tmp = nums[p-1];
-        nums[p-1] = nums[q];
-        nums[q] = tmp;
-        // reverse
-        reverse(nums,p,len-1);
-        return;
-    &#125;
+<p><a href="/../img/basic_algorithms/image-20240523111929453.png" title="image-20240523111929453" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/image-20240523111929453.png" alt="image-20240523111929453"></a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">nextPermutation</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> len-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(;p&gt;=<span class="number">1</span>;p--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[p-<span class="number">1</span>]&lt;nums[p])<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果p==0表明nums全是降序的</span></span><br><span class="line">        <span class="keyword">if</span>(p==<span class="number">0</span>)&#123;</span><br><span class="line">            reverse(nums,<span class="number">0</span>,len-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> q=len-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(;q&gt;p-<span class="number">1</span>;q--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[p-<span class="number">1</span>]&lt;nums[q])<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//swap</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> nums[p-<span class="number">1</span>];</span><br><span class="line">        nums[p-<span class="number">1</span>] = nums[q];</span><br><span class="line">        nums[q] = tmp;</span><br><span class="line">        <span class="comment">// reverse</span></span><br><span class="line">        reverse(nums,p,len-<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">reverse</span><span class="params">(<span class="type">int</span>[] nums,<span class="type">int</span> start,<span class="type">int</span> end)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=start,j=end;i&lt;j;i++,j--)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> nums[i];</span><br><span class="line">            nums[i] = nums[j];</span><br><span class="line">            nums[j] = tmp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    private void reverse(int[] nums,int start,int end)&#123;
-        for(int i=start,j=end;i&lt;j;i++,j--)&#123;
-            int tmp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = tmp;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<p><img src="/../img/basic_algorithms/image-20240523111941751.png" alt="image-20240523111941751"></p>
+<p><a href="/../img/basic_algorithms/image-20240523111941751.png" title="image-20240523111941751" class="gallery-item" style="box-shadow: none;"> <img src="/../img/basic_algorithms/image-20240523111941751.png" alt="image-20240523111941751"></a></p>
 <h3 id="84-柱状图中最大的矩形-力扣（LeetCode）"><a href="#84-柱状图中最大的矩形-力扣（LeetCode）" class="headerlink" title="84. 柱状图中最大的矩形 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/largest-rectangle-in-histogram/description/?envType=study-plan-v2&envId=top-100-liked">84. 柱状图中最大的矩形 - 力扣（LeetCode）</a></h3><p>难度：困难</p>
-<pre><code class="java">class Solution &#123;
-    public int largestRectangleArea(int[] heights) &#123;
-        LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();   // stack中存放索引
-        stack.push(-1);  // 第一个哨兵进栈
-        int res = Integer.MIN_VALUE;
-        
-        for(int i=0;i&lt;=heights.length;i++)&#123;
-            int cur;
-            if(i!=heights.length)&#123;   // 最后一个哨兵
-                cur = heights[i];
-            &#125;else&#123;
-                cur = -1;
-            &#125;
-            int peekIdx = stack.peek();
-            int peek;
-            if(peekIdx!=-1)&#123;  
-                peek = heights[peekIdx];
-            &#125;else&#123; 
-                peek = -1;  // 如果当前是哨兵索引
-            &#125;
-            while(peek&gt;cur)&#123;
-                stack.pop();
-                int h = peek;
-                int w = i - stack.peek() - 1;
-                res = Math.max(h*w,res);
-                peekIdx = stack.peek();
-                if(peekIdx!=-1)&#123;
-                    peek = heights[peekIdx];
-                &#125;else&#123;
-                    peek = -1;
-                &#125;
-            &#125;
-            stack.push(i);
-        &#125;
-        return res;
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">largestRectangleArea</span><span class="params">(<span class="type">int</span>[] heights)</span> &#123;</span><br><span class="line">        LinkedList&lt;Integer&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();   <span class="comment">// stack中存放索引</span></span><br><span class="line">        stack.push(-<span class="number">1</span>);  <span class="comment">// 第一个哨兵进栈</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> Integer.MIN_VALUE;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=heights.length;i++)&#123;</span><br><span class="line">            <span class="type">int</span> cur;</span><br><span class="line">            <span class="keyword">if</span>(i!=heights.length)&#123;   <span class="comment">// 最后一个哨兵</span></span><br><span class="line">                cur = heights[i];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                cur = -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="type">int</span> <span class="variable">peekIdx</span> <span class="operator">=</span> stack.peek();</span><br><span class="line">            <span class="type">int</span> peek;</span><br><span class="line">            <span class="keyword">if</span>(peekIdx!=-<span class="number">1</span>)&#123;  </span><br><span class="line">                peek = heights[peekIdx];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123; </span><br><span class="line">                peek = -<span class="number">1</span>;  <span class="comment">// 如果当前是哨兵索引</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">while</span>(peek&gt;cur)&#123;</span><br><span class="line">                stack.pop();</span><br><span class="line">                <span class="type">int</span> <span class="variable">h</span> <span class="operator">=</span> peek;</span><br><span class="line">                <span class="type">int</span> <span class="variable">w</span> <span class="operator">=</span> i - stack.peek() - <span class="number">1</span>;</span><br><span class="line">                res = Math.max(h*w,res);</span><br><span class="line">                peekIdx = stack.peek();</span><br><span class="line">                <span class="keyword">if</span>(peekIdx!=-<span class="number">1</span>)&#123;</span><br><span class="line">                    peek = heights[peekIdx];</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    peek = -<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>维护一个<strong>单调栈</strong>，栈底 &lt;&lt; 栈顶，当有新的值要入栈时，如果新的值比当前栈顶的值小，那么就计算<strong>以当前栈顶高度为高的最大矩形面积</strong>，<strong>宽就为当前值的索引 减去 当前栈顶弹出后新栈顶的值(这个索引对应的高度一定小于当前栈顶，所以这里是这个高度所能向左边延申的边界) 再减 1</strong></p>
 <p>所以该题关键是找到某个高度能延申的左右边界，以高度为单位求最大矩形面积。</p>
 <h3 id="316-去除重复字母-力扣（LeetCode）"><a href="#316-去除重复字母-力扣（LeetCode）" class="headerlink" title="316. 去除重复字母 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-duplicate-letters/description/">316. 去除重复字母 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
-<pre><code class="java">class Solution &#123;
-    public String removeDuplicateLetters(String s) &#123;
-        int[] count = new int[26]; // 用于记录每个字母的出现次数
-        for (char ch : s.toCharArray()) &#123;
-            count[ch - &#39;a&#39;]++; // 计算每个字母的出现次数
-        &#125;
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">removeDuplicateLetters</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] count = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">26</span>]; <span class="comment">// 用于记录每个字母的出现次数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> ch : s.toCharArray()) &#123;</span><br><span class="line">            count[ch - <span class="string">&#x27;a&#x27;</span>]++; <span class="comment">// 计算每个字母的出现次数</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">boolean</span>[] flag = <span class="keyword">new</span> <span class="title class_">boolean</span>[<span class="number">26</span>]; <span class="comment">// 用于标记字母是否已经在栈中</span></span><br><span class="line">        </span><br><span class="line">        LinkedList&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;(); <span class="comment">// 用于构建结果的单调栈</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="type">char</span> ch : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!flag[ch - <span class="string">&#x27;a&#x27;</span>]) &#123; <span class="comment">// 如果当前字母还没有被加入到最终结果中</span></span><br><span class="line">                <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; stack.peek() &gt; ch &amp;&amp; count[stack.peek() - <span class="string">&#x27;a&#x27;</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                    flag[stack.pop() - <span class="string">&#x27;a&#x27;</span>] = <span class="literal">false</span>; <span class="comment">// 将那些比当前字母大且后续还会出现的字母从栈中移除</span></span><br><span class="line">                &#125;</span><br><span class="line">                stack.push(ch); <span class="comment">// 将当前字母加入栈中</span></span><br><span class="line">                flag[ch - <span class="string">&#x27;a&#x27;</span>] = <span class="literal">true</span>; <span class="comment">// 标记当前字母已被加入栈中</span></span><br><span class="line">            &#125;</span><br><span class="line">            count[ch - <span class="string">&#x27;a&#x27;</span>]--; <span class="comment">// 当前字母的剩余数量减一</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">res</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(); <span class="comment">// 用于构建最终结果字符串</span></span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            res.append(stack.removeLast()); <span class="comment">// 从栈底开始构建最终结果</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res.toString(); <span class="comment">// 返回最终结果</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-        boolean[] flag = new boolean[26]; // 用于标记字母是否已经在栈中
-        
-        LinkedList&lt;Character&gt; stack = new LinkedList&lt;&gt;(); // 用于构建结果的单调栈
-        
-        for (char ch : s.toCharArray()) &#123;
-            if (!flag[ch - &#39;a&#39;]) &#123; // 如果当前字母还没有被加入到最终结果中
-                while (!stack.isEmpty() &amp;&amp; stack.peek() &gt; ch &amp;&amp; count[stack.peek() - &#39;a&#39;] &gt; 0) &#123;
-                    flag[stack.pop() - &#39;a&#39;] = false; // 将那些比当前字母大且后续还会出现的字母从栈中移除
-                &#125;
-                stack.push(ch); // 将当前字母加入栈中
-                flag[ch - &#39;a&#39;] = true; // 标记当前字母已被加入栈中
-            &#125;
-            count[ch - &#39;a&#39;]--; // 当前字母的剩余数量减一
-        &#125;
-        
-        StringBuilder res = new StringBuilder(); // 用于构建最终结果字符串
-        while (!stack.isEmpty()) &#123;
-            res.append(stack.removeLast()); // 从栈底开始构建最终结果
-        &#125;
-        
-        return res.toString(); // 返回最终结果
-    &#125;
-&#125;
-</code></pre>
 <p>维护单调栈，但是这个题维护单调栈有一些<strong>额外的要求，比如说每个不同的字母只能出现一次（flag数组辅助），还要保证必须出现一次，即不能错过这个字母（count数组辅助）。</strong></p>
 <h3 id="402-移掉-K-位数字-力扣（LeetCode）"><a href="#402-移掉-K-位数字-力扣（LeetCode）" class="headerlink" title="402. 移掉 K 位数字 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-k-digits/description/">402. 移掉 K 位数字 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
-<pre><code class="java">class Solution &#123;
-    public String removeKdigits(String num, int k) &#123;
-        int len = num.length();
-        if(k&gt;=len)return &quot;0&quot;;
-        
-        LinkedList&lt;Character&gt; stack = new LinkedList&lt;&gt;();
-        
-        int cnt = 0;  // 表示当前移除了多少位数字了
-        
-        for(char ch : num.toCharArray())&#123;
-            while(!stack.isEmpty()&amp;&amp;stack.peek()&gt;ch&amp;&amp;cnt&lt;k)&#123;
-                stack.pop();
-                cnt++;
-            &#125;
-            stack.push(ch);
-        &#125;
-        
-        // 避免cnt&lt;k
-        for(;cnt&lt;k;cnt++)&#123;
-            stack.pop();
-        &#125;
-        
-        // 清除前置0
-        while(!stack.isEmpty()&amp;&amp;stack.getLast()==&#39;0&#39;)&#123;
-            stack.removeLast();
-        &#125;
-        
-        // 组装最后的res
-        String res = &quot;&quot;;
-        while(!stack.isEmpty())&#123;
-            res += stack.removeLast();
-        &#125;
-        
-        return (res==&quot;&quot;)?&quot;0&quot;:res;
-        
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">removeKdigits</span><span class="params">(String num, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> num.length();</span><br><span class="line">        <span class="keyword">if</span>(k&gt;=len)<span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">        </span><br><span class="line">        LinkedList&lt;Character&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> <span class="number">0</span>;  <span class="comment">// 表示当前移除了多少位数字了</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> ch : num.toCharArray())&#123;</span><br><span class="line">            <span class="keyword">while</span>(!stack.isEmpty()&amp;&amp;stack.peek()&gt;ch&amp;&amp;cnt&lt;k)&#123;</span><br><span class="line">                stack.pop();</span><br><span class="line">                cnt++;</span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(ch);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 避免cnt&lt;k</span></span><br><span class="line">        <span class="keyword">for</span>(;cnt&lt;k;cnt++)&#123;</span><br><span class="line">            stack.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 清除前置0</span></span><br><span class="line">        <span class="keyword">while</span>(!stack.isEmpty()&amp;&amp;stack.getLast()==<span class="string">&#x27;0&#x27;</span>)&#123;</span><br><span class="line">            stack.removeLast();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 组装最后的res</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">res</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">while</span>(!stack.isEmpty())&#123;</span><br><span class="line">            res += stack.removeLast();</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> (res==<span class="string">&quot;&quot;</span>)?<span class="string">&quot;0&quot;</span>:res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>用数组模拟栈，stack中存放索引，这样可以使得代码运行更快。</p>
-<pre><code class="java">class Solution &#123;
-    public String removeKdigits(String num, int k) &#123;
-        int len = num.length();
-        if(k&gt;=len)return &quot;0&quot;;
-        
-        int[] stack = new int[len];
-        int top = -1;
-        char[] con = num.toCharArray();
-        
-        for(int i=0;i&lt;len;i++)&#123;
-            while(top!=-1&amp;&amp;con[stack[top]]&gt;con[i]&amp;&amp;k&gt;0)&#123;
-                k--;
-                top--;
-            &#125;
-            top++;
-            stack[top] = i;
-        &#125;
-        
-        // 用掉可能多余的k
-        top -= k;
-        
-        // 去除前置0
-        int start = 0;
-        for(;start&lt;=top;start++)&#123;
-            if(con[stack[start]]==&#39;0&#39;)
-                continue;
-            else
-                break;
-        &#125;
-        if(start&gt;top)
-            return &quot;0&quot;;
-        
-        StringBuffer sb =new StringBuffer();
-        for(int i=start;i&lt;=top;i++)&#123;
-            sb.append(con[stack[i]]);
-        &#125;
-        return sb.toString();
-        
-        
-    &#125;
-&#125;
-</code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">removeKdigits</span><span class="params">(String num, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> num.length();</span><br><span class="line">        <span class="keyword">if</span>(k&gt;=len)<span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span>[] stack = <span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">        <span class="type">int</span> <span class="variable">top</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="type">char</span>[] con = num.toCharArray();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;len;i++)&#123;</span><br><span class="line">            <span class="keyword">while</span>(top!=-<span class="number">1</span>&amp;&amp;con[stack[top]]&gt;con[i]&amp;&amp;k&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                k--;</span><br><span class="line">                top--;</span><br><span class="line">            &#125;</span><br><span class="line">            top++;</span><br><span class="line">            stack[top] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 用掉可能多余的k</span></span><br><span class="line">        top -= k;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 去除前置0</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(;start&lt;=top;start++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(con[stack[start]]==<span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(start&gt;top)</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;0&quot;</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="type">StringBuffer</span> <span class="variable">sb</span> <span class="operator">=</span><span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=start;i&lt;=top;i++)&#123;</span><br><span class="line">            sb.append(con[stack[i]]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>该题也是在维护单调栈的同时要满足一些要求，比如说规定了从栈中pop出的元素的数量。</p>
-<h3 id="1019-链表中的下一个更大节点-力扣（LeetCode）"><a href="#1019-链表中的下一个更大节点-力扣（LeetCode）" class="headerlink" title="1019. 链表中的下一个更大节点 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-node-in-linked-list/description/">1019. 链表中的下一个更大节点 - 力扣（LeetCode）</a></h3><pre><code class="java">/**
- * Definition for singly-linked list.
- * public class ListNode &#123;
- *     int val;
- *     ListNode next;
- *     ListNode() &#123;&#125;
- *     ListNode(int val) &#123; this.val = val; &#125;
- *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;
- * &#125;
- */
-class Solution &#123;
-    
-    int[] res;
-    LinkedList&lt;Integer&gt; stack = new LinkedList&lt;&gt;();
-    
-    public int[] nextLargerNodes(ListNode head) &#123;
-        f(head,0);
-        return res;
-    &#125;
-    
-    private void f(ListNode p,int i)&#123;
-        if(p==null)&#123;
-            res = new int[i];
-            return;
-        &#125;
-        // 先递归到底，初始化res数组
-        // 然后再从最后往前遍历节点
-        f(p.next,i+1);
-        while(!stack.isEmpty()&amp;&amp;stack.peek()&lt;=p.val)&#123;
-            stack.pop();
-        &#125;
-        if(!stack.isEmpty())&#123;
-            res[i] = stack.peek();
-        &#125;
-        stack.push(p.val);
-    &#125;
-&#125;
-</code></pre>
+<h3 id="1019-链表中的下一个更大节点-力扣（LeetCode）"><a href="#1019-链表中的下一个更大节点-力扣（LeetCode）" class="headerlink" title="1019. 链表中的下一个更大节点 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/next-greater-node-in-linked-list/description/">1019. 链表中的下一个更大节点 - 力扣（LeetCode）</a></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span>[] res;</span><br><span class="line">    LinkedList&lt;Integer&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] nextLargerNodes(ListNode head) &#123;</span><br><span class="line">        f(head,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">f</span><span class="params">(ListNode p,<span class="type">int</span> i)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(p==<span class="literal">null</span>)&#123;</span><br><span class="line">            res = <span class="keyword">new</span> <span class="title class_">int</span>[i];</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 先递归到底，初始化res数组</span></span><br><span class="line">        <span class="comment">// 然后再从最后往前遍历节点</span></span><br><span class="line">        f(p.next,i+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">while</span>(!stack.isEmpty()&amp;&amp;stack.peek()&lt;=p.val)&#123;</span><br><span class="line">            stack.pop();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!stack.isEmpty())&#123;</span><br><span class="line">            res[i] = stack.peek();</span><br><span class="line">        &#125;</span><br><span class="line">        stack.push(p.val);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>由于现在操作的目标是链表，无法获得其索引值，需要一些技巧初始化<code>res</code>，并且需要用合适的方式遍历链表 维护单调栈。</p>
 <p><strong>主要思路</strong></p>
 <ol>
@@ -631,7 +426,12 @@ class Solution &#123;
 <p>前者确定下一个更大的元素是在 更大的元素加入栈后将小的元素依次pop出的时候确定的。</p>
 <p>后者确定下一个更大的元素是在 将新元素与当前栈顶元素进行比较，将不行的pop出，直到找到大于当前新元素的栈顶，这时才能确定。</p>
 <p>也就是说，前者可能出现新元素入栈时候确定了很多个元素的下一个最大元素，而后者是新元素入栈时只能确定新元素的下一个最大元素。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -672,6 +472,13 @@ class Solution &#123;
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -704,26 +511,8 @@ class Solution &#123;
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -735,12 +524,27 @@ class Solution &#123;
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -754,7 +558,13 @@ class Solution &#123;
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

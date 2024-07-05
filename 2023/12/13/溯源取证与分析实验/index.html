@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="溯源取证与分析实验" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,124 +332,129 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C"><span class="post-toc-text">溯源取证与分析实验</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Task1-Webshell%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="post-toc-text">Task1. Webshell数据包</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#A-%E9%BB%91%E5%AE%A2%E5%9C%A8%E6%95%B4%E4%B8%AA%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%81%9A%E4%BA%86%E5%93%AA%E4%BA%9B%E6%93%8D%E4%BD%9C%EF%BC%8C%E8%AF%B7%E7%AE%80%E5%8D%95%E5%88%97%E4%B8%BE%E5%87%BA%E6%9D%A5%E5%B9%B6%E6%88%AA%E5%9B%BE%E8%AF%B4%E6%98%8E%E3%80%82"><span class="post-toc-text">A. 黑客在整个过程中做了哪些操作，请简单列举出来并截图说明。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B-%E9%BB%91%E5%AE%A2%E7%99%BB%E9%99%86%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E7%9A%84%E5%AF%86%E7%A0%81%E3%80%81%E9%BB%91%E5%AE%A2%E7%9A%84socks5%E7%9A%84%E8%BF%9E%E6%8E%A5%E8%B4%A6%E5%8F%B7%E4%B8%8E%E5%AF%86%E7%A0%81%E8%AF%B7%E5%88%97%E4%B8%BE%E5%87%BA%E6%9D%A5%EF%BC%8C%E5%B9%B6%E9%85%8D%E5%9B%BE%E8%AF%B4%E6%98%8E%E3%80%82"><span class="post-toc-text">B. 黑客登陆系统使用的密码、黑客的socks5的连接账号与密码请列举出来，并配图说明。</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Task2-%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90"><span class="post-toc-text">Task2. 日志分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#A-%E7%BD%91%E7%BB%9C%E5%AD%98%E5%9C%A8%E6%BA%90%E7%A0%81%E6%B3%84%E6%BC%8F%EF%BC%8C%E6%BA%90%E7%A0%81%E6%96%87%E4%BB%B6%E5%90%8D%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F-%E8%AF%B7%E6%8F%90%E4%BA%A4%E5%B8%A6%E6%9C%89%E6%96%87%E4%BB%B6%E5%90%8E%E7%BC%80%E7%9A%84%E6%96%87%E4%BB%B6%E5%90%8D%EF%BC%8C%E4%BE%8B%E5%A6%82x-txt%EF%BC%8C%E5%B9%B6%E5%AF%B9%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E8%BF%9B%E8%A1%8C%E6%88%AA%E5%9B%BE"><span class="post-toc-text">A. 网络存在源码泄漏，源码文件名是什么？(请提交带有文件后缀的文件名，例如x.txt，并对流量分析进行截图)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B-%E5%88%86%E6%9E%90%E6%94%BB%E5%87%BB%E6%B5%81%E9%87%8F%EF%BC%8C%E9%BB%91%E5%AE%A2%E5%BE%80-tmp%E7%9B%AE%E5%BD%95%E5%86%99%E5%85%A5%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E5%90%8D%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%EF%BC%88%E8%AF%B7%E5%AF%B9%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90%E8%BF%9B%E8%A1%8C%E6%88%AA%E5%9B%BE%EF%BC%89"><span class="post-toc-text">B. 分析攻击流量，黑客往&#x2F;tmp目录写入一个文件，文件名是什么？（请对流量分析进行截图）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-%E5%88%86%E6%9E%90%E6%94%BB%E5%87%BB%E6%B5%81%E9%87%8F%EF%BC%8C%E9%BB%91%E5%AE%A2%E4%BD%BF%E7%94%A8%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88%E6%BC%8F%E6%B4%9E%E8%AF%BB%E5%8F%96%E4%BA%86%E7%A7%98%E5%AF%86%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="post-toc-text">C. 分析攻击流量，黑客使用的是什么漏洞读取了秘密文件？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Task3-%E5%88%86%E6%9E%90%E9%92%88%E5%AF%B9%E2%80%9C%E8%8B%B9%E6%9E%9C%E2%80%9D%E7%9A%84%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB"><span class="post-toc-text">Task3. 分析针对“苹果”的注入攻击</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="post-toc-text">分析过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#A-%E7%AE%80%E8%BF%B0%E9%BB%91%E5%AE%A2%E7%9A%84%E6%95%B4%E4%B8%AA%E6%94%BB%E5%87%BB%E8%BF%87%E7%A8%8B%EF%BC%8C%E5%85%B3%E9%94%AE%E6%AD%A5%E9%AA%A4%E8%AF%B7%E9%85%8D%E5%9B%BE%E8%AF%B4%E6%98%8E%E3%80%82"><span class="post-toc-text">A. 简述黑客的整个攻击过程，关键步骤请配图说明。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#B-%E9%BB%91%E5%AE%A2%E6%89%80%E6%8E%A7%E5%88%B6%E7%9A%84C-C%E6%9C%8D%E5%8A%A1%E5%99%A8IP%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%9F"><span class="post-toc-text">B. 黑客所控制的C&amp;C服务器IP是多少？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#C-%E8%A2%AB%E5%AE%B3%E8%80%85%E6%89%8B%E6%9C%BA%E4%B8%8A%E8%A2%AB%E7%AA%83%E5%8F%96%E7%9A%84%E7%A7%81%E5%AF%86%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="post-toc-text">C. 被害者手机上被窃取的私密文件内容是什么？</span></a></li></ol></li></ol></li></ol>
             
         
-        <h1 id="溯源取证与分析实验"><a href="#溯源取证与分析实验" class="headerlink" title="溯源取证与分析实验"></a>溯源取证与分析实验</h1><h2 id="Task1-Webshell数据包"><a href="#Task1-Webshell数据包" class="headerlink" title="Task1. Webshell数据包"></a>Task1. Webshell数据包</h2><p>小张单位网站被黑客挂马，请您从流量中分析出webshell，并且回答问题。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="溯源取证与分析实验"><a href="#溯源取证与分析实验" class="headerlink" title="溯源取证与分析实验"></a>溯源取证与分析实验</h1><h2 id="Task1-Webshell数据包"><a href="#Task1-Webshell数据包" class="headerlink" title="Task1. Webshell数据包"></a>Task1. Webshell数据包</h2><p>小张单位网站被黑客挂马，请您从流量中分析出webshell，并且回答问题。</p>
 <h3 id="A-黑客在整个过程中做了哪些操作，请简单列举出来并截图说明。"><a href="#A-黑客在整个过程中做了哪些操作，请简单列举出来并截图说明。" class="headerlink" title="A. 黑客在整个过程中做了哪些操作，请简单列举出来并截图说明。"></a>A. 黑客在整个过程中做了哪些操作，请简单列举出来并截图说明。</h3><p><strong>回答如下：</strong></p>
 <p>先整体观察pcap中数据包，发现有一部分的数据包与1.php高频互动。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/1.png" alt="1"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/1.png" alt="1"></a></p>
 <p>1.php文件非常可疑，很大概率是黑客上传的webshell，黑客通过1.php控制受害电脑。</p>
 <p>然后再在pcap文件中检索一些攻击场景中可能会出现的字符串。</p>
 <p>① 黑客使用弱口令（Admin123!@#）登录管理员账户</p>
 <p>在数据包中检索login字段，发现有一个登录请求http数据包，查看载荷的信息即可发现黑客登录的痕迹。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/2.png" alt="2"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/2.png" title="2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/2.png" alt="2"></a></p>
 <p>② 修改21_08_07.log日志文件</p>
 <p>继续往下分析数据包，又发现可疑的数据包，载荷中有eval函数：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/3.png" alt="3"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/3.png" title="3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/3.png" alt="3"></a></p>
 <p>并且紧接着的许多数据包的行为都很可疑，并且都带有assign_resume_tpl字段，上网搜索之后发现是2020年骑士CMS的一个漏洞函数，可以利用它实现远程代码执行。到这里，几乎可以确定黑客是利用这个漏洞上传webshell，然后控制受害主机。</p>
 <p>然后发现第312号数据包返回了phpinfo()的信息：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/4.png" alt="4"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/4.png" title="4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/4.png" alt="4"></a></p>
 <p>紧接着分析对应的310号（请求）数据包：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/5.png" alt="5"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/5.png" title="5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/5.png" alt="5"></a></p>
 <p>调用有漏洞的函数assign_resume_tpl，并将参数tpl的值设置为日志文件的（相对）路径。在这里，结合骑士CMS发布出的漏洞信息结合这两个数据包，大致可以分析出，服务器将log中的内容当作php代码运行了。</p>
 <p>而312号数据包返回了phpinfo()信息，那么在之前就一定有向日志文件写入php代码的操作。于是查看前面的数据包，发现306号数据包的载荷中有可疑内容：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/6.png" alt="6"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/6.png" title="6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/6.png" alt="6"></a></p>
 <p>猜测就是306号数据包的操作使得日志文件中写入了php代码。</p>
 <p>日志文件的绝对路径为：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/7.png" alt="7"></p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/8.png" alt="8"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/7.png" title="7" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/7.png" alt="7"></a></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/8.png" title="8" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/8.png" alt="8"></a></p>
 <p>拼接起来就得到了绝对路径：</p>
-<pre><code class="bash">/var/www/html/data/Runtime/Logs/Home/21_08_07.log
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/var/www/html/data/Runtime/Logs/Home/21_08_07.<span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
 <p>Q：为什么309号数据包没有返回phpinfo的值？？</p>
 <p>在第308号包中传入了参数a的值，本想远程执行whoami指令。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/9.png" alt="9"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/9.png" title="9" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/9.png" alt="9"></a></p>
 <p>但是309号包却没有返回正确的值，甚至连phpinfo都没有返回，后续将a参数去掉之后才能返回phpinfo，可能是因为载荷中的参数a与url栏中的参数a命名相同导致的错误。在310包中去掉载荷中的参数a之后就可以收到服务器的phpinfo了，并且在后续的数据包中，还将一句话木马的命令参数改为了aaa。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/10.png" alt="10"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/10.png" title="10" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/10.png" alt="10"></a></p>
 <p>③ 黑客利用assigin_resume_tpl漏洞执行了一系列命令，最后创建了一个一句话木马1.php</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/11.png" alt="11"></p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/12.png" alt="12"></p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/13.png" alt="13"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/11.png" title="11" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/11.png" alt="11"></a></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/12.png" title="12" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/12.png" alt="12"></a></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/13.png" title="13" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/13.png" alt="13"></a></p>
 <p>……</p>
 <p>其中，最重要的命令为创建了一个一句话木马1.php</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/14.png" alt="14"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/14.png" title="14" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/14.png" alt="14"></a></p>
 <p>将内容通过base64解码之后为</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/15.png" alt="15"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/15.png" title="15" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/15.png" alt="15"></a></p>
 <p>④ 黑客通过刚才创建的1.php木马向frpc.ini文件写入内容</p>
 <p>继续分析黑客与服务器1.php交互的数据包，发现第343号数据包中传递给服务器端的命令如下：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/16.png" alt="16"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/16.png" title="16" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/16.png" alt="16"></a></p>
 <p>具体逻辑如下：</p>
 <p>从 $_POST[“j68071301598f”] 中解码并获取一个文件路径 $f。</p>
 <p>从 $_POST[“xa5d606e67883a”] 中获取一个经过处理的字符串 $c，然后进行一系列替换操作，将其还原为原始内容。</p>
 <p>将还原后的字符串 $c 解码为二进制数据，然后通过 fwrite 函数写入到文件 $f 中。如果写入成功，输出 “1”，否则输出 “0”。</p>
 <p>我们观察这个：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/17.png" alt="17"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/17.png" title="17" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/17.png" alt="17"></a></p>
 <p>所以，我们把前两个字符串去掉，将剩余的部分进行base64解码之后可以得到：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/18.png" alt="18"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/18.png" title="18" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/18.png" alt="18"></a></p>
 <p>所以黑客向&#x2F;frpc.ini写入了内容。</p>
 <p>然后再观察下面内容：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/19.png" alt="19"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/19.png" title="19" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/19.png" alt="19"></a></p>
 <p>得知，buf的值是从$c中以hex的形式读取。于是，我们将$c的值经过hex编码之后可以得到：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/20.png" alt="20"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/20.png" title="20" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/20.png" alt="20"></a></p>
 <p>所以黑客向frpc.ini文件中写入的数据为上图所示：应该是配置一个代理服务器，这个服务器的IP地址为192.168.239.123，端口为7778，且支持 SOCKS5 协议。</p>
 <h3 id="B-黑客登陆系统使用的密码、黑客的socks5的连接账号与密码请列举出来，并配图说明。"><a href="#B-黑客登陆系统使用的密码、黑客的socks5的连接账号与密码请列举出来，并配图说明。" class="headerlink" title="B. 黑客登陆系统使用的密码、黑客的socks5的连接账号与密码请列举出来，并配图说明。"></a>B. 黑客登陆系统使用的密码、黑客的socks5的连接账号与密码请列举出来，并配图说明。</h3><p><strong>回答如下：</strong></p>
 <p>分析过程已在A.中阐述，黑客socks5的连接账号与密码为：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/21.png" alt="21"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/21.png" title="21" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/21.png" alt="21"></a></p>
 <h2 id="Task2-日志分析"><a href="#Task2-日志分析" class="headerlink" title="Task2. 日志分析"></a>Task2. 日志分析</h2><p>小明发现单位某应用程序被攻击后提取了对应的日志数据，请分析日志并回答问题。</p>
 <h3 id="A-网络存在源码泄漏，源码文件名是什么？-请提交带有文件后缀的文件名，例如x-txt，并对流量分析进行截图"><a href="#A-网络存在源码泄漏，源码文件名是什么？-请提交带有文件后缀的文件名，例如x-txt，并对流量分析进行截图" class="headerlink" title="A. 网络存在源码泄漏，源码文件名是什么？(请提交带有文件后缀的文件名，例如x.txt，并对流量分析进行截图)"></a>A. 网络存在源码泄漏，源码文件名是什么？(请提交带有文件后缀的文件名，例如x.txt，并对流量分析进行截图)</h3><p><strong>回答如下：</strong></p>
 <p>源码文件名为<a href="http://www.zip，在日志文件中搜索状态码为200的请求：">www.zip，在日志文件中搜索状态码为200的请求：</a></p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/22.png" alt="22"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/22.png" title="22" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/22.png" alt="22"></a></p>
 <p>发现只有这个对文件的请求比较符合源码文件。</p>
 <h3 id="B-分析攻击流量，黑客往-tmp目录写入一个文件，文件名是什么？（请对流量分析进行截图）"><a href="#B-分析攻击流量，黑客往-tmp目录写入一个文件，文件名是什么？（请对流量分析进行截图）" class="headerlink" title="B. 分析攻击流量，黑客往&#x2F;tmp目录写入一个文件，文件名是什么？（请对流量分析进行截图）"></a>B. 分析攻击流量，黑客往&#x2F;tmp目录写入一个文件，文件名是什么？（请对流量分析进行截图）</h3><p><strong>回答如下：</strong></p>
 <p>该文件名为sess_car</p>
 <p>我们在日志中搜索tmp，发现下面两条可疑的记录：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/23.png" alt="23"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/23.png" title="23" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/23.png" alt="23"></a></p>
 <p>通过url解码之后得到以下内容：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/24.png" alt="24"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/24.png" title="24" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/24.png" alt="24"></a></p>
 <p>使用大量的..&#x2F;（退格符号），表示黑客尝试导航到文件系统的根目录，然后再导航到 tmp 目录，这种技术通常被称为路径遍历攻击。</p>
 <h3 id="C-分析攻击流量，黑客使用的是什么漏洞读取了秘密文件？"><a href="#C-分析攻击流量，黑客使用的是什么漏洞读取了秘密文件？" class="headerlink" title="C. 分析攻击流量，黑客使用的是什么漏洞读取了秘密文件？"></a>C. 分析攻击流量，黑客使用的是什么漏洞读取了秘密文件？</h3><p><strong>回答如下：</strong></p>
 <p>利用了服务器端没有合理处理SplFileObject类的漏洞。</p>
 <h2 id="Task3-分析针对“苹果”的注入攻击"><a href="#Task3-分析针对“苹果”的注入攻击" class="headerlink" title="Task3. 分析针对“苹果”的注入攻击"></a>Task3. 分析针对“苹果”的注入攻击</h2><p>一位苹果安全研究员在家中使用手机联网被黑，不仅被窃密还丢失比特币若干，请你通过流量和日志分析之后回答问题。</p>
 <h3 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h3><p>首先在pcap文件中查看可疑的数据包。</p>
 <p>追踪tcp流编号为15的数据：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/25.png" alt="25"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/25.png" title="25" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/25.png" alt="25"></a></p>
 <p>发现主机3.128.156.159在远程主机192.168.1.8上执行了ls和wget等命令，从github上下载了ios_agent工具，这是一个渗透ios系统的软件，可以在受害主机上部署代理以进行远程控制。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/26.png" alt="26"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/26.png" title="26" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/26.png" alt="26"></a></p>
 <p>最后又让192.168.1.8通过ios_agent连接到3.128.156.159的8081端口，节点加密密钥为hack4sec。</p>
 <p>然后又发现了192.168.1.8对192.168.1.12的前500个端口进行扫描的数据包：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/27.png" alt="27"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/27.png" title="27" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/27.png" alt="27"></a></p>
 <p>给的资料里面有一个keylog.txt文件，将keylog.txt文件导入wireshark。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/28.png" alt="28"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/28.png" title="28" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/28.png" alt="28"></a></p>
 <p>分析wireshark解密出的HTTP2的数据包。</p>
 <p>发现有很多sql注入的数据包：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/29.png" alt="29"></p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/30.png" alt="30"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/29.png" title="29" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/29.png" alt="29"></a></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/30.png" title="30" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/30.png" alt="30"></a></p>
 <p>通过分析可得，黑客在进行sql盲注入。</p>
 <p>我们过滤数据包之后，将黑客发起的sql盲注入数据包写入csv文件中分析：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/31.png" alt="31"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/31.png" title="31" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/31.png" alt="31"></a></p>
 <p>通过分析刚解码出来的sql注入命令，可以知道黑客在一个接一个地尝试密码的每一个字符。并且黑客遍历每一个字符的顺序为0x2B、0x2D、0x7B、0x7D、0x30……</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/32.png" alt="32"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/32.png" title="32" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/32.png" alt="32"></a></p>
 <p>通过查询十六进制字符表可以得到，黑客遍历的字符顺序为：+-{}0123456789abcdef……xyz。</p>
 <p><strong>那么黑客每遍历成功一个字符之后就会重新遍历，我们可以根据这一个特点从数据包中分析出黑客所得到的密码的十六进制形式。</strong></p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/33.png" alt="33"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/33.png" title="33" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/33.png" alt="33"></a></p>
 <p>依次这样分析剩下的所有数据包即可可以获得所有的十六进制值，然后将收集到的所有十六进制值转换为字符串即可：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/34.png" alt="34"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/34.png" title="34" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/34.png" alt="34"></a></p>
 <p>这就是被黑客通过sql注入盗走的密码。</p>
 <h3 id="A-简述黑客的整个攻击过程，关键步骤请配图说明。"><a href="#A-简述黑客的整个攻击过程，关键步骤请配图说明。" class="headerlink" title="A. 简述黑客的整个攻击过程，关键步骤请配图说明。"></a>A. 简述黑客的整个攻击过程，关键步骤请配图说明。</h3><p><strong>回答如下：</strong></p>
 <p>由分析可得，黑客的攻击过程大致为：</p>
 <p>① 使用主机3.128.156.159作为C&amp;C服务器，在主机192.168.1.8上安装stowaway的ios_agent以控制主机。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/35.png" alt="35"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/35.png" title="35" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/35.png" alt="35"></a></p>
 <p>② 通过主机192.168.1.8对内网的主机192.168.1.12进行端口扫描。 </p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/36.png" alt="36"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/36.png" title="36" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/36.png" alt="36"></a></p>
 <p>③ 通过主机192.168.1.8对主机192.168.1.12进行sql盲注入攻击，窃取密钥。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/37.png" alt="37"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/37.png" title="37" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/37.png" alt="37"></a></p>
 <p>④ 向内网主机172.28.0.3写入了一个webshell，控制参数为fxxk。</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/38.png" alt="38"></p>
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/38.png" title="38" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/38.png" alt="38"></a></p>
 <p>（d2hvYW1p解码之后为fxxk）</p>
 <h3 id="B-黑客所控制的C-C服务器IP是多少？"><a href="#B-黑客所控制的C-C服务器IP是多少？" class="headerlink" title="B. 黑客所控制的C&amp;C服务器IP是多少？"></a>B. 黑客所控制的C&amp;C服务器IP是多少？</h3><p><strong>回答如下：</strong></p>
 <p>由分析可得IP为：3.128.156.159</p>
 <h3 id="C-被害者手机上被窃取的私密文件内容是什么？"><a href="#C-被害者手机上被窃取的私密文件内容是什么？" class="headerlink" title="C. 被害者手机上被窃取的私密文件内容是什么？"></a>C. 被害者手机上被窃取的私密文件内容是什么？</h3><p><strong>回答如下：</strong></p>
 <p>由分析可得，被害者手机上被拿走的私钥文件内容为：</p>
-<p><img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/39.png" alt="39"></p>
-
+<p><a href="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/39.png" title="39" class="gallery-item" style="box-shadow: none;"> <img src="/../img/%E6%BA%AF%E6%BA%90%E5%8F%96%E8%AF%81%E4%B8%8E%E5%88%86%E6%9E%90%E5%AE%9E%E9%AA%8C/39.png" alt="39"></a></p>
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -273,6 +487,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -305,26 +526,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -336,12 +539,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -355,7 +573,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

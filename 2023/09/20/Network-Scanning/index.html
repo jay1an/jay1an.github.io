@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="Network Scanning" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Network-Scanning"><span class="post-toc-text">Network-Scanning</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ICMP-Protocol"><span class="post-toc-text">ICMP-Protocol</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BB%E6%9C%BA%E6%89%AB%E6%8F%8F"><span class="post-toc-text">主机扫描</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sL%EF%BC%8C%E5%88%97%E8%A1%A8%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sL，列表扫描</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#sP%EF%BC%8C%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sP，端口扫描</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#P0%EF%BC%8C%E6%97%A0ping"><span class="post-toc-text">-P0，无ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PS%EF%BC%8CTCP-SYN-Ping"><span class="post-toc-text">-PS，TCP SYN Ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PA%EF%BC%8CTCP-ACK-Ping"><span class="post-toc-text">-PA，TCP ACK Ping</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%85%B6%E4%BB%96%E6%89%AB%E6%8F%8F%E6%96%B9%E6%B3%95"><span class="post-toc-text">其他扫描方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">端口扫描</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%8A%80%E6%9C%AF"><span class="post-toc-text">端口扫描技术</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sS%EF%BC%8CTCP-SYN%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sS，TCP SYN扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sT%EF%BC%8CTCP-connect-%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sT，TCP connect()扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sU%EF%BC%8CUDP%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sU，UDP扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sN-sF-sX%EF%BC%8CTCP-Null%EF%BC%8CFIN%EF%BC%8CXmas%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sN; -sF; -sX，TCP Null，FIN，Xmas扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sA%EF%BC%8CTCP-ACK%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sA，TCP ACK扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#sW%EF%BC%8CTCP%E7%AA%97%E5%8F%A3%E6%89%AB%E6%8F%8F"><span class="post-toc-text">-sW，TCP窗口扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E2%80%93scanflags-%E5%AE%9A%E5%88%B6TCP%E6%89%AB%E6%8F%8F"><span class="post-toc-text">–scanflags 定制TCP扫描</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%85%B6%E4%BD%99%E7%9A%84%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E6%8A%80%E6%9C%AF"><span class="post-toc-text">其余的端口扫描技术</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Nmap%E5%85%B6%E4%BB%96%E5%8A%9F%E8%83%BD"><span class="post-toc-text">Nmap其他功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li></ol></li></ol>
             
         
-        <h2 id="Network-Scanning"><a href="#Network-Scanning" class="headerlink" title="Network-Scanning"></a>Network-Scanning</h2><p>网络扫描对于侵、维护都十分重要，是信息收集工作的一部分。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h2 id="Network-Scanning"><a href="#Network-Scanning" class="headerlink" title="Network-Scanning"></a>Network-Scanning</h2><p>网络扫描对于侵、维护都十分重要，是信息收集工作的一部分。</p>
 <p>通过网络扫描我们可以知道主机的开放情况、主机端口的开放情况、是否采用防火墙等。</p>
 <h3 id="ICMP-Protocol"><a href="#ICMP-Protocol" class="headerlink" title="ICMP-Protocol"></a>ICMP-Protocol</h3><p>以下内容由Chat-GPT生成：</p>
 <blockquote>
@@ -139,18 +348,8 @@
 </ol>
 </blockquote>
 <p>ICMP报文的格式如下：</p>
-<pre><code class="diff">+-----------------------+ 
-|  Type (8bits) | Code (8bits)  | 
-+-----------------------+ 
-|      Checksum (16bits)        | 
-+-----------------------+ 
-|          Idertifier (16bits)           | 
-+-----------------------+ 
-|            Sequence Number (16bits)          | 
-+-----------------------+ 
-|                                Data (Optional)                              | 
-+-----------------------+ 
-</code></pre>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">+-----------------------+ </span></span><br><span class="line">|  Type (8bits) | Code (8bits)  | </span><br><span class="line"><span class="addition">+-----------------------+ </span></span><br><span class="line">|      Checksum (16bits)        | </span><br><span class="line"><span class="addition">+-----------------------+ </span></span><br><span class="line">|          Idertifier (16bits)           | </span><br><span class="line"><span class="addition">+-----------------------+ </span></span><br><span class="line">|            Sequence Number (16bits)          | </span><br><span class="line"><span class="addition">+-----------------------+ </span></span><br><span class="line">|                                Data (Optional)                              | </span><br><span class="line"><span class="addition">+-----------------------+ </span></span><br></pre></td></tr></table></figure>
+
 <p>一般来说，ICMP报文的头部固定字段有:</p>
 <ul>
 <li><strong>类型（Type）</strong>：8位，用于表示消息的类型。</li>
@@ -191,12 +390,12 @@
 <p>最简单的ping程序，发送一个ICMP type 8 (回声请求)报文到目标IP地址，如果目标主机回应一个type 0的报文，那么就表示主机是开放的。</p>
 <p>但是很多主机为了保护资产安全，都会有防火墙拦截此类报文，所以仅仅ICMP扫描对于互联网上的目标通常是不够的。</p>
 <h3 id="主机扫描"><a href="#主机扫描" class="headerlink" title="主机扫描"></a>主机扫描</h3><p>以下内容基于Nmap工具以及Nmap官方文档。</p>
-<h4 id="sL，列表扫描"><a href="#sL，列表扫描" class="headerlink" title="-sL，列表扫描"></a>-sL，列表扫描</h4><pre><code class="bash">nmap -sL 202.115.32.43/24
-</code></pre>
+<h4 id="sL，列表扫描"><a href="#sL，列表扫描" class="headerlink" title="-sL，列表扫描"></a>-sL，列表扫描</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sL 202.115.32.43/24</span><br></pre></td></tr></table></figure>
+
 <p>它仅仅列出指定网络上的每台主机， 不发送任何报文到目标主机。</p>
 <p>也就是说，该命令的结果并不会表明主机是否开机，他只是对主机进行反向域名解析以获得它们的名字。因为这些名字也是会有有价值的信息，比如： <code>fw.chi.playboy.com</code>是花花公子芝加哥办公室的防火墙。</p>
-<h4 id="sP，端口扫描"><a href="#sP，端口扫描" class="headerlink" title="-sP，端口扫描"></a>-sP，端口扫描</h4><pre><code class="bash">nmap -sP 202.115.32.43/24
-</code></pre>
+<h4 id="sP，端口扫描"><a href="#sP，端口扫描" class="headerlink" title="-sP，端口扫描"></a>-sP，端口扫描</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sP 202.115.32.43/24</span><br></pre></td></tr></table></figure>
+
 <p>让Nmap仅仅使用ping扫描，然后打印有反应的主机。</p>
 <p><strong>地毯式ping</strong>而非广播ping，许多主机都不会响应广播请求。</p>
 <blockquote>
@@ -212,34 +411,15 @@
 <li><strong>设备A接收ARP响应后，知道了设备B的MAC地址，现在可以使用它来构建数据包并将数据包发送到设备B</strong>。</li>
 </ol>
 </blockquote>
-<h4 id="P0，无ping"><a href="#P0，无ping" class="headerlink" title="-P0，无ping"></a>-P0，无ping</h4><pre><code class="bash">nmap -P0 localhost/24
-</code></pre>
+<h4 id="P0，无ping"><a href="#P0，无ping" class="headerlink" title="-P0，无ping"></a>-P0，无ping</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -P0 localhost/24</span><br></pre></td></tr></table></figure>
+
 <p><code>-Pn</code>同<code>-P0</code>，跳过主机发现。</p>
 <p>该选项完全跳过Nmap发现阶段。 通常Nmap在进行高强度的扫描时用它确定正在运行的机器。 默认情况下，Nmap只对正在运行的主机进行高强度的探测如 端口扫描，版本探测，或者操作系统探测。</p>
 <p>这意味着，Nmap会对给出的所有的IP地址进行扫描，好像每个IP所对应的主机都是开启的。</p>
-<pre><code class="bash">PS D:\Program Files (x86)\Nmap&gt; nmap -P0 192.168.1.105/31
-Starting Nmap 7.93 ( https://nmap.org ) at 2023-10-01 20:00 中国标准时间
-Nmap scan report for 192.168.1.104
-Host is up (0.0085s latency).
-All 1000 scanned ports on 192.168.1.104 are in ignored states.
-Not shown: 1000 closed tcp ports (reset)
-MAC Address: E2:96:FF:67:2B:C7 (Unknown)
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Program Files (x86)\Nmap&gt; nmap -P0 192.168.1.105/31</span><br><span class="line">Starting Nmap 7.93 ( https://nmap.org ) at 2023-10-01 20:00 中国标准时间</span><br><span class="line">Nmap scan report <span class="keyword">for</span> 192.168.1.104</span><br><span class="line">Host is up (0.0085s latency).</span><br><span class="line">All 1000 scanned ports on 192.168.1.104 are <span class="keyword">in</span> ignored states.</span><br><span class="line">Not shown: 1000 closed tcp ports (reset)</span><br><span class="line">MAC Address: E2:96:FF:67:2B:C7 (Unknown)</span><br><span class="line"></span><br><span class="line">Nmap scan report <span class="keyword">for</span> 192.168.1.105</span><br><span class="line">Host is up (0.000034s latency).</span><br><span class="line">Not shown: 992 closed tcp ports (reset)</span><br><span class="line">PORT     STATE SERVICE</span><br><span class="line">80/tcp   open  http</span><br><span class="line">135/tcp  open  msrpc</span><br><span class="line">139/tcp  open  netbios-ssn</span><br><span class="line">445/tcp  open  microsoft-ds</span><br><span class="line">902/tcp  open  iss-realsecure</span><br><span class="line">912/tcp  open  apex-mesh</span><br><span class="line">5357/tcp open  wsdapi</span><br><span class="line">5555/tcp open  freeciv</span><br></pre></td></tr></table></figure>
 
-Nmap scan report for 192.168.1.105
-Host is up (0.000034s latency).
-Not shown: 992 closed tcp ports (reset)
-PORT     STATE SERVICE
-80/tcp   open  http
-135/tcp  open  msrpc
-139/tcp  open  netbios-ssn
-445/tcp  open  microsoft-ds
-902/tcp  open  iss-realsecure
-912/tcp  open  apex-mesh
-5357/tcp open  wsdapi
-5555/tcp open  freeciv
-</code></pre>
-<h4 id="PS，TCP-SYN-Ping"><a href="#PS，TCP-SYN-Ping" class="headerlink" title="-PS，TCP SYN Ping"></a>-PS，TCP SYN Ping</h4><pre><code class="bash">nmap -PS localhost/24
-</code></pre>
+<h4 id="PS，TCP-SYN-Ping"><a href="#PS，TCP-SYN-Ping" class="headerlink" title="-PS，TCP SYN Ping"></a>-PS，TCP SYN Ping</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -PS localhost/24</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>该选项发送一个设置了SYN标志位的空TCP报文。 默认目的端口为80 (可以通过改变<code>nmap.h</code>) 文件中的DEFAULT-TCP-PROBE-PORT值进行配置，但不同的端口也可以作为选项指定。 甚至可以指定一个以逗号分隔的端口列表(如 <code>-PS22，23，25，80，113，1050，35000</code>)， 在这种情况下，每个端口会被并发地扫描。</p>
 <p>SYN标志位告诉对方您正试图建立一个连接。 通常目标端口是关闭的，一个RST (复位) 包会发回来。 如果碰巧端口是开放的，目标会进行TCP三步握手的第二步，回应 一个SYN&#x2F;ACK TCP报文。然后运行Nmap的机器则会扼杀这个正在建立的连接， 发送一个RST而非ACK报文，否则，一个完全的连接将会建立。 RST报文是运行Nmap的机器而不是Nmap本身响应的，因为它对收到 的SYN&#x2F;ACK感到很意外。</p>
@@ -247,8 +427,10 @@ PORT     STATE SERVICE
 <p>在UNIX机器上，通常只有特权用户 <code>root</code> 能否发送和接收 原始的TCP报文。因此作为一个变通的方法，对于非特权用户， Nmap会为每个目标主机进行系统调用connect()，它也会发送一个SYN 报文来尝试建立连接。如果connect()迅速返回成功或者一个ECONNREFUSED 失败，下面的TCP堆栈一定已经收到了一个SYN&#x2F;ACK或者RST，该主机将被 标志位为在运行。 如果连接超时了，该主机就标志位为down掉了。这种方法也用于IPv6 连接，因为Nmap目前还不支持原始的IPv6报文。</p>
 </blockquote>
 <p>这类方法也用于端口扫描。</p>
-<h4 id="PA，TCP-ACK-Ping"><a href="#PA，TCP-ACK-Ping" class="headerlink" title="-PA，TCP ACK Ping"></a>-PA，TCP ACK Ping</h4><pre><code class="bash">nmap -PA localhost
-</code></pre>
+<h4 id="PA，TCP-ACK-Ping"><a href="#PA，TCP-ACK-Ping" class="headerlink" title="-PA，TCP ACK Ping"></a>-PA，TCP ACK Ping</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -PA localhost</span><br></pre></td></tr></table></figure>
+
+
+
 <blockquote>
 <p>TCP ACK ping和刚才讨论的SYN ping相当类似。 也许您已经猜到了，区别就是设置TCP的ACK标志位而不是SYN标志位。 ACK报文表示确认一个建立连接的尝试，但该连接尚未完全建立。 所以远程主机应该总是回应一个RST报文， 因为它们并没有发出过连接请求到运行Nmap的机器，如果它们正在运行的话。</p>
 <p><code>-PA</code>选项使用和SYN探测相同的默认端口(80)，也可以 用相同的格式指定目标端口列表。如果非特权用户尝试该功能， 或者指定的是IPv6目标，前面说过的connect()方法将被使用。 这个方法并不完美，因为它实际上发送的是SYN报文，而不是ACK报文。</p>
@@ -270,23 +452,23 @@ PORT     STATE SERVICE
 <p>大部分扫描类型只对特权用户可用。 这是因为他们发送接收原始报文，这在Unix系统需要root权限。 在Windows上推荐使用administrator账户，但是当WinPcap已经被加载到操作系统时， 非特权用户也可以正常使用Nmap。当Nmap在1997年发布时，需要root权限是一个严重的 局限，因为很多用户只有共享的shell账户。现在，世界变了，计算机便宜了，更多人拥有互联网连接 ，桌面UNIX系统 (包括Linux和MAC OS X)很普遍了。Windows版本的Nmap现在也有了，这使它可以运行在更多的桌面上。 由于所有这些原因，用户不再需要用有限的共享shell账户运行Nmap。 这是很幸运的，因为特权选项让Nmap强大得多也灵活得多。</p>
 <p>虽然Nmap努力产生正确的结果，但请记住所有结果都是基于目标机器(或者它们前面的防火墙)返回的报文的。 。这些主机也许是不值得信任的，它们可能响应以迷惑或误导Nmap的报文。 更普遍的是非RFC兼容的主机以不正确的方式响应Nmap探测。FIN，Null和Xmas扫描 特别容易遇到这个问题。</p>
 </blockquote>
-<h5 id="sS，TCP-SYN扫描"><a href="#sS，TCP-SYN扫描" class="headerlink" title="-sS，TCP SYN扫描"></a>-sS，TCP SYN扫描</h5><pre><code class="bash">nmap -sS localhost -p portNum
-</code></pre>
+<h5 id="sS，TCP-SYN扫描"><a href="#sS，TCP-SYN扫描" class="headerlink" title="-sS，TCP SYN扫描"></a>-sS，TCP SYN扫描</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sS localhost -p portNum</span><br></pre></td></tr></table></figure>
+
 <p>TCP SYN是Nmap的默认扫描，执行的速度很快。</p>
 <p>而且不易被察觉，因为没有完成完整的TCP连接，而且几乎所有的平台都遵守统一规则。可以明确地区分端口的状态。</p>
 <blockquote>
 <p>TCP SYN被称为<strong>半开放扫描</strong>， 因为它不打开一个完全的TCP连接。它发送一个SYN报文， 就像您真的要打开一个连接，然后等待响应。 SYN&#x2F;ACK表示端口在监听 (开放<code>open</code>)，而 RST (复位)表示没有监听者<code>closed</code>。如果数次重发后仍没响应， 该端口就被标记为被过滤<code>filtered</code>。如果收到ICMP不可到达错误 (类型3，代码1，2，3，9，10，或者13)，该端口也被标记为被过滤。</p>
 </blockquote>
-<h5 id="sT，TCP-connect-扫描"><a href="#sT，TCP-connect-扫描" class="headerlink" title="-sT，TCP connect()扫描"></a>-sT，TCP connect()扫描</h5><pre><code class="bash">nmap -sT localhost -p portNum
-</code></pre>
+<h5 id="sT，TCP-connect-扫描"><a href="#sT，TCP-connect-扫描" class="headerlink" title="-sT，TCP connect()扫描"></a>-sT，TCP connect()扫描</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sT localhost -p portNum</span><br></pre></td></tr></table></figure>
+
 <p>创建系统调用connect()，直接与目标端口建立连接，所以并不会构造原始报文并发送。</p>
 <p>系统中的网络应用程序一样会调用connect()，用于与其他主机通信。</p>
 <p>Nmap会使用该API读取每个连接的信息，而不是分析原始报文。这导致，TCP connect()扫描耗费的时间比SYN扫描要长许多。</p>
 <blockquote>
 <p>当SYN扫描可用时，它通常是更好的选择。因为Nmap对高层的 <code>connect()</code>调用比对原始报文控制更少， 所以TCP connect()的效率较低。 该系统调用完全连接到开放的目标端口而不是像SYN扫描进行 半开放的复位。这不仅花更长时间，需要更多报文得到同样信息，目标机也更可能 记录下连接。IDS(入侵检测系统)可以捕获两者，但大部分机器没有这样的警报系统。 当Nmap连接，然后不发送数据又关闭连接， 许多普通UNIX系统上的服务会在syslog留下记录，有时候是一条加密的错误消息。 此时，有些真正可怜的服务会崩溃，虽然这不常发生。如果管理员在日志里看到来自同一系统的 一堆连接尝试，她应该知道她的系统被扫描了。</p>
 </blockquote>
-<h5 id="sU，UDP扫描"><a href="#sU，UDP扫描" class="headerlink" title="-sU，UDP扫描"></a>-sU，UDP扫描</h5><pre><code class="bash">nmap -sU localhost -p portNum
-</code></pre>
+<h5 id="sU，UDP扫描"><a href="#sU，UDP扫描" class="headerlink" title="-sU，UDP扫描"></a>-sU，UDP扫描</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sU localhost -p portNum</span><br></pre></td></tr></table></figure>
+
 <p>由于大多数服务都是运行在TCP协议上的，但是也有运行在UDP协议上的服务，可以使用-sU命令进行扫描。</p>
 <blockquote>
 <p>虽然互联网上很多流行的服务运行在TCP 协议上，<a target="_blank" rel="noopener" href="http://www.rfc-editor.org/rfc/rfc768.txt">UDP</a>服务也不少。 DNS，SNMP，和DHCP (注册的端口是53，161&#x2F;162，和67&#x2F;68)是最常见的三个。 因为UDP扫描一般较慢，比TCP更困难，一些安全审核人员忽略这些端口。 这是一个错误，因为可探测的UDP服务相当普遍，攻击者当然不会忽略整个协议。 所幸，Nmap可以帮助记录并报告UDP端口。</p>
@@ -297,8 +479,8 @@ PORT     STATE SERVICE
 <blockquote>
 <p>UDP扫描的巨大挑战是怎样使它更快速。 开放的和被过滤的端口很少响应，让Nmap超时然后再探测，以防探测帧或者 响应丢失。关闭的端口常常是更大的问题。 它们一般发回一个ICMP端口无法到达错误。但是不像关闭的TCP端口响应SYN或者Connect 扫描所发送的RST报文，许多主机在默认情况下限制ICMP端口不可到达消息。 Linux和Solaris对此特别严格。例如， Linux 2.4.20内核限制一秒钟只发送一条目标不可到达消息</p>
 </blockquote>
-<h5 id="sN-sF-sX，TCP-Null，FIN，Xmas扫描"><a href="#sN-sF-sX，TCP-Null，FIN，Xmas扫描" class="headerlink" title="-sN; -sF; -sX，TCP Null，FIN，Xmas扫描"></a>-sN; -sF; -sX，TCP Null，FIN，Xmas扫描</h5><pre><code class="bash">nmap -sN localhost -p portNum
-</code></pre>
+<h5 id="sN-sF-sX，TCP-Null，FIN，Xmas扫描"><a href="#sN-sF-sX，TCP-Null，FIN，Xmas扫描" class="headerlink" title="-sN; -sF; -sX，TCP Null，FIN，Xmas扫描"></a>-sN; -sF; -sX，TCP Null，FIN，Xmas扫描</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sN localhost -p portNum</span><br></pre></td></tr></table></figure>
+
 <p>这是根据<a target="_blank" rel="noopener" href="http://www.rfc-editor.org/rfc/rfc793.txt">TCP RFC</a>中的规范发展出来的扫描方法。</p>
 <blockquote>
 <p>如果扫描系统遵循该RFC，当端口关闭时，任何不包含SYN，RST，或者ACK位的报文会导致 一个RST返回，而当端口开放时，应该没有任何响应。只要不包含SYN，RST，或者ACK， 任何其它三种**(FIN，PSH，and URG)**的组合都行。Nmap有三种扫描类型利用这一点：</p>
@@ -318,23 +500,23 @@ PORT     STATE SERVICE
 <p>优势：可以躲过一些防火墙，没有建立连接比较神秘。</p>
 <p>劣势：并非所有的系统平台都遵循了词条RFC规定。在这些平台（包含Windows）上，针对这样的不含SYN、RST、ACK的报文，端口无论开放或者关闭，都会返回RST，导致所有端口都被标记为closed。并且它不能辨别端口是<code>open</code>还是<code>filtered</code>。</p>
 <p>但是大多数的Unix操作系统都可以使用此类方法。</p>
-<h5 id="sA，TCP-ACK扫描"><a href="#sA，TCP-ACK扫描" class="headerlink" title="-sA，TCP ACK扫描"></a>-sA，TCP ACK扫描</h5><pre><code class="bash">nmap -sA localhost -p portNum
-</code></pre>
+<h5 id="sA，TCP-ACK扫描"><a href="#sA，TCP-ACK扫描" class="headerlink" title="-sA，TCP ACK扫描"></a>-sA，TCP ACK扫描</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sA localhost -p portNum</span><br></pre></td></tr></table></figure>
+
 <p>上一种将ACK SYN RST置零的扫描模式无法确定端口是<code>open</code>还是<code>filtered</code>，</p>
 <p>-sA TCP ACK扫描方式与前面都不同，它无法确定端口处于<code>open</code>还是<code>closed</code>，它的作用是确定防火墙是否启用，即端口是否被过滤。</p>
 <p>原理：</p>
 <blockquote>
 <p>ACK扫描探测报文只设置ACK标志位(除非您使用 <code>--scanflags</code>)。当扫描未被过滤的系统时， <code>open</code>(开放的)和<code>closed</code>(关闭的) 端口 都会返回RST报文。Nmap把它们标记为 <code>unfiltered</code>(未被过滤的)，意思是 ACK报文不能到达，但至于它们是<code>open</code>(开放的)或者 <code>closed</code>(关闭的) 无法确定。不响应的端口 或者发送特定的ICMP错误消息(类型3，代号1，2，3，9，10， 或者13)的端口，标记为 <code>filtered</code>(被过滤的)。</p>
 </blockquote>
-<h5 id="sW，TCP窗口扫描"><a href="#sW，TCP窗口扫描" class="headerlink" title="-sW，TCP窗口扫描"></a>-sW，TCP窗口扫描</h5><pre><code class="bash">nmap -sW localhost -p portNum
-</code></pre>
+<h5 id="sW，TCP窗口扫描"><a href="#sW，TCP窗口扫描" class="headerlink" title="-sW，TCP窗口扫描"></a>-sW，TCP窗口扫描</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sW localhost -p portNum</span><br></pre></td></tr></table></figure>
+
 <p>窗口扫描其实与ACK扫描差不多，它会分析返回的RST报文。</p>
 <p>它与ACK扫描一样，发送TCP ACK数据包，但是将TCP 窗口字段设为非零值，意在与对方服务器商讨窗口范围。如果服务器返回的RST报文中，窗口值的大小为正数，那么该端口的状态为<code>open</code>，如果为0，则<code>closed</code>，而ACK扫描仅会将其判定为<code>unfiltered</code>。</p>
 <blockquote>
 <p>该扫描依赖于互联网上少数系统的实现细节， 因此您不能永远相信它。不支持它的系统会通常返回所有端口<code>closed</code>。 当然，一台机器没有开放端口也是有可能的。 如果大部分被扫描的端口是 <code>closed</code>，而一些常见的端口 (如 22， 25，53) 是 <code>filtered</code>，该系统就非常可疑了。 偶尔地，系统甚至会显示恰恰相反的行为。 如果您的扫描显示1000个开放的端口和3个关闭的或者被过滤的端口， 那么那3个很可能也是开放的端口。</p>
 </blockquote>
-<h5 id="–scanflags-定制TCP扫描"><a href="#–scanflags-定制TCP扫描" class="headerlink" title="–scanflags 定制TCP扫描"></a>–scanflags 定制TCP扫描</h5><pre><code class="bash">nmap --scanflags SYNACK localhost -p 80
-</code></pre>
+<h5 id="–scanflags-定制TCP扫描"><a href="#–scanflags-定制TCP扫描" class="headerlink" title="–scanflags 定制TCP扫描"></a>–scanflags 定制TCP扫描</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap --scanflags SYNACK localhost -p 80</span><br></pre></td></tr></table></figure>
+
 <p>☆ 还需要<strong>指定响应类型</strong>，如果不指定，就会用SYN扫描的响应类型来分析返回的数据包。</p>
 <blockquote>
 <p>除了设置需要的标志位，您也可以设置 TCP扫描类型(如<code>-sA</code>或者<code>-sF</code>)。 那个基本类型告诉Nmap怎样解释响应。例如， SYN扫描认为没有响应意味着 <code>filtered</code>端口，而FIN扫描则认为是 <code>open|filtered</code>。 除了使用您指定的TCP标记位，Nmap会和基本扫描类型一样工作。 如果您不指定基本类型，就使用SYN扫描。</p>
@@ -361,148 +543,16 @@ PORT     STATE SERVICE
 <p>4）回答问题：样例程序中“conf.L3socket&#x3D;L3RawSocket”的作用是什么？</p>
 </blockquote>
 <p>实验代码部分：</p>
-<pre><code class="python"># 导入所需的库
-from scapy.all import *
-from IPy import IP as IPY
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 导入所需的库</span></span><br><span class="line"><span class="keyword">from</span> scapy.<span class="built_in">all</span> <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> IPy <span class="keyword">import</span> IP <span class="keyword">as</span> IPY</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># made by jay1an 2023/9/19</span></span><br><span class="line"></span><br><span class="line">scan_types = [<span class="string">&#x27;SYN&#x27;</span>,<span class="string">&#x27;ACK&#x27;</span>,<span class="string">&#x27;FIN&#x27;</span>,<span class="string">&#x27;Null&#x27;</span>,<span class="string">&#x27;Xmas&#x27;</span>,<span class="string">&#x27;Window&#x27;</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># conf.L3socket=L3RawSocket </span></span><br><span class="line"><span class="comment"># 定义一个函数，用于执行TCP端口扫描</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">port_scan</span>(<span class="params">ip, port, scan_type</span>):</span><br><span class="line">    <span class="keyword">if</span> scan_type == <span class="string">&quot;SYN&quot;</span>:                                                                           <span class="comment"># 半连接扫描</span></span><br><span class="line">        p = IP(dst=ip) / TCP(dport=<span class="built_in">int</span>(port), flags=<span class="string">&quot;S&quot;</span>)</span><br><span class="line">        ans = sr1(p, timeout=<span class="number">5</span>, verbose=<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(ans)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> ans:</span><br><span class="line">            ans.display()</span><br><span class="line">            <span class="keyword">if</span> ans[TCP].flags == <span class="string">&quot;SA&quot;</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is open.&quot;</span>)</span><br><span class="line">            <span class="keyword">elif</span> ans[TCP].flags == <span class="string">&quot;RA&quot;</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is closed&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;has a unknown response&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is filtered.&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> scan_type == <span class="string">&quot;ACK&quot;</span>:                                                                        <span class="comment"># ACK扫描  (只能判定是否存在防火墙)</span></span><br><span class="line">        p = IP(dst=ip) / TCP(dport=<span class="built_in">int</span>(port), flags=<span class="string">&quot;A&quot;</span>)</span><br><span class="line">        ans = sr1(p, timeout=<span class="number">5</span>, verbose=<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(ans)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> ans:</span><br><span class="line">            ans.display()</span><br><span class="line">            <span class="keyword">if</span> ans[TCP].flags == <span class="string">&quot;R&quot;</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is unfiltered&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is filtered&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is filtered&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> scan_type == <span class="string">&quot;FIN&quot;</span>:                                                                                         <span class="comment"># FIN扫描</span></span><br><span class="line">        p = IP(dst=ip) / TCP(dport=<span class="built_in">int</span>(port), flags=<span class="string">&quot;F&quot;</span>)</span><br><span class="line">        ans = sr1(p, timeout=<span class="number">5</span>, verbose=<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(ans)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> ans:</span><br><span class="line">            ans.display()</span><br><span class="line">            <span class="keyword">if</span> ans[TCP].flags == <span class="string">&quot;RA&quot;</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is closed.&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;has an unknown response.&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is open or filtered&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> scan_type == <span class="string">&quot;Null&quot;</span>:                                                                                   <span class="comment"># Null扫描</span></span><br><span class="line">        <span class="comment"># 创建NULL数据包</span></span><br><span class="line">        p = IP(dst=ip) / TCP(dport=port, flags=<span class="string">&quot;&quot;</span>)</span><br><span class="line">        ans = sr1(p, timeout=<span class="number">5</span>, verbose=<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(ans)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> ans:</span><br><span class="line">            ans.display()</span><br><span class="line">            <span class="keyword">if</span> ans[TCP].flags == <span class="string">&quot;RA&quot;</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is closed.&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;has an unknown response.&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is open or filtered&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> scan_type == <span class="string">&quot;Xmas&quot;</span>:                                                                                   <span class="comment"># Xmas扫描</span></span><br><span class="line">        <span class="comment"># 创建Xmas Tree数据包</span></span><br><span class="line">        p = IP(dst=ip) / TCP(dport=port, flags=<span class="string">&quot;FPU&quot;</span>)</span><br><span class="line">        ans = sr1(p, timeout=<span class="number">5</span>, verbose=<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(ans)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> ans:</span><br><span class="line">            ans.display()</span><br><span class="line">            <span class="keyword">if</span> ans[TCP].flags == <span class="string">&quot;RA&quot;</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is closed.&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;has an unknown response.&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot;is open or filtered&quot;</span>)</span><br><span class="line">    <span class="keyword">elif</span> scan_type == <span class="string">&quot;Window&quot;</span>:                                                                                  <span class="comment"># window扫描(窗口扫描)</span></span><br><span class="line">        <span class="comment"># 创建一个TCP SYN数据包，同时设置TCP窗口大小为0</span></span><br><span class="line">        p = IP(dst=ip) / TCP(dport=port, flags=<span class="string">&quot;S&quot;</span>, window=<span class="number">0</span>)</span><br><span class="line">        ans = sr1(p, timeout=<span class="number">5</span>, verbose=<span class="number">1</span>)</span><br><span class="line">        <span class="built_in">print</span>(ans)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;---------------------------------------&quot;</span>)</span><br><span class="line">        <span class="keyword">if</span> ans:</span><br><span class="line">            ans.display()</span><br><span class="line">            <span class="comment"># 检查响应中的TCP标志位</span></span><br><span class="line">            <span class="keyword">if</span> ans[TCP].flags == <span class="string">&quot;SA&quot;</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">f&quot;is open (TCP window size: <span class="subst">&#123;ans[TCP].window&#125;</span>).&quot;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot; is closed.&quot;</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(ip, <span class="string">&quot;port&quot;</span>, port, <span class="string">&quot; is closed or filtered.&quot;</span>)</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line"><span class="comment"># 定义一个函数，用于执行ICMP ping扫描</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">Ping</span>(<span class="params">dest</span>):</span><br><span class="line">    <span class="comment"># 使用IPy库将目标参数dest解析为一个IP地址对象</span></span><br><span class="line">    ip_addr = IPY(dest)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 遍历解析后的IP地址列表</span></span><br><span class="line">    <span class="keyword">for</span> ip <span class="keyword">in</span> ip_addr:</span><br><span class="line">        <span class="comment"># 为每个IP地址构建一个ICMP ping数据包</span></span><br><span class="line">        packet = IP(dst=<span class="built_in">str</span>(ip)) / ICMP() / <span class="string">b&#x27;rootkit&#x27;</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 使用Scapy的sr1函数发送ping数据包，timeout参数设置为1秒，verbose参数设置为False以禁用详细信息输出</span></span><br><span class="line">        ping = sr1(packet, timeout=<span class="number">3</span>, verbose=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果成功收到响应，打印 &quot;ip is up!&quot; 并使用彩色输出来突出显示</span></span><br><span class="line">        <span class="keyword">if</span> ping:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;\033[0;32;47m\t&quot;</span> + <span class="built_in">str</span>(ip) + <span class="string">&quot; is up!&quot;</span> + <span class="string">&quot;\033[0m&quot;</span>)</span><br><span class="line">        <span class="comment"># 如果没有收到响应，打印 &quot;ip is down!&quot;</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="built_in">str</span>(ip) + <span class="string">&quot; is down!&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#输入ip 端口 和扫描类型</span></span><br><span class="line">    dest = <span class="string">&#x27;127.0.0.1&#x27;</span></span><br><span class="line">    port = <span class="number">22</span></span><br><span class="line">    scan_type = <span class="string">&#x27;Window&#x27;</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;== Network Scanner ==&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(dest,port,scan_type)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 调用Ping函数执行ICMP ping扫描</span></span><br><span class="line">    Ping(dest)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 调用port_scan函数执行TCP端口扫描</span></span><br><span class="line">    port_scan(dest, port, scan_type)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 
-
-# made by jay1an 2023/9/19
-
-scan_types = [&#39;SYN&#39;,&#39;ACK&#39;,&#39;FIN&#39;,&#39;Null&#39;,&#39;Xmas&#39;,&#39;Window&#39;]
-
-
-# conf.L3socket=L3RawSocket 
-# 定义一个函数，用于执行TCP端口扫描
-def port_scan(ip, port, scan_type):
-    if scan_type == &quot;SYN&quot;:                                                                           # 半连接扫描
-        p = IP(dst=ip) / TCP(dport=int(port), flags=&quot;S&quot;)
-        ans = sr1(p, timeout=5, verbose=1)
-        print(ans)
-        print(&quot;---------------------------------------&quot;)
-        if ans:
-            ans.display()
-            if ans[TCP].flags == &quot;SA&quot;:
-                print(ip, &quot;port&quot;, port, &quot;is open.&quot;)
-            elif ans[TCP].flags == &quot;RA&quot;:
-                print(ip, &quot;port&quot;, port, &quot;is closed&quot;)
-            else:
-                print(ip, &quot;port&quot;, port, &quot;has a unknown response&quot;)
-        else:
-            print(ip, &quot;port&quot;, port, &quot;is filtered.&quot;)
-    elif scan_type == &quot;ACK&quot;:                                                                        # ACK扫描  (只能判定是否存在防火墙)
-        p = IP(dst=ip) / TCP(dport=int(port), flags=&quot;A&quot;)
-        ans = sr1(p, timeout=5, verbose=1)
-        print(ans)
-        print(&quot;---------------------------------------&quot;)
-        if ans:
-            ans.display()
-            if ans[TCP].flags == &quot;R&quot;:
-                print(ip, &quot;port&quot;, port, &quot;is unfiltered&quot;)
-            else:
-                print(ip, &quot;port&quot;, port, &quot;is filtered&quot;)
-        else:
-            print(ip, &quot;port&quot;, port, &quot;is filtered&quot;)
-    elif scan_type == &quot;FIN&quot;:                                                                                         # FIN扫描
-        p = IP(dst=ip) / TCP(dport=int(port), flags=&quot;F&quot;)
-        ans = sr1(p, timeout=5, verbose=1)
-        print(ans)
-        print(&quot;---------------------------------------&quot;)
-        if ans:
-            ans.display()
-            if ans[TCP].flags == &quot;RA&quot;:
-                print(ip, &quot;port&quot;, port, &quot;is closed.&quot;)
-            else:
-                print(ip, &quot;port&quot;, port, &quot;has an unknown response.&quot;)
-        else:
-            print(ip, &quot;port&quot;, port, &quot;is open or filtered&quot;)
-    elif scan_type == &quot;Null&quot;:                                                                                   # Null扫描
-        # 创建NULL数据包
-        p = IP(dst=ip) / TCP(dport=port, flags=&quot;&quot;)
-        ans = sr1(p, timeout=5, verbose=1)
-        print(ans)
-        print(&quot;---------------------------------------&quot;)
-        if ans:
-            ans.display()
-            if ans[TCP].flags == &quot;RA&quot;:
-                print(ip, &quot;port&quot;, port, &quot;is closed.&quot;)
-            else:
-                print(ip, &quot;port&quot;, port, &quot;has an unknown response.&quot;)
-        else:
-            print(ip, &quot;port&quot;, port, &quot;is open or filtered&quot;)
-    elif scan_type == &quot;Xmas&quot;:                                                                                   # Xmas扫描
-        # 创建Xmas Tree数据包
-        p = IP(dst=ip) / TCP(dport=port, flags=&quot;FPU&quot;)
-        ans = sr1(p, timeout=5, verbose=1)
-        print(ans)
-        print(&quot;---------------------------------------&quot;)
-        if ans:
-            ans.display()
-            if ans[TCP].flags == &quot;RA&quot;:
-                print(ip, &quot;port&quot;, port, &quot;is closed.&quot;)
-            else:
-                print(ip, &quot;port&quot;, port, &quot;has an unknown response.&quot;)
-        else:
-            print(ip, &quot;port&quot;, port, &quot;is open or filtered&quot;)
-    elif scan_type == &quot;Window&quot;:                                                                                  # window扫描(窗口扫描)
-        # 创建一个TCP SYN数据包，同时设置TCP窗口大小为0
-        p = IP(dst=ip) / TCP(dport=port, flags=&quot;S&quot;, window=0)
-        ans = sr1(p, timeout=5, verbose=1)
-        print(ans)
-        print(&quot;---------------------------------------&quot;)
-        if ans:
-            ans.display()
-            # 检查响应中的TCP标志位
-            if ans[TCP].flags == &quot;SA&quot;:
-                print(ip, &quot;port&quot;, port, f&quot;is open (TCP window size: &#123;ans[TCP].window&#125;).&quot;)
-            else:
-                print(ip, &quot;port&quot;, port, &quot; is closed.&quot;)
-        else:
-            print(ip, &quot;port&quot;, port, &quot; is closed or filtered.&quot;)
-        
-        
-# 定义一个函数，用于执行ICMP ping扫描
-def Ping(dest):
-    # 使用IPy库将目标参数dest解析为一个IP地址对象
-    ip_addr = IPY(dest)
-
-    # 遍历解析后的IP地址列表
-    for ip in ip_addr:
-        # 为每个IP地址构建一个ICMP ping数据包
-        packet = IP(dst=str(ip)) / ICMP() / b&#39;rootkit&#39;
-
-        # 使用Scapy的sr1函数发送ping数据包，timeout参数设置为1秒，verbose参数设置为False以禁用详细信息输出
-        ping = sr1(packet, timeout=3, verbose=False)
-
-        # 如果成功收到响应，打印 &quot;ip is up!&quot; 并使用彩色输出来突出显示
-        if ping:
-            print(&quot;\033[0;32;47m\t&quot; + str(ip) + &quot; is up!&quot; + &quot;\033[0m&quot;)
-        # 如果没有收到响应，打印 &quot;ip is down!&quot;
-        else:
-            print(str(ip) + &quot; is down!&quot;)
-
-
-def main():
-    
-    #输入ip 端口 和扫描类型
-    dest = &#39;127.0.0.1&#39;
-    port = 22
-    scan_type = &#39;Window&#39;
-    
-    print(&quot;== Network Scanner ==&quot;)
-    print(dest,port,scan_type)
-    
-    # 调用Ping函数执行ICMP ping扫描
-    Ping(dest)
-
-    # 调用port_scan函数执行TCP端口扫描
-    port_scan(dest, port, scan_type)
-
-if __name__ == &#39;__main__&#39;:
-    main()
-</code></pre>
 <p>本次实验主要是通过python代码实现网络数据包的构造、发送、接收、分析。</p>
 <p>再通过计算机网络知识结合RFC规则，判断主机和端口状态。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -535,6 +585,13 @@ if __name__ == &#39;__main__&#39;:
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -567,26 +624,8 @@ if __name__ == &#39;__main__&#39;:
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -598,12 +637,27 @@ if __name__ == &#39;__main__&#39;:
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -617,7 +671,13 @@ if __name__ == &#39;__main__&#39;:
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>

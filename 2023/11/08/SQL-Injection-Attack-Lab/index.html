@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
     
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
     <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  viewport-fit=cover" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="SQL Injection Attack Lab" />
-    <meta name="hexo-theme-A4" content="v1.8.2" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
 
     
         
-<link rel="stylesheet" href="/css/a11y-dark.min.css">
+<link rel="stylesheet" href="/css/highlight/style1.css">
 
         
 <link rel="stylesheet" href="/css/reset.css">
@@ -48,12 +56,207 @@
 
         
     
-    
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
     
     
     <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '53px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #eaeae8  ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
+        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -66,6 +269,8 @@
             
                 <div class="shadow-drop-2-bottom paper-main">
                     
+
+
 <div class="header">
     <div class="header-container">
         <img style="
@@ -97,6 +302,10 @@
                 <li><a href="/categories/">分类</a></li>
             
         
+            
+                <li><a href="/about/">关于</a></li>
+            
+        
     </ul>
 </div> 
         
@@ -123,7 +332,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#SQL-Injection-Attack-Lab"><span class="post-toc-text">SQL Injection Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Get-Familiar-with-SQL-Statements"><span class="post-toc-text">Task1. Get Familiar with SQL Statements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-SQL-Injection-Attack-on-SELECT-Statement"><span class="post-toc-text">Task2. SQL Injection Attack on SELECT Statement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-1-SQL-Injection-Attack-from-webpage"><span class="post-toc-text">Task2.1 SQL Injection Attack from webpage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-2-SQL-Injection-Attack-from-command-line"><span class="post-toc-text">Task2.2 SQL Injection Attack from command line</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-3-Append-a-new-SQL-statement"><span class="post-toc-text">Task2.3 Append a new SQL statement</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-SQL-Injection-Attack-on-UPDATE-Statement"><span class="post-toc-text">Task3. SQL Injection Attack on UPDATE Statement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-1-Modify-your-own-salary"><span class="post-toc-text">Task3.1 Modify your own salary</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-2-Modify-other-people%E2%80%99s-salary"><span class="post-toc-text">Task3.2 Modify other people’s salary</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3-3-Modify-other-people%E2%80%99s-password"><span class="post-toc-text">Task3.3 Modify other people’s password</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Countermeasure-Prepared-Statement"><span class="post-toc-text">Task4. Countermeasure - Prepared Statement</span></a></li></ol></li></ol></li></ol>
             
         
-        <h1 id="SQL-Injection-Attack-Lab"><a href="#SQL-Injection-Attack-Lab" class="headerlink" title="SQL Injection Attack Lab"></a>SQL Injection Attack Lab</h1><p>SQL 注入攻击是一种网络安全威胁，攻击者通过在应用程序的用户输入中注入恶意的 SQL 代码，从而实现对数据库的非法访问和操纵。这种攻击利用了应用程序对用户输入的处理不当，导致攻击者能够执行未经授权的数据库操作。</p>
+        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="SQL-Injection-Attack-Lab"><a href="#SQL-Injection-Attack-Lab" class="headerlink" title="SQL Injection Attack Lab"></a>SQL Injection Attack Lab</h1><p>SQL 注入攻击是一种网络安全威胁，攻击者通过在应用程序的用户输入中注入恶意的 SQL 代码，从而实现对数据库的非法访问和操纵。这种攻击利用了应用程序对用户输入的处理不当，导致攻击者能够执行未经授权的数据库操作。</p>
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
 <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>SQL injection is a code injection technique that exploits the vulnerabilities in the interface between web applications and database servers. The vulnerability is present when user’s inputs are not correctly checked within the web applications before being sent to the back-end database servers.</p>
 <p>Many web applications take inputs from users, and then use these inputs to construct SQL queries, so they can get information from the database. Web applications also use SQL queries to store information in the database. These are common practices in the development of web applications. When SQL queries are not carefully constructed, SQL injection vulnerabilities can occur. SQL injection is one of the most common<br>attacks on web applications.</p>
@@ -137,21 +346,21 @@
 <h3 id="Task1-Get-Familiar-with-SQL-Statements"><a href="#Task1-Get-Familiar-with-SQL-Statements" class="headerlink" title="Task1. Get Familiar with SQL Statements"></a>Task1. Get Familiar with SQL Statements</h3><p>本次task的目标是熟悉sql语句，需要进入开放数据库服务的容器，在里面进行数据库操作。</p>
 <p><strong>实验步骤：</strong></p>
 <p>进入开放数据库服务的容器的shell，进入数据库服务。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/1.png" alt="1"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/1.png" title="1" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/1.png" alt="1"></a></p>
 <p>选择数据库中的表，打印期中的信息。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/2.png" alt="2"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/2.png" title="2" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/2.png" alt="2"></a></p>
 <p>Select * from credential where Name &#x3D; ‘Alice’</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/3.png" alt="3"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/3.png" title="3" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/3.png" alt="3"></a></p>
 <h3 id="Task2-SQL-Injection-Attack-on-SELECT-Statement"><a href="#Task2-SQL-Injection-Attack-on-SELECT-Statement" class="headerlink" title="Task2. SQL Injection Attack on SELECT Statement"></a>Task2. SQL Injection Attack on SELECT Statement</h3><p>本次task的目标是在不知道任何一个employee的密码的情况下从主页登录。</p>
 <p>实验手册给出了前端的验证代码，对代码进行简单的审计即可发现前端验证系统存在sql注入漏洞。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/4.png" alt="4"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/4.png" title="4" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/4.png" alt="4"></a></p>
 <p>并没有对要输入的username和password进行处理的代码，但是由于password要进行hash运算，所以password的值不好控制，可以选择构造username的值实现sql注入。</p>
 <h4 id="Task2-1-SQL-Injection-Attack-from-webpage"><a href="#Task2-1-SQL-Injection-Attack-from-webpage" class="headerlink" title="Task2.1 SQL Injection Attack from webpage"></a>Task2.1 SQL Injection Attack from webpage</h4><p>在网页上进行sql注入，在知道管理员账号为admin的情况下登录管理员账号。</p>
 <p><strong>实验步骤：</strong></p>
 <p>将构造好的username值输入，直接登录。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/5.png" alt="5"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/5.png" title="5" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/5.png" alt="5"></a></p>
 <p>点击Login直接登陆成功了。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/6.png" alt="6"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/6.png" title="6" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/6.png" alt="6"></a></p>
 <p><strong>分析：</strong></p>
 <p>因为验证部分没有对输入进行检查处理，并且代码逻辑不够完善，我们构造username的值使原始的sql语句中途截断。</p>
 <p>Username &#x3D; admin’ – (最后有一个空格)</p>
@@ -161,78 +370,78 @@
 <p>注意：使用curl命令时，如果有特殊符号（如&amp;），需要放在同网址一起放在单引号中，不然会被shell编译。其次，在网址中的一些符号需要被url编码，比如说单引号、空格等。</p>
 <p>实验步骤：</p>
 <p>登录时发送的的http请求为：</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/7.png" alt="7"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/7.png" title="7" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/7.png" alt="7"></a></p>
 <p>同样，我们还是构造恶意的username，实现sql注入的效果，不过需要对单引号和空格进行url编码。</p>
 <p>所以我们在终端的输入为：</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/8.png" alt="8"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/8.png" title="8" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/8.png" alt="8"></a></p>
 <p>发现成功返回了所有employee的信息。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/9.png" alt="9"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/9.png" title="9" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/9.png" alt="9"></a></p>
 <p><strong>分析：</strong></p>
 <p>Sql注入的原理与上一个小实验仍然是相同的，只是本次实验使用curl在命令行上进行操作，需要额外对特殊字符进行url编码。</p>
 <h4 id="Task2-3-Append-a-new-SQL-statement"><a href="#Task2-3-Append-a-new-SQL-statement" class="headerlink" title="Task2.3 Append a new SQL statement"></a>Task2.3 Append a new SQL statement</h4><p>在前两次task中，都是通过sql注入从数据库拿数据，如果可以修改数据库就更好了，在SQL中，分号；用来分割两个sql语句，在本次task中需要在登陆界面尝试执行两个sql语句。</p>
 <p>但是对抗机制会阻止两个sql语句的运行，我们需要找出对抗机制是什么。</p>
 <p><strong>实验步骤：</strong></p>
 <p>先尝试分号的效果。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/10.png" alt="10"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/10.png" title="10" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/10.png" alt="10"></a></p>
 <p>的确执行了两条sql语句，证明分号确实可以用来分割sql语句。</p>
 <p>下面在登录页面上使用sql注入构造两个sql语句。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/11.png" alt="11"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/11.png" title="11" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/11.png" alt="11"></a></p>
 <p>点击登陆后，提示语法错误，无法执行第二条sql语句。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/12.png" alt="12"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/12.png" title="12" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/12.png" alt="12"></a></p>
 <p><strong>分析：</strong></p>
 <p>执行失败了，通过查看unsafe_home.php发现其使用query函数执行sql语句。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/13.png" alt="13"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/13.png" title="13" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/13.png" alt="13"></a></p>
 <p>查询php的mysqli::query函数:</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/14.png" alt="14"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/14.png" title="14" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/14.png" alt="14"></a></p>
 <p>此函数只能一次执行一个sql语句，如果需要一次执行多条SQL命令，就必须使用mysqli对象中的 multi_query()方法。具体做法是把多条SQL命令写在同一个字符串里作为参数传递给multi_query()方法，多条SQL之间使用分号 (;)分隔。</p>
 <p>因为代码中使用的query函数来执行sql语句，所以当输入的是多条sql命令的时候，query无法处理，不会成功执行。</p>
 <h3 id="Task3-SQL-Injection-Attack-on-UPDATE-Statement"><a href="#Task3-SQL-Injection-Attack-on-UPDATE-Statement" class="headerlink" title="Task3. SQL Injection Attack on UPDATE Statement"></a>Task3. SQL Injection Attack on UPDATE Statement</h3><p>在task2中，sql注入漏洞发生在SELECT语句处，所以我们可以利用此漏洞获取数据库内的信息。但如果sql漏洞发生在UPDATE语句处，后果将会非常严重，因为我们可以通过注入，在UPDATE的基础上对数据库中的数据做修改。</p>
 <p>实验说明中给出了employee修改个人资料的代码逻辑：</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/15.png" alt="15"></p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/16.png" alt="16"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/15.png" title="15" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/15.png" alt="15"></a></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/16.png" title="16" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/16.png" alt="16"></a></p>
 <p>可以看出，代码并没有对输入的数据进行进一步的检测和处理，所以在修改个人资料的功能处是存在sql注入漏洞的。在接下来的小task中，会利用此漏洞修改数据库中的数据。</p>
 <h4 id="Task3-1-Modify-your-own-salary"><a href="#Task3-1-Modify-your-own-salary" class="headerlink" title="Task3.1 Modify your own salary"></a>Task3.1 Modify your own salary</h4><p>对于每一个employee，只能修改Nickname、emails等数据，无法修改Salary，本次task的目标就是以employee的身份登录并且利用sql注入漏洞修改自己的salary。</p>
 <p>实验步骤：</p>
 <p>登录Alice的账户，打开编辑个人信息的页面，在Nickname栏输入进行构造的数据，执行sql注入。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/17.png" alt="17"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/17.png" title="17" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/17.png" alt="17"></a></p>
 <p>点击save提交，再查看Alice的信息可以发现Salary已经被修改了。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/18.png" alt="18"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/18.png" title="18" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/18.png" alt="18"></a></p>
 <p><strong>分析：</strong></p>
 <p>Salary的值被修改了，表明Salary&#x3D;’9999999’被执行了。</p>
 <p>因为我们输入的NickName的值传到了后端会导致sql语句变成：</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/19.png" alt="19"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/19.png" title="19" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/19.png" alt="19"></a></p>
 <p>Salary&#x3D;’9999999’被插入并且成功执行。</p>
 <h4 id="Task3-2-Modify-other-people’s-salary"><a href="#Task3-2-Modify-other-people’s-salary" class="headerlink" title="Task3.2 Modify other people’s salary"></a>Task3.2 Modify other people’s salary</h4><p>本次task的目标是将上司Boby的工资改为1。</p>
 <p><strong>实验步骤：</strong></p>
 <p>根据sql漏洞构造特殊的输入。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/20.png" alt="20"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/20.png" title="20" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/20.png" alt="20"></a></p>
 <p>点击Save，提交表单，然后查看Boby的工资发现的确被修改为1。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/21.png" alt="21"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/21.png" title="21" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/21.png" alt="21"></a></p>
 <p><strong>分析：</strong></p>
 <p>原理同上，利用sql漏洞将Salary&#x3D;’1’插入要执行的sql语句中。</p>
 <p>只是在task3.2中需要用WHERE条件对Boby进行定位，所以需要用注释符 – 将后面的无关的sql语句部分注释掉，如果不注释掉就会有两个WHERE条件，出现语法错误。</p>
 <h4 id="Task3-3-Modify-other-people’s-password"><a href="#Task3-3-Modify-other-people’s-password" class="headerlink" title="Task3.3 Modify other people’s password"></a>Task3.3 Modify other people’s password</h4><p>在Task3.2中，我们登录Alice的账户，通过sql漏洞修改了上司Boby的工资。本次Task的目标是通过sql漏洞修改Boby的password，进而我们可以用新的password登录Boby的账户。</p>
 <p><strong>注意：数据库中存放的密码是原密码经过散列运算的值，所以如果要直接修改Password，就必须要先得到其散列运算的值。</strong></p>
 <p>查看源码，我们可以知道散列函数为SHA1。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/22.png" alt="22"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/22.png" title="22" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/22.png" alt="22"></a></p>
 <p><strong>实验步骤：</strong></p>
 <p>假设要Boby的password改为’pwd’，先获得SHA1(‘pwd’)。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/23.png" alt="23"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/23.png" title="23" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/23.png" alt="23"></a></p>
 <p>根据sql漏洞构造特殊的输入。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/24.png" alt="24"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/24.png" title="24" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/24.png" alt="24"></a></p>
 <p>我们的输入会使得后端真正执行的sql语句为：</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/25.png" alt="25"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/25.png" title="25" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/25.png" alt="25"></a></p>
 <p>这会将Boby的密码改为SHA1(‘pwd’)。</p>
 <p>我们在登陆界面用这个密码(pwd)登录Boby的账号。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/26.png" alt="26"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/26.png" title="26" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/26.png" alt="26"></a></p>
 <p>发现可以成功登录。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/27.png" alt="27"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/27.png" title="27" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/27.png" alt="27"></a></p>
 <p><strong>分析：</strong></p>
 <p>注入的原理仍然与前两次实验相同，都是通过将想要执行的sql语句插入到原来的sql语句中，然后再使用WHERE对Boby进行定位，最后使用注释符 – 将多余的sql语句部分注释。</p>
 <p>但值得注意的是，Password在数据库中是以散列值的方式存储的，所以直修改Password进行修改时，要先获得新密码的散列值，将散列值存入数据库，而不是新密码本身。</p>
 <h3 id="Task4-Countermeasure-Prepared-Statement"><a href="#Task4-Countermeasure-Prepared-Statement" class="headerlink" title="Task4. Countermeasure - Prepared Statement"></a>Task4. Countermeasure - Prepared Statement</h3><p>在本次task中，介绍了如何用预处理的方式处理防止sql注入。</p>
 <p>在实验说明中，介绍了sql服务器对于前端传递的sql语句的处理过程。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/28.png" alt="28"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/28.png" title="28" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/28.png" alt="28"></a></p>
 <p>在数据库系统中，当执行一个SQL查询时，会经历几个关键的阶段，这些阶段包括解析和规范化（Parsing and Normalization）、编译（Compilation）、查询优化（Query Optimization）和缓存（Cache）。以下是每个阶段的详细解释：</p>
 <p><strong>Parsing and Normalization Phase</strong></p>
 <p>这是SQL查询处理的第一阶段，在这个阶段中，查询的文本被分析并转换成数据库系统能理解的结构化表示形式。</p>
@@ -257,18 +466,23 @@
 <p>所以本次task的目标就是利用预处理修复sql注入漏洞。</p>
 <p><strong>实验步骤：</strong></p>
 <p>登录&#x2F;defense网页，此网页具有sql注入漏洞。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/29.png" alt="29"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/29.png" title="29" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/29.png" alt="29"></a></p>
 <p>我们对username栏进行sql注入，发现可以成功登录admin的账号。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/30.png" alt="30"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/30.png" title="30" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/30.png" alt="30"></a></p>
 <p>查看unsafe.php源码，发现其并没有采用过滤输入或者预处理的方式来预防sql注入。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/31.png" alt="31"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/31.png" title="31" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/31.png" alt="31"></a></p>
 <p>这使得我们很容易就可以登录任意账户。</p>
 <p>下面对unsafe.php进行修改，采用预处理的方式对sql注入进行防御。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/32.png" alt="32"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/32.png" title="32" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/32.png" alt="32"></a></p>
 <p>保存，重新dcbuild，dcup，再次访问&#x2F;defense页面，尝试进行sql注入攻击。</p>
-<p><img src="/../img/SQL-Injection-Attack-Lab/33.png" alt="33"></p>
+<p><a href="/../img/SQL-Injection-Attack-Lab/33.png" title="33" class="gallery-item" style="box-shadow: none;"> <img src="/../img/SQL-Injection-Attack-Lab/33.png" alt="33"></a></p>
 <p>发现用同样的sql注入手段已经无法成功获取到admin的数据了，证明预编译成功防御了这种sql注入攻击。</p>
-
+</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
+        }</script>
     </div>
 
     <div class="post-meta">
@@ -305,6 +519,13 @@
         
         </i>
     </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
     
         
 
@@ -337,26 +558,8 @@
 </div>
 
 
-   
     
-<script src="/js/highlight.min.js"></script>
-
-    
-<script src="/js/highlightjs-line-numbers.js"></script>
-
-
-    
-<script src="/js/randomHeaderContent.js"></script>
-
-    <!--回到顶部按钮-->
-    
-        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-        
-<script src="/js/returnToTop.js"></script>
-
-    
 
     <!--目录-->
     
@@ -368,12 +571,27 @@
 
     
 
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
 
 
-<script>
-    hljs.initHighlightingOnLoad();
-    hljs.initLineNumbersOnLoad();
-</script>
+
+
+
+<script src="/js/lightgallery.min.js"></script>
 
 
 
@@ -387,7 +605,13 @@
                     </svg>
                 </div>
             
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
     </body>
-
-
 </html>
