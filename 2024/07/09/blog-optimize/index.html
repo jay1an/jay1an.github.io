@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="优化博客网站" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            优化博客网站
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E4%BC%98%E5%8C%96%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99"><span class="post-toc-text">优化博客网站</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%9A%E5%AE%A2%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E4%BC%98%E5%8C%96"><span class="post-toc-text">博客访问速度优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CDN-%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%97%AE%E9%A2%98"><span class="post-toc-text">CDN 服务器问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%E5%8F%91%E7%8E%B0"><span class="post-toc-text">问题发现</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-%E6%9B%B4%E6%94%B9Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%BA%90%E7%A0%81"><span class="post-toc-text">解决办法 - 更改Hexo博客主题源码</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%87%86%E5%A4%87"><span class="post-toc-text">工作准备</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%8E%BB%E6%8E%89%E4%BE%9D%E8%B5%96-CDN-%E7%9A%84%E8%B5%84%E6%BA%90"><span class="post-toc-text">去掉依赖 CDN 的资源</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%88%E6%9E%9C"><span class="post-toc-text">效果</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E9%87%8D%E5%A4%8D%E8%AF%B7%E6%B1%82%E9%97%AE%E9%A2%98"><span class="post-toc-text">静态资源重复请求问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%E5%8F%91%E7%8E%B0-1"><span class="post-toc-text">问题发现</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-%E5%BC%80%E5%90%AF%E7%BC%93%E5%AD%98"><span class="post-toc-text">解决办法 - 开启缓存</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%88%E6%9E%9C-1"><span class="post-toc-text">效果</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%88%B7%E6%96%B0"><span class="post-toc-text">刷新</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%88%87%E6%8D%A2%E9%A1%B5%E9%9D%A2"><span class="post-toc-text">切换页面</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%9A%E5%AE%A2%E5%AE%89%E5%85%A8%E5%8A%A0%E5%9B%BA"><span class="post-toc-text">博客安全加固</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%9A%90%E8%97%8F%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF"><span class="post-toc-text">隐藏服务器信息</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%84%9F%E4%BC%98%E5%8C%96"><span class="post-toc-text">博客使用感优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%87%8D%E5%AE%9A%E5%90%91404%E9%A1%B5%E9%9D%A2"><span class="post-toc-text">重定向404页面</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="优化博客网站"><a href="#优化博客网站" class="headerlink" title="优化博客网站"></a>优化博客网站</h1><p>昨天我把博客从GitHub Pages上转移到阿里云服务器上，然后由于网站备案的问题又转移到了Azure的韩国服务器上。虽然访问速度比以前快了不少，但是访问速度还是略慢，有时候又会快一点，不稳定。然后我又做了一些安全性的加固，比如说在返回的数据包中隐藏服务器信息。</p>
+<p>所以这篇博客记录我是如何优化博客访问速度、如何进行安全加固，以及后续可能会更新的优化博客使用体验的操作。</p>
+<h2 id="博客访问速度优化"><a href="#博客访问速度优化" class="headerlink" title="博客访问速度优化"></a>博客访问速度优化</h2><h3 id="CDN-服务器问题"><a href="#CDN-服务器问题" class="headerlink" title="CDN 服务器问题"></a>CDN 服务器问题</h3><h4 id="问题发现"><a href="#问题发现" class="headerlink" title="问题发现"></a>问题发现</h4><p>打开浏览器开发工具，切换到网络工具，查看本机对网站资源的请求情况。</p>
+<p>我发现我的博客内容中的图片的请求速度还挺快，但是我的博客内容却要在图片加载完成之后一段时间才能被浏览器渲染出来。</p>
+<p>这是我使用的这个hexo博客主题<code>A4</code>设置中，有一些静态的资源<code>css</code>、<code>js</code>和字体是从cdn上请求下来的。</p>
+<p><a href="/../img/blog-optimize/image-20240711184912146.png" title="image-20240711184912146" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711184912146.png" alt="image-20240711184912146"></a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">jay1an@Azure-jay1an:~$ curl ipinfo.io/104.21.82.50</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;ip&quot;</span>: <span class="string">&quot;104.21.82.50&quot;</span>,</span><br><span class="line">  <span class="string">&quot;anycast&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;city&quot;</span>: <span class="string">&quot;San Francisco&quot;</span>,</span><br><span class="line">  <span class="string">&quot;region&quot;</span>: <span class="string">&quot;California&quot;</span>,</span><br><span class="line">  <span class="string">&quot;country&quot;</span>: <span class="string">&quot;US&quot;</span>,</span><br><span class="line">  <span class="string">&quot;loc&quot;</span>: <span class="string">&quot;37.7621,-122.3971&quot;</span>,</span><br><span class="line">  <span class="string">&quot;org&quot;</span>: <span class="string">&quot;AS13335 Cloudflare, Inc.&quot;</span>,</span><br><span class="line">  <span class="string">&quot;postal&quot;</span>: <span class="string">&quot;94107&quot;</span>,</span><br><span class="line">  <span class="string">&quot;timezone&quot;</span>: <span class="string">&quot;America/Los_Angeles&quot;</span>,</span><br><span class="line">  <span class="string">&quot;readme&quot;</span>: <span class="string">&quot;https://ipinfo.io/missingauth&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如下图，这个css文件就是从cdn上请求下来的，而这个cdn服务器在美国加州，以国内的网络访问该地址需要花费的时间比较长，并且在网络环境不太好的时候甚至无法访问，这就会导致博客的访问速度变慢。</p>
+<p><a href="/../img/blog-optimize/image-20240711185713514.png" title="image-20240711185713514" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711185713514.png" alt="image-20240711185713514"></a></p>
+<p>在这里可以清晰看见，我们主机访问博客页面的时候除了要向博客所在的服务器请求博客内容的资源以及一些必要的css和js文件之外，还会向两个位于美国加州的cdn服务器请求一些静态资源。</p>
+<p>由于国内网络访问美国加州cdn服务器造成很大的延时甚至有时请求失败，这使得博客内容整体访问速度变慢，所以我想先将位于cdn上的资源下载到服务器上，以后访问博客页面时，主机只需要向博客所在服务器请求资源即可。</p>
+<h4 id="解决办法-更改Hexo博客主题源码"><a href="#解决办法-更改Hexo博客主题源码" class="headerlink" title="解决办法 - 更改Hexo博客主题源码"></a>解决办法 - 更改Hexo博客主题源码</h4><h5 id="工作准备"><a href="#工作准备" class="headerlink" title="工作准备"></a>工作准备</h5><p>在分析完问题之后，确定需要查看Hexo <code>A4</code>主题的源码文件，找到调用cdn的位置，将其替换为从本地的资源中获取。</p>
+<p>先来到hexo <code>A4</code>主题的目录下 <code>themes\A4</code></p>
+<p>然后在cmd窗口使用下面的命令，搜索内容中带有<code>&quot;str&quot;</code>的文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">findstr /S /I /M <span class="string">&quot;str&quot;</span> *</span><br></pre></td></tr></table></figure>
+
+<p>这个命令的各个部分的含义如下：</p>
+<ul>
+<li><strong>findstr</strong>: 命令的名称，用于搜索文件中的字符串。</li>
+<li><strong>&#x2F;S</strong>: 递归搜索当前目录及其子目录中的文件。</li>
+<li><strong>&#x2F;I</strong>: 忽略大小写（即搜索时不区分大小写）。</li>
+<li><strong>&#x2F;M</strong>: 只显示包含匹配字符串的文件名，而不是显示匹配的具体行。</li>
+<li><strong>“str”</strong>: 要搜索的字符串。在这个例子中，”str” 是要搜索的字符串。</li>
+<li>*****: 文件通配符，表示当前目录下的所有文件。</li>
+</ul>
+<h5 id="去掉依赖-CDN-的资源"><a href="#去掉依赖-CDN-的资源" class="headerlink" title="去掉依赖 CDN 的资源"></a>去掉依赖 CDN 的资源</h5><p>目前我想找到对这个资源的请求代码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css</span><br></pre></td></tr></table></figure>
+
+<p>于是使用<code>findstr</code>命令在hexo <code>A4</code>主题目录下搜索：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">themes\A4&gt;findstr /S /I /M <span class="string">&quot;css/lightgallery&quot;</span> *</span><br><span class="line">layout\_partial\head.ejs</span><br><span class="line">scripts\events\gallery\gallery.js</span><br></pre></td></tr></table></figure>
+
+<p>结果表明<code>head.ejs</code>和<code>gallery.js</code>中包含字符串<code>&quot;css/lightgallery&quot;</code>，所以请求cdn的逻辑应该就在这里。</p>
+<p>果然在<code>gallery.js</code>中发现了以下内容</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> renderer = <span class="built_in">require</span>(<span class="string">&#x27;./renderer&#x27;</span>);</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">config</span>.<span class="property">lightgallery</span> = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;</span><br><span class="line">    <span class="attr">js</span>: <span class="string">&#x27;https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js&#x27;</span>,</span><br><span class="line">    <span class="attr">css</span>: <span class="string">&#x27;https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css&#x27;</span>,</span><br><span class="line">    <span class="attr">plugins</span>: &#123;&#125;,</span><br><span class="line">&#125;, hexo.<span class="property">config</span>.<span class="property">lightgallery</span>);</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>,renderer.<span class="property">render</span>,<span class="number">9</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在<code>renderer.js</code>又有如下代码段，利用了定义在<code>gallery.js</code>中的<code>hexo.config.lightgallery</code>，这里是请求cdn的一处逻辑。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">addTag</span>(<span class="params">data</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> config = <span class="variable language_">this</span>.<span class="property">config</span>.<span class="property">lightgallery</span>;</span><br><span class="line">    <span class="keyword">if</span>(!config)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// add js</span></span><br><span class="line">    data.<span class="property">content</span> = <span class="string">&#x27;&lt;div class=&quot;.article-gallery&quot;&gt;&#x27;</span>+data.<span class="property">content</span>+<span class="string">&#x27;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">    data.<span class="property">content</span>+=<span class="string">&#x27;&lt;script src=&quot;&#x27;</span>+config.<span class="property">js</span>+<span class="string">&#x27;&quot;&gt;&lt;/script&gt;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// add css</span></span><br><span class="line">    <span class="keyword">var</span> css = <span class="string">&#x27;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;&#x27;</span>+config.<span class="property">css</span>+<span class="string">&#x27;&quot; /&gt;&#x27;</span>;</span><br><span class="line">    data.<span class="property">content</span> = css + data.<span class="property">content</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// add plugins</span></span><br><span class="line">    <span class="keyword">var</span> plugins = <span class="title class_">Object</span>.<span class="title function_">keys</span>(config.<span class="property">plugins</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> plugin <span class="keyword">of</span> plugins)&#123;</span><br><span class="line">        <span class="keyword">var</span> jsTag = <span class="string">&#x27;&lt;script src=&quot;&#x27;</span>+config.<span class="property">plugins</span>[plugin]+<span class="string">&#x27;&quot;&gt;&lt;/script&gt;&#x27;</span>;</span><br><span class="line">        data.<span class="property">content</span> += jsTag;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>于是我将上述两个文件下载下来，分别存放在 <code>A4/source/css</code> 和 <code>A4/source/js</code> 目录下，并且修改了代码配置，使其从本地文件中读取而不是从 CDN 服务器获取资源。</p>
+<blockquote>
+<p>然而，我发现 <code>A4/source/css</code> 和 <code>A4/source/js</code> 目录中原本就有这两个文件。经过进一步调查，我认为这可能是 <code>A4</code> 主题设计上的一个不足之处。具体来说，部分代码是从本地文件中读取 CSS 和 JS 资源，而其他部分则依赖于 CDN 获取资源。这种不一致性可能是主题作者在开发过程中遗留下来的一个 BUG。</p>
+</blockquote>
+<p>修改部分：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> renderer = <span class="built_in">require</span>(<span class="string">&#x27;./renderer&#x27;</span>);</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">config</span>.<span class="property">lightgallery</span> = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;</span><br><span class="line">    <span class="attr">js</span>: <span class="string">&#x27;js/lightgallery.min.js&#x27;</span>,</span><br><span class="line">    <span class="attr">css</span>: <span class="string">&#x27;css/lightgallery.min.css&#x27;</span>,</span><br><span class="line">    <span class="attr">plugins</span>: &#123;&#125;,</span><br><span class="line">&#125;, hexo.<span class="property">config</span>.<span class="property">lightgallery</span>);</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_post_render&#x27;</span>,renderer.<span class="property">render</span>,<span class="number">9</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">addTag</span>(<span class="params">data</span>)&#123;</span><br><span class="line">    <span class="keyword">var</span> config = <span class="variable language_">this</span>.<span class="property">config</span>.<span class="property">lightgallery</span>;</span><br><span class="line">    <span class="keyword">if</span>(!config)&#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取根路径 ⭐⭐⭐</span></span><br><span class="line">    <span class="keyword">var</span> root = <span class="variable language_">this</span>.<span class="property">config</span>.<span class="property">root</span> || <span class="string">&#x27;/&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// add js</span></span><br><span class="line">    data.<span class="property">content</span> = <span class="string">&#x27;&lt;div class=&quot;article-gallery&quot;&gt;&#x27;</span>+data.<span class="property">content</span>+<span class="string">&#x27;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">    data.<span class="property">content</span> += <span class="string">`&lt;script src=&quot;<span class="subst">$&#123;root&#125;</span><span class="subst">$&#123;config.js&#125;</span>&quot;&gt;&lt;/script&gt;`</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// add css</span></span><br><span class="line">    <span class="keyword">var</span> css = <span class="string">`&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;<span class="subst">$&#123;root&#125;</span><span class="subst">$&#123;config.css&#125;</span>&quot; /&gt;`</span>;</span><br><span class="line">    data.<span class="property">content</span> = css + data.<span class="property">content</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// add plugins</span></span><br><span class="line">    <span class="keyword">var</span> plugins = <span class="title class_">Object</span>.<span class="title function_">keys</span>(config.<span class="property">plugins</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> plugin <span class="keyword">of</span> plugins)&#123;</span><br><span class="line">        <span class="keyword">var</span> jsTag = <span class="string">`&lt;script src=&quot;<span class="subst">$&#123;root&#125;</span><span class="subst">$&#123;config.plugins[plugin]&#125;</span>&quot;&gt;&lt;/script&gt;`</span>;</span><br><span class="line">        data.<span class="property">content</span> += jsTag;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p>我按照相同的方法，将所有依赖于 CDN 服务器的资源全部下载到本地，并修改相应的代码配置，使其全部从本地读取资源。</p>
+<blockquote>
+<p>下载后我发现，这些资源中的大多数实际上也已经存在于本地文件夹中…….这种不一致性大概率就是作者的疏忽吧。</p>
+</blockquote>
+<p>这样，再次访问我的博客时，可以明显看到不再依赖于 CDN 服务器的效果，所有资源全部从博客所在服务器请求。</p>
+<p><a href="/../img/blog-optimize/image-20240711200536316.png" title="image-20240711200536316" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711200536316.png" alt="image-20240711200536316"></a></p>
+<h3 id="静态资源重复请求问题"><a href="#静态资源重复请求问题" class="headerlink" title="静态资源重复请求问题"></a>静态资源重复请求问题</h3><h4 id="问题发现-1"><a href="#问题发现-1" class="headerlink" title="问题发现"></a>问题发现</h4><p>开启浏览器开发者工具后，我注意到在博客中切换页面时，一些常用的资源和字体在不同页面间是共享的。然而，每次刷新页面或切换页面时，这些资源都会重新向服务器发出请求。这不仅造成了网络资源的浪费，还影响了页面的加载速度和用户体验。</p>
+<p>为了进一步提升博客的访问速度，我决定在服务器上开启缓存功能。通过缓存，可以减少重复请求的次数，减少服务器负载，并加快用户的访问速度。</p>
+<h4 id="解决办法-开启缓存"><a href="#解决办法-开启缓存" class="headerlink" title="解决办法 - 开启缓存"></a>解决办法 - 开启缓存</h4><p>在服务器上修改<code>Apache</code>配置，我的网站对应的conf文件路径为：<code>/etc/apache2/sites-available/jay1an.conf</code></p>
+<p>需要在里面加入这样一段内容</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">IfModule</span> <span class="attr">mod_headers.c</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">FilesMatch</span> &quot;\<span class="attr">.</span>(<span class="attr">html</span>|<span class="attr">css</span>|<span class="attr">js</span>|<span class="attr">png</span>|<span class="attr">jpg</span>|<span class="attr">jpeg</span>|<span class="attr">gif</span>|<span class="attr">ico</span>|<span class="attr">svg</span>|<span class="attr">woff2</span>|<span class="attr">woff</span>|<span class="attr">ttf</span>)$&quot;&gt;</span></span><br><span class="line">        Header set Cache-Control &quot;max-age=86400, public&quot;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">FilesMatch</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">IfModule</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><a href="/../img/blog-optimize/image-20240711201740542.png" title="image-20240711201740542" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711201740542.png" alt="image-20240711201740542"></a></p>
+<p>然后还需确保<code>Apache</code>已经启用了<code>mod_headers</code>和<code>mod_expires</code>模块。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo a2enmod headers</span><br><span class="line">sudo a2enmod expires</span><br><span class="line">sudo systemctl restart apache2</span><br></pre></td></tr></table></figure>
+
+<p>通过上述配置，服务器会在响应头中添加<code>Cache-Control</code>指令，告知浏览器缓存指定时间内的资源。当用户再次访问这些资源时，浏览器会直接从缓存中加载，而不是重新向服务器请求，从而提高访问速度。</p>
+<h4 id="效果-1"><a href="#效果-1" class="headerlink" title="效果"></a>效果</h4><p>在开启缓存功能后，重新访问博客，可以明显感觉到页面加载速度的提升。浏览器会缓存常用的资源和字体，当切换页面时，这些资源无需再次从服务器获取，大大减少了网络资源的浪费，并提升了访问速度。</p>
+<h5 id="刷新"><a href="#刷新" class="headerlink" title="刷新"></a>刷新</h5><p>第一次访问：</p>
+<p><a href="/../img/blog-optimize/image-20240711202208803.png" title="image-20240711202208803" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711202208803.png" alt="image-20240711202208803"></a></p>
+<p>刷新：</p>
+<p><a href="/../img/blog-optimize/image-20240711202247939.png" title="image-20240711202247939" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711202247939.png" alt="image-20240711202247939"></a></p>
+<p>并且从上图中的<code>Size</code>栏中可以看到这些静态资源都是从缓存中获取的，而不是从服务器上请求的。</p>
+<p><a href="/../img/blog-optimize/image-20240711202351309.png" title="image-20240711202351309" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711202351309.png" alt="image-20240711202351309"></a></p>
+<h5 id="切换页面"><a href="#切换页面" class="headerlink" title="切换页面"></a>切换页面</h5><p>现在切换到另外一个页面，发现共用的静态资源都从内存中获取了。</p>
+<p><a href="/../img/blog-optimize/image-20240711202601998.png" title="image-20240711202601998" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711202601998.png" alt="image-20240711202601998"></a></p>
+<h2 id="博客安全加固"><a href="#博客安全加固" class="headerlink" title="博客安全加固"></a>博客安全加固</h2><h3 id="隐藏服务器信息"><a href="#隐藏服务器信息" class="headerlink" title="隐藏服务器信息"></a>隐藏服务器信息</h3><p>服务器在返回给客户端的数据包的包头中设置了<code>Server</code>字段</p>
+<p><a href="/../img/blog-optimize/image-20240711203630336.png" title="image-20240711203630336" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711203630336.png" alt="image-20240711203630336"></a></p>
+<p>这暴露了服务器的操作系统和<code>Apache</code>的版本，这存在一定的安全隐患。</p>
+<p>可以通过设置修改<code>Apache</code>的配置隐藏这一消息。</p>
+<p>下面是在我的服务器(Ubuntu)上具体的步骤：</p>
+<ol>
+<li><p><strong>编辑Apache配置文件</strong>： 打开Apache的主配置文件，<code>/etc/apache2/conf-enabled/security.conf</code>。</p>
+</li>
+<li><p><strong>找到并修改ServerTokens指令</strong>： ServerTokens指令决定了在服务器响应头中显示的Apache版本信息。可以将其设置为<code>Prod</code>或者<code>ProductOnly</code>，这样只会显示“Apache”而不显示具体的版本号。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerTokens Prod</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>找到并修改ServerSignature指令</strong>： ServerSignature指令决定了在服务器错误页面中显示的Apache版本信息。可以将其设置为<code>Off</code>，以禁止显示版本信息。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ServerSignature Off</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>重启Apache服务</strong>： 修改配置文件后，重新启动Apache服务使更改生效。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>最终效果</p>
+<p><a href="/../img/blog-optimize/image-20240711204324834.png" title="image-20240711204324834" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711204324834.png" alt="image-20240711204324834"></a></p>
+<h2 id="博客使用感优化"><a href="#博客使用感优化" class="headerlink" title="博客使用感优化"></a>博客使用感优化</h2><h3 id="重定向404页面"><a href="#重定向404页面" class="headerlink" title="重定向404页面"></a>重定向404页面</h3><p>未重定向前，如果请求到服务期上不存在的资源，则会提示404，并且返回默认的页面。</p>
+<p><a href="/../img/blog-optimize/image-20240711205458020.png" title="image-20240711205458020" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711205458020.png" alt="image-20240711205458020"></a></p>
+<p>为了在这种情况下提供一个友好的提示页面，从而提升使用体验，需要配置一下重定向404。</p>
+<p>首先需要准备一个<code>404.html</code>文件</p>
+<p>然后在网站目录下创建一个<code>.htaccess</code>文件，在<code>.htaccess</code>文件中添加如下内容即可。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ErrorDocument 404 /404.html</span><br></pre></td></tr></table></figure>
+
+<p><a href="/../img/blog-optimize/image-20240711205723584.png" title="image-20240711205723584" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711205723584.png" alt="image-20240711205723584"></a></p>
+<p>这样，当用户访问一个不存在的页面时，会自动重定向到<code>404.html</code>页面。</p>
+<p><a href="/../img/blog-optimize/image-20240711210003956.png" title="image-20240711210003956" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711210003956.png" alt="image-20240711210003956"></a></p>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-09</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
+                            博客搭建
+                        </a>
+                    
+                        <a href='/tags/CDN/'>
+                            CDN
+                        </a>
+                    
+                        <a href='/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+                            云服务器
+                        </a>
+                    
+                        <a href='/tags/%E5%AE%89%E5%85%A8/'>
+                            安全
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
+                            博客搭建
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
