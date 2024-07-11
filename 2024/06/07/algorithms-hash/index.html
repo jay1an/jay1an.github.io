@@ -239,24 +239,6 @@
     <body>
         <script src="/js/darkmode-js.min.js"></script>
         
-        <script>
-            const options = {
-                bottom: '53px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '42px', // default: 'unset'
-                time: '0.3s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: ' #eaeae8  ',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        </script>
-        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -302,10 +284,6 @@
                 <li><a href="/categories/">分类</a></li>
             
         
-            
-                <li><a href="/about/">关于</a></li>
-            
-        
     </ul>
 </div> 
         
@@ -332,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%93%88%E5%B8%8C%E8%A1%A8"><span class="post-toc-text">基础算法 - 哈希表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LeetCode-%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">LeetCode 相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">1. 两数之和 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#49-%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D%E5%88%86%E7%BB%84-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">49. 字母异位词分组 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#128-%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E5%BA%8F%E5%88%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">128. 最长连续序列 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-哈希表"><a href="#基础算法-哈希表" class="headerlink" title="基础算法 - 哈希表"></a>基础算法 - 哈希表</h1><p>哈希表（Hash Table）作为一种高效的数据结构，在计算机科学中广泛应用于数据存储和快速查找。其基本原理是通过哈希函数将键映射到存储位置，从而实现快速的插入、删除和查找操作。</p>
+        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-哈希表"><a href="#基础算法-哈希表" class="headerlink" title="基础算法 - 哈希表"></a>基础算法 - 哈希表</h1><p>哈希表（Hash Table）作为一种高效的数据结构，在计算机科学中广泛应用于数据存储和快速查找。其基本原理是通过哈希函数将键映射到存储位置，从而实现快速的插入、删除和查找操作。</p>
 <p>哈希表的主要特点包括：</p>
 <ul>
 <li><strong>键值对存储</strong>：每个键值对都通过哈希函数计算得到唯一的存储位置。</li>
@@ -358,7 +336,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">longestConsecutive</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        HashSet&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : nums) &#123;</span><br><span class="line">            set.add(num);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> count;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> num : set)&#123; <span class="comment">// ⭐，遍历set会更快....</span></span><br><span class="line">            <span class="keyword">if</span>(!set.contains(num-<span class="number">1</span>))&#123; <span class="comment">// 查看当前的num是不是一个连续序列的起点</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> num;</span><br><span class="line">                count = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">while</span>(set.contains(++cur))&#123; <span class="comment">// 以cur为起点，寻找这个连续序列的最长长度</span></span><br><span class="line">                    count++;</span><br><span class="line">                &#125;</span><br><span class="line">                res = Math.max(res, count);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>巧妙之处在于利用哈希集合（HashSet）来快速检索和判断数字是否存在。</strong></p>
-</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
@@ -440,13 +418,13 @@
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
 
     <!--目录-->
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
         
 <script src="/js/toc.js"></script>
 

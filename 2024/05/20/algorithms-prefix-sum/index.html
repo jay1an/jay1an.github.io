@@ -239,24 +239,6 @@
     <body>
         <script src="/js/darkmode-js.min.js"></script>
         
-        <script>
-            const options = {
-                bottom: '53px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '42px', // default: 'unset'
-                time: '0.3s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: ' #eaeae8  ',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        </script>
-        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -302,10 +284,6 @@
                 <li><a href="/categories/">分类</a></li>
             
         
-            
-                <li><a href="/about/">关于</a></li>
-            
-        
     </ul>
 </div> 
         
@@ -332,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%89%8D%E7%BC%80%E5%92%8C"><span class="post-toc-text">基础算法 - 前缀和</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LeetCode-%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">LeetCode 相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#560-%E5%92%8C%E4%B8%BA-K-%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">560. 和为 K 的子数组 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1248-%E7%BB%9F%E8%AE%A1%E3%80%8C%E4%BC%98%E7%BE%8E%E5%AD%90%E6%95%B0%E7%BB%84%E3%80%8D-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">1248. 统计「优美子数组」 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#974-%E5%92%8C%E5%8F%AF%E8%A2%AB-K-%E6%95%B4%E9%99%A4%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">974. 和可被 K 整除的子数组 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#523-%E8%BF%9E%E7%BB%AD%E7%9A%84%E5%AD%90%E6%95%B0%E7%BB%84%E5%92%8C-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">523. 连续的子数组和 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-前缀和"><a href="#基础算法-前缀和" class="headerlink" title="基础算法 - 前缀和"></a>基础算法 - 前缀和</h1><p>前缀和（Prefix Sum）是一种常见且高效的算法技巧，广泛应用于一系列数据处理和查询问题中。通过预处理数组，前缀和能够显著降低区间和查询的时间复杂度，是解决许多连续区间问题的重要工具。</p>
+        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-前缀和"><a href="#基础算法-前缀和" class="headerlink" title="基础算法 - 前缀和"></a>基础算法 - 前缀和</h1><p>前缀和（Prefix Sum）是一种常见且高效的算法技巧，广泛应用于一系列数据处理和查询问题中。通过预处理数组，前缀和能够显著降低区间和查询的时间复杂度，是解决许多连续区间问题的重要工具。</p>
 <p>前缀和的主要特点包括：</p>
 <ul>
 <li><strong>预处理数组</strong>：通过一次遍历计算出前缀和数组，使得后续的区间和查询能够在常数时间内完成。</li>
@@ -372,7 +350,7 @@
 
 <p>这样按理说是没问题的….可是题目中有一个示例<code>k</code>&#x3D;<code>Integer.MAX_VALUE</code>给内存干超了。。。。</p>
 <p>但确实，在k值比较大的情况，使用数组会导致空间的浪费，还是应该使用<code>HashSet</code>。</p>
-</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
@@ -458,13 +436,13 @@
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
 
     <!--目录-->
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
         
 <script src="/js/toc.js"></script>
 

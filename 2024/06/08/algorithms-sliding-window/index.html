@@ -239,24 +239,6 @@
     <body>
         <script src="/js/darkmode-js.min.js"></script>
         
-        <script>
-            const options = {
-                bottom: '53px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '42px', // default: 'unset'
-                time: '0.3s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: ' #eaeae8  ',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        </script>
-        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -302,10 +284,6 @@
                 <li><a href="/categories/">分类</a></li>
             
         
-            
-                <li><a href="/about/">关于</a></li>
-            
-        
     </ul>
 </div> 
         
@@ -332,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="post-toc-text">基础算法 - 滑动窗口</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#LeetCode-%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">LeetCode 相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">3. 无重复字符的最长子串 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#76-%E6%9C%80%E5%B0%8F%E8%A6%86%E7%9B%96%E5%AD%90%E4%B8%B2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">76. 最小覆盖子串 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#567-%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%8E%92%E5%88%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">567. 字符串的排列 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#438-%E6%89%BE%E5%88%B0%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%89%80%E6%9C%89%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">438. 找到字符串中所有字母异位词 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#239-%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E6%9C%80%E5%A4%A7%E5%80%BC-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">239. 滑动窗口最大值 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-滑动窗口"><a href="#基础算法-滑动窗口" class="headerlink" title="基础算法 - 滑动窗口"></a>基础算法 - 滑动窗口</h1><p>滑动窗口（Sliding Window）是一种高效的数组&#x2F;字符串处理技术，常用于解决子数组或子字符串相关的问题。它通过在数组或字符串上维护一个固定大小的窗口或动态调整窗口的大小，来逐步遍历并处理每个子集。</p>
+        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="基础算法-滑动窗口"><a href="#基础算法-滑动窗口" class="headerlink" title="基础算法 - 滑动窗口"></a>基础算法 - 滑动窗口</h1><p>滑动窗口（Sliding Window）是一种高效的数组&#x2F;字符串处理技术，常用于解决子数组或子字符串相关的问题。它通过在数组或字符串上维护一个固定大小的窗口或动态调整窗口的大小，来逐步遍历并处理每个子集。</p>
 <p>滑动窗口的主要特点包括：</p>
 <ul>
 <li><strong>固定窗口大小</strong>：在某些问题中，滑动窗口的大小是固定的，窗口从数组或字符串的一端滑动到另一端。</li>
@@ -393,7 +371,7 @@
 <p><em><strong>每一个新的滑动窗口，只需要获取队列头的值就可以了</strong></em></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] maxSlidingWindow(<span class="type">int</span>[] nums, <span class="type">int</span> k) &#123;</span><br><span class="line">        <span class="comment">// 处理边界情况</span></span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="literal">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="type">int</span>[] res = <span class="keyword">new</span> <span class="title class_">int</span>[len - k + <span class="number">1</span>];</span><br><span class="line">        LinkedList&lt;Integer&gt; queue = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">r</span> <span class="operator">=</span> <span class="number">0</span>; r &lt; len; r++) &#123;</span><br><span class="line">            <span class="comment">// 计算左边界</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">l</span> <span class="operator">=</span> r - k + <span class="number">1</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 移除滑动窗口外的元素</span></span><br><span class="line">            <span class="keyword">if</span> (!queue.isEmpty() &amp;&amp; queue.peekFirst() &lt; l) &#123;</span><br><span class="line">                queue.removeFirst();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 维护队列单调递减</span></span><br><span class="line">            <span class="keyword">while</span> (!queue.isEmpty() &amp;&amp; nums[queue.peekLast()] &lt; nums[r]) &#123;</span><br><span class="line">                queue.removeLast();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 将当前元素的索引加入队列</span></span><br><span class="line">            queue.addLast(r);</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 当左边界大于等于0时，将队列头部的元素加入结果数组</span></span><br><span class="line">            <span class="keyword">if</span> (l &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">                res[l] = nums[queue.peekFirst()];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
@@ -475,13 +453,13 @@
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
 
     <!--目录-->
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
         
 <script src="/js/toc.js"></script>
 

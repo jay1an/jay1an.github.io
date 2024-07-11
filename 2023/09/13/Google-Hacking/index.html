@@ -239,24 +239,6 @@
     <body>
         <script src="/js/darkmode-js.min.js"></script>
         
-        <script>
-            const options = {
-                bottom: '53px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '42px', // default: 'unset'
-                time: '0.3s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: ' #eaeae8  ',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        </script>
-        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -302,10 +284,6 @@
                 <li><a href="/categories/">分类</a></li>
             
         
-            
-                <li><a href="/about/">关于</a></li>
-            
-        
     </ul>
 </div> 
         
@@ -332,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Google-Hacking"><span class="post-toc-text">Google Hacking</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="post-toc-text">基本语法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%AB%98%E7%BA%A7%E6%90%9C%E7%B4%A2"><span class="post-toc-text">高级搜索</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="post-toc-text">实例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B1%EF%BC%9Asite%E3%80%81filetype%E3%80%81intext-%E9%85%8D%E5%90%88"><span class="post-toc-text">实例1：site、filetype、intext 配合</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E4%BE%8B2%EF%BC%9Agoogle%E6%90%9C%E7%B4%A2%E8%87%AA%E5%B7%B1%E7%9A%84blog%E6%98%AF%E5%90%A6%E8%A2%AB%E6%94%B6%E5%BD%95"><span class="post-toc-text">实例2：google搜索自己的blog是否被收录</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%BD%91%E7%BB%9C%E6%94%BB%E9%98%B2%E6%8A%80%E6%9C%AF%E8%AF%BE%E7%A8%8B%E5%AE%9E%E9%AA%8C%E2%80%93-%E5%9F%9F%E5%90%8D%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7"><span class="post-toc-text">网络攻防技术课程实验–&gt;域名信息收集工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E8%A6%81%E6%B1%82"><span class="post-toc-text">实验要求</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#python%E4%BB%A3%E7%A0%81%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="post-toc-text">python代码的实现</span></a></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h3 id="Google-Hacking"><a href="#Google-Hacking" class="headerlink" title="Google Hacking"></a>Google Hacking</h3><p><strong>Google Hacking</strong>就是利用搜索引擎强大的搜索功能，选用搜索语法和特殊的搜索关键字，将隐藏在目标网站中的不恰当配置信息和后门信息找出来。</p>
+        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h3 id="Google-Hacking"><a href="#Google-Hacking" class="headerlink" title="Google Hacking"></a>Google Hacking</h3><p><strong>Google Hacking</strong>就是利用搜索引擎强大的搜索功能，选用搜索语法和特殊的搜索关键字，将隐藏在目标网站中的不恰当配置信息和后门信息找出来。</p>
 <h4 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h4><ul>
 <li>and ：逻辑与</li>
 <li>or ：；逻辑或</li>
@@ -379,7 +357,7 @@
 <p>运行结果：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">https<span class="punctuation">:</span><span class="comment">//help.douban.com: 帮助中心</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//www.douban.com: 豆瓣电影</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//movie.douban.com: 豆瓣电影</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//group.douban.com: 讨论精选 (豆瓣)</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//book.douban.com: 豆瓣读书</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//mobilestore.douban.com: 登录豆瓣</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//m.douban.com: 豆瓣电影</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//frodo.douban.com: 豆瓣App</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//jobs.douban.com: 在豆瓣工作</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//beijing.douban.com: 豆瓣同城_北京</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//blog.douban.com: 豆瓣blog</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//market.douban.com: 豆瓣豆品</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//music.douban.com: 豆瓣音乐</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//read.douban.com: 电子图书 | 豆瓣阅读</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//dongxi.douban.com: 豆瓣</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//talion.douban.com: 豆瓣(手机版)</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//douban.com: 豆瓣</span></span><br><span class="line">http<span class="punctuation">:</span><span class="comment">//shuo.douban.com: 豆瓣</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//site.douban.com: 豆瓣</span></span><br><span class="line">https<span class="punctuation">:</span><span class="comment">//accounts.douban.com: 登录豆瓣</span></span><br></pre></td></tr></table></figure>
 
-</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
@@ -457,13 +435,13 @@
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
 
     <!--目录-->
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
         
 <script src="/js/toc.js"></script>
 

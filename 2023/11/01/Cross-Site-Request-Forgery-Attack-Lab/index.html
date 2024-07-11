@@ -239,24 +239,6 @@
     <body>
         <script src="/js/darkmode-js.min.js"></script>
         
-        <script>
-            const options = {
-                bottom: '53px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '42px', // default: 'unset'
-                time: '0.3s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: ' #eaeae8  ',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        </script>
-        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -302,10 +284,6 @@
                 <li><a href="/categories/">分类</a></li>
             
         
-            
-                <li><a href="/about/">关于</a></li>
-            
-        
     </ul>
 </div> 
         
@@ -332,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Cross-Site-Request-Forgery-Attack-Lab"><span class="post-toc-text">Cross-Site Request Forgery Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Posting-a-Malicious-Message-to-Display-an-Alert-Window"><span class="post-toc-text">Task1. Posting a Malicious Message to Display an Alert Window</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Posting-a-Malicious-Message-to-Display-Cookies"><span class="post-toc-text">Task2. Posting a Malicious Message to Display Cookies</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Stealing-Cookies-from-the-Victim%E2%80%99s-Machine"><span class="post-toc-text">Task3. Stealing Cookies from the Victim’s Machine</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Becoming-the-Victim%E2%80%99s-Friend"><span class="post-toc-text">Task4. Becoming the Victim’s Friend</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Modifying-the-Victim%E2%80%99s-Profile"><span class="post-toc-text">Task5. Modifying the Victim’s Profile</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-Writing-a-Self-Propagating-XSS-Worm"><span class="post-toc-text">Task6. Writing a Self-Propagating XSS Worm</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-Defeating-XSS-Attacks-Using-CSP"><span class="post-toc-text">Task7. Defeating XSS Attacks Using CSP</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Cross-Site-Request-Forgery-Attack-Lab"><a href="#Cross-Site-Request-Forgery-Attack-Lab" class="headerlink" title="Cross-Site Request Forgery Attack Lab"></a>Cross-Site Request Forgery Attack Lab</h1><p>跨站脚本攻击（Cross-Site Scripting，XSS）是一种常见的网络安全漏洞，攻击者利用这种漏洞向网页注入恶意脚本，然后这些脚本被浏览器执行。XSS 攻击的目标是在受害者的浏览器中执行恶意脚本，以获取用户敏感信息、窃取会话令牌或执行其他恶意操作。</p>
+        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Cross-Site-Request-Forgery-Attack-Lab"><a href="#Cross-Site-Request-Forgery-Attack-Lab" class="headerlink" title="Cross-Site Request Forgery Attack Lab"></a>Cross-Site Request Forgery Attack Lab</h1><p>跨站脚本攻击（Cross-Site Scripting，XSS）是一种常见的网络安全漏洞，攻击者利用这种漏洞向网页注入恶意脚本，然后这些脚本被浏览器执行。XSS 攻击的目标是在受害者的浏览器中执行恶意脚本，以获取用户敏感信息、窃取会话令牌或执行其他恶意操作。</p>
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
 <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p>The objective of this lab is to help students understand the Cross-Site Request Forgery (CSRF) attack. A CSRF attack involves a victim user, a trusted site, and a malicious site. The victim user holds an activesession with a trusted site while visiting a malicious site. The malicious site injects an HTTP request for thetrusted site into the victim user session, causing damages.</p>
 <p>In this lab, students will be attacking a social networking web application using the CSRF attack. The open-source social networking application is called Elgg, which has already been installed in our VM. Elgg has countermeasures against CSRF, but we have turned them off for the purpose of this lab. This lab covers the following topics:<br>    • Cross-Site Request Forgery attack<br>    • CSRF countermeasures: Secret token and Same-site cookie<br>    • HTTP GET and POST requests<br>    • JavaScript and Ajax</p>
@@ -496,7 +474,7 @@
 </ol>
 <p>CSP可以严格控制哪些js代码可以被执行，而XSS攻击就是要让受害者的浏览器执行特定的恶意js代码，如果此恶意js代码不再CSP允许的范围内，那么它就不会被执行，所以XSS攻击会失败。</p>
 <p>所以，CSP就像是一个白名单政策，只让受信任的js代码被执行。</p>
-</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
@@ -578,13 +556,13 @@
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
 
     <!--目录-->
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
         
 <script src="/js/toc.js"></script>
 

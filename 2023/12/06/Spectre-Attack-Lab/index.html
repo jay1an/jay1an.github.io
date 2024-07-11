@@ -239,24 +239,6 @@
     <body>
         <script src="/js/darkmode-js.min.js"></script>
         
-        <script>
-            const options = {
-                bottom: '53px', // default: '32px'
-                right: 'unset', // default: '32px'
-                left: '42px', // default: 'unset'
-                time: '0.3s', // default: '0.3s'
-                mixColor: '#fff', // default: '#fff'
-                backgroundColor: ' #eaeae8  ',  // default: '#fff'
-                buttonColorDark: '#100f2c',  // default: '#100f2c'
-                buttonColorLight: '#fff', // default: '#fff'
-                saveInCookies: true, // default: true,
-                label: '🌓', // default: ''
-                autoMatchOsTheme: true // default: true
-            }
-            const darkmode = new Darkmode(options);
-            darkmode.showWidget();
-        </script>
-        
         
             <div class="left-toc-container">
                 <nav id="toc" class="bs-docs-sidebar"></nav>
@@ -302,10 +284,6 @@
                 <li><a href="/categories/">分类</a></li>
             
         
-            
-                <li><a href="/about/">关于</a></li>
-            
-        
     </ul>
 </div> 
         
@@ -332,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Spectre-Attack-Lab"><span class="post-toc-text">Spectre Attack Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-2-Side-Channel-Attacks-via-CPU-Caches"><span class="post-toc-text">Task1&amp;2. Side Channel Attacks via CPU Caches</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-Reading-from-Cache-versus-from-Memory"><span class="post-toc-text">Task1. Reading from Cache versus from Memory</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-Using-Cache-as-a-Side-Channel"><span class="post-toc-text">Task2. Using Cache as a Side Channel</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Out-of-Order-Execution-and-Branch-Prediction"><span class="post-toc-text">Task3. Out-of-Order Execution and Branch Prediction</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Out-Of-Order-Execution"><span class="post-toc-text">Out-Of-Order Execution</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-Experiment"><span class="post-toc-text">The Experiment</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task3"><span class="post-toc-text">Task3</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-The-Spectre-Attack"><span class="post-toc-text">Task4. The Spectre Attack</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-Setup-for-the-Experiment"><span class="post-toc-text">The Setup for the Experiment</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-Program-Used-in-the-Experiment"><span class="post-toc-text">The Program Used in the Experiment</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Improve-the-Attack-Accuracy"><span class="post-toc-text">Task5. Improve the Attack Accuracy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-Steal-the-Entire-Secret-String"><span class="post-toc-text">Task6. Steal the Entire Secret String</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Spectre-Attack-Lab"><a href="#Spectre-Attack-Lab" class="headerlink" title="Spectre Attack Lab"></a>Spectre Attack Lab</h1><p>幽灵攻击通过利用现代处理器的漏洞实施，可以使得进程间隔离和进程内隔离失效，进而使得恶意程序可以读取它本不该读到的数据。</p>
+        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Spectre-Attack-Lab"><a href="#Spectre-Attack-Lab" class="headerlink" title="Spectre Attack Lab"></a>Spectre Attack Lab</h1><p>幽灵攻击通过利用现代处理器的漏洞实施，可以使得进程间隔离和进程内隔离失效，进而使得恶意程序可以读取它本不该读到的数据。</p>
 <p>实验资料：<a target="_blank" rel="noopener" href="https://seedsecuritylabs.org/Labs_20.04/System/Spectre_Attack/">https://seedsecuritylabs.org/Labs_20.04/System/Spectre_Attack/</a></p>
 <blockquote>
 <p>此实验仅在一些旧的CPU上可以成功</p>
@@ -479,7 +457,7 @@
 <p>循环结束之后打印res数组即可。</p>
 <p><strong>执行效果：</strong></p>
 <p><a href="/../img/Spectre-Attack-Lab/35.png" title="35" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Spectre-Attack-Lab/35.png" alt="35"></a></p>
-</div><script src="https://jsd.onmicrosoft.cn/npm/hexo-theme-a4@latest/source/js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
@@ -557,13 +535,13 @@
 
 
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
 
     <!--目录-->
     
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
         
 <script src="/js/toc.js"></script>
 
