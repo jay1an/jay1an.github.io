@@ -310,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Environment-Variable-and-Set-UID-Lab"><span class="post-toc-text">Environment Variable and Set-UID Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="post-toc-text">环境变量</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Set-UID"><span class="post-toc-text">Set-UID</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Manipulating-Environment-Variables"><span class="post-toc-text">Task1. Manipulating Environment Variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Passing-Environment-Variables-from-Parent-Process-to-Child-Process"><span class="post-toc-text">Task2. Passing Environment Variables from Parent Process to Child Process</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Enviroment-Variables-and-execve"><span class="post-toc-text">Task3. Enviroment Variables and execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Environment-Varibales-and-systems"><span class="post-toc-text">Task4. Environment Varibales and systems()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task5. Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-The-PATH-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task6. The PATH Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-The-LD-PRELOAD-Environment-Variable-and-Set-UID-Programs"><span class="post-toc-text">Task7. The LD PRELOAD Environment Variable and Set-UID Programs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task8-Invoking-External-Programs-Using-system-versus-execve"><span class="post-toc-text">Task8. Invoking External Programs Using system() versus execve()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task9-Capability-Leaking"><span class="post-toc-text">Task9. Capability Leaking</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Environment-Variable-and-Set-UID-Lab"><a href="#Environment-Variable-and-Set-UID-Lab" class="headerlink" title="Environment Variable and Set-UID Lab"></a>Environment Variable and Set-UID Lab</h1><h5 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h5><p><strong>环境变量 (Environment Variables)</strong> 是在操作系统中存储配置信息和系统状态的动态值。它们为操作系统和应用程序提供了一种在运行时传递信息的方式。每个进程都可以有自己的环境变量，允许它们在不同的上下文中运行。</p>
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="Environment-Variable-and-Set-UID-Lab"><a href="#Environment-Variable-and-Set-UID-Lab" class="headerlink" title="Environment Variable and Set-UID Lab"></a>Environment Variable and Set-UID Lab</h1><h5 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h5><p><strong>环境变量 (Environment Variables)</strong> 是在操作系统中存储配置信息和系统状态的动态值。它们为操作系统和应用程序提供了一种在运行时传递信息的方式。每个进程都可以有自己的环境变量，允许它们在不同的上下文中运行。</p>
 <p>例：</p>
 <p><strong>PATH：</strong> <code>PATH</code> 是一个非常常见的环境变量，它包含了系统用于查找可执行文件的路径列表。当您在命令行中输入一个命令时，系统将在 <code>PATH</code> 中列出的路径中查找该命令的可执行文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH=/usr/local/bin:/usr/bin:/bin</span><br></pre></td></tr></table></figure>
@@ -510,12 +510,14 @@
 <p>在这个情况下，fd 在新的 &#x2F;bin&#x2F;sh shell 中仍然保持打开状态，所以尽管程序已经禁用了特权。但仍然可以使用 &#x2F;bin&#x2F;sh shell 来执行针对fd&#x3D;3的文件操作，即随意写入数据到&#x2F;etc&#x2F;zzz文件，而不需要特权。</p>
 <p><a href="/../img/Environment-variable-and-Set-UID-Lab/53.png" title="53" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Environment-variable-and-Set-UID-Lab/53.png" alt="53"></a></p>
 <p>这个漏洞强调了正确的权限管理的重要性，尤其是在使用 Set-UID 程序时，开发者必须小心确保特权和文件描述符等资源受到适当的限制和控制。</p>
-</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
-        }</script>
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
     </div>
 
     <div class="post-meta">
@@ -596,12 +598,13 @@
 
     <!--目录-->
     
-        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
         
 <script src="/js/toc.js"></script>
 
+    
     
 
     

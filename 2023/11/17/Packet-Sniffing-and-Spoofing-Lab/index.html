@@ -310,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Packet-Sniffing-and-Spoofing-Lab"><span class="post-toc-text">Packet Sniffing and Spoofing Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lab-Task-Set1-Using-Scapy-to-Sniff-and-Spoof-Packets"><span class="post-toc-text">Lab Task Set1. Using Scapy to  Sniff and Spoof Packets</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-1-Sniffing-Packets"><span class="post-toc-text">Task1.1 Sniffing Packets</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task1-1A"><span class="post-toc-text">Task1.1A.</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task1-1B"><span class="post-toc-text">Task1.1B</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-2-Spoofing-ICMP-Packets"><span class="post-toc-text">Task1.2 Spoofing ICMP Packets</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-3-Traceroute"><span class="post-toc-text">Task1.3 Traceroute</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-4-Sniffing-and-then-Spoofing"><span class="post-toc-text">Task1.4 Sniffing and-then Spoofing</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lab-Task-Set2-Writing-Programs-to-Sniff-and-Spoof-Packets"><span class="post-toc-text">Lab Task Set2. Writing Programs to Sniff and Spoof Packets</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-1-Writing-Packet-Sniffing-Program"><span class="post-toc-text">Task2.1 Writing Packet Sniffing Program</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-1A-Understanding-How-a-Sniffer-Works"><span class="post-toc-text">Task2.1A Understanding How a Sniffer Works</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-1B-Writing-Filters"><span class="post-toc-text">Task2.1B Writing Filters</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-1C-Sniffing-Passwords"><span class="post-toc-text">Task2.1C Sniffing Passwords</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task2-2-Spoofing"><span class="post-toc-text">Task2.2 Spoofing</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-2A-Write-a-spoofing-program"><span class="post-toc-text">Task2.2A Write a spoofing program</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Task2-2B-Spoofing-and-ICMP-Echo-Request"><span class="post-toc-text">Task2.2B Spoofing and ICMP Echo Request</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task-2-3-Sniff-and-then-Spoof"><span class="post-toc-text">Task 2.3 Sniff and then Spoof</span></a></li></ol></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Packet-Sniffing-and-Spoofing-Lab"><a href="#Packet-Sniffing-and-Spoofing-Lab" class="headerlink" title="Packet Sniffing and Spoofing Lab"></a>Packet Sniffing and Spoofing Lab</h1><p><strong>Packet Sniffing (数据包嗅探)</strong>:</p>
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="Packet-Sniffing-and-Spoofing-Lab"><a href="#Packet-Sniffing-and-Spoofing-Lab" class="headerlink" title="Packet Sniffing and Spoofing Lab"></a>Packet Sniffing and Spoofing Lab</h1><p><strong>Packet Sniffing (数据包嗅探)</strong>:</p>
 <p>Packet sniffing是指截获和监视计算机网络上传输的数据包的过程。攻击者或网络管理员可以使用数据包嗅探工具来捕获通过网络传输的数据，从而获得敏感信息，例如用户名、密码、以及其他未加密的数据。合法的用途包括网络故障排除、性能分析和网络管理。然而，当恶意使用时，数据包嗅探可能导致隐私泄漏和安全漏洞。</p>
 <p><strong>Packet Spoofing (数据包欺骗)</strong>:</p>
 <p>Packet spoofing是指伪造或欺骗网络上的数据包，使其看起来好像来自于不同的源或目标。攻击者可能使用数据包欺骗来隐藏其真实的身份或执行欺骗攻击，例如欺骗过滤器或防火墙，或者执行中间人攻击。这种技术可能会导致对网络的伪装攻击，使得攻击者能够劫持通信、篡改数据包或执行其他恶意操作。</p>
@@ -575,12 +575,14 @@
 <p><a href="/../img/Packet-Sniffing-and-Spoofing-Lab/58.png" title="58" class="gallery-item" style="box-shadow: none;"> <img src="/../img/Packet-Sniffing-and-Spoofing-Lab/58.png" alt="58"></a></p>
 <p>至此，实验结束。</p>
 <p>用C语言捕获和构造数据包需要考虑的地方更多，但是灵活性也更大，所以难度较大，需要多加练习。</p>
-</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
-        }</script>
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
     </div>
 
     <div class="post-meta">
@@ -661,12 +663,13 @@
 
     <!--目录-->
     
-        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
         
 <script src="/js/toc.js"></script>
 
+    
     
 
     

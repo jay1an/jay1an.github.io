@@ -310,7 +310,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Buffer-Overflow"><span class="post-toc-text">Buffer Overflow</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Overview"><span class="post-toc-text">Overview</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task1-Get-Familiar-with-the-Shellcode"><span class="post-toc-text">Task1. Get Familiar with the Shellcode</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task2-Level-1-Attack"><span class="post-toc-text">Task2. Level-1 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task3-Level-2-Attack"><span class="post-toc-text">Task3. Level-2 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task4-Level-3-Attack"><span class="post-toc-text">Task4. Level-3 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task5-Level-4-Attack"><span class="post-toc-text">Task5. Level-4 Attack</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task6-Experimenting-with-the-Address-Randomization"><span class="post-toc-text">Task6. Experimenting with the Address Randomization</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Task7-Experimenting-with-Other-Countermeasures"><span class="post-toc-text">Task7. Experimenting with Other Countermeasures</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="css/lightgallery.min.css" /><div class=".article-gallery"><h1 id="Buffer-Overflow"><a href="#Buffer-Overflow" class="headerlink" title="Buffer Overflow"></a>Buffer Overflow</h1><p>缓冲区溢出是一种软件漏洞类型，发生在程序向内存块（缓冲区）写入的数据超过了为其分配的空间。这可能导致各种问题，包括崩溃、意外行为，有时还包括安全漏洞，攻击者可以利用这些漏洞。</p>
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="Buffer-Overflow"><a href="#Buffer-Overflow" class="headerlink" title="Buffer Overflow"></a>Buffer Overflow</h1><p>缓冲区溢出是一种软件漏洞类型，发生在程序向内存块（缓冲区）写入的数据超过了为其分配的空间。这可能导致各种问题，包括崩溃、意外行为，有时还包括安全漏洞，攻击者可以利用这些漏洞。</p>
 <p>以下是与缓冲区溢出相关的关键概念的简要概述：</p>
 <ol>
 <li><strong>缓冲区</strong>：缓冲区是计算机内存中的临时存储区域。缓冲区通常用于保存从文件、网络连接或其他I&#x2F;O操作读取或写入的数据。</li>
@@ -436,12 +436,14 @@
 <h3 id="Task7-Experimenting-with-Other-Countermeasures"><a href="#Task7-Experimenting-with-Other-Countermeasures" class="headerlink" title="Task7. Experimenting with Other Countermeasures"></a>Task7. Experimenting with Other Countermeasures</h3><p>进入 server-code 文件夹，去除 -fno-stack-protector 编译 stack.c，并将 badfile 作为输入。</p>
 <p>然后系统会检测到stack smashing，会终止该进程。</p>
 <p>在shellcode文件夹下，去除-z execstack，再编译call_shellcode.c，执行生成的out文件会出现Segmentation fault，栈不再运行了。</p>
-</div><script src="js/lightgallery.min.js"></script><script>if("undefined"!=typeof lightGallery) {
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
         var options1 = {
             selector: '.gallery-item'
         };
-        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1);
-        }</script>
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
     </div>
 
     <div class="post-meta">
@@ -522,12 +524,13 @@
 
     <!--目录-->
     
-        <script src="js/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
-        <script src="js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
-        <script src="js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
         
 <script src="/js/toc.js"></script>
 
+    
     
 
     

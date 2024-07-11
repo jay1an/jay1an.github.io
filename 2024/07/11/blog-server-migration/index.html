@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="博客迁移记" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/tags/">标签</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            博客迁移记
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E8%AE%B0"><span class="post-toc-text">博客迁移记</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BF%81%E7%A7%BB%E5%8A%A8%E6%9C%BA"><span class="post-toc-text">迁移动机</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E4%BA%9B%E5%B7%A5%E4%BD%9C"><span class="post-toc-text">一些工作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-text">阿里云服务器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%9F%E5%90%8D"><span class="post-toc-text">域名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SSL"><span class="post-toc-text">SSL</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="post-toc-text">小结</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E4%B8%8E%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="post-toc-text">一些问题与解决办法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98"><span class="post-toc-text">问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%A3%80%E6%B5%8BSSL%E8%AF%81%E4%B9%A6%E5%A4%B1%E8%B4%A5"><span class="post-toc-text">检测SSL证书失败</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Google-Search-Console%E9%AA%8C%E8%AF%81%E5%A4%B1%E8%B4%A5"><span class="post-toc-text">Google Search Console验证失败</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%89%8B%E6%9C%BA%E7%AB%AF%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE"><span class="post-toc-text">手机端无法访问</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="post-toc-text">解决办法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%88%86%E6%9E%90%E5%8E%9F%E5%9B%A0"><span class="post-toc-text">分析原因</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%B0%9D%E8%AF%95%E5%A4%87%E6%A1%88"><span class="post-toc-text">尝试备案</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%9B%B4%E6%8D%A2%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="post-toc-text">更换服务器</span></a></li></ol></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="博客迁移记"><a href="#博客迁移记" class="headerlink" title="博客迁移记"></a>博客迁移记</h1><p>这篇博客记录我再过去两天将我的博客内容从GitHub Pages迁移到云服务器，以及遇到的一些问题。包括购买域名、解析域名、配置SSL证书以启用HTTPS，以及由于备案问题而更换韩国服务器的过程。</p>
+<h2 id="迁移动机"><a href="#迁移动机" class="headerlink" title="迁移动机"></a>迁移动机</h2><p>GitHub Pages虽然方便，但在某些情况下需要更高的自定义和控制，并且国内访问Github服务器速度太慢，导致访问博客时加载时间太长，所以最终决定将博客迁移到合适的云服务器上。</p>
+<h2 id="一些工作"><a href="#一些工作" class="headerlink" title="一些工作"></a>一些工作</h2><h3 id="阿里云服务器"><a href="#阿里云服务器" class="headerlink" title="阿里云服务器"></a>阿里云服务器</h3><p>首先我选择了阿里云服务器，购买之后，调整安全组，设置ssh、80、443端口开放，设置好root账户密码之后就可以在本机上通过<code>ssh root@ip</code>的方式连接到服务器。</p>
+<p>连接好服务器之后安装<code>apache</code>服务，从github仓库将博客的内容clone下到<code>/var/www/html</code>目录下，再调整一下<code>apache</code>设置。完成之后就可以通过<code>http://ip</code>的方式访问博客。</p>
+<p>由于我购买的云服务器是在西南地区（成都），所以在不开梯子的情况下，访问速度还是比之前访问GitHub Pages要快很多（但是也没有很快，下一篇会有原因）。</p>
+<h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>然后在阿里云上购买了一个域名：<code>jay1an.site</code>。</p>
+<p>设置DNS解析（需要对域名进行备案），等待生效之后就可以通过<code>http://jay1an.site</code>的方式进行访问了。 </p>
+<p><a href="/../img/blog-server-migration/image-20240711161831137.png" title="image-20240711161831137" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711161831137.png" alt="image-20240711161831137"></a></p>
+<h3 id="SSL"><a href="#SSL" class="headerlink" title="SSL"></a>SSL</h3><p>HTTP是明文传输的，我想改用HTTPS协议，另外还想将所有HTTP的请求自动重定向到HTTPS（端口443）。这样，即使用户访问的是HTTP链接，也会被安全地重定向到HTTPS链接。</p>
+<p>但是开启HTTPS需要配置SSL证书。</p>
+<p>一开始，我选择自己生成证书，这个可以使用<code>OpenSSL</code>工具完成，最终获得<code>.crt</code>和<code>.key</code>文件，然后再编辑<code>apache</code>的配置文件，使得证书生效。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:443</span>&gt;</span></span><br><span class="line">    ServerName jay1an.site</span><br><span class="line">    DocumentRoot /var/www/html/jay1an.github.io</span><br><span class="line"></span><br><span class="line">    SSLEngine on</span><br><span class="line">    SSLCertificateFile /path/to/server.crt</span><br><span class="line">    SSLCertificateKeyFile /path/to/private.key</span><br><span class="line"></span><br><span class="line">    ErrorLog $&#123;APACHE_LOG_DIR&#125;/error.log</span><br><span class="line">    CustomLog $&#123;APACHE_LOG_DIR&#125;/access.log combined</span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>但由于自签名证书不被浏览器信任，每次使用HTTPS协议访问博客时，浏览器都会弹出安全提示，就像下图一样。</p>
+<p>虽然点击advanced按钮仍然可以继续访问，并且也是是用了SSL加密传输过程，使用密文传输，但是观感不太好。</p>
+<p><a href="/../img/blog-server-migration/image-20240711163142014.png" title="image-20240711163142014" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711163142014.png" alt="image-20240711163142014"></a></p>
+<p>所以我决定使用受信任的CA机构签发的SSL证书，可以使用一些免费的工具生成但是日期不是很长，我嫌麻烦就直接上淘宝上购买了一个证书服务，只需要给出域名，店家几分钟之后就会将对应的权威证书发送过来，有效期一年。</p>
+<p><a href="/../img/blog-server-migration/image-20240711163623466.png" title="image-20240711163623466" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711163623466.png" alt="image-20240711163623466"></a></p>
+<p>然后将这些证书配置到<code>apache</code>中，之后访问<code>https://jay1an.site</code>浏览器就不会提示不安全了。</p>
+<p><a href="/../img/blog-server-migration/image-20240711163915518.png" title="image-20240711163915518" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711163915518.png" alt="image-20240711163915518"></a></p>
+<p>最后配置HTTP到HTTPS的重定向</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">VirtualHost</span> *<span class="attr">:80</span>&gt;</span></span><br><span class="line">    ServerAdmin webmaster@jay1an.site</span><br><span class="line">    ServerName jay1an.site</span><br><span class="line">    DocumentRoot /var/www/html/jay1an.github.io</span><br><span class="line"></span><br><span class="line">    ErrorLog $&#123;APACHE_LOG_DIR&#125;/error.log</span><br><span class="line">    CustomLog $&#123;APACHE_LOG_DIR&#125;/access.log combined</span><br><span class="line"></span><br><span class="line">    RewriteEngine On</span><br><span class="line">    RewriteCond %&#123;HTTPS&#125; off</span><br><span class="line">    RewriteRule ^ https://%&#123;HTTP_HOST&#125;%&#123;REQUEST_URI&#125; [R=301,L]</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">Directory</span> /<span class="attr">var</span>/<span class="attr">www</span>/<span class="attr">html</span>/<span class="attr">jay1an.github.io</span>&gt;</span></span><br><span class="line">        Options Indexes FollowSymLinks</span><br><span class="line">        AllowOverride All</span><br><span class="line">        Require all granted</span><br><span class="line">    <span class="tag">&lt;/<span class="name">Directory</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    # Other settings as needed</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">VirtualHost</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p>到此，在PC端可以使用<code>https://jay1an.site</code>访问我的个人博客，速度比从GitHub Pages上访问快多了，并且现在不会有任何安全风险提示。但是我的网站没有备案，所以通过HTTP协议访问的时候<code>http://jay1an.site</code>会被阿里云拦截，提示该网站未备案所以无法访问，但是在PC端通过HTTPS协议是可以访问的。</p>
+<h2 id="一些问题与解决办法"><a href="#一些问题与解决办法" class="headerlink" title="一些问题与解决办法"></a>一些问题与解决办法</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><h4 id="检测SSL证书失败"><a href="#检测SSL证书失败" class="headerlink" title="检测SSL证书失败"></a>检测SSL证书失败</h4><p>我想尝试在权威的SSL证书验证网站去验证博客网站的SSL加密套件情况，但是一直失败，情况大致如下图。</p>
+<p><a href="/../img/blog-server-migration/94846c13493d282f6b2f480279c26d45_720.jpg" title="img" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/94846c13493d282f6b2f480279c26d45_720.jpg" alt="img"></a></p>
+<p>之后又尝试了<a target="_blank" rel="noopener" href="https://www.ssllabs.com/ssltest/">SSL Server Test (Powered by Qualys SSL Labs)</a>和<a target="_blank" rel="noopener" href="https://www.whynopadlock.com/">Why No Padlock?</a>，都没能检测到SSL…..</p>
+<h4 id="Google-Search-Console验证失败"><a href="#Google-Search-Console验证失败" class="headerlink" title="Google Search Console验证失败"></a>Google Search Console验证失败</h4><p>我尝试将博客加入Google Search Console ，在认证所有权这一步被卡住，我当时采用的是HTML文件验证方法，即将特定的HTML文件上传至主页，然后可以通过<code>https:/jay1an.site/filename.html</code>的方式访问到文件即可。神奇的是，我自己的PC端可以通过这样的方式访问到该文件，但是Google无法验证，”提示无法连接到您的网站服务器“</p>
+<h4 id="手机端无法访问"><a href="#手机端无法访问" class="headerlink" title="手机端无法访问"></a>手机端无法访问</h4><p>我尝试用手机进行访问，当我输入<code>https://</code>+域名 后提示无法访问，失败原因<code>net::ERR_CONNECTION_RESET</code></p>
+<p>一开始我以为是该域名没有被成功解析，但是过了一段时间之后仍然无法访问，并且显示相同的原因，查看详情之后发现域名被成功解析了，但是还是无法访问。</p>
+<p><a href="/../img/blog-server-migration/image-20240711170417501.png" title="image-20240711170417501" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711170417501.png" alt="image-20240711170417501"></a></p>
+<p>但是直接通过<code>https://</code>+<code>IP</code>的方式却可以访问。</p>
+<p><a href="/../img/blog-server-migration/image-20240711170511013.png" title="image-20240711170511013" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711170511013.png" alt="image-20240711170511013"></a></p>
+<p>与这个案例类似：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/ask/234705">HTTPS无法访问，提示ERRCONNECTIONRESET_问答-阿里云开发者社区 (aliyun.com)</a></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="分析原因"><a href="#分析原因" class="headerlink" title="分析原因"></a>分析原因</h4><p>在查阅资料后，我觉得大概率是因为网站没有备案，因为我的网站挂在阿里的成都服务器上，所以域名解析之后被阿里识别并阻断了。</p>
+<p>（但是我不知道为什么PC端可以通过域名访问。。。）</p>
+<p><a href="/../img/blog-server-migration/image-20240711170745155.png" title="image-20240711170745155" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711170745155.png" alt="image-20240711170745155"></a></p>
+<h4 id="尝试备案"><a href="#尝试备案" class="headerlink" title="尝试备案"></a>尝试备案</h4><p>之前域名备案的流程非常简单并且流程也非常快。</p>
+<p>但是网站备案的流程有点儿繁琐，并且审核周期非常长要十多天，于是不就不太想给网站备案了。</p>
+<p>但是如果将网站部署在中国内地之外的服务器，比如说港澳台和其他国家的服务器，这样就不需要对网站进行备案了，所以我就把阿里云的服务器退了，尝试将网站挂在一个不需要备案的服务器上。</p>
+<h4 id="更换服务器"><a href="#更换服务器" class="headerlink" title="更换服务器"></a>更换服务器</h4><p>一开始我尝试在国内的云服务厂商上购买香港的服务器，但是配完之后发现这类服务器是不享受优惠的…..最后一年的价格就要一千多………..</p>
+<p>之后想起来微软的<code>Azure</code>可以通过学生认证领取免费权益，可以免费使用云服务器资源。</p>
+<p><code>Azure</code>的学生认证非常简单，只需要提供学生邮箱即可，认证结束之后即可领取100USD的额度和750小时免费云服务器使用额度。</p>
+<p>在<code>Azure</code>中创建了位于一个韩国的VPS</p>
+<p><a href="/../img/blog-server-migration/image-20240711172522757.png" title="image-20240711172522757" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711172522757.png" alt="image-20240711172522757"></a></p>
+<p>再重新配置<code>apache</code>和SSL，重新改变域名解析结果，等生效之后就转移成功了。</p>
+<p>这样就成功解决了因为网站挂在国内服务器需要备案的问题，现在SSL证书可以被成功检测到、Google Search Console也可以验证、手机端也可以正常访问了。</p>
+<p>但是，出现了新的问题，当我用国内的网络访问网站时，虽然以前在GitHub Pages上访问要快多了，但是在加载网页的时候仍然有卡顿。</p>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-11</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
+                            博客搭建
+                        </a>
+                    
+                        <a href='/tags/SSL/'>
+                            SSL
+                        </a>
+                    
+                        <a href='/tags/%E7%BD%91%E7%AB%99%E5%A4%87%E6%A1%88/'>
+                            网站备案
+                        </a>
+                    
+                        <a href='/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+                            云服务器
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
+                            博客搭建
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
