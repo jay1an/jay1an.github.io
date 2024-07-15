@@ -314,7 +314,7 @@
 <h2 id="迁移动机"><a href="#迁移动机" class="headerlink" title="迁移动机"></a>迁移动机</h2><p>GitHub Pages虽然方便，但在某些情况下需要更高的自定义和控制，并且国内访问Github服务器速度太慢，导致访问博客时加载时间太长，所以最终决定将博客迁移到合适的云服务器上。</p>
 <h2 id="一些工作"><a href="#一些工作" class="headerlink" title="一些工作"></a>一些工作</h2><h3 id="阿里云服务器"><a href="#阿里云服务器" class="headerlink" title="阿里云服务器"></a>阿里云服务器</h3><p>首先我选择了阿里云服务器，购买之后，调整安全组，设置ssh、80、443端口开放，设置好root账户密码之后就可以在本机上通过<code>ssh root@ip</code>的方式连接到服务器。</p>
 <p>连接好服务器之后安装<code>apache</code>服务，从github仓库将博客的内容clone下到<code>/var/www/html</code>目录下，再调整一下<code>apache</code>设置。完成之后就可以通过<code>http://ip</code>的方式访问博客。</p>
-<p>由于我购买的云服务器是在西南地区（成都），所以在不开梯子的情况下，访问速度还是比之前访问GitHub Pages要快很多（但是也没有很快，下一篇会有原因）。</p>
+<p>由于我购买的云服务器是在西南地区（成都），所以在不开梯子的情况下使用国内的校园网访问，速度还是比之前访问GitHub Pages要快很多（但是也没有很快，下一篇会有原因）。</p>
 <h3 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h3><p>然后在阿里云上购买了一个域名：<code>jay1an.site</code>。</p>
 <p>设置DNS解析（需要对域名进行备案），等待生效之后就可以通过<code>http://jay1an.site</code>的方式进行访问了。 </p>
 <p><a href="/../img/blog-server-migration/image-20240711161831137.png" title="image-20240711161831137" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-server-migration/image-20240711161831137.png" alt="image-20240711161831137"></a></p>
