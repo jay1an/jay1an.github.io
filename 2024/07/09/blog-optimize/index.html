@@ -310,7 +310,7 @@
 <p>所以这篇博客记录我是如何优化博客访问速度、如何进行安全加固，以及后续可能会更新的优化博客使用体验的操作。</p>
 <h2 id="博客访问速度优化"><a href="#博客访问速度优化" class="headerlink" title="博客访问速度优化"></a>博客访问速度优化</h2><h3 id="CDN-服务器问题"><a href="#CDN-服务器问题" class="headerlink" title="CDN 服务器问题"></a>CDN 服务器问题</h3><h4 id="问题发现"><a href="#问题发现" class="headerlink" title="问题发现"></a>问题发现</h4><p>打开浏览器开发工具，切换到网络工具，查看本机对网站资源的请求情况。</p>
 <p>我发现我的博客内容中的图片的请求速度还挺快，但是我的博客内容却要在图片加载完成之后一段时间才能被浏览器渲染出来。</p>
-<p>这是我使用的这个hexo博客主题<code>A4</code>设置中，有一些静态的资源<code>css</code>、<code>js</code>和字体是从cdn上请求下来的。</p>
+<p>在我使用的这个hexo博客主题<code>A4</code>设置中，有一些静态的资源<code>css</code>、<code>js</code>和字体是从cdn上请求下来的。</p>
 <p><a href="/../img/blog-optimize/image-20240711184912146.png" title="image-20240711184912146" class="gallery-item" style="box-shadow: none;"> <img src="/../img/blog-optimize/image-20240711184912146.png" alt="image-20240711184912146"></a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">jay1an@Azure-jay1an:~$ curl ipinfo.io/104.21.82.50</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;ip&quot;</span>: <span class="string">&quot;104.21.82.50&quot;</span>,</span><br><span class="line">  <span class="string">&quot;anycast&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">&quot;city&quot;</span>: <span class="string">&quot;San Francisco&quot;</span>,</span><br><span class="line">  <span class="string">&quot;region&quot;</span>: <span class="string">&quot;California&quot;</span>,</span><br><span class="line">  <span class="string">&quot;country&quot;</span>: <span class="string">&quot;US&quot;</span>,</span><br><span class="line">  <span class="string">&quot;loc&quot;</span>: <span class="string">&quot;37.7621,-122.3971&quot;</span>,</span><br><span class="line">  <span class="string">&quot;org&quot;</span>: <span class="string">&quot;AS13335 Cloudflare, Inc.&quot;</span>,</span><br><span class="line">  <span class="string">&quot;postal&quot;</span>: <span class="string">&quot;94107&quot;</span>,</span><br><span class="line">  <span class="string">&quot;timezone&quot;</span>: <span class="string">&quot;America/Los_Angeles&quot;</span>,</span><br><span class="line">  <span class="string">&quot;readme&quot;</span>: <span class="string">&quot;https://ipinfo.io/missingauth&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -430,16 +430,16 @@
                 <span>打上标签:
                     
                     
+                        <a href='/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
+                            云服务器
+                        </a>
+                    
                         <a href='/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/'>
                             博客搭建
                         </a>
                     
                         <a href='/tags/CDN/'>
                             CDN
-                        </a>
-                    
-                        <a href='/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/'>
-                            云服务器
                         </a>
                     
                         <a href='/tags/%E5%AE%89%E5%85%A8/'>
