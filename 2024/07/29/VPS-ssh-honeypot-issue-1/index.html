@@ -12,7 +12,7 @@
     <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
-    <meta name="description" content="" />
+    <meta name="description" content="VPS - SSH蜜罐搭建 - 问题1" />
     <meta name="hexo-theme-A4" content="v1.9.0" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
     <title>Jay1an</title>
@@ -287,49 +287,123 @@
                     
 
                     
-                            
-
-
-<div class="archive-list">
-  <ul class="archive">
-
-    
-    <span><span class="darkmode-ignore">📌</span><i>云服务器</i></span>
- 
-    
-
-    
-    
-
-    
-
-    
-  
-    
-        <li>
-        <span class="archive-date">2024-07-09</span>
-        <div class="archive-main">
-            <a class="archive-title" href="/2024/07/09/blog-optimize/">优化博客网站</a>
-        </div>
-        </li>
-    
-  
-    
-        <li>
-        <span class="archive-date">2024-07-08</span>
-        <div class="archive-main">
-            <a class="archive-title" href="/2024/07/08/blog-server-migration/">博客迁移记</a>
-        </div>
-        </li>
-    
-  
-  </ul>
-</div>
- 
-                    
                     
                     
                     <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            VPS - SSH蜜罐搭建 - 问题1
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#VPS-SSH%E8%9C%9C%E7%BD%90%E6%90%AD%E5%BB%BA-%E9%97%AE%E9%A2%981"><span class="post-toc-text">VPS - SSH蜜罐搭建 - 问题1</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%83%8C%E6%99%AF"><span class="post-toc-text">背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3-%E5%BC%83%E7%94%A8iptables"><span class="post-toc-text">解决 - 弃用iptables</span></a></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="VPS-SSH蜜罐搭建-问题1"><a href="#VPS-SSH蜜罐搭建-问题1" class="headerlink" title="VPS - SSH蜜罐搭建 - 问题1"></a>VPS - SSH蜜罐搭建 - 问题1</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>我配置好SSH蜜罐与MySQL服务之后，过了一夜，我连接到VPS的数据库上进行查询，发现记录的所有的攻击的源IP都是<code>172.19.0.1</code>，即VPS主机对于<code>cowrie</code>容器的IP。</p>
+<p><a href="/../img/VPS-ssh-honeypot-issue-1/image-20240729140003713.png" title="image-20240729140003713" class="gallery-item" style="box-shadow: none;"> <img src="/../img/VPS-ssh-honeypot-issue-1/image-20240729140003713.png" alt="image-20240729140003713"></a></p>
+<p>这当然不是我意料之中的，本地的IP也没有什么价值，所以我还是想收集原本的IP。</p>
+<h2 id="解决-弃用iptables"><a href="#解决-弃用iptables" class="headerlink" title="解决 - 弃用iptables"></a>解决 - 弃用iptables</h2><p>在之前的设置中，VPS的22号端口（默认的SSH端口）被重定向到<code>cowrie</code>容器的2222号端口。具体步骤如下：</p>
+<ol>
+<li><p><strong>Docker端口映射</strong>：</p>
+<ul>
+<li>在Docker中，将<code>cowrie</code>容器的2222号端口映射到VPS的2222号端口。这意味着VPS的2222号端口开放的是<code>cowrie</code>的服务。</li>
+</ul>
+<p><strong>iptables重定向</strong>：</p>
+<ul>
+<li>在VPS上配置iptables规则，将所有到达VPS的22号端口的网络请求重定向到本机的2222号端口。这使得所有外部的SSH连接请求都会被自动转发到<code>cowrie</code>容器的2222号端口。</li>
+</ul>
+</li>
+</ol>
+<p>当时设置的iptables的命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo iptables -t nat -A PREROUTING -p tcp --dport 22 -j REDIRECT --to-port 2222</span><br></pre></td></tr></table></figure>
+
+<p>我猜测问题的原因应该是这里的NAT设置，所以我决定弃用iptables，直接将<code>cowrie</code>容器的2222号端口映射到VPS的22号端口。</p>
+<p>修改<code>docker-compose.yml</code>文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">version: &#x27;3&#x27;</span><br><span class="line"></span><br><span class="line">volumes:</span><br><span class="line">  cowrie-var:</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line">  cowrie:</span><br><span class="line">    restart: always</span><br><span class="line">    build:</span><br><span class="line">      context: ./</span><br><span class="line">      dockerfile: Dockerfile</span><br><span class="line">    ports:</span><br><span class="line">      - &quot;22:2222&quot;</span><br><span class="line">        # - &quot;2223:2223&quot;</span><br><span class="line">    volumes:</span><br><span class="line">      - ./etc:/cowrie/cowrie-git/etc</span><br><span class="line">      - cowrie-var:/cowrie/cowrie-git/var</span><br></pre></td></tr></table></figure>
+
+<p>然后执行以下命令即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 停止并删除现有的容器</span></span><br><span class="line">docker-compose down</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新创建并启动容器</span></span><br><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+
+<p>再次使用<code>docker ps</code>命令，在状态栏下可以发现端口映射已经修改成功了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo docker ps</span><br><span class="line">CONTAINER ID   IMAGE           COMMAND                  CREATED          STATUS          PORTS                                                  NAMES</span><br><span class="line">83388cf01d3b   cowrie_cowrie   <span class="string">&quot;/cowrie/cowrie-env/…&quot;</span>   15 minutes ago   Up 15 minutes   2223/tcp, 0.0.0.0:22-&gt;2222/tcp, :::22-&gt;2222/tcp        cowrie_cowrie_1</span><br></pre></td></tr></table></figure>
+
+<p>重新配置好之后就可以捕获到真正的IP了：</p>
+<p><a href="/../img/VPS-ssh-honeypot-issue-1/image-20240729144753277-1722239160896.png" title="image-20240729144753277" class="gallery-item" style="box-shadow: none;"> <img src="/../img/VPS-ssh-honeypot-issue-1/image-20240729144753277-1722239160896.png" alt="image-20240729144753277"></a></p>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-29</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/'>
+                            网络安全
+                        </a>
+                    
+                        <a href='/tags/VPS/'>
+                            VPS
+                        </a>
+                    
+                        <a href='/tags/ssh/'>
+                            ssh
+                        </a>
+                    
+                        <a href='/tags/%E7%BD%91%E7%BB%9C/'>
+                            网络
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/VPS/'>
+                            VPS
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
                     
                     
                     <div class="footer">

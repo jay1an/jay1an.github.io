@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="Linux - 常用指令" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            Linux - 常用指令
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Linux-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="post-toc-text">Linux - 常用指令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9C-netstat"><span class="post-toc-text">查看网络 - netstat</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8A%B6%E6%80%81-top"><span class="post-toc-text">系统运行状态 - top</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BE%93%E5%87%BA%E8%A7%A3%E9%87%8A"><span class="post-toc-text">输出解释</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E7%B3%BB%E7%BB%9F%E4%BF%A1%E6%81%AF%E9%83%A8%E5%88%86"><span class="post-toc-text">系统信息部分</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BB%BB%E5%8A%A1%E5%92%8C-CPU-%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="post-toc-text">任务和 CPU 使用情况</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%86%85%E5%AD%98%E5%92%8C%E4%BA%A4%E6%8D%A2%E5%8C%BA%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5"><span class="post-toc-text">内存和交换区使用情况</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%BF%9B%E7%A8%8B%E5%88%97%E8%A1%A8%E9%83%A8%E5%88%86"><span class="post-toc-text">进程列表部分</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="post-toc-text">使用技巧</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8-free"><span class="post-toc-text">内存使用 - free</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%BE%93%E5%87%BA%E8%A7%A3%E9%87%8A-1"><span class="post-toc-text">输出解释</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%AE%A1%E7%90%86%E6%9C%8D%E5%8A%A1-systemctl"><span class="post-toc-text">管理服务 - systemctl</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#systemctl-status-service"><span class="post-toc-text">systemctl status [service]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#systemctl-start-service"><span class="post-toc-text">systemctl start [service]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#systemctl-stop-service"><span class="post-toc-text">systemctl stop [service]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#systemctl-restart-service"><span class="post-toc-text">systemctl restart [service]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#systemctl-reload-service"><span class="post-toc-text">systemctl reload [service]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#systemctl-enable-service"><span class="post-toc-text">systemctl enable [service]</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#systemctl-disable-service"><span class="post-toc-text">systemctl disable [service]</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8-vim"><span class="post-toc-text">文本编辑器 - vim</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%BC%8F"><span class="post-toc-text">基本模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="post-toc-text">常用命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%99%AE%E9%80%9A%E6%A8%A1%E5%BC%8F%E6%93%8D%E4%BD%9C"><span class="post-toc-text">普通模式操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F%E6%93%8D%E4%BD%9C"><span class="post-toc-text">插入模式操作</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F%E6%93%8D%E4%BD%9C"><span class="post-toc-text">命令模式操作</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Docker"><span class="post-toc-text">Docker</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-ps"><span class="post-toc-text">docker ps</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-images"><span class="post-toc-text">docker images</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-network-ls"><span class="post-toc-text">docker network ls</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-logs-tail-5"><span class="post-toc-text">docker logs &lt;container_id&gt; --tail 5</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-compose-up-d"><span class="post-toc-text">docker-compose up -d</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-compose-down"><span class="post-toc-text">docker-compose down</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-compose-restart"><span class="post-toc-text">docker-compose restart</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-volume-ls"><span class="post-toc-text">docker volume ls</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-volume-inspect-my-volume"><span class="post-toc-text">docker volume inspect my_volume</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-stats"><span class="post-toc-text">docker stats</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="Linux-常用指令"><a href="#Linux-常用指令" class="headerlink" title="Linux - 常用指令"></a>Linux - 常用指令</h1><p>除了简单的<code>cd</code>、<code>cat</code>、<code>ls</code>等简单的指令，其他的稍微复杂一点的指令几乎我一般是问chatGPT，有一些可能在做实验和项目的时候会经常用到，当时记得挺清楚，但是时间一久还是容易忘记。</p>
+<p>所以创建这篇博客，记录一下我所用到的一些比较常用的指令。</p>
+<p>(持续更新)</p>
+<h2 id="查看网络-netstat"><a href="#查看网络-netstat" class="headerlink" title="查看网络 - netstat"></a>查看网络 - netstat</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tuln</span><br></pre></td></tr></table></figure>
+
+<p><code>-t</code>：显示 TCP 连接。</p>
+<p><code>-u</code>：显示 UDP 连接。</p>
+<p><code>-l</code>：仅显示在监听状态的连接（即正在等待传入连接的端口）。</p>
+<p><code>-n</code>：以数字形式显示地址和端口号，而不是尝试解析为主机名或服务名。</p>
+<hr>
+<p>一个可能的输出如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Proto Recv-Q Send-Q Local Address           Foreign Address         State</span><br><span class="line">tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN</span><br><span class="line">tcp6       0      0 :::80                   :::*                    LISTEN</span><br><span class="line">udp        0      0 0.0.0.0:123             0.0.0.0:*</span><br></pre></td></tr></table></figure>
+
+<p><strong>输出字段解释：</strong></p>
+<p><strong>Proto</strong>: 协议类型（<code>tcp</code>、<code>udp</code>、<code>tcp6</code>、<code>udp6</code> 等）。</p>
+<p><strong>Recv-Q</strong>: 接收队列的字节数。表示当前接收队列中有多少字节数据尚未处理。</p>
+<p><strong>Send-Q</strong>: 发送队列的字节数。表示当前发送队列中有多少字节数据尚未发送。</p>
+<p><strong>Local Address</strong>: 本地地址和端口。格式为 <code>[IP地址]:[端口号]</code>。如果是 IPv6 地址，则显示为 <code>[IPv6地址]:[端口号]</code>。</p>
+<p><strong>Foreign Address</strong>: 外部地址和端口。对于<strong>监听状态的连接</strong>，这一列显示为 <code>*</code>。</p>
+<p><strong>State</strong>: 连接状态（如 <code>LISTEN</code>、<code>ESTABLISHED</code>、<code>CLOSE_WAIT</code> 等）。对于监听端口，状态通常为 <code>LISTEN</code>。</p>
+<h2 id="系统运行状态-top"><a href="#系统运行状态-top" class="headerlink" title="系统运行状态 - top"></a>系统运行状态 - top</h2><h3 id="输出解释"><a href="#输出解释" class="headerlink" title="输出解释"></a>输出解释</h3><p>一个可能的输出：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">top - 07:55:07 up  4:32,  1 user,  load average: 0.07, 0.04, 0.03</span><br><span class="line">Tasks: 111 total,   2 running, 108 sleeping,   1 stopped,   0 zombie</span><br><span class="line">%Cpu(s):  0.7 us,  0.3 sy,  0.0 ni, 96.3 <span class="built_in">id</span>,  2.7 wa,  0.0 hi,  0.0 si,  0.0 st</span><br><span class="line">MiB Mem :    883.6 total,     76.0 free,    444.9 used,    362.8 buff/cache</span><br><span class="line">MiB Swap:  16384.0 total,  15961.9 free,    422.1 used.    288.9 avail Mem</span><br><span class="line"></span><br><span class="line">    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND</span><br><span class="line">   1307 lxd       20   0 1326048 140896  24064 S   1.0  15.6   1:41.15 mysqld</span><br><span class="line">   1188 root      20   0 1597956   3164   2944 S   0.3   0.3   0:02.32 docker-proxy</span><br><span class="line">   3763 lxd       20   0  168724  78584  15744 S   0.3   8.7   0:15.36 python3</span><br><span class="line">      1 root      20   0  167664  10196   6912 S   0.0   1.1   0:04.10 systemd</span><br></pre></td></tr></table></figure>
+
+<h4 id="系统信息部分"><a href="#系统信息部分" class="headerlink" title="系统信息部分"></a>系统信息部分</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">top</span> - <span class="number">07</span>:<span class="number">55</span>:<span class="number">07</span> up  <span class="number">4</span>:<span class="number">32</span>,  <span class="number">1</span> user,  load average: <span class="number">0.07</span>, <span class="number">0.04</span>, <span class="number">0.03</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>07:55:07</strong>：当前系统时间。</li>
+<li><strong>up 4:32</strong>：系统已经运行了 4 小时 32 分钟。</li>
+<li><strong>1 user</strong>：当前有 1 个用户登录。</li>
+<li><strong>load average: 0.07, 0.04, 0.03</strong>：系统的负载平均值，分别表示过去 1 分钟、5 分钟和 15 分钟的平均负载。数值越低，表示系统越空闲。</li>
+</ul>
+<h4 id="任务和-CPU-使用情况"><a href="#任务和-CPU-使用情况" class="headerlink" title="任务和 CPU 使用情况"></a>任务和 CPU 使用情况</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Tasks: 111 total,   2 running, 108 sleeping,   1 stopped,   0 zombie</span><br><span class="line">%Cpu(s):  0.7 us,  0.3 sy,  0.0 ni, 96.3 <span class="built_in">id</span>,  2.7 wa,  0.0 hi,  0.0 si,  0.0 st</span><br></pre></td></tr></table></figure>
+
+<p><strong>Tasks</strong>：</p>
+<ul>
+<li><strong>111 total</strong>：总共有 111 个任务（进程）。</li>
+<li><strong>2 running</strong>：有 2 个任务正在运行。</li>
+<li><strong>108 sleeping</strong>：有 108 个任务处于休眠状态。</li>
+<li><strong>1 stopped</strong>：有 1 个任务被停止。</li>
+<li><strong>0 zombie</strong>：没有僵尸进程。</li>
+</ul>
+<p>**%Cpu(s)**：</p>
+<ul>
+<li><strong>0.7 us</strong>：用户态 CPU 使用百分比。</li>
+<li><strong>0.3 sy</strong>：系统态 CPU 使用百分比。</li>
+<li><strong>0.0 ni</strong>：改变优先级的进程使用的 CPU 百分比。</li>
+<li><strong>96.3 id</strong>：空闲 CPU 百分比。</li>
+<li><strong>2.7 wa</strong>：等待 I&#x2F;O 操作的 CPU 百分比。</li>
+<li><strong>0.0 hi</strong>：硬中断的 CPU 百分比。</li>
+<li><strong>0.0 si</strong>：软件中断的 CPU 百分比。</li>
+<li><strong>0.0 st</strong>：被虚拟机偷取的 CPU 百分比。</li>
+</ul>
+<h4 id="内存和交换区使用情况"><a href="#内存和交换区使用情况" class="headerlink" title="内存和交换区使用情况"></a>内存和交换区使用情况</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MiB Mem :    <span class="number">883.6</span> total,     <span class="number">76.0</span> <span class="built_in">free</span>,    <span class="number">444.9</span> used,    <span class="number">362.8</span> buff/cache</span><br><span class="line">MiB Swap:  <span class="number">16384.0</span> total,  <span class="number">15961.9</span> <span class="built_in">free</span>,    <span class="number">422.1</span> used.    <span class="number">288.9</span> avail Mem</span><br></pre></td></tr></table></figure>
+
+<p><strong>Mem</strong>（内存）：</p>
+<ul>
+<li><strong>883.6 total</strong>：总内存为 883.6 MiB。</li>
+<li><strong>76.0 free</strong>：空闲内存为 76.0 MiB。</li>
+<li><strong>444.9 used</strong>：已用内存为 444.9 MiB。</li>
+<li><strong>362.8 buff&#x2F;cache</strong>：缓存和缓冲区使用的内存为 362.8 MiB。</li>
+</ul>
+<p><strong>Swap</strong>（交换区）：</p>
+<ul>
+<li><strong>16384.0 total</strong>：总交换区为 16384.0 MiB。</li>
+<li><strong>15961.9 free</strong>：空闲交换区为 15961.9 MiB。</li>
+<li><strong>422.1 used</strong>：已用交换区为 422.1 MiB。</li>
+<li><strong>288.9 avail Mem</strong>：可用内存为 288.9 MiB。</li>
+</ul>
+<h4 id="进程列表部分"><a href="#进程列表部分" class="headerlink" title="进程列表部分"></a>进程列表部分</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     <span class="selector-tag">TIME</span>+ COMMAND</span><br><span class="line"><span class="number">1307</span> lxd       <span class="number">20</span>   <span class="number">0</span> <span class="number">1326048</span> <span class="number">140896</span>  <span class="number">24064</span> S   <span class="number">1.0</span>  <span class="number">15.6</span>   <span class="number">1</span>:<span class="number">41.15</span> mysqld</span><br><span class="line"><span class="number">1188</span> root      <span class="number">20</span>   <span class="number">0</span> <span class="number">1597956</span>   <span class="number">3164</span>   <span class="number">2944</span> S   <span class="number">0.3</span>   <span class="number">0.3</span>   <span class="number">0</span>:<span class="number">02.32</span> docker-proxy</span><br><span class="line"><span class="number">3763</span> lxd       <span class="number">20</span>   <span class="number">0</span>  <span class="number">168724</span>  <span class="number">78584</span>  <span class="number">15744</span> S   <span class="number">0.3</span>   <span class="number">8.7</span>   <span class="number">0</span>:<span class="number">15.36</span> python3</span><br><span class="line">   <span class="number">1</span> root      <span class="number">20</span>   <span class="number">0</span>  <span class="number">167664</span>  <span class="number">10196</span>   <span class="number">6912</span> S   <span class="number">0.0</span>   <span class="number">1.1</span>   <span class="number">0</span>:<span class="number">04.10</span> systemd</span><br></pre></td></tr></table></figure>
+
+<p><strong>PID</strong>：进程 ID。</p>
+<p><strong>USER</strong>：启动进程的用户。</p>
+<p><strong>PR</strong>：进程优先级。</p>
+<p><strong>NI</strong>：进程的 nice 值。</p>
+<p><strong>VIRT</strong>：进程使用的虚拟内存量。 (KB)</p>
+<p><strong>RES</strong>：进程使用的实际物理内存量。  (KB)</p>
+<p><strong>SHR</strong>：进程共享的内存量。  (KB)</p>
+<p><strong>S</strong>：进程状态（S&#x3D;睡眠，R&#x3D;运行，Z&#x3D;僵尸，T&#x3D;停止等）。</p>
+<p><strong>%CPU</strong>：进程使用的 CPU 百分比。</p>
+<p><strong>%MEM</strong>：进程使用的内存百分比。</p>
+<p>**TIME+**：进程的总 CPU 时间。</p>
+<p><strong>COMMAND</strong>：进程的命令名。</p>
+<h3 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h3><p><strong><code>top</code> 命令的交互操作</strong>:</p>
+<ul>
+<li>按 <code>q</code> 退出 <code>top</code>。</li>
+<li>按 <code>P</code> 根据 CPU 使用率排序进程。</li>
+<li>按 <code>M</code> 根据内存使用量排序进程。</li>
+<li>按 <code>N</code> 根据进程 ID 排序进程。</li>
+<li>按 <code>R</code> 反转排序顺序。</li>
+</ul>
+<p><strong>定时刷新</strong>:</p>
+<ul>
+<li>默认情况下，<code>top</code> 每 3 秒刷新一次。可以通过 <code>-d</code> 参数指定自定义刷新间隔。例如，<code>top -d 5</code> 每 5 秒刷新一次。</li>
+</ul>
+<h2 id="内存使用-free"><a href="#内存使用-free" class="headerlink" title="内存使用 - free"></a>内存使用 - free</h2><p><code>free</code> 命令用于显示系统的内存使用情况，包括物理内存（RAM）和交换内存（swap）。它可以帮助你快速了解系统的内存资源使用情况。</p>
+<p>可以有以下选项：</p>
+<p><code>-h</code>：以人类可读的格式显示（例如，GB 和 MB）。</p>
+<p><code>-m</code>：以 MB 为单位显示。</p>
+<p><code>-g</code>：以 GB 为单位显示。</p>
+<p><code>-t</code>：显示总内存和交换内存的统计信息。</p>
+<h3 id="输出解释-1"><a href="#输出解释-1" class="headerlink" title="输出解释"></a>输出解释</h3><p>一个可能的输出如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">               total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:           883Mi       438Mi       116Mi       3.0Mi       328Mi       295Mi</span><br><span class="line">Swap:           15Gi       426Mi        15Gi</span><br></pre></td></tr></table></figure>
+
+<p><strong>内存使用情况</strong>：系统总共有 883 MiB 的物理内存，其中 438 MiB 已被使用，116 MiB 是空闲的，还有 328 MiB 用于缓存和缓冲。可用内存为 295 MiB。</p>
+<p><strong>交换空间使用情况</strong>：系统总共有 15 GiB 的交换内存，其中 426 MiB 已被使用，剩余的 15 GiB 是空闲的。</p>
+<p>可以看出系统的内存使用情况相对较低，缓存的内存也在合理范围内，交换空间使用量不大。这通常意味着系统性能较好，没有特别严重的内存压力。</p>
+<h2 id="管理服务-systemctl"><a href="#管理服务-systemctl" class="headerlink" title="管理服务 - systemctl"></a>管理服务 - systemctl</h2><p><code>systemctl</code> 是一个用于管理和控制系统和服务的工具，主要用于与 <code>systemd</code> 系统和服务管理器交互。允许启动、停止、重启、查看状态等操作服务和系统单元。</p>
+<h3 id="systemctl-status-service"><a href="#systemctl-status-service" class="headerlink" title="systemctl status [service]"></a><code>systemctl status [service]</code></h3><p>例如，查看<code>apache2</code>服务状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$ sudo systemctl status apache2</span><br><span class="line">● apache2.service - The Apache HTTP Server</span><br><span class="line">     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)</span><br><span class="line">     Active: active (running) since Mon 2024-07-29 03:23:18 UTC; 5h 12min ago</span><br><span class="line">       Docs: https://httpd.apache.org/docs/2.4/</span><br><span class="line">   Main PID: 675 (apache2)</span><br><span class="line">      Tasks: 55 (<span class="built_in">limit</span>: 1053)</span><br><span class="line">     Memory: 16.5M</span><br><span class="line">        CPU: 1.773s</span><br><span class="line">     CGroup: /system.slice/apache2.service</span><br><span class="line">             ├─675 /usr/sbin/apache2 -k start</span><br><span class="line">             ├─716 /usr/sbin/apache2 -k start</span><br><span class="line">             └─717 /usr/sbin/apache2 -k start</span><br><span class="line"></span><br><span class="line">Jul 29 03:23:17 Azure-jay1an systemd[1]: Starting The Apache HTTP Server...</span><br><span class="line">Jul 29 03:23:18 Azure-jay1an systemd[1]: Started The Apache HTTP Server.</span><br></pre></td></tr></table></figure>
+
+<h3 id="systemctl-start-service"><a href="#systemctl-start-service" class="headerlink" title="systemctl start [service]"></a><strong><code>systemctl start [service]</code></strong></h3><ul>
+<li>启动一个服务，例如 <code>systemctl start nginx</code>。</li>
+<li>启动指定的服务，并使其开始运行。</li>
+</ul>
+<h3 id="systemctl-stop-service"><a href="#systemctl-stop-service" class="headerlink" title="systemctl stop [service]"></a><strong><code>systemctl stop [service]</code></strong></h3><ul>
+<li>停止一个服务，例如 <code>systemctl stop nginx</code>。</li>
+<li>停止指定的服务，使其不再运行。</li>
+</ul>
+<h3 id="systemctl-restart-service"><a href="#systemctl-restart-service" class="headerlink" title="systemctl restart [service]"></a><strong><code>systemctl restart [service]</code></strong></h3><ul>
+<li>重新启动一个服务，例如 <code>systemctl restart nginx</code>。</li>
+<li>停止并重新启动指定的服务，这对于<strong>应用配置变更</strong>时特别有用。</li>
+</ul>
+<blockquote>
+<p>在服务的配置改变之后，应用新配置需要用到该命令。</p>
+</blockquote>
+<h3 id="systemctl-reload-service"><a href="#systemctl-reload-service" class="headerlink" title="systemctl reload [service]"></a><strong><code>systemctl reload [service]</code></strong></h3><ul>
+<li><strong>重新加载一个服务的配置</strong>，例如 <code>systemctl reload nginx</code>。</li>
+<li>使服务重新加载其配置文件，而无需完全重启。</li>
+</ul>
+<h3 id="systemctl-enable-service"><a href="#systemctl-enable-service" class="headerlink" title="systemctl enable [service]"></a><strong><code>systemctl enable [service]</code></strong></h3><ul>
+<li>设置服务开机启动，例如 <code>systemctl enable nginx</code>。</li>
+<li>配置服务在系统启动时自动启动。</li>
+</ul>
+<h3 id="systemctl-disable-service"><a href="#systemctl-disable-service" class="headerlink" title="systemctl disable [service]"></a><strong><code>systemctl disable [service]</code></strong></h3><ul>
+<li>禁用服务开机启动，例如 <code>systemctl disable nginx</code>。</li>
+<li>配置服务在系统启动时不自动启动。</li>
+</ul>
+<h2 id="文本编辑器-vim"><a href="#文本编辑器-vim" class="headerlink" title="文本编辑器 - vim"></a>文本编辑器 - vim</h2><p>是 vi 的升级版</p>
+<h3 id="基本模式"><a href="#基本模式" class="headerlink" title="基本模式"></a>基本模式</h3><p><code>vim</code> 有三种基本模式：</p>
+<ol>
+<li><strong>普通模式（Normal Mode）</strong>：这是 <code>vim</code> 的默认模式，在这个模式下，你可以进行文本导航、删除、复制等操作。按 <code>Esc</code> 键可以进入普通模式。</li>
+<li><strong>插入模式（Insert Mode）</strong>：在这个模式下，你可以插入和编辑文本。按 <code>i</code>（在光标前插入）、<code>I</code>（在行首插入）、<code>a</code>（在光标后插入）、<code>A</code>（在行尾插入）进入插入模式。按 <code>Esc</code> 返回普通模式。</li>
+<li><strong>命令模式（Command Mode）</strong>：在这个模式下，你可以输入命令来执行特定操作，比如保存文件、退出等。按 <code>:</code> 进入命令模式，输入命令后按 <code>Enter</code> 执行。</li>
+</ol>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="普通模式操作"><a href="#普通模式操作" class="headerlink" title="普通模式操作"></a>普通模式操作</h4><ul>
+<li><strong>移动光标</strong><ul>
+<li><code>h</code>：左移</li>
+<li><code>j</code>：下移</li>
+<li><code>k</code>：上移</li>
+<li><code>l</code>：右移</li>
+<li><code>0</code>：跳到行首</li>
+<li><code>$</code>：跳到行尾</li>
+<li><code>gg</code>：跳到文件开头</li>
+<li><code>G</code>：跳到文件末尾</li>
+</ul>
+</li>
+<li><strong>删除文本</strong><ul>
+<li><code>x</code>：删除光标处的字符</li>
+<li><code>dd</code>：删除当前行</li>
+<li><code>d$</code>：删除光标到行尾的内容</li>
+<li><code>d0</code>：删除光标到行首的内容</li>
+</ul>
+</li>
+<li><strong>复制和粘贴</strong><ul>
+<li><code>yy</code>：复制当前行</li>
+<li><code>p</code>（小写p）：将复制的内容粘贴到当前行的下一行</li>
+<li><code>P</code>(大写P)：粘贴到当前行的上一行</li>
+</ul>
+</li>
+<li><strong>撤销和重做</strong><ul>
+<li><code>u</code>：撤销上一个操作</li>
+</ul>
+</li>
+<li><strong>查找和替换</strong><ul>
+<li><code>/pattern</code>：查找 <code>pattern</code>，按 <code>n</code> 跳到下一个匹配，按 <code>N</code> 跳到上一个匹配</li>
+<li><code>:s/old/new/</code>：在当前行替换 <code>old</code> 为 <code>new</code></li>
+<li><code>:%s/old/new/g</code>：在整个文件中替换 <code>old</code> 为 <code>new</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="插入模式操作"><a href="#插入模式操作" class="headerlink" title="插入模式操作"></a>插入模式操作</h4><ul>
+<li>在插入模式下，直接编辑即可。</li>
+</ul>
+<h4 id="命令模式操作"><a href="#命令模式操作" class="headerlink" title="命令模式操作"></a>命令模式操作</h4><ul>
+<li><strong>保存和退出</strong><ul>
+<li><code>:w</code>：保存文件</li>
+<li><code>:q</code>：退出 <code>vim</code></li>
+<li><code>:wq</code> 或 <code>:x</code>：保存文件并退出 <code>vim</code></li>
+<li><code>:q!</code>：强制退出而不保存更改</li>
+</ul>
+</li>
+<li><strong>其他命令</strong><ul>
+<li><code>:e filename</code>：编辑指定的文件</li>
+<li><code>:r filename</code>：将指定文件的内容插入到当前文件中</li>
+<li><code>:!command</code>：在 <code>vim</code> 中执行外部命令</li>
+</ul>
+</li>
+</ul>
+<p><strong>清空文件</strong>就是<code>ggdG</code>：<code>gg</code>将光标移动到文件的第一行，<code>d</code> 是 <code>vim</code> 中的删除命令的前缀，<code>G</code> 表示文件的最后一行。因此，<code>dG</code> 意味着从当前光标位置（文件的第一行）删除到文件的最后一行的所有内容。所以合起来就是清空文件。</p>
+<h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><h3 id="docker-ps"><a href="#docker-ps" class="headerlink" title="docker ps"></a><code>docker ps</code></h3><p>列出所有正在运行的容器。</p>
+<p><code>-a</code> 选项列出所有容器。</p>
+<blockquote>
+<p>相关指令：</p>
+<p><code>docker start &lt;container_id&gt;</code></p>
+<p><code>docker stop &lt;container_id&gt;</code></p>
+<p><code>docker rm &lt;container_id&gt;</code></p>
+<p><code>docker rm -f &lt;container_id&gt;</code>  强制删除一个运行中的容器</p>
+</blockquote>
+<h3 id="docker-images"><a href="#docker-images" class="headerlink" title="docker images"></a><code>docker images</code></h3><p>列出所有镜像</p>
+<blockquote>
+<p>相关指令：</p>
+<p><code>docker pull &lt;image_name&gt;</code>   从 Docker 仓库拉取一个镜像。</p>
+<p><code>docker rmi &lt;image_id&gt;</code></p>
+<p><code>docker inspect &lt;image_id&gt;</code></p>
+</blockquote>
+<h3 id="docker-network-ls"><a href="#docker-network-ls" class="headerlink" title="docker network ls"></a><code>docker network ls</code></h3><p>列出所有Docker网络。</p>
+<h3 id="docker-logs-tail-5"><a href="#docker-logs-tail-5" class="headerlink" title="docker logs &lt;container_id&gt; --tail 5"></a><code>docker logs &lt;container_id&gt; --tail 5</code></h3><p>查看某个Docker容器日志的最后50行。</p>
+<h3 id="docker-compose-up-d"><a href="#docker-compose-up-d" class="headerlink" title="docker-compose up -d"></a><code>docker-compose up -d</code></h3><p>以分离模式（在后台运行）启动<code>docker-compose.yml</code>文件中定义的Docker服务。</p>
+<h3 id="docker-compose-down"><a href="#docker-compose-down" class="headerlink" title="docker-compose down"></a><code>docker-compose down</code></h3><p>停止并移除<code>docker-compose.yml</code>文件中定义的Docker服务。</p>
+<h3 id="docker-compose-restart"><a href="#docker-compose-restart" class="headerlink" title="docker-compose restart"></a><code>docker-compose restart</code></h3><p><code>docker-compose restart</code> 命令用于重新启动已经运行的容器。它不会重新创建容器，也<strong>不会重新加载任何配置文件的变化</strong>。</p>
+<blockquote>
+<p><strong><code>docker-compose down</code> 和 <code>docker-compose up</code></strong></p>
+<p><code>docker-compose down</code> 命令会停止并移除容器、网络、卷和镜像（停止和删除所有相关资源）。<code>docker-compose up</code> 命令会创建并启动所有服务。</p>
+<p>会重新加载配置文件的变化，容器会被重新创建，之前的容器中的数据和状态会丢失（除非使用卷来持久化数据）</p>
+</blockquote>
+<h3 id="docker-volume-ls"><a href="#docker-volume-ls" class="headerlink" title="docker volume ls"></a><code>docker volume ls</code></h3><p>列出所有Docker卷。</p>
+<h3 id="docker-volume-inspect-my-volume"><a href="#docker-volume-inspect-my-volume" class="headerlink" title="docker volume inspect my_volume"></a><code>docker volume inspect my_volume</code></h3><p>显示名为 <code>my_volume</code> 的卷的详细信息。</p>
+<h3 id="docker-stats"><a href="#docker-stats" class="headerlink" title="docker stats"></a><code>docker stats</code></h3><p><code>docker stats</code> 命令用于显示正在运行的容器的<strong>实时</strong>资源使用统计信息，包括 CPU 使用率、内存使用情况、网络 I&#x2F;O 和磁盘 I&#x2F;O 等。</p>
+<blockquote>
+<p><code>--no-stream</code> 只显示一次统计信息</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O         PIDS</span><br><span class="line">83388cf01d3b   cowrie_cowrie_1   0.00%     60.11MiB / 883.6MiB   6.80%     4.81MB / 5.34MB   6.39MB / 14.9MB   2</span><br><span class="line">dfb2032ec83c   mysql_container   0.55%     137.5MiB / 883.6MiB   15.56%    3.14MB / 2.95MB   162MB / 1.02GB    48</span><br></pre></td></tr></table></figure>
+
+<p><strong>MEM USAGE &#x2F; LIMIT</strong>: 内存使用量与内存限制。</p>
+<p><strong>MEM %</strong>: 内存使用百分比。</p>
+<p><strong>NET I&#x2F;O</strong>: 网络输入&#x2F;输出数据量。</p>
+<p><strong>BLOCK I&#x2F;O</strong>: 磁盘输入&#x2F;输出数据量。</p>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-07-29</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%9F%BA%E7%A1%80/'>
+                            基础
+                        </a>
+                    
+                        <a href='/tags/Linux/'>
+                            Linux
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9F%BA%E7%A1%80/'>
+                            基础
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
