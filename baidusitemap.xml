@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jay1an.site/2024/07/30/coding-practice-2/</loc>
+    <lastmod>2024-07-30</lastmod>
+  </url>
+  <url>
+    <loc>https://jay1an.site/2024/07/26/coding-practice-1/</loc>
+    <lastmod>2024-07-30</lastmod>
+  </url>
+  <url>
     <loc>https://jay1an.site/2024/07/27/VPS-ssh-honeypot/</loc>
     <lastmod>2024-07-29</lastmod>
   </url>
@@ -19,10 +27,6 @@
   <url>
     <loc>https://jay1an.site/2024/07/09/blog-optimize/</loc>
     <lastmod>2024-07-27</lastmod>
-  </url>
-  <url>
-    <loc>https://jay1an.site/2024/07/26/coding-practice-1/</loc>
-    <lastmod>2024-07-26</lastmod>
   </url>
   <url>
     <loc>https://jay1an.site/2024/06/10/algorithms-backtracking/</loc>
