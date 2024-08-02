@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="刷题日记 - 3" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            刷题日记 - 3
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0-3"><span class="post-toc-text">刷题日记 - 3</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#13-%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">13. 罗马数字转整数 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12-%E6%95%B4%E6%95%B0%E8%BD%AC%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">12. 整数转罗马数字 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#58-%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E5%8D%95%E8%AF%8D%E7%9A%84%E9%95%BF%E5%BA%A6-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">58. 最后一个单词的长度 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#14-%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">14. 最长公共前缀 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#151-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E5%8D%95%E8%AF%8D-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">151. 反转字符串中的单词 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#LCP-40-%E5%BF%83%E7%AE%97%E6%8C%91%E6%88%98-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">LCP 40. 心算挑战 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-Z-%E5%AD%97%E5%BD%A2%E5%8F%98%E6%8D%A2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">6. Z 字形变换 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="刷题日记-3"><a href="#刷题日记-3" class="headerlink" title="刷题日记 - 3"></a>刷题日记 - 3</h1><p>记录刷题。</p>
+<h3 id="13-罗马数字转整数-力扣（LeetCode）"><a href="#13-罗马数字转整数-力扣（LeetCode）" class="headerlink" title="13. 罗马数字转整数 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/roman-to-integer/description/?envType=study-plan-v2&envId=top-interview-150">13. 罗马数字转整数 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">romanToInt</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取字符串的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="comment">// 将字符串转换为字符数组，便于逐个字符处理</span></span><br><span class="line">        <span class="type">char</span>[] charArray = s.toCharArray();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 创建一个HashMap来存储罗马数字与整数值的对应关系</span></span><br><span class="line">        HashMap&lt;Character, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">&#x27;I&#x27;</span>, <span class="number">1</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;V&#x27;</span>, <span class="number">5</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;X&#x27;</span>, <span class="number">10</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;L&#x27;</span>, <span class="number">50</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;C&#x27;</span>, <span class="number">100</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;D&#x27;</span>, <span class="number">500</span>);</span><br><span class="line">        map.put(<span class="string">&#x27;M&#x27;</span>, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 初始化结果变量和上一个处理的字符变量</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">char</span> <span class="variable">last</span> <span class="operator">=</span> <span class="string">&#x27;I&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 从右向左遍历字符数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="comment">// 当前处理的字符</span></span><br><span class="line">            <span class="type">char</span> <span class="variable">cur</span> <span class="operator">=</span> charArray[i];</span><br><span class="line">            <span class="comment">// 如果当前字符代表的值小于上一个字符的值，则减去当前字符的值</span></span><br><span class="line">            <span class="keyword">if</span> (map.get(cur) &lt; map.get(last)) &#123;</span><br><span class="line">                res -= map.get(cur);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 否则，加上当前字符的值，并更新上一个字符为当前字符</span></span><br><span class="line">                res += map.get(cur);</span><br><span class="line">                last = cur;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回计算的结果</span></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>根据罗马数字的规律来即可。</p>
+<p>正常情况下是小的字符在右边，但是类似于<code>IV = 5 - 1</code>这种特例，增加变量<code>last</code>记录一下上一个字符，如果当前字符小于上一个字符，表明这就是特殊情况。</p>
+<h3 id="12-整数转罗马数字-力扣（LeetCode）"><a href="#12-整数转罗马数字-力扣（LeetCode）" class="headerlink" title="12. 整数转罗马数字 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/integer-to-roman/description/?envType=study-plan-v2&envId=top-interview-150">12. 整数转罗马数字 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">intToRoman</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">        <span class="comment">// 用于存储结果的StringBuilder</span></span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">res</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 定义数组存储可能的整数值</span></span><br><span class="line">        <span class="type">int</span>[] vals = &#123;<span class="number">1000</span>, <span class="number">900</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">100</span>, <span class="number">90</span>, <span class="number">50</span>, <span class="number">40</span>, <span class="number">10</span>, <span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="comment">// 定义数组存储对应的罗马数字</span></span><br><span class="line">        String[] symbols = &#123;<span class="string">&quot;M&quot;</span>, <span class="string">&quot;CM&quot;</span>, <span class="string">&quot;D&quot;</span>, <span class="string">&quot;CD&quot;</span>, <span class="string">&quot;C&quot;</span>, <span class="string">&quot;XC&quot;</span>, <span class="string">&quot;L&quot;</span>, <span class="string">&quot;XL&quot;</span>, <span class="string">&quot;X&quot;</span>, <span class="string">&quot;IX&quot;</span>, <span class="string">&quot;V&quot;</span>, <span class="string">&quot;IV&quot;</span>, <span class="string">&quot;I&quot;</span>&#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将数字转换为罗马数字</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; vals.length; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (num &gt;= vals[i]) &#123;</span><br><span class="line">                num -= vals[i];</span><br><span class="line">                res.append(symbols[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回结果</span></span><br><span class="line">        <span class="keyword">return</span> res.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>每次都减去可能的最大值。</p>
+<h3 id="58-最后一个单词的长度-力扣（LeetCode）"><a href="#58-最后一个单词的长度-力扣（LeetCode）" class="headerlink" title="58. 最后一个单词的长度 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/length-of-last-word/?envType=study-plan-v2&envId=top-interview-150">58. 最后一个单词的长度 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<hr>
+<p>从前往后：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthOfLastWord</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="comment">// 将字符串转换为字符数组</span></span><br><span class="line">        <span class="type">char</span>[] charArray = s.toCharArray();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// res 用于保存最后一个单词的长度，tmp 用于临时保存当前单词的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// p 用于遍历字符数组的指针，len 为字符串的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历字符串</span></span><br><span class="line">        <span class="keyword">while</span> (p &lt; len) &#123;</span><br><span class="line">            <span class="comment">// 如果当前字符不是空格，增加 tmp 计数器</span></span><br><span class="line">            <span class="keyword">if</span> (charArray[p] != <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                tmp++;</span><br><span class="line">                p++;</span><br><span class="line">            <span class="comment">// 如果当前字符是空格</span></span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (charArray[p] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                <span class="comment">// 将 tmp 的值赋给 res 表示当前单词结束</span></span><br><span class="line">                res = tmp;</span><br><span class="line">                <span class="comment">// 将 tmp 重置为 0 为下一个单词做准备</span></span><br><span class="line">                tmp = <span class="number">0</span>;</span><br><span class="line">                <span class="comment">// 跳过连续的空格</span></span><br><span class="line">                p++;</span><br><span class="line">                <span class="keyword">while</span> (p &lt; len &amp;&amp; charArray[p] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                    p++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 如果遍历到最后并且 tmp 不为 0，更新 res</span></span><br><span class="line">            <span class="keyword">if</span> (p == len &amp;&amp; tmp != <span class="number">0</span>) &#123;</span><br><span class="line">                res = tmp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 返回最后一个单词的长度</span></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>从后往前：</p>
+<p>这个方法其实更合理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthOfLastWord</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">char</span>[] charArray = s.toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> charArray.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=len-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">cur</span> <span class="operator">=</span> charArray[i];</span><br><span class="line">            <span class="keyword">if</span>(cur==<span class="string">&#x27; &#x27;</span>&amp;&amp;res==<span class="number">0</span>) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">if</span>(cur!=<span class="string">&#x27; &#x27;</span>) res++;</span><br><span class="line">            <span class="keyword">if</span>(cur==<span class="string">&#x27; &#x27;</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从最后一个字符开始向前遍历，如果遇到<code>&#39; &#39;</code>并且<code>res=0</code>就跳过，表示这是结尾多余的空字符。</p>
+<p>但是如果遇到了<code>&#39; &#39;</code>并且<code>res&gt;0</code>，表明最后一个单词的长度已经被遍历过去了。</p>
+<h3 id="14-最长公共前缀-力扣（LeetCode）"><a href="#14-最长公共前缀-力扣（LeetCode）" class="headerlink" title="14. 最长公共前缀 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-common-prefix/description/?envType=study-plan-v2&envId=top-interview-150">14. 最长公共前缀 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">longestCommonPrefix</span><span class="params">(String[] strs)</span> &#123;</span><br><span class="line">        <span class="comment">// StringBuilder 用于构建结果字符串</span></span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        <span class="comment">// 索引，用于遍历字符</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">idx</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 标志位，用于控制外层循环</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// 临时变量，用于保存当前比较的字符</span></span><br><span class="line">        <span class="type">char</span> <span class="variable">hold</span> <span class="operator">=</span> <span class="string">&#x27; &#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 外层循环，当 flag 为 true 时继续执行</span></span><br><span class="line">        <span class="keyword">while</span> (flag) &#123;</span><br><span class="line">            <span class="comment">// 遍历每个字符串</span></span><br><span class="line">            <span class="keyword">for</span> (String str : strs) &#123;</span><br><span class="line">                <span class="comment">// 如果当前索引超过字符串长度，设置 flag 为 false 并跳出循环</span></span><br><span class="line">                <span class="keyword">if</span> (idx &gt;= str.length()) &#123;</span><br><span class="line">                    flag = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 获取当前字符串的第 idx 个字符</span></span><br><span class="line">                <span class="type">char</span> <span class="variable">cur</span> <span class="operator">=</span> str.charAt(idx);</span><br><span class="line">                <span class="comment">// 如果 hold 是空格，说明是第一个字符，将 hold 设置为当前字符</span></span><br><span class="line">                <span class="keyword">if</span> (hold == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                    hold = cur;</span><br><span class="line">                <span class="comment">// 否则检查当前字符是否与 hold 相同，如果不同，设置 flag 为 false 并跳出循环</span></span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (hold != cur) &#123;</span><br><span class="line">                    flag = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 索引加一，准备检查下一个字符</span></span><br><span class="line">            idx++;</span><br><span class="line">            <span class="comment">// 如果 flag 仍然为 true，将 hold 的字符添加到结果字符串中</span></span><br><span class="line">            <span class="keyword">if</span> (flag) sb.append(hold);</span><br><span class="line">            <span class="comment">// 重置 hold 为空格，为下一个字符比较做准备</span></span><br><span class="line">            hold = <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回构建的结果字符串</span></span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用指针<code>idx</code>去同步指向每一个<code>str</code>的某个字符的位置，注意<code>break</code>的时机。</p>
+<h3 id="151-反转字符串中的单词-力扣（LeetCode）"><a href="#151-反转字符串中的单词-力扣（LeetCode）" class="headerlink" title="151. 反转字符串中的单词 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/reverse-words-in-a-string/description/?envType=study-plan-v2&envId=top-interview-150">151. 反转字符串中的单词 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">reverseWords</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用 LinkedList 作为栈来存储单词</span></span><br><span class="line">        LinkedList&lt;String&gt; stack = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="type">char</span>[] charArray = s.toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> charArray.length;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        </span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span> (p &lt; len) &#123;</span><br><span class="line">            <span class="comment">// 跳过所有空格</span></span><br><span class="line">            <span class="keyword">while</span> (p &lt; len &amp;&amp; charArray[p] == <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                p++;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 如果到达字符串末尾，跳出循环</span></span><br><span class="line">            <span class="keyword">if</span> (p == len) <span class="keyword">break</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 找到下一个单词的结尾</span></span><br><span class="line">            <span class="keyword">while</span> (p &lt; len &amp;&amp; charArray[p] != <span class="string">&#x27; &#x27;</span>) &#123;</span><br><span class="line">                sb.append(charArray[p]);</span><br><span class="line">                p++;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 将单词推入栈中</span></span><br><span class="line">            stack.push(sb.toString());</span><br><span class="line">            sb.setLength(<span class="number">0</span>);  <span class="comment">// 清空 StringBuilder</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 构建结果字符串</span></span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">res</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="keyword">while</span> (stack.size() &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            res.append(stack.pop());</span><br><span class="line">            res.append(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 处理最后一个单词</span></span><br><span class="line">        <span class="keyword">if</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            res.append(stack.pop());</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> res.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将String转换为字符串数组，这样更快。</p>
+<p>然后再一个一个将单词提取出来，由于需要反转，所以用到了栈。</p>
+<blockquote>
+<p><code>StringBuilder</code>的清空方法是 <code>StringBuilder.setLength(0)</code></p>
+</blockquote>
+<h3 id="LCP-40-心算挑战-力扣（LeetCode）"><a href="#LCP-40-心算挑战-力扣（LeetCode）" class="headerlink" title="LCP 40. 心算挑战 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/uOAnQW/">LCP 40. 心算挑战 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxmiumScore</span><span class="params">(<span class="type">int</span>[] cards, <span class="type">int</span> cnt)</span> &#123;</span><br><span class="line">        <span class="comment">// 初始化一个桶数组，用于记录每个卡片值的数量</span></span><br><span class="line">        <span class="type">int</span>[] bucket = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">1001</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 填充桶数组</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> card: cards)&#123;</span><br><span class="line">            bucket[card]++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">oddMin</span> <span class="operator">=</span> -<span class="number">1</span>; <span class="comment">// 记录选中的奇数最小值</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">evenMin</span> <span class="operator">=</span> -<span class="number">1</span>; <span class="comment">// 记录选中的偶数最小值</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">1000</span>; <span class="comment">// 从最大的可能卡片值开始</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 最终得分</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 选择 cnt 张卡片</span></span><br><span class="line">        <span class="keyword">while</span>(cnt &gt; <span class="number">0</span>)&#123;</span><br><span class="line">            p = findNextNum(bucket, p); <span class="comment">// 找到下一个最大的可用卡片值</span></span><br><span class="line">            res += p; <span class="comment">// 加到总得分中</span></span><br><span class="line">            bucket[p]--; <span class="comment">// 更新桶数组</span></span><br><span class="line">            cnt--; <span class="comment">// 减少剩余需要选择的卡片数</span></span><br><span class="line">            <span class="keyword">if</span>(p % <span class="number">2</span> == <span class="number">1</span>) oddMin = p; <span class="comment">// 如果是奇数，更新 oddMin</span></span><br><span class="line">            <span class="keyword">if</span>(p % <span class="number">2</span> == <span class="number">0</span>) evenMin = p; <span class="comment">// 如果是偶数，更新 evenMin</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果总得分是偶数，直接返回结果</span></span><br><span class="line">        <span class="keyword">if</span>(res % <span class="number">2</span> == <span class="number">0</span>) <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 寻找可以替换的奇数和偶数</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">nextOdd</span> <span class="operator">=</span> (evenMin == -<span class="number">1</span>) ? -<span class="number">1</span> : findNextOddNum(bucket, p);</span><br><span class="line">        <span class="type">int</span> <span class="variable">nextEven</span> <span class="operator">=</span> (oddMin == -<span class="number">1</span>) ? -<span class="number">1</span> : findNextEvenNum(bucket, p);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 输出调试信息</span></span><br><span class="line">        <span class="comment">// System.out.println(oddMin);</span></span><br><span class="line">        <span class="comment">// System.out.println(evenMin);</span></span><br><span class="line">        <span class="comment">// System.out.println(nextOdd);</span></span><br><span class="line">        <span class="comment">// System.out.println(nextEven);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果没有可替换的奇数和偶数，返回 0</span></span><br><span class="line">        <span class="keyword">if</span>(nextOdd == -<span class="number">1</span> &amp;&amp; nextEven == -<span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 如果没有可替换的奇数，但有偶数，进行替换并返回结果</span></span><br><span class="line">        <span class="keyword">if</span>(nextOdd == -<span class="number">1</span> &amp;&amp; nextEven != -<span class="number">1</span>) <span class="keyword">return</span> res - oddMin + nextEven;</span><br><span class="line">        <span class="comment">// 如果没有可替换的偶数，但有奇数，进行替换并返回结果</span></span><br><span class="line">        <span class="keyword">if</span>(nextOdd != -<span class="number">1</span> &amp;&amp; nextEven == -<span class="number">1</span>) <span class="keyword">return</span> res - evenMin + nextOdd;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 返回两种替换方式中的最大值</span></span><br><span class="line">        <span class="keyword">return</span> Math.max(res - oddMin + nextEven, res - evenMin + nextOdd);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 找到下一个最大的可用卡片值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">findNextNum</span><span class="params">(<span class="type">int</span>[] bucket, <span class="type">int</span> p)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(p &gt;= <span class="number">0</span> &amp;&amp; bucket[p] == <span class="number">0</span>)&#123;</span><br><span class="line">            p--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p != -<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 找到下一个最大的奇数卡片值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">findNextOddNum</span><span class="params">(<span class="type">int</span>[] bucket, <span class="type">int</span> p)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>((p &gt;= <span class="number">0</span> &amp;&amp; bucket[p] == <span class="number">0</span>) || (p % <span class="number">2</span> == <span class="number">0</span>))&#123;</span><br><span class="line">            p--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p != -<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 找到下一个最大的偶数卡片值</span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">findNextEvenNum</span><span class="params">(<span class="type">int</span>[] bucket, <span class="type">int</span> p)</span>&#123;</span><br><span class="line">        <span class="keyword">while</span>((p &gt;= <span class="number">0</span> &amp;&amp; bucket[p] == <span class="number">0</span>) || (p % <span class="number">2</span> == <span class="number">1</span>))&#123;</span><br><span class="line">            p--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p != -<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个题难度其实挺大的。</p>
+<p>首先要想好思路：想要最终的结果最大，直接排序，从后往前累加即可。</p>
+<p>但是题目要求最终累加结果是偶数才能算有效，所以累加结束之后需要判r<code>res</code>是否为偶数，如果是偶数则直接返回。</p>
+<p>如果是奇数，那么可以通过以下两种方法将<code>res</code>改为偶数：</p>
+<ul>
+<li>删除已选中的数中最小的奇数，并选上下一个偶数 </li>
+<li>删除已选中的数中最小的偶数，选上下下一个奇数（如果已经选中的数中没有偶数，那个就不存在了）</li>
+</ul>
+<p><code>res</code>取最大的那一个。</p>
+<p>当然还要考虑没有解的情况，就是<code>nextOdd</code>,<code>nextEven</code>值为<code>-1</code>的时候。</p>
+<blockquote>
+<p>由于<code>card[i]</code>的值范围为<code>0-1000</code>，所以我直接用计数排序了，排序的时间复杂度为O(n)</p>
+</blockquote>
+<h3 id="6-Z-字形变换-力扣（LeetCode）"><a href="#6-Z-字形变换-力扣（LeetCode）" class="headerlink" title="6. Z 字形变换 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/zigzag-conversion/description/?envType=study-plan-v2&envId=top-interview-150">6. Z 字形变换 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">convert</span><span class="params">(String s, <span class="type">int</span> numRows)</span> &#123;</span><br><span class="line">        <span class="comment">// 获取字符串的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="comment">// 如果字符串长度小于等于行数，或者行数为1，直接返回字符串</span></span><br><span class="line">        <span class="keyword">if</span> (len &lt;= numRows || numRows == <span class="number">1</span>) <span class="keyword">return</span> s;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将字符串转换为字符数组</span></span><br><span class="line">        <span class="type">char</span>[] charArray = s.toCharArray();</span><br><span class="line">        <span class="comment">// 使用 StringBuilder 存储结果字符串</span></span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算完整的间隔周期</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">interval</span> <span class="operator">=</span> <span class="number">2</span> * numRows - <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历每一行</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; numRows; i++) &#123;</span><br><span class="line">            <span class="comment">// 处理第一行</span></span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">                <span class="comment">// 每次跳过完整周期间隔</span></span><br><span class="line">                <span class="keyword">while</span> (p &lt; len) &#123;</span><br><span class="line">                    sb.append(charArray[p]);</span><br><span class="line">                    p += interval;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 处理最后一行</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (i == numRows - <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> numRows - <span class="number">1</span>;</span><br><span class="line">                <span class="comment">// 每次跳过完整周期间隔</span></span><br><span class="line">                <span class="keyword">while</span> (p &lt; len) &#123;</span><br><span class="line">                    sb.append(charArray[p]);</span><br><span class="line">                    p += interval;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 处理中间行</span></span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">p1</span> <span class="operator">=</span> i; <span class="comment">// 当前行的第一个字符</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">p2</span> <span class="operator">=</span> <span class="number">2</span> * numRows - <span class="number">2</span> - i; <span class="comment">// 当前行的第二个字符</span></span><br><span class="line">                <span class="keyword">while</span> (p1 &lt; len &amp;&amp; p2 &lt; len) &#123;</span><br><span class="line">                    sb.append(charArray[p1]);</span><br><span class="line">                    sb.append(charArray[p2]);</span><br><span class="line">                    p1 += interval;</span><br><span class="line">                    p2 += interval;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 如果剩下一个字符</span></span><br><span class="line">                <span class="keyword">if</span> (p1 &lt; len) &#123;</span><br><span class="line">                    sb.append(charArray[p1]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回结果字符串</span></span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个中等题难度甚至不如上一题心算挑战。</p>
+<p>此题只需要找到数学规律即可。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0							 2n-2</span><br><span class="line">1					   2n-3  2n-1</span><br><span class="line">.				  ...          .</span><br><span class="line">.             ...   		   .</span><br><span class="line">. 		  n+2				   .</span><br><span class="line">n-2   n</span><br><span class="line">n-1</span><br></pre></td></tr></table></figure>
+
+<p>第一行和最后一行只有一个值，中间行有两个值。</p>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-08-02</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%88%B7%E9%A2%98/'>
+                            刷题
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
