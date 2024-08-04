@@ -345,14 +345,14 @@
 
 <p>这个题难度其实挺大的。</p>
 <p>首先要想好思路：想要最终的结果最大，直接排序，从后往前累加即可。</p>
-<p>但是题目要求最终累加结果是偶数才能算有效，所以累加结束之后需要判r<code>res</code>是否为偶数，如果是偶数则直接返回。</p>
+<p>但是题目要求最终累加结果是偶数才能算有效，所以累加结束之后需要判<code>res</code>是否为偶数，如果是偶数则直接返回。</p>
 <p>如果是奇数，那么可以通过以下两种方法将<code>res</code>改为偶数：</p>
 <ul>
-<li>删除已选中的数中最小的奇数，并选上下一个偶数 </li>
-<li>删除已选中的数中最小的偶数，选上下下一个奇数（如果已经选中的数中没有偶数，那个就不存在了）</li>
+<li>删除已选中的数中最小的奇数，选择下一个偶数 （如果已经选中的数中没有奇数，这不可能….因为<code>res</code>是奇数；如果下面没有偶数了，那这种方法行不通） </li>
+<li>删除已选中的数中最小的偶数，选择下一个奇数（如果已经选中的数中没有偶数，这种方法行不通）</li>
 </ul>
-<p><code>res</code>取最大的那一个。</p>
-<p>当然还要考虑没有解的情况，就是<code>nextOdd</code>,<code>nextEven</code>值为<code>-1</code>的时候。</p>
+<p>如果两个方法都能凑效，<code>res</code>取最大的那一个。</p>
+<p>如果两个方法都不奏效…..那没办法了，找不到<code>cnt</code>个数的和为偶数的情况。</p>
 <blockquote>
 <p>由于<code>card[i]</code>的值范围为<code>0-1000</code>，所以我直接用计数排序了，排序的时间复杂度为O(n)</p>
 </blockquote>
@@ -361,7 +361,7 @@
 
 <p>这个中等题难度甚至不如上一题心算挑战。</p>
 <p>此题只需要找到数学规律即可。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0							 2n-2</span><br><span class="line">1					   2n-3  2n-1</span><br><span class="line">.				  ...          .</span><br><span class="line">.             ...   		   .</span><br><span class="line">. 		  n+2				   .</span><br><span class="line">n-2   n</span><br><span class="line">n-1</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0							</span><br><span class="line">1         2n-3  </span><br><span class="line">.		 .   </span><br><span class="line">.       .   		   </span><br><span class="line">.    n+2				   </span><br><span class="line">n-2 n</span><br><span class="line">n-1</span><br></pre></td></tr></table></figure>
 
 <p>第一行和最后一行只有一个值，中间行有两个值。</p>
 </div><script src="/js/lightgallery.min.js"></script><script>

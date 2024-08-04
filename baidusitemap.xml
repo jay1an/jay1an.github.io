@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jay1an.site/2024/08/04/algorithms-KMP/</loc>
+    <lastmod>2024-08-04</lastmod>
+  </url>
+  <url>
+    <loc>https://jay1an.site/2024/06/18/algorithms-dp-1/</loc>
+    <lastmod>2024-08-04</lastmod>
+  </url>
+  <url>
     <loc>https://jay1an.site/2024/08/02/coding-practice-3/</loc>
     <lastmod>2024-08-02</lastmod>
   </url>
@@ -39,10 +47,6 @@
   <url>
     <loc>https://jay1an.site/2024/06/20/algorithms-dp-2/</loc>
     <lastmod>2024-07-22</lastmod>
-  </url>
-  <url>
-    <loc>https://jay1an.site/2024/06/18/algorithms-dp-1/</loc>
-    <lastmod>2024-07-19</lastmod>
   </url>
   <url>
     <loc>https://jay1an.site/2024/06/08/algorithms-tow-pointers/</loc>

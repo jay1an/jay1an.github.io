@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="字符串匹配 - KMP" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            字符串匹配 - KMP
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D-KMP"><span class="post-toc-text">字符串匹配 - KMP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="post-toc-text">问题背景</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%9C%B4%E7%B4%A0%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95%E7%9A%84%E9%97%AE%E9%A2%98"><span class="post-toc-text">朴素匹配算法的问题</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#KMP%E7%AE%97%E6%B3%95%E7%9A%84%E6%A0%B8%E5%BF%83%E6%80%9D%E6%83%B3"><span class="post-toc-text">KMP算法的核心思想</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%83%A8%E5%88%86%E5%8C%B9%E9%85%8D%E8%A1%A8"><span class="post-toc-text">部分匹配表</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="post-toc-text">例子</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#KMP%E5%8C%B9%E9%85%8D%E8%BF%87%E7%A8%8B"><span class="post-toc-text">KMP匹配过程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Java%E5%AE%9E%E7%8E%B0"><span class="post-toc-text">Java实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%9E%84%E5%BB%BA%E9%83%A8%E5%88%86%E5%8C%B9%E9%85%8D%E8%A1%A8%EF%BC%88LPS%E6%95%B0%E7%BB%84%EF%BC%89"><span class="post-toc-text">构建部分匹配表（LPS数组）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A"><span class="post-toc-text">详细解释</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%B8%8D%E5%8C%B9%E9%85%8D%E5%A4%84%E7%90%86%E2%AD%90"><span class="post-toc-text">不匹配处理⭐</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#KMP%E5%8C%B9%E9%85%8D%E7%AE%97%E6%B3%95"><span class="post-toc-text">KMP匹配算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%AF%A6%E7%BB%86%E8%A7%A3%E9%87%8A-1"><span class="post-toc-text">详细解释</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%AD%97%E7%AC%A6%E5%8C%B9%E9%85%8D"><span class="post-toc-text">字符匹配</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%8D%E5%8C%B9%E9%85%8D"><span class="post-toc-text">字符不匹配</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="post-toc-text">参考资料</span></a></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="字符串匹配-KMP"><a href="#字符串匹配-KMP" class="headerlink" title="字符串匹配 - KMP"></a>字符串匹配 - KMP</h1><p>刷题刷到字符串匹配相关的题，但是忘记KMP算法了。</p>
+<p>此篇博客记录KMP复习。</p>
+<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>假设有两个字符串，一个是“文本串”（<code>text</code>），一个是“模式串”（<code>pattern</code>）。我们想知道模式串在文本串中出现的位置。</p>
+<h2 id="朴素匹配算法的问题"><a href="#朴素匹配算法的问题" class="headerlink" title="朴素匹配算法的问题"></a>朴素匹配算法的问题</h2><p><strong>传统的字符串匹配算法</strong>会逐字符比较，<strong>如果发现不匹配，就从文本串的下一个字符开始重新匹配</strong>。这种方法在最坏情况下的时间复杂度是O(n*m)，n是文本串的长度，m是模式串的长度，效率较低。</p>
+<h2 id="KMP算法的核心思想"><a href="#KMP算法的核心思想" class="headerlink" title="KMP算法的核心思想"></a>KMP算法的核心思想</h2><p>KMP算法的关键在于：<strong>当匹配失败时，如何利用已经匹配的信息，尽可能减少不必要的字符比较。</strong></p>
+<p>它通过<strong>“部分匹配表”</strong>来实现这一点。</p>
+<blockquote>
+<p>部分匹配表也叫做前缀表</p>
+</blockquote>
+<h2 id="部分匹配表"><a href="#部分匹配表" class="headerlink" title="部分匹配表"></a>部分匹配表</h2><p>部分匹配表记录了模式串中<strong>每个位置之前的字符串中相同的前缀和后缀的最长长度。</strong>通过这个表，当匹配失败时，我们可以直接跳到下一个可能的匹配位置，而不是重新开始。</p>
+<blockquote>
+<p>“前缀”和”后缀”。 “前缀”指除了最后一个字符以外，一个字符串的全部头部组合；”后缀”指除了第一个字符以外，一个字符串的全部尾部组合。</p>
+</blockquote>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>假设模式串是 <code>ABABCABAB</code></p>
+<p>部分匹配表的计算过程如下：</p>
+<ul>
+<li>对于第一个字符 <code>A</code>，没有前缀和后缀，部分匹配表值为0。</li>
+<li>对于前两个字符 <code>AB</code>，没有前缀和后缀相同，部分匹配表值为0。</li>
+<li>对于前三个字符 <code>ABA</code>，前缀 <code>A</code> 和后缀 <code>A</code> 相同，部分匹配表值为1。</li>
+<li>以此类推，计算出部分匹配表为 <code>[0, 0, 1, 2, 0, 1, 2, 3, 4]</code>。</li>
+</ul>
+<h2 id="KMP匹配过程"><a href="#KMP匹配过程" class="headerlink" title="KMP匹配过程"></a>KMP匹配过程</h2><ol>
+<li>我们从文本串的开始位置和模式串的开始位置比较。</li>
+<li>如果匹配，继续比较下一个字符。</li>
+<li><strong>如果不匹配，根据部分匹配表调整模式串的位置，而不是简单地移动一位。</strong></li>
+</ol>
+<blockquote>
+<p>比如说对于文本串<code>ABABCACBAKDNEKSIJNMGF</code></p>
+<p>模式串<code>ABABCABAB</code></p>
+<p>第一次进行匹配的时候：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ABABCACBAKDNEKSIJNMGF</span><br><span class="line">ABABCABAB</span><br><span class="line">xxxxxx^</span><br><span class="line">发现模式串中索引为6的字符不匹配，索引0-5的字符都是匹配的。</span><br></pre></td></tr></table></figure>
+
+<p>部分匹配表中 索引为5的值为1，表明模式串中索引0-5的子字符串最长公共前后缀长度为1</p>
+<p><strong>这表明，刚才匹配过的文本串的这六个位置，不再可能成为成功匹配模式串起始了，所以不用一个一个比较，直接将模式串跳跃到文本串索引为5的位置开始下一次匹配。</strong></p>
+</blockquote>
+<ol start="4">
+<li>重复上述过程，直到找到所有匹配位置。</li>
+</ol>
+<h2 id="Java实现"><a href="#Java实现" class="headerlink" title="Java实现"></a>Java实现</h2><h3 id="构建部分匹配表（LPS数组）"><a href="#构建部分匹配表（LPS数组）" class="headerlink" title="构建部分匹配表（LPS数组）"></a>构建部分匹配表（LPS数组）</h3><p>在构建LPS（Longest Prefix which is also Suffix）数组时，要找到<strong>模式串中每个位置之前的字符串的最长前缀后缀长度</strong>。如果当前字符和前一个最长前缀字符不匹配，我们需要调整前缀长度，以便继续匹配。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] computeLPSArray(String pattern) &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">length</span> <span class="operator">=</span> pattern.length();</span><br><span class="line">    <span class="type">int</span>[] lps = <span class="keyword">new</span> <span class="title class_">int</span>[length];</span><br><span class="line">    <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 最长前缀后缀长度</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    lps[<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">// lps[0] 总是 0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt; length) &#123;</span><br><span class="line">        <span class="keyword">if</span> (pattern.charAt(i) == pattern.charAt(j)) &#123;</span><br><span class="line">            j++;</span><br><span class="line">            lps[i] = j;</span><br><span class="line">            i++;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (j != <span class="number">0</span>) &#123;</span><br><span class="line">                j = lps[j - <span class="number">1</span>]; <span class="comment">// 利用之前计算的部分匹配表，调整 j 的值 ⭐</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                lps[i] = <span class="number">0</span>;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> lps;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="详细解释"><a href="#详细解释" class="headerlink" title="详细解释"></a>详细解释</h4><p>假设我们有一个模式串 <code>pattern</code> 和当前的 LPS 数组 <code>lps</code>。我们用两个指针 <code>i</code> 和 <code>j</code> 来遍历模式串：</p>
+<ul>
+<li><code>i</code> 指向当前处理的字符。</li>
+<li><code>j</code> 记录最长前缀后缀的长度。</li>
+</ul>
+<p>当 <code>pattern[i]</code> 和 <code>pattern[j]</code> 匹配时，我们增加 <code>j</code> 的长度，并设置 <code>lps[i] = j</code>。</p>
+<h4 id="不匹配处理⭐"><a href="#不匹配处理⭐" class="headerlink" title="不匹配处理⭐"></a>不匹配处理⭐</h4><blockquote>
+<p>参考：<a target="_blank" rel="noopener" href="https://oi-wiki.org/string/kmp/">前缀函数与 KMP 算法 - OI Wiki (oi-wiki.org)</a></p>
+</blockquote>
+<p>当 <code>pattern[i]</code> 和 <code>pattern[j]</code> 不匹配时，我们需要调整 <code>j</code> 的值：</p>
+<ul>
+<li>如果 <code>j != 0</code> ，<strong>说明我们之前已经有一部分匹配了。</strong>此时，我们不需要从头开始匹配，而是可以利用已经计算好的部分匹配表来减少比较次数。我们将 <code>j</code> 设置为 <code>lps[j - 1]</code>，即前一个位置的部分匹配值。⭐</li>
+</ul>
+<p><a href="/../img/algorithms-KMP/06fc05eeb946c22eb6577e30efffb10b_720.jpg" title="img" class="gallery-item" style="box-shadow: none;"> <img src="/../img/algorithms-KMP/06fc05eeb946c22eb6577e30efffb10b_720.jpg" alt="img"></a></p>
+<ul>
+<li>如果 <code>j == 0</code>，则没有匹配的前缀，将 <code>lps[i]</code> 设为0，继续处理下一个字符 <code>i++</code>。</li>
+</ul>
+<h3 id="KMP匹配算法"><a href="#KMP匹配算法" class="headerlink" title="KMP匹配算法"></a>KMP匹配算法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// KMP 匹配算法</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">KMPSearch</span><span class="params">(String text, String pattern)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">M</span> <span class="operator">=</span> pattern.length(); <span class="comment">// 模式串长度</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">N</span> <span class="operator">=</span> text.length(); <span class="comment">// 文本串长度</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span>[] lps = computeLPSArray(pattern); <span class="comment">// 计算部分匹配表（LPS数组）</span></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// text 的索引</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// pattern 的索引</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (i &lt; N) &#123;</span><br><span class="line">        <span class="keyword">if</span> (pattern.charAt(j) == text.charAt(i)) &#123; <span class="comment">// 当前字符匹配</span></span><br><span class="line">            i++;</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (j == M) &#123; <span class="comment">// 完全匹配</span></span><br><span class="line">            System.out.println(<span class="string">&quot;Found pattern at index &quot;</span> + (i - j));</span><br><span class="line">            j = lps[j - <span class="number">1</span>]; <span class="comment">// 调整 j 值，继续寻找下一个匹配</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (i &lt; N &amp;&amp; pattern.charAt(j) != text.charAt(i)) &#123; <span class="comment">// 当前字符不匹配</span></span><br><span class="line">            <span class="keyword">if</span> (j != <span class="number">0</span>) &#123;</span><br><span class="line">                j = lps[j - <span class="number">1</span>]; <span class="comment">// 调整 j 值，利用部分匹配表跳过已经匹配的部分</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="详细解释-1"><a href="#详细解释-1" class="headerlink" title="详细解释"></a>详细解释</h4><ul>
+<li><p><code>M</code> 是模式串的长度。</p>
+</li>
+<li><p><code>N</code> 是文本串的长度。</p>
+</li>
+<li><p><code>lps</code> 是部分匹配表，通过 <code>computeLPSArray(pattern)</code> 函数计算得到。</p>
+</li>
+<li><p><code>i</code> 和 <code>j</code> 分别是文本串和模式串的索引，用于遍历两个字符串。</p>
+</li>
+</ul>
+<p>通过 <code>while</code> 循环遍历整个文本串，寻找模式串的匹配位置。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(i&lt;N)</span><br></pre></td></tr></table></figure>
+
+<h5 id="字符匹配"><a href="#字符匹配" class="headerlink" title="字符匹配"></a>字符匹配</h5><p>如果当前字符匹配，则继续比较下一个字符</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (pattern.charAt(j) == text.charAt(i)) &#123;</span><br><span class="line">    i++;</span><br><span class="line">    j++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>j</code> 达到模式串的长度 <code>M</code>，说明找到了一个完整的匹配。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (j == M) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Found pattern at index &quot;</span> + (i - j));</span><br><span class="line">    j = lps[j - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后，将 <code>j</code> 设置为 <code>lps[j - 1]</code>，即部分匹配表中前一个位置的值，以便继续寻找下一个匹配。</p>
+<h5 id="字符不匹配"><a href="#字符不匹配" class="headerlink" title="字符不匹配"></a>字符不匹配</h5><p>如果当前字符不匹配，根据 <code>j</code> 的值来决定下一步操作。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">else</span> <span class="keyword">if</span> (i &lt; N &amp;&amp; pattern.charAt(j) != text.charAt(i)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (j != <span class="number">0</span>) &#123;</span><br><span class="line">        j = lps[j - <span class="number">1</span>];</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>j != 0</code>，利用部分匹配表 <code>lps</code> 调整 <code>j</code> 的值为 <code>lps[j - 1]</code>，以便跳过已经匹配的部分。</p>
+<p>如果 <code>j == 0</code>，说明没有任何部分匹配，直接将 <code>i</code> 加1，继续比较文本串的下一个字符。</p>
+<blockquote>
+<p>可以看作在移动模式串<code>pattern</code>，如果比较到中途发现某一个字符不匹配，可以根据已经匹配部分的最长前后缀长度移动模式串<code>pattern</code> 。</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://cmps-people.ok.ubc.ca/ylucet/DS/KnuthMorrisPratt.html">KMP算法可视化</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://oi-wiki.org/string/kmp/">前缀函数与 KMP 算法 - OI Wiki (oi-wiki.org)</a></p>
+</li>
+</ul>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-08-04</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                        <a href='/tags/KMP/'>
+                            KMP
+                        </a>
+                    
+                        <a href='/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/'>
+                            字符串匹配
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95/'>
+                            基础算法
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
