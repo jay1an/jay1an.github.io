@@ -336,10 +336,9 @@
 <p>比如说对于文本串<code>ABABCACBAKDNEKSIJNMGF</code></p>
 <p>模式串<code>ABABCABAB</code></p>
 <p>第一次进行匹配的时候：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ABABCACBAKDNEKSIJNMGF</span><br><span class="line">ABABCABAB</span><br><span class="line">xxxxxx^</span><br><span class="line">发现模式串中索引为6的字符不匹配，索引0-5的字符都是匹配的。</span><br></pre></td></tr></table></figure>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ABABCACBAKDNEKSIJNMGF</span><br><span class="line">ABABCABAB</span><br><span class="line">      ^</span><br><span class="line">i=6,j=6，发现模式串中索引为6的字符不匹配，但是索引0-5的字符都是匹配的。（此时指针i和指针j的值应该为）</span><br><span class="line">下一步就直接跳跃到，i=6,j=1</span><br><span class="line">ABABCACBAKDNEKSIJNMGF</span><br><span class="line">     ABABCABAB</span><br><span class="line">      ^</span><br></pre></td></tr></table></figure>
 
-<p>部分匹配表中 索引为5的值为1，表明模式串中索引0-5的子字符串最长公共前后缀长度为1</p>
-<p><strong>这表明，刚才匹配过的文本串的这六个位置，不再可能成为成功匹配模式串起始了，所以不用一个一个比较，直接将模式串跳跃到文本串索引为5的位置开始下一次匹配。</strong></p>
+<p>部分匹配表中 索引为5的值为1，表明模式串中索引0-5的子字符串最长公共前后缀长度为1。</p>
 </blockquote>
 <ol start="4">
 <li>重复上述过程，直到找到所有匹配位置。</li>
