@@ -420,7 +420,7 @@
 </ul>
 <blockquote>
 <p><code>172.20.0.%</code>所对应的就是两个容器所在的网络。</p>
-<p>限制用户只要从该网络下登录。</p>
+<p>限制用户只能从该网络下登录。</p>
 </blockquote>
 <h3 id="上传Spring-Boot-JAR包到VPS"><a href="#上传Spring-Boot-JAR包到VPS" class="headerlink" title="上传Spring Boot JAR包到VPS"></a>上传Spring Boot JAR包到VPS</h3><p>首先要先修改Spring Boot项目中的配置文件，使其适配新环境。然后再通过<code>maven</code>打成JAR包。</p>
 <p>然后使用<code>scp</code>命令将JAR包上传到服务器的<code>/tmp</code>目录下</p>
@@ -466,7 +466,7 @@
 <h4 id="解决-修改前端代码"><a href="#解决-修改前端代码" class="headerlink" title="解决 - 修改前端代码"></a>解决 - 修改前端代码</h4><p>在这样的情况下，请求<code>https://域名/img/1.jpg</code>会失败，因为我的<code>DocumentRoot</code>目录下找不到这个文件。但是如果将请求改为<code>https://域名/threat_perception/img/1.jpg</code>，这个请求就会触发反向代理，对<code>/img/1.jpg</code>的请求就会被发送到<code>http://localhost:8080/img/1.jpg</code>，这样就可以成功请求到这个静态资源。</p>
 <p>写在html页面的接口路径也一样。</p>
 <p>所以，为了使得SpringBoot项目在这样的环境下正常工作，还需要统一修改一下前端。</p>
-<p>IDEA提供了<code>Replace in Files</code>功能，可以很方便地完成同意修改前端的工作。</p>
+<p>IDEA提供了<code>Replace in Files</code>功能，可以很方便地完成统一修改前端代码的工作。</p>
 <p><a href="/../img/VPS-SpringBoot-depoloyment/image-20240806174454414.png" title="image-20240806174454414" class="gallery-item" style="box-shadow: none;"> <img src="/../img/VPS-SpringBoot-depoloyment/image-20240806174454414.png" alt="image-20240806174454414"></a></p>
 <p>在统一修改完成后SpringBoot项目就可以正常工作了。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在本次配置和调试过程中，我学到了如何使用 Apache 的反向代理功能，将请求转发到 Spring Boot 应用，并确保静态资源的正确加载。同时，更加熟练了在 Linux 系统上的操作，也加强了对 Docker 的使用能力。</p>
