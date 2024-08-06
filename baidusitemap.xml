@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jay1an.site/2024/08/06/VPS-SpringBoot-depoloyment/</loc>
+    <lastmod>2024-08-06</lastmod>
+  </url>
+  <url>
+    <loc>https://jay1an.site/2024/07/28/VPS-Swap/</loc>
+    <lastmod>2024-08-05</lastmod>
+  </url>
+  <url>
     <loc>https://jay1an.site/2024/08/05/coding-practice-4/</loc>
     <lastmod>2024-08-05</lastmod>
   </url>
@@ -30,10 +38,6 @@
   </url>
   <url>
     <loc>https://jay1an.site/2024/07/29/Linux-commands/</loc>
-    <lastmod>2024-07-29</lastmod>
-  </url>
-  <url>
-    <loc>https://jay1an.site/2024/07/28/VPS-Swap/</loc>
     <lastmod>2024-07-29</lastmod>
   </url>
   <url>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="在VPS上部署SpringBoot项目" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            在VPS上部署SpringBoot项目
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9C%A8VPS%E4%B8%8A%E9%83%A8%E7%BD%B2SpringBoot%E9%A1%B9%E7%9B%AE"><span class="post-toc-text">在VPS上部署SpringBoot项目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%83%8C%E6%99%AF"><span class="post-toc-text">背景</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%AE%E5%89%8D%E7%9A%84%E6%83%85%E5%86%B5"><span class="post-toc-text">目前的情况</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="post-toc-text">目标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E6%96%B9%E6%B3%95"><span class="post-toc-text">方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="post-toc-text">反向代理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="post-toc-text">简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="post-toc-text">工作原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="post-toc-text">为什么选择反向代理</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4"><span class="post-toc-text">配置步骤</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#docker-compose"><span class="post-toc-text">docker-compose</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E5%AF%B9docker-compose%E5%86%85%E5%AE%B9%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="post-toc-text">对docker-compose内容的解释</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AEMySQL%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="post-toc-text">配置MySQL数据库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%8A%E4%BC%A0Spring-Boot-JAR%E5%8C%85%E5%88%B0VPS"><span class="post-toc-text">上传Spring Boot JAR包到VPS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8docker-compose%E6%9E%84%E5%BB%BA%E5%AE%B9%E5%99%A8"><span class="post-toc-text">使用docker-compose构建容器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%AE%BE%E7%BD%AEApace%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"><span class="post-toc-text">设置Apace反向代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="post-toc-text">一些问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E9%97%AE%E9%A2%98-%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%8A%A0%E8%BD%BD%E8%B7%AF%E5%BE%84"><span class="post-toc-text">问题 - 静态资源加载路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E8%A7%A3%E5%86%B3-%E4%BF%AE%E6%94%B9%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81"><span class="post-toc-text">解决 - 修改前端代码</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%80%BB%E7%BB%93"><span class="post-toc-text">总结</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="post-toc-text">参考资料</span></a></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="在VPS上部署SpringBoot项目"><a href="#在VPS上部署SpringBoot项目" class="headerlink" title="在VPS上部署SpringBoot项目"></a>在VPS上部署SpringBoot项目</h1><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>已经进入秋招了，在实训期间，个人完成了一个基于SpringBoot的项目。所以我打算将项目稍作修改，放到我的VPS上以便展示。</p>
+<h3 id="目前的情况"><a href="#目前的情况" class="headerlink" title="目前的情况"></a>目前的情况</h3><ul>
+<li>一个可以运行的SpringBoot项目</li>
+<li>一台VPS（Ubuntu系统）</li>
+<li>一个域名</li>
+<li>VPS上运行着Apache2，公开80和443端口（挂着静态blog）</li>
+<li>SSL证书</li>
+</ul>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>想要通过配置和部署，使得SpringBoot项目可以通过域名访问，共享SSL加密证书，同时还不影响blog的访问。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>查阅资料之后，发现<strong>反向代理</strong>可以实现这样的效果。 </p>
+<h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><strong>反向代理</strong>（Reverse Proxy）是一种服务器，它位于客户端和后端服务器之间，接收客户端的请求，然后将这些请求转发给一个或多个内部服务器（后端服务器）进行处理。处理完成后，反向代理将服务器的响应返回给客户端。反向代理的主要功能和用途包括：</p>
+<ol>
+<li><strong>负载均衡</strong>：将请求分发到多个后端服务器上，以平衡负载，提高系统的性能和可靠性。</li>
+<li><strong>缓存</strong>：缓存从后端服务器获取的内容，以减少后端服务器的负载，加快响应时间。</li>
+<li><strong>安全性</strong>：隐藏后端服务器的真实IP地址和架构，提高系统的安全性，防止直接攻击。</li>
+<li><strong>SSL终止</strong>：处理SSL加密和解密操作，减少后端服务器的负担。</li>
+</ol>
+<blockquote>
+<p><strong>代理（Forward Proxy）</strong>：客户端通过代理服务器向目标服务器发起请求。代理服务器代表客户端发起请求，隐藏客户端的真实身份。</p>
+<p><strong>反向代理（Reverse Proxy）</strong>：客户端通过反向代理服务器访问内部服务。反向代理服务器接受请求并将其转发到合适的内部服务器，客户端只知道反向代理服务器的地址，隐藏了内部服务器的细节。</p>
+<p>两个很形象的例子：</p>
+<p>代理（Forward Proxy）可以比作一个“中介服务”。假设你需要购买某个商品，但你在国外，无法直接与当地商店联系。这时，你可以找一个当地的中介服务（代理服务器）来帮助你完成购买。</p>
+<p>你到一个大楼（反向代理）参观，前台接待员（反向代理服务器）接待你。你告诉前台你想访问某个部门（例如，技术支持部）。接待员（反向代理）会将你的请求转发到相应的办公室（内部服务器）。无论你需要访问哪个办公室，你只需通过前台（反向代理）进行，而你对内部办公室的具体位置和细节并不需要了解。</p>
+</blockquote>
+<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>反向代理的工作原理可以分为以下几个步骤：</p>
+<ol>
+<li><strong>客户端请求</strong>：客户端发送请求到反向代理服务器，通常是HTTP或HTTPS请求。</li>
+<li><strong>请求处理</strong>：反向代理服务器接收到请求，根据配置决定将请求转发到哪个后端服务器。可以<strong>基于URL路径</strong>、<strong>负载均衡策略</strong>等进行决策。</li>
+<li><strong>转发请求</strong>：反向代理将请求转发给后端服务器。后端服务器处理请求并生成响应。</li>
+<li><strong>响应处理</strong>：反向代理接收到后端服务器的响应，可能会对响应进行一些处理（如缓存）。</li>
+<li><strong>返回响应</strong>：反向代理将处理后的响应返回给客户端。</li>
+</ol>
+<h3 id="为什么选择反向代理"><a href="#为什么选择反向代理" class="headerlink" title="为什么选择反向代理"></a>为什么选择反向代理</h3><p>通过反向代理，可以根据请求的URL路径将请求分发到不同的后端服务。</p>
+<p>假设有一个blog网站和一个SpringBoot项目，希望通过同一个域名访问它们。个人网站的根路径为<code>/var/www/html/your-personal-website</code>，SpringBoot项目运行在本地的8080端口。通过反向代理，可以将<code>/</code>路径分发到个人网站，将<code>/app</code>路径分发到SpringBoot项目。</p>
+<p><code>Apache</code>部分配置如下</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置个人网站的根路径</span></span><br><span class="line"><span class="string">DocumentRoot</span> <span class="string">/var/www/html/your-personal-website</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 配置反向代理以访问SpringBoot项目</span></span><br><span class="line"><span class="string">ProxyPreserveHost</span> <span class="string">On</span></span><br><span class="line"><span class="string">ProxyPass</span> <span class="string">/app</span> <span class="string">http://localhost:8080</span></span><br><span class="line"><span class="string">ProxyPassReverse</span> <span class="string">/app</span> <span class="string">http://localhost:8080</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 或者这样配置</span></span><br><span class="line"><span class="comment"># &lt;Location /threat_perception&gt;</span></span><br><span class="line"><span class="comment">#         ProxyPass http://localhost:8080</span></span><br><span class="line"><span class="comment">#         ProxyPassReverse http://localhost:8080</span></span><br><span class="line"><span class="comment"># &lt;/Location&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>DocumentRoot</code>配置指定了个人网站的根目录。当访问<code>http://your-domain.com/</code>时，Apache会显示这个目录下的内容。</p>
+<p><code>ProxyPass</code>指示Apache将前缀为<code>/app</code>的请求代理到<code>http://localhost:8080</code>。</p>
+<p><code>ProxyPassReverse</code>指示Apache在代理响应时也要修改响应中的相关URL，使得它们正确指向客户端。</p>
+<p><strong>外部请求80端口：</strong></p>
+<ol>
+<li>访问<code>http://域名/</code>时：<ul>
+<li>Apache查看请求路径为<code>/</code>，因此根据<code>DocumentRoot</code>配置，返回个人网站的内容。</li>
+</ul>
+</li>
+<li>访问<code>http://域名/app</code>时：<ul>
+<li>Apache查看请求路径以<code>/app</code>开头，根据<code>ProxyPass</code>和<code>ProxyPassReverse</code>配置，将请求代理到<code>http://localhost:8080/</code>，即SpringBoot项目。</li>
+<li>SpringBoot项目处理请求并生成响应，响应通过Apache返回给客户端。</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<p>在我的这个应用场景下，反向代理服务器将请求转发到运行在本地的SpringBoot应用。</p>
+<p>我的VPS既是反向代理服务器又是运行SpringBoot应用的服务器。</p>
+<p>（我的Azure VPS只有1GB的运存…..所以VPS Swap还是得设置）</p>
+</blockquote>
+<h2 id="配置步骤"><a href="#配置步骤" class="headerlink" title="配置步骤"></a>配置步骤</h2><p>因为这个SpringBoot项目所使用的一些库是存在漏洞的，为了保证VPS的安全，我打算将这个项目运行在Docker容器中，通过端口映射的方式提供访问。</p>
+<h3 id="docker-compose"><a href="#docker-compose" class="headerlink" title="docker-compose"></a>docker-compose</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;3.8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">springboot-app:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">openjdk:17-jdk</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">threat_perception_springboot</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./threat_perception_platform-0.0.1-SNAPSHOT.jar:/app/threat_perception_platform-0.0.1-SNAPSHOT.jar</span></span><br><span class="line">    <span class="attr">working_dir:</span> <span class="string">/app</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">SPRING_DATASOURCE_URL=jdbc:mysql://$MySQL_Server_IP:3306/threat_perception?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;8080:8080&quot;</span></span><br><span class="line">    <span class="attr">networks:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">mysql_default</span></span><br><span class="line">    <span class="attr">entrypoint:</span> [<span class="string">&quot;java&quot;</span>, <span class="string">&quot;-jar&quot;</span>, <span class="string">&quot;threat_perception_platform-0.0.1-SNAPSHOT.jar&quot;</span>]</span><br><span class="line">    </span><br><span class="line"><span class="attr">networks:</span></span><br><span class="line">  <span class="attr">mysql_default:</span></span><br><span class="line">    <span class="attr">external:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<h3 id="对docker-compose内容的解释"><a href="#对docker-compose内容的解释" class="headerlink" title="对docker-compose内容的解释"></a>对docker-compose内容的解释</h3><p><strong><code>version: &#39;3.8&#39;</code></strong></p>
+<p>指定了 Docker Compose 文件的版本。<code>3.8</code> 是 Docker Compose 的一个版本，用于定义文件格式和功能。</p>
+<p><strong><code>services:</code></strong></p>
+<p>定义服务。在这个配置中，定义了一个服务 <code>springboot-app</code>。</p>
+<p><strong><code>springboot-app:</code></strong></p>
+<p>服务的名称。在 Docker Compose 中，服务名称用于标识和管理特定的容器实例。</p>
+<p><strong><code>image: openjdk:17-jdk</code></strong></p>
+<p>指定了容器使用的 Docker 镜像。这里使用的是 <code>openjdk:17-jdk</code>，它包含了 JDK 17 环境，适合运行 Java 应用程序。</p>
+<p><strong><code>container_name: threat_perception_springboot</code></strong></p>
+<p>为容器指定一个名称 <code>threat_perception_springboot</code>。这样更方便地引用和管理这个容器。</p>
+<p><strong><code>volumes:</code></strong></p>
+<p>定义了数据卷的挂载。<code>./threat_perception_platform-0.0.1-SNAPSHOT.jar:/app/threat_perception_platform-0.0.1-SNAPSHOT.jar</code> 将本地的 JAR 文件挂载到容器的 <code>/app</code> 目录中，这样容器可以访问并运行这个 JAR 文件。</p>
+<p><strong><code>working_dir: /app</code></strong></p>
+<p>置容器中的工作目录为 <code>/app</code>。这意味着容器中的命令将在 <code>/app</code> 目录下执行。</p>
+<p><strong><code>environment:</code></strong></p>
+<p>置环境变量。在这里，定义了 <code>SPRING_DATASOURCE_URL</code> 环境变量，指定了 Spring Boot 应用连接 MySQL 数据库的 URL。</p>
+<p><strong><code>ports:</code></strong></p>
+<p>映射容器的端口到主机的端口。<code>&quot;8080:8080&quot;</code> 表示将容器的 8080 端口映射到主机的 8080 端口，这样您可以通过访问 <code>http://&lt;host_ip&gt;:8080</code> 来访问 Spring Boot 应用。</p>
+<p><strong><code>networks:</code></strong></p>
+<p>将服务连接到网络。在这里，<code>mysql_default</code> 是一个外部网络，确保 <code>springboot-app</code> 可以与 MySQL 容器在相同的网络中通信。</p>
+<p><strong><code>entrypoint:</code></strong></p>
+<p>义容器启动时的入口命令。<code>[&quot;java&quot;, &quot;-jar&quot;, &quot;threat_perception_platform-0.0.1-SNAPSHOT.jar&quot;]</code> 表示容器启动时执行 Java 命令来运行 JAR 文件。</p>
+<p><strong><code>networks:</code></strong></p>
+<p>**<code>mysql_default:</code>**定义了名为 <code>mysql_default</code> 的网络，并将其标记为外部网络。这样，Docker Compose 就会使用已经存在的 <code>mysql_default</code> 网络，而不是创建一个新的。</p>
+</blockquote>
+<p>因为之前创建的MySQL容器的时候没有指定网络，Docker自动为其创建了一个<code>mysql_default</code>的桥接网络，那么为了让运行SpringBoot项目的容器能够方便地访问到数据库，所以我在这里的docker-compose文件中为该容器指定了网络。</p>
+<p>那配置中的<code>SPRING_DATASOURCE_URL</code>里面的IP地址就一定要是<code>mysql_default</code>网络下运行MySQL服务容器的地址。</p>
+<p><strong>那怎么获得正在运行中的容器的IP地址呢？</strong></p>
+<p>可以使用这个命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect &lt;container_name_or_id&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在输出的JSON字符串中找到Networks部分，就可以找到该容器的IP地址。</p>
+<h3 id="配置MySQL数据库"><a href="#配置MySQL数据库" class="headerlink" title="配置MySQL数据库"></a>配置MySQL数据库</h3><p>要运行SpringBoot应用需要访问MySQL数据库，前一阵子，我用Docker开启并运行了一个MySQL容器。</p>
+<p>现在需要创建应用所用的数据库并且将一些示例数据导入，并且创建专门的用户。</p>
+<ul>
+<li><p>创建表，导入数据</p>
+<p>在以前测试的数据库中生成SQL脚本，在VPS上的MySQL数据库中运行，把一些展示数据导入。</p>
+</li>
+<li><p>创建MySQL用户</p>
+<ol>
+<li><p>创建用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;172.20.0.%&#x27;</span> IDENTIFIED <span class="keyword">BY</span> <span class="string">&#x27;password&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>授予用户对特定数据库权限</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GRANT</span> <span class="keyword">ALL</span> PRIVILEGES <span class="keyword">ON</span> database_name.<span class="operator">*</span> <span class="keyword">TO</span> <span class="string">&#x27;username&#x27;</span>@<span class="string">&#x27;172.20.0.%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>刷新权限</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FLUSH PRIVILEGES;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><code>172.20.0.%</code>所对应的就是两个容器所在的网络。</p>
+<p>限制用户只要从该网络下登录。</p>
+</blockquote>
+<h3 id="上传Spring-Boot-JAR包到VPS"><a href="#上传Spring-Boot-JAR包到VPS" class="headerlink" title="上传Spring Boot JAR包到VPS"></a>上传Spring Boot JAR包到VPS</h3><p>首先要先修改Spring Boot项目中的配置文件，使其适配新环境。然后再通过<code>maven</code>打成JAR包。</p>
+<p>然后使用<code>scp</code>命令将JAR包上传到服务器的<code>/tmp</code>目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp .\threat_perception_platform-0.0.1-SNAPSHOT.jar <span class="variable">$username</span>@<span class="variable">$IP</span>:/tmp/</span><br></pre></td></tr></table></figure>
+
+<p>然后在VPS中将JAR包移动到当前用户目录下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">mv</span> threat_perception_platform-0.0.1-SNAPSHOT.jar /home/<span class="variable">$username</span>/threat_perception</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用docker-compose构建容器"><a href="#使用docker-compose构建容器" class="headerlink" title="使用docker-compose构建容器"></a>使用docker-compose构建容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">~/threat_perception$ <span class="built_in">ls</span></span><br><span class="line">docker-compose.yml  threat_perception_platform-0.0.1-SNAPSHOT.jar</span><br><span class="line">~/threat_perception$ sudo docker-compose up -d</span><br><span class="line">Creating threat_perception_springboot ... <span class="keyword">done</span></span><br><span class="line">~/threat_perception$ sudo docker ps</span><br><span class="line">CONTAINER ID   IMAGE            COMMAND                  CREATED         STATUS         PORTS</span><br><span class="line">                                   NAMES</span><br><span class="line">043972e53b79   openjdk:17-jdk   <span class="string">&quot;java -jar threat_pe…&quot;</span>   8 seconds ago   Up 7 seconds   0.0.0.0:8080-&gt;8080/tcp, :::8080-&gt;8080/tcp              threat_perception_springboot</span><br><span class="line">83388cf01d3b   cowrie_cowrie    <span class="string">&quot;/cowrie/cowrie-env/…&quot;</span>   7 days ago      Up 7 days      2223/tcp, 0.0.0.0:22-&gt;2222/tcp, :::22-&gt;2222/tcp        cowrie_cowrie_1</span><br><span class="line">dfb2032ec83c   mysql:8.0        <span class="string">&quot;docker-entrypoint.s…&quot;</span>   8 days ago      Up 8 days      0.0.0.0:3306-&gt;3306/tcp, :::3306-&gt;3306/tcp, 33060/tcp   mysql_container</span><br></pre></td></tr></table></figure>
+
+<p>容器成功启动之后，使用<code>netstat</code>命令查看网络状态，8080端口号已经开启监听。</p>
+<h3 id="设置Apace反向代理"><a href="#设置Apace反向代理" class="headerlink" title="设置Apace反向代理"></a>设置Apace反向代理</h3><p>在<code>.conf</code>文件中加入以下部分：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&lt;VirtualHost</span> <span class="string">*:443&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="string">.........</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># Reverse proxy for Spring Boot application</span></span><br><span class="line">    <span class="string">&lt;Location</span> <span class="string">/threat_perception&gt;</span></span><br><span class="line">        <span class="string">ProxyPass</span> <span class="string">http://localhost:8080</span></span><br><span class="line">        <span class="string">ProxyPassReverse</span> <span class="string">http://localhost:8080</span></span><br><span class="line">    <span class="string">&lt;/Location&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="string">&lt;/VirtualHost&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个块配置了对 <code>/threat_perception</code> 路径的处理。所有以 <code>/threat_perception</code> 开头的请求都会使用这个配置。</p>
+<ul>
+<li><code>ProxyPass http://localhost:8080</code></li>
+</ul>
+<p>该配置会将所有以 <code>/threat_perception</code> 开头的请求转发到 <code>http://localhost:8080</code>，例如请求<code>https://jay1an.site/threat_perception/page/login</code> 将被转发到 <code>http://localhost:8080/page/login</code>。</p>
+<ul>
+<li><code>ProxyPassReverse http://localhost:8080</code></li>
+</ul>
+<p>这个指令调整响应头中的 <code>Location</code>、<code>Content-Location</code> 和 <code>URI</code>，使它们相对于原始请求路径。它确保当后端服务器（即 <code>localhost:8080</code>）返回重定向响应时，重定向路径被调整为与客户端请求一致。</p>
+<p>例如，如果 <code>http://localhost:8080</code> 返回一个重定向到 <code>/page/home</code>，<code>ProxyPassReverse</code> 会将其修改为 <code>/threat_perception/page/home</code>，使得客户端能够正确处理重定向。</p>
+<hr>
+<p>然后确保Apache启用了<code>proxy</code>模块</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo a2enmod proxy</span><br></pre></td></tr></table></figure>
+
+<p>最后重启Apache服务使改动生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart apache2</span><br></pre></td></tr></table></figure>
+
+<h3 id="一些问题"><a href="#一些问题" class="headerlink" title="一些问题"></a>一些问题</h3><h4 id="问题-静态资源加载路径"><a href="#问题-静态资源加载路径" class="headerlink" title="问题 - 静态资源加载路径"></a>问题 - 静态资源加载路径</h4><p>此时已经可以通过<code>https://域名/threat_perception</code>的方式访问到SpringBoot项目了。</p>
+<p>但是访问该路劲的时候发现<code>css</code>,<code>js</code>和一些图片等静态资源都下载失败了，因为<strong>在我的SpringBoot项目中，静态资源的请求路径是写死在html文件中</strong>的，如果直接访问SpringBoot项目，这些静态资源是可以被请求到的，但是在使用了反向代理的情况下就不行了。</p>
+<p>比如这种我的html文件中有类似这种的img标签：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">class</span>=<span class="string">&quot;bgone&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/img/1.jpg&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个根路径<code>/</code>本意指向的是<code>localhost:8080/</code></p>
+<p>但是当我用反向代理<code>https://域名/threat_perception</code>的方式请求到该页面下的html文件，浏览器解析到这个img标签就会将根路径<code>/</code>理解为<code>https://域名/</code>，所以会发起一个url为<code>https://域名/img/1.jpg</code>的请求，这样当然无法成功请求到资源。在这样反向代理的情况下，其他静态的资源都一样无法被成功请求，所以导致网站前端渲染失败。</p>
+<p>并且前后端也不再适配了，因有一些接口路径也写死在前端了，比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: &quot;/user/login&quot;,</span><br></pre></td></tr></table></figure>
+
+<p>同静态资源，使用了反向代理之后，这个接口访问地址的目的地就会被浏览器解释成<code>https://域名/user/login</code>，在这种情况下，这当然也是访问不到的。</p>
+<h4 id="解决-修改前端代码"><a href="#解决-修改前端代码" class="headerlink" title="解决 - 修改前端代码"></a>解决 - 修改前端代码</h4><p>在这样的情况下，请求<code>https://域名/img/1.jpg</code>会失败，因为我的<code>DocumentRoot</code>目录下找不到这个文件。但是如果将请求改为<code>https://域名/threat_perception/img/1.jpg</code>，这个请求就会触发反向代理，对<code>/img/1.jpg</code>的请求就会被发送到<code>http://localhost:8080/img/1.jpg</code>，这样就可以成功请求到这个静态资源。</p>
+<p>写在html页面的接口路径也一样。</p>
+<p>所以，为了使得SpringBoot项目在这样的环境下正常工作，还需要统一修改一下前端。</p>
+<p>IDEA提供了<code>Replace in Files</code>功能，可以很方便地完成同意修改前端的工作。</p>
+<p><a href="/../img/VPS-SpringBoot-depoloyment/image-20240806174454414.png" title="image-20240806174454414" class="gallery-item" style="box-shadow: none;"> <img src="/../img/VPS-SpringBoot-depoloyment/image-20240806174454414.png" alt="image-20240806174454414"></a></p>
+<p>在统一修改完成后SpringBoot项目就可以正常工作了。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在本次配置和调试过程中，我学到了如何使用 Apache 的反向代理功能，将请求转发到 Spring Boot 应用，并确保静态资源的正确加载。同时，更加熟练了在 Linux 系统上的操作，也加强了对 Docker 的使用能力。</p>
+<hr>
+<p>目前已经配置结束。</p>
+<p>现在已经可以访问了：<a href="https://jay1an.site/threat_perception">threat_perception</a></p>
+<blockquote>
+<p>登陆用户名: <code>admin</code>，密码:<code>adminadmin</code></p>
+<p>我已修改了代码，限制了增删改功能。</p>
+</blockquote>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.cloudflare.com/zh-cn/learning/cdn/glossary/reverse-proxy/">什么是反向代理？|代理服务器介绍 | Cloudflare</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wajika/p/6606063.html">apache配置中ProxyPassReverse指令的含义 - wajika - 博客园 (cnblogs.com)</a></p>
+</li>
+</ul>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-08-06</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/Linux/'>
+                            Linux
+                        </a>
+                    
+                        <a href='/tags/SpringBoot%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/'>
+                            SpringBoot项目部署
+                        </a>
+                    
+                        <a href='/tags/VPS/'>
+                            VPS
+                        </a>
+                    
+                        <a href='/tags/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/'>
+                            反向代理
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/VPS/'>
+                            VPS
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
