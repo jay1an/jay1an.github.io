@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="刷题日记 - 6" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            刷题日记 - 6
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0-6"><span class="post-toc-text">刷题日记 - 6</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#205-%E5%90%8C%E6%9E%84%E5%AD%97%E7%AC%A6%E4%B8%B2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">205. 同构字符串 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#290-%E5%8D%95%E8%AF%8D%E8%A7%84%E5%BE%8B-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">290. 单词规律 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">242. 有效的字母异位词 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#202-%E5%BF%AB%E4%B9%90%E6%95%B0-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">202. 快乐数 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#219-%E5%AD%98%E5%9C%A8%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0-II-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">219. 存在重复元素 II - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#228-%E6%B1%87%E6%80%BB%E5%8C%BA%E9%97%B4-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">228. 汇总区间 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#57-%E6%8F%92%E5%85%A5%E5%8C%BA%E9%97%B4-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">57. 插入区间 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="刷题日记-6"><a href="#刷题日记-6" class="headerlink" title="刷题日记 - 6"></a>刷题日记 - 6</h1><h3 id="205-同构字符串-力扣（LeetCode）"><a href="#205-同构字符串-力扣（LeetCode）" class="headerlink" title="205. 同构字符串 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/isomorphic-strings/?envType=study-plan-v2&envId=top-interview-150">205. 同构字符串 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<p><strong>哈希表</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isIsomorphic</span><span class="params">(String s, String t)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sLen</span> <span class="operator">=</span> s.length();  <span class="comment">// 获取字符串s的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">tLen</span> <span class="operator">=</span> t.length();  <span class="comment">// 获取字符串t的长度</span></span><br><span class="line">        <span class="keyword">if</span>(sLen != tLen) <span class="keyword">return</span> <span class="literal">false</span>;  <span class="comment">// 如果两个字符串长度不同，直接返回false</span></span><br><span class="line">        <span class="keyword">if</span>(sLen &lt; <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>;  <span class="comment">// 如果字符串长度小于1，返回true</span></span><br><span class="line"></span><br><span class="line">        <span class="type">char</span>[] sChars = s.toCharArray();  <span class="comment">// 将字符串s转换为字符数组</span></span><br><span class="line">        <span class="type">char</span>[] tChars = t.toCharArray();  <span class="comment">// 将字符串t转换为字符数组</span></span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] map = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">128</span>];  <span class="comment">// 创建一个数组用于存储s字符到t字符的映射</span></span><br><span class="line">        <span class="type">int</span>[] charStatus = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">128</span>];  <span class="comment">// 记录当前字符串t是否已经被映射了 0表示未被映射，1表示被映射</span></span><br><span class="line">        Arrays.fill(map, -<span class="number">1</span>);  <span class="comment">// 初始化数组，所有值为-1</span></span><br><span class="line"></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">res</span> <span class="operator">=</span> <span class="literal">true</span>;  <span class="comment">// 结果标志，初始设为true</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; sLen; i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">s_</span> <span class="operator">=</span> sChars[i];  <span class="comment">// 获取s当前字符</span></span><br><span class="line">            <span class="type">char</span> <span class="variable">t_</span> <span class="operator">=</span> tChars[i];  <span class="comment">// 获取t当前字符</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (map[s_] == -<span class="number">1</span> &amp;&amp; charStatus[t_] == <span class="number">0</span>) &#123;  <span class="comment">// 如果s当前字符还没有映射，并且目标t字符也没有被映射</span></span><br><span class="line">                map[s_] = t_;  <span class="comment">// 将s当前字符映射到t当前字符</span></span><br><span class="line">                charStatus[t_] = <span class="number">1</span>;  <span class="comment">// 记录t字符已经被映射了</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;  <span class="comment">// 如果当前字符s已经有映射，或者字符t已经被映射了</span></span><br><span class="line">                <span class="keyword">if</span> (map[s_] == -<span class="number">1</span> || map[s_] != t_) &#123;  <span class="comment">// 检查是否与已有映射匹配, 或者当前映射的对不对</span></span><br><span class="line">                    res = <span class="literal">false</span>;  <span class="comment">// 如果不匹配，设置结果为false</span></span><br><span class="line">                    <span class="keyword">break</span>;  <span class="comment">// 结束循环</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;  <span class="comment">// 返回结果</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为输入的字符属于ascii字符，数量不多且范围确定，可以用数组模拟哈希表。</p>
+<p><strong>值得注意的是：不同字符不能映射到同一个字符上，所以需要一个新的<code>charStatus[]</code>来记录当前字符被是否被映射了。</strong></p>
+<p>对于当前字符<code>s_</code>和<code>t_</code></p>
+<ul>
+<li>如果发现<code>s_</code>没有映射，<code>t_</code>没有被映射，那么就更新映射关系，标记<code>t_</code>已经被映射了</li>
+<li>如果发现<code>s_</code>没有映射，<code>t_</code>却被映射了，那可以直接退出了，因为<code>t_</code>那个肯定不是被<code>s_</code>映射的，出现了多个字符映射到一个字符的情况，False</li>
+<li>如果发现<code>s_</code>有映射，<code>t_</code>也被映射了，就直接判断当前<code>s_</code>映射的是不是<code>t_</code>即可。</li>
+<li>如果发现<code>s_</code>有映射了，<code>t_</code>没有被映射 。。。。。。。（这是不可能会出现的情况）</li>
+</ul>
+<h3 id="290-单词规律-力扣（LeetCode）"><a href="#290-单词规律-力扣（LeetCode）" class="headerlink" title="290. 单词规律 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/word-pattern/description/?envType=study-plan-v2&envId=top-interview-150">290. 单词规律 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<p><strong>哈希表</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">wordPattern</span><span class="params">(String pattern, String s)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用空格分割字符串s，得到单词数组</span></span><br><span class="line">        String[] words = s.split(<span class="string">&quot; &quot;</span>);</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> words.length;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果单词数组的长度和模式字符串长度不一致，则返回false</span></span><br><span class="line">        <span class="keyword">if</span> (len != pattern.length()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 用于记录字符和单词的映射</span></span><br><span class="line">        HashMap&lt;Character, String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 用于记录已经映射的单词</span></span><br><span class="line">        HashSet&lt;String&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 将模式字符串转换为字符数组</span></span><br><span class="line">        <span class="type">char</span>[] patternChars = pattern.toCharArray();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历模式字符串和单词数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">cur</span> <span class="operator">=</span> patternChars[i];</span><br><span class="line">            <span class="type">String</span> <span class="variable">word</span> <span class="operator">=</span> words[i];</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 如果当前字符和单词都没有被映射，则建立映射关系</span></span><br><span class="line">            <span class="keyword">if</span> (!map.containsKey(cur) &amp;&amp; !set.contains(word)) &#123;</span><br><span class="line">                map.put(cur, word);</span><br><span class="line">                set.add(word);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 如果字符已被映射但映射的单词不匹配，或单词已被映射但映射的字符不匹配，则返回false</span></span><br><span class="line">                <span class="keyword">if</span> (!map.containsKey(cur) || !map.get(cur).equals(word)) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同上一题，不过这一题不能再用数组模拟哈希表了。</p>
+<h3 id="242-有效的字母异位词-力扣（LeetCode）"><a href="#242-有效的字母异位词-力扣（LeetCode）" class="headerlink" title="242. 有效的字母异位词 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-anagram/description/?envType=study-plan-v2&envId=top-interview-150">242. 有效的字母异位词 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<p><strong>哈希表</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isAnagram</span><span class="params">(String s, String t)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> s.length();</span><br><span class="line">        <span class="keyword">if</span>(len!=t.length())<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] sCnt = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="type">int</span>[] tCnt = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">26</span>];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> ch:s.toCharArray())&#123;</span><br><span class="line">            sCnt[ch-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> ch:t.toCharArray())&#123;</span><br><span class="line">            tCnt[ch-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        <span class="type">boolean</span> <span class="variable">res</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">26</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(sCnt[i]!=tCnt[i])&#123;</span><br><span class="line">                res = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为<code>s</code>和<code>t</code>仅包含小写字母，那么范围是确定的，所以可以用数组模拟哈希表，记录每个字母的出现次数，最后比较两个数组即可。 </p>
+<p>进阶：如果输入字符串包含 Unicode 字符，范围不确定了，直接用哈希表即可。</p>
+<blockquote>
+<p> Unicode字符和ASCII字符的区别主要在于字符集的大小、编码范围和表示的字符种类。</p>
+<hr>
+<p>每个ASCII字符用1个字节（8位），实际只用了7位，0-127</p>
+<p>Unicode 采用不同的编码方式，包括UTF-8（每个字符占用1到4个字节）、UTF-16（每个字符占用2或4个字节）和UTF-32（每个字符占用4个字节）</p>
+<blockquote>
+<p> ASCII字符在UTF-8编码中是完全兼容的</p>
+</blockquote>
+</blockquote>
+<h3 id="202-快乐数-力扣（LeetCode）"><a href="#202-快乐数-力扣（LeetCode）" class="headerlink" title="202. 快乐数 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/happy-number/description/?envType=study-plan-v2&envId=top-interview-150">202. 快乐数 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<p><strong>哈希表</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isHappy</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用HashSet来记录出现过的数字，防止无限循环</span></span><br><span class="line">        HashSet&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">        set.add(n);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 结果标志变量，初始化为true</span></span><br><span class="line">        <span class="type">boolean</span> <span class="variable">res</span> <span class="operator">=</span> <span class="literal">true</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 当n不为1时继续循环</span></span><br><span class="line">        <span class="keyword">while</span>(n != <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> n; <span class="comment">// 临时变量存储当前数字</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 存储每位数字平方和</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> -<span class="number">1</span>; <span class="comment">// 当前位的数字</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 计算每位数字的平方和</span></span><br><span class="line">            <span class="keyword">while</span>(tmp &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                cur = tmp % <span class="number">10</span>; <span class="comment">// 取最后一位数字</span></span><br><span class="line">                tmp /= <span class="number">10</span>; <span class="comment">// 去掉最后一位数字</span></span><br><span class="line">                sum += cur * cur; <span class="comment">// 将平方加到sum中</span></span><br><span class="line">            &#125;</span><br><span class="line">            n = sum; <span class="comment">// 更新n为平方和</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 如果新数字已经出现过，说明陷入循环，返回false</span></span><br><span class="line">            <span class="keyword">if</span>(set.contains(n)) &#123;</span><br><span class="line">                res = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将新数字加入集合</span></span><br><span class="line">            set.add(n);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 返回结果</span></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>识别循环</strong>：用哈希表记录本轮的数字是否已经出现过，如果出现过就代表陷入循环。</p>
+<h3 id="219-存在重复元素-II-力扣（LeetCode）"><a href="#219-存在重复元素-II-力扣（LeetCode）" class="headerlink" title="219. 存在重复元素 II - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/contains-duplicate-ii/description/?envType=study-plan-v2&envId=top-interview-150">219. 存在重复元素 II - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<p><strong>哈希表</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">containsNearbyDuplicate</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用HashMap来记录数字及其对应的最新出现位置</span></span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length; <span class="comment">// 数组的长度</span></span><br><span class="line">        </span><br><span class="line">        <span class="type">boolean</span> <span class="variable">res</span> <span class="operator">=</span> <span class="literal">false</span>; <span class="comment">// 结果标志变量，初始化为false</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 遍历数组</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> nums[i]; <span class="comment">// 当前数字</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 如果当前数字不在map中，则将其加入map</span></span><br><span class="line">            <span class="keyword">if</span> (!map.containsKey(cur)) &#123;</span><br><span class="line">                map.put(cur, i);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 如果当前数字已经在map中，获取上次出现的位置</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">lastCurIdx</span> <span class="operator">=</span> map.get(cur);</span><br><span class="line">                <span class="comment">// 检查当前索引与上次出现位置的差是否小于等于k</span></span><br><span class="line">                <span class="keyword">if</span> (i - lastCurIdx &lt;= k) &#123;</span><br><span class="line">                    res = <span class="literal">true</span>;</span><br><span class="line">                    <span class="keyword">break</span>; <span class="comment">// 满足条件，退出循环</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 更新当前数字的最新出现位置</span></span><br><span class="line">                map.put(cur, i);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res; <span class="comment">// 返回结果</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>哈希表</strong>：Key存储数组中的值，Value存该值最新的索引。 </p>
+<p><strong>索引差的判断</strong>：在找到重复元素后，需要检查它们的索引差（该元素目前最新与上一个最新）是否小于等于k。</p>
+<h3 id="228-汇总区间-力扣（LeetCode）"><a href="#228-汇总区间-力扣（LeetCode）" class="headerlink" title="228. 汇总区间 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/summary-ranges/description/?envType=study-plan-v2&envId=top-interview-150">228. 汇总区间 - 力扣（LeetCode）</a></h3><p>难度：简单</p>
+<p><strong>区间题</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;String&gt; <span class="title function_">summaryRanges</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        List&lt;String&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (len &lt; <span class="number">1</span>) <span class="keyword">return</span> res; <span class="comment">// 如果数组为空，返回空列表</span></span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">start</span> <span class="operator">=</span> nums[<span class="number">0</span>]; <span class="comment">// 初始化起始值为第一个元素</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">last</span> <span class="operator">=</span> nums[<span class="number">0</span>];  <span class="comment">// 初始化最后一个值为第一个元素</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">1</span>; <span class="comment">// 指针从第二个元素开始遍历</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (p &lt; len) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> nums[p];</span><br><span class="line">            <span class="keyword">if</span> (last + <span class="number">1</span> == cur) &#123; <span class="comment">// 如果当前元素是连续的</span></span><br><span class="line">                last = cur; <span class="comment">// 更新最后一个值为当前元素</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">// 构造字符串并加入结果列表</span></span><br><span class="line">                <span class="keyword">if</span> (start == last) &#123;</span><br><span class="line">                    res.add(String.valueOf(start)); <span class="comment">// 单个元素</span></span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    res.add(start + <span class="string">&quot;-&gt;&quot;</span> + last); <span class="comment">// 区间</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 更新新区间的起始值和最后一个值</span></span><br><span class="line">                start = cur;</span><br><span class="line">                last = cur;</span><br><span class="line">            &#125;</span><br><span class="line">            p++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理最后一个区间</span></span><br><span class="line">        <span class="keyword">if</span> (start == last) &#123;</span><br><span class="line">            res.add(String.valueOf(start));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res.add(start + <span class="string">&quot;-&gt;&quot;</span> + last);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>区间处理的<strong>逻辑理解</strong>和<strong>代码实现</strong>能力。</p>
+<h3 id="57-插入区间-力扣（LeetCode）"><a href="#57-插入区间-力扣（LeetCode）" class="headerlink" title="57. 插入区间 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/insert-interval/description/?envType=study-plan-v2&envId=top-interview-150">57. 插入区间 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<p><strong>区间题</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[][] insert(<span class="type">int</span>[][] intervals, <span class="type">int</span>[] newInterval) &#123;</span><br><span class="line">        <span class="comment">// 创建一个用于存储结果的列表</span></span><br><span class="line">        List&lt;<span class="type">int</span>[]&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> intervals.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 新区间的左右边界</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> newInterval[<span class="number">0</span>];</span><br><span class="line">        <span class="type">int</span> <span class="variable">right</span> <span class="operator">=</span> newInterval[<span class="number">1</span>];</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">flag</span> <span class="operator">=</span> <span class="literal">false</span>; <span class="comment">// 用于标记新区间是否已插入</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 遍历所有区间</span></span><br><span class="line">        <span class="keyword">while</span> (p &lt; len) &#123;</span><br><span class="line">            <span class="type">int</span>[] interval = intervals[p];</span><br><span class="line">            <span class="keyword">if</span> (interval[<span class="number">1</span>] &lt; left) &#123;</span><br><span class="line">                <span class="comment">// 当前区间在新区间左侧且不重叠，直接添加到结果列表</span></span><br><span class="line">                res.add(interval);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (interval[<span class="number">0</span>] &lt;= right) &#123;</span><br><span class="line">                <span class="comment">// 当前区间与新区间有重叠，更新新区间的左右边界</span></span><br><span class="line">                left = Math.min(interval[<span class="number">0</span>], left);</span><br><span class="line">                right = Math.max(interval[<span class="number">1</span>], right);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (interval[<span class="number">0</span>] &gt; right) &#123;</span><br><span class="line">                <span class="comment">// 当前区间在新区间右侧且不重叠，插入新区间并标记为已插入</span></span><br><span class="line">                res.add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;left, right&#125;);</span><br><span class="line">                flag = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            p++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理剩余的区间</span></span><br><span class="line">        <span class="keyword">while</span> (p &lt; len) &#123;</span><br><span class="line">            res.add(intervals[p]);</span><br><span class="line">            p++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 如果新区间还未被插入，则插入新区间</span></span><br><span class="line">        <span class="keyword">if</span> (!flag) &#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">int</span>[]&#123;left, right&#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将结果列表转换为二维数组并返回</span></span><br><span class="line">        <span class="keyword">return</span> res.toArray(<span class="keyword">new</span> <span class="title class_">int</span>[res.size()][]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>处理重叠区间</strong>、<strong>边界条件</strong></p>
+<p>遍历所有原区间，相对于插入区间，有三种情况；</p>
+<ul>
+<li>原区间在插入区间的左边</li>
+<li>原区间有一部分在插入区间中</li>
+<li>园区见在插入区间的右边</li>
+</ul>
+<p>第一种和第三种情况都很简单，主要看第二种情况：计算两个交叉区间的等效区间，然后再将更新插入区间为等效区间，进行下一轮判断，直到找到下一个原区间满足第三种情况，这时候就直接可以将插入区间加入<code>res</code>了，包括这个在内的后面所有的原区间都可以直接加入<code>res</code>。但也有可能，插入区间就是最后一个区间，所以最后要判断一下插入区间是否被加入<code>res</code>了。</p>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-08-08</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%88%B7%E9%A2%98/'>
+                            刷题
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
