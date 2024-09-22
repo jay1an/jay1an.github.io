@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        body
+        {
+            font-family: "Times New Roman", Helvetica, Tahoma, Arial,   LXGW WenKai   "notoserifsc-medium", "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif !important;
+
+        }
+    </style>
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <meta name="description" content="刷题日记 - 9" />
+    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
+    <title>Jay1an</title>
+
+    
+        
+<link rel="stylesheet" href="/css/highlight/style1.css">
+
+        
+<link rel="stylesheet" href="/css/reset.css">
+
+        
+<link rel="stylesheet" href="/css/markdown.css">
+
+        
+<link rel="stylesheet" href="/css/fonts.css">
+ 
+         <!--注意：首页既不是post也不是page-->
+        
+        
+        
+<link rel="stylesheet" href="/css/ui.css">
+ 
+        
+<link rel="stylesheet" href="/css/style.css">
+
+
+        
+            <!--返回顶部css-->
+            
+<link rel="stylesheet" href="/css/returnToTop.css">
+
+            
+<link rel="stylesheet" href="/css/unicons.css">
+
+        
+        
+            <!--目录-->
+            
+<link rel="stylesheet" href="/css/toc.css">
+
+        
+    
+
+    
+        
+<link rel="stylesheet" href="/css/returnToLastPage.css">
+
+    
+    
+   
+<link rel="stylesheet" href="/css/lightgallery.min.css">
+
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+    
+    <style>
+        :root {
+            --waline-theme-color: #323e74; 
+            --waline-color: #323e74; 
+            --waline-border-color: #323e74; 
+            --waline-white: #323e74; 
+            --waline-bgcolor-light: #f2fafc;  
+        }
+        body {
+            color: #323e74;
+            background: #eaeae8;
+        }
+        .post-md code {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        .post-md pre, .post-md .highlight {
+            background: #e7f7f3;
+            color: #7f688d; 
+        }
+        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+            color: #323e74;
+        }
+        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+            color: #323e74;
+        }
+        .year-font-color {
+            color: #323e74 !important;
+        }
+        .wl-card span.wl-nick {
+            color: #323e74; 
+        }
+        .wl-card .wl-badge {
+            border: 1px solid #323e74;
+            color: #323e74; 
+        }
+        .wl-btn {
+            border: 1px solid #323e74; 
+            color:  #323e74;  
+        }
+        .wl-btn.primary {
+            color: #f2fafc; 
+        }
+        .wl-header label {
+            color: #323e74;
+        }
+        a {
+            color: #7f688d;
+        }
+
+        .post-md a {
+            color: #7f688d;
+        }
+
+        .nav li a {
+            color: #7f688d;
+        }
+
+        .archive-main a:link {
+            color: #7f688d;
+        }
+        .archive-main a:visited {
+            color: #767c7c; 
+        }
+
+        .archive li span {
+            color: #323e74;
+        }
+
+        .post-main-title {
+            color: #323e74;
+        }
+
+        .post-md h1,
+        .post-md h2,
+        .post-md h3,
+        .post-md h4,
+        .post-md h5,
+        .post-md h6 {
+            color: #323e74;
+        }
+
+        [data-waline] p {
+            color: #323e74;
+        }
+        [data-waline] a {
+            color: #323e74;
+        } 
+        .wl-sort li.active {
+            color: #323e74;
+        }
+
+        .wl-card .wl-meta>span {
+            background: #f2fafc;
+        }
+
+        .paper {
+            background: #eaeae8;
+        }
+
+        .index-main {
+            background: #f2fafc;
+        }
+
+        .paper-main {
+            background: #f2fafc;
+        }
+
+        .wl-panel {
+            background: #f2fafc;
+        }
+
+        .archive li:nth-child(odd) {
+            background: #f2fafc;
+            ;
+        }
+
+        .archive li:nth-child(even) {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(odd) td {
+            background: #f2fafc;
+        }
+
+        .post-md table tr:nth-child(even) td {
+            background: #f2fafc;
+        }
+
+    
+        .progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+        .return-to-last-progress-wrap::after {
+            color: #323e74; /* 箭头的颜色 */
+        }
+        .return-to-last-progress-wrap svg.progress-circle path {
+	        stroke: #323e74; /* 边框的颜色 */
+        }
+        .return-to-last-progress-wrap::before {
+	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
+         }
+
+         .left-toc-container::-webkit-scrollbar-thumb {
+            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
+        }
+
+        .bs-docs-sidebar .nav>.active>a,
+        .bs-docs-sidebar .nav>li>a:hover,
+        .bs-docs-sidebar .nav>li>a:focus {
+            color: #7f688d;
+            border-left-color: #7f688d;
+        }
+        .bs-docs-sidebar .nav>li>a {
+            color:  #323e74;
+        }
+    </style>
+
+    
+    
+    <body>
+        <script src="/js/darkmode-js.min.js"></script>
+        
+        
+            <div class="left-toc-container">
+                <nav id="toc" class="bs-docs-sidebar"></nav>
+            </div>
+        
+        <div class="paper">
+            
+            
+            
+            
+                <div class="shadow-drop-2-bottom paper-main">
+                    
+
+
+<div class="header">
+    <div class="header-container">
+        <img style="
+        width: 56px;
+        height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
+        <div class="header-content">
+            <a class="logo" href="/">Jay1an</a> 
+            <span class="description">I am who I am.</span> 
+        </div>
+        
+    </div>
+    
+   
+    <ul class="nav">
+        
+            
+                <li><a href="/">首页</a></li>
+            
+        
+            
+                <li><a href="/list/">文章</a></li>
+            
+        
+            
+                <li><a href="/categories/">分类</a></li>
+            
+        
+    </ul>
+</div> 
+        
+                    
+                    
+
+                    
+                    
+                    
+                    <!--说明是文章post页面-->
+                    
+                        <div class="post-main">
+
+    
+        <div class="post-main-title">
+            刷题日记 - 9
+        </div>
+      
+    
+
+    <div class="post-md">
+        
+            
+                <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0-9"><span class="post-toc-text">刷题日记 - 9</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#86-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">86. 分隔链表 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#102-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">102. 二叉树的层序遍历 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86-%E6%A0%88"><span class="post-toc-text">二叉树的遍历 -  栈</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#144-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">144. 二叉树的前序遍历 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#94-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">94. 二叉树的中序遍历 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#145-%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">145. 二叉树的后序遍历 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BD%BF%E7%94%A8%E6%A0%88%E6%A8%A1%E6%8B%9F%E4%BA%8C%E5%8F%89%E6%A0%91%E5%89%8D%E5%BA%8F%E3%80%81%E4%B8%AD%E5%BA%8F%E5%92%8C%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="post-toc-text">使用栈模拟二叉树前序、中序和后序遍历的区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%A0%88%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="post-toc-text">栈操作流程</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%A0%88%E6%93%8D%E4%BD%9C%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%B7%AE%E5%BC%82"><span class="post-toc-text">栈操作中的关键差异</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="post-toc-text">注意事项</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#902-%E6%9C%80%E5%A4%A7%E4%B8%BA-N-%E7%9A%84%E6%95%B0%E5%AD%97%E7%BB%84%E5%90%88-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">902. 最大为 N 的数字组合 - 力扣（LeetCode）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PDD%E9%9D%A2%E8%AF%95%E9%A2%98"><span class="post-toc-text">PDD面试题</span></a></li></ol></li></ol></li></ol></li></ol>
+            
+        
+        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="刷题日记-9"><a href="#刷题日记-9" class="headerlink" title="刷题日记 - 9"></a>刷题日记 - 9</h1><h3 id="86-分隔链表-力扣（LeetCode）"><a href="#86-分隔链表-力扣（LeetCode）" class="headerlink" title="86. 分隔链表 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/partition-list/description/?envType=study-plan-v2&envId=top-interview-150">86. 分隔链表 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<p><strong>链表</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">partition</span><span class="params">(ListNode head, <span class="type">int</span> x)</span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">dummy1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">111</span>); <span class="comment">// 赋值为-111，标记这是dummy节点</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">dummy2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">111</span>); <span class="comment">// dummy1链表是小于x的节点，dummy2是大于等于x的节点</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">t1</span> <span class="operator">=</span> dummy1,t2 = dummy2;    </span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">p</span> <span class="operator">=</span> head;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="literal">null</span>)&#123;                <span class="comment">// 遍历整个初始链表，按照每个节点的值分别放入不同的dummy中</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">val</span> <span class="operator">=</span> p.val;</span><br><span class="line">            <span class="keyword">if</span>(val&lt;x)&#123;</span><br><span class="line">                t1.next = p;</span><br><span class="line">                t1 = t1.next;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(val&gt;=x)&#123;</span><br><span class="line">                t2.next = p;</span><br><span class="line">                t2 = t2.next;</span><br><span class="line">            &#125;</span><br><span class="line">            p = p.next;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">dummy</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ListNode</span>(-<span class="number">1</span>); <span class="comment">// 最后将dummy1和dummy2串成一串。</span></span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">t</span> <span class="operator">=</span> dummy;</span><br><span class="line">        <span class="keyword">if</span>(t1.val!=-<span class="number">111</span>)&#123;</span><br><span class="line">            t.next = dummy1.next;</span><br><span class="line">            t = t1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(t2.val!=-<span class="number">111</span>)&#123;</span><br><span class="line">            t.next = dummy2.next;</span><br><span class="line">            t = t2;</span><br><span class="line">        &#125;</span><br><span class="line">        t.next = <span class="literal">null</span>;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="102-二叉树的层序遍历-力扣（LeetCode）"><a href="#102-二叉树的层序遍历-力扣（LeetCode）" class="headerlink" title="102. 二叉树的层序遍历 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-level-order-traversal/description/?envType=study-plan-v2&envId=top-interview-150">102. 二叉树的层序遍历 - 力扣（LeetCode）</a></h3><p>难度：中等</p>
+<p><strong>二叉树 队列 BFS</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">levelOrder</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();  <span class="comment">// 用于存储最终的层次遍历结果</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) <span class="keyword">return</span> res;  <span class="comment">// 如果根节点为空，直接返回空列表</span></span><br><span class="line"></span><br><span class="line">        Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();  <span class="comment">// 创建一个队列，用于广度优先搜索</span></span><br><span class="line">        queue.offer(root);  <span class="comment">// 将根节点入队</span></span><br><span class="line">        queue.offer(<span class="literal">null</span>);  <span class="comment">// 用 null 作为层与层之间的分隔符</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            List&lt;Integer&gt; cur = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();  <span class="comment">// 用于存储当前层的节点值</span></span><br><span class="line">            <span class="keyword">while</span> (queue.peek() != <span class="literal">null</span>) &#123;  <span class="comment">// 当队列前端不是 null 时，处理当前层的所有节点</span></span><br><span class="line">                <span class="type">TreeNode</span> <span class="variable">curNode</span> <span class="operator">=</span> queue.poll();  <span class="comment">// 出队一个节点</span></span><br><span class="line">                cur.add(curNode.val);  <span class="comment">// 将该节点的值添加到当前层的列表中</span></span><br><span class="line">                <span class="keyword">if</span> (curNode.left != <span class="literal">null</span>) queue.offer(curNode.left);  <span class="comment">// 如果左子节点不为空，入队</span></span><br><span class="line">                <span class="keyword">if</span> (curNode.right != <span class="literal">null</span>) queue.offer(curNode.right);  <span class="comment">// 如果右子节点不为空，入队</span></span><br><span class="line">            &#125;</span><br><span class="line">            res.add(cur);  <span class="comment">// 将当前层的结果添加到最终结果列表中</span></span><br><span class="line">            queue.poll();  <span class="comment">// 移除层与层之间的分隔符（即 null）</span></span><br><span class="line">            <span class="keyword">if</span> (queue.isEmpty()) <span class="keyword">break</span>;  <span class="comment">// 如果队列为空，说明遍历结束，跳出循环</span></span><br><span class="line">            queue.offer(<span class="literal">null</span>);  <span class="comment">// 在队列末尾加入新的层分隔符</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;  <span class="comment">// 返回最终的层次遍历结果</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>难点：</p>
+<ul>
+<li><strong>层次分割的处理</strong>：通过在队列中加入 <code>null</code> 作为层与层之间的分隔符。</li>
+<li><strong>利用队列实现层序遍历（二叉树的BFS）</strong></li>
+</ul>
+<h3 id="二叉树的遍历-栈"><a href="#二叉树的遍历-栈" class="headerlink" title="二叉树的遍历 -  栈"></a>二叉树的遍历 -  栈</h3><p>不使用递归实现，而是使用栈。</p>
+<h4 id="144-二叉树的前序遍历-力扣（LeetCode）"><a href="#144-二叉树的前序遍历-力扣（LeetCode）" class="headerlink" title="144. 二叉树的前序遍历 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-preorder-traversal/description/">144. 二叉树的前序遍历 - 力扣（LeetCode）</a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">preorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();  <span class="comment">// 用于存储前序遍历结果</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) <span class="keyword">return</span> res;  <span class="comment">// 如果根节点为空，返回空列表</span></span><br><span class="line">        </span><br><span class="line">        Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();  <span class="comment">// 创建一个栈用于模拟递归调用</span></span><br><span class="line">        stack.push(root);  <span class="comment">// 将根节点压入栈中</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;  <span class="comment">// 当栈不为空时，继续遍历</span></span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">p</span> <span class="operator">=</span> stack.pop();  <span class="comment">// 弹出栈顶节点</span></span><br><span class="line">            res.add(p.val);  <span class="comment">// 将该节点的值加入结果列表中</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 由于栈是后进先出 (LIFO)，我们先压入右子节点，后压入左子节点</span></span><br><span class="line">            <span class="comment">// 这样在下一次循环中，左子节点会先被处理，实现了前序遍历的顺序</span></span><br><span class="line">            <span class="keyword">if</span> (p.right != <span class="literal">null</span>) stack.push(p.right);  <span class="comment">// 如果右子节点不为空，将右子节点压入栈</span></span><br><span class="line">            <span class="keyword">if</span> (p.left != <span class="literal">null</span>) stack.push(p.left);  <span class="comment">// 如果左子节点不为空，将左子节点压入栈</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;  <span class="comment">// 返回前序遍历结果</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>前序遍历的顺序是：<strong>根节点 -&gt; 左子树 -&gt; 右子树</strong>。</p>
+<p>为了实现这一顺序，我们需要注意压栈的顺序。首先将右子节点压入栈，再将左子节点压入栈。这样在下一个循环中，左子节点会先从栈中弹出并被处理，确保遍历顺序符合前序遍历的要求。</p>
+<h4 id="94-二叉树的中序遍历-力扣（LeetCode）"><a href="#94-二叉树的中序遍历-力扣（LeetCode）" class="headerlink" title="94. 二叉树的中序遍历 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-inorder-traversal/description/">94. 二叉树的中序遍历 - 力扣（LeetCode）</a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">inorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();  <span class="comment">// 用于存储中序遍历结果</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) <span class="keyword">return</span> res;  <span class="comment">// 如果根节点为空，返回空列表</span></span><br><span class="line">        </span><br><span class="line">        Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();  <span class="comment">// 创建一个栈用于模拟递归调用</span></span><br><span class="line">        stack.push(root);  <span class="comment">// 将根节点压入栈中</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;  <span class="comment">// 当栈不为空时，继续遍历</span></span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">p</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 将当前节点的所有左孩子压入栈</span></span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">                p = stack.peek();  <span class="comment">// 查看栈顶节点</span></span><br><span class="line">                <span class="keyword">if</span> (p.left != <span class="literal">null</span>) &#123;  <span class="comment">// 如果当前节点有左子节点</span></span><br><span class="line">                    stack.push(p.left);  <span class="comment">// 将左子节点压入栈</span></span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">break</span>;  <span class="comment">// 如果没有左子节点，停止压栈</span></span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 依次弹出栈中的节点并处理</span></span><br><span class="line">            TreeNode pop;</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">                pop = stack.pop();  <span class="comment">// 弹出栈顶节点 ⭐ 栈顶节点的左孩子要么没有，要么被处理完了</span></span><br><span class="line">                res.add(pop.val);  <span class="comment">// 将节点的值加入结果列表中</span></span><br><span class="line">                </span><br><span class="line">                <span class="comment">// 如果弹出的节点有右子节点，将其压入栈中 ⭐</span></span><br><span class="line">                <span class="keyword">if</span> (pop.right != <span class="literal">null</span>) &#123;</span><br><span class="line">                    stack.push(pop.right);  <span class="comment">// 压入右子节点</span></span><br><span class="line">                    <span class="keyword">break</span>;  <span class="comment">// 进入下一轮循环处理右子树</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> res;  <span class="comment">// 返回中序遍历结果</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在处理左子树时，需要不断地将左孩子节点压入栈中，直到没有左孩子为止。<strong>只要没有左孩子，或者左孩子处理完毕，就可以弹出当前节点</strong></p>
+<p>当我们弹出栈顶节点时，如果该节点有右子树，我们需要将右子树的根节点压入栈，然后继续按照中序的顺序处理右子树。</p>
+<h4 id="145-二叉树的后序遍历-力扣（LeetCode）"><a href="#145-二叉树的后序遍历-力扣（LeetCode）" class="headerlink" title="145. 二叉树的后序遍历 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-tree-postorder-traversal/description/">145. 二叉树的后序遍历 - 力扣（LeetCode）</a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">postorderTraversal</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="comment">// 结果列表，用于存储后序遍历的节点值</span></span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 如果根节点为空，直接返回空的结果列表</span></span><br><span class="line">        <span class="keyword">if</span> (root == <span class="literal">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 使用栈来模拟递归调用的过程</span></span><br><span class="line">        Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();</span><br><span class="line">        <span class="comment">// 记录最后一个被弹出的节点，用于判断右子树是否已经被访问</span></span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">lastPop</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">        <span class="comment">// 将根节点压入栈中</span></span><br><span class="line">        stack.push(root);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 只要栈不为空，继续遍历</span></span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">            <span class="comment">// 递归入栈左孩子</span></span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">p</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">                p = stack.peek(); <span class="comment">// 获取栈顶节点</span></span><br><span class="line">                <span class="keyword">if</span> (p.left != <span class="literal">null</span>) &#123;</span><br><span class="line">                    <span class="comment">// 如果有左孩子，将左孩子入栈</span></span><br><span class="line">                    stack.push(p.left);</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">break</span>;  <span class="comment">// 如果没有左孩子，退出内循环</span></span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 开始出栈</span></span><br><span class="line">            <span class="type">TreeNode</span> <span class="variable">cur</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty()) &#123; <span class="comment">// 处理栈顶的节点</span></span><br><span class="line">                cur = stack.peek();  <span class="comment">// 获取当前栈顶节点  ⭐还不能pop</span></span><br><span class="line">                </span><br><span class="line">                <span class="comment">// 如果右孩子存在且右孩子还未被处理</span></span><br><span class="line">                <span class="keyword">if</span> (cur.right != <span class="literal">null</span> &amp;&amp; lastPop != cur.right) &#123;</span><br><span class="line">                    <span class="comment">// 将右孩子入栈，并退出内循环以继续处理右子树</span></span><br><span class="line">                    stack.push(cur.right);</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="comment">// 否则，右子树已经处理完毕，可以安全地访问当前节点</span></span><br><span class="line">                    res.add(cur.val);  <span class="comment">// 将当前节点的值加入结果列表</span></span><br><span class="line">                    stack.pop();       <span class="comment">// 弹出当前节点</span></span><br><span class="line">                    lastPop = cur;     <span class="comment">// 更新最后一个被弹出的节点</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 返回结果列表</span></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>是否弹出当前节点 –&gt; 不仅要判断左孩子是否被处理了，还要判断右孩子是否被处理。</strong></p>
+<hr>
+<h4 id="使用栈模拟二叉树前序、中序和后序遍历的区别"><a href="#使用栈模拟二叉树前序、中序和后序遍历的区别" class="headerlink" title="使用栈模拟二叉树前序、中序和后序遍历的区别"></a>使用栈模拟二叉树前序、中序和后序遍历的区别</h4><h5 id="栈操作流程"><a href="#栈操作流程" class="headerlink" title="栈操作流程"></a><strong>栈操作流程</strong></h5><ul>
+<li><strong>前序遍历</strong>:<ul>
+<li><strong>根节点先入栈</strong>：首先将根节点入栈。</li>
+<li><strong>先处理根，再处理子节点</strong>：从栈中弹出根节点，处理后依次将右孩子和左孩子入栈（注意先右后左，这样出栈时先处理左子树）。</li>
+<li><strong>重复上述步骤</strong>：继续弹栈并处理，直到栈为空。</li>
+</ul>
+</li>
+<li><strong>中序遍历</strong>: ⭐<ul>
+<li><strong>左孩子依次入栈</strong>：先将当前节点的所有左孩子压入栈，直到没有左孩子为止。⭐</li>
+<li><strong>弹栈并处理根节点</strong>：弹出栈顶节点，处理后，检查是否有右孩子。⭐</li>
+<li><strong>处理右子树</strong>：如果有右孩子，将右孩子作为新的当前节点，重复左孩子入栈的过程。⭐</li>
+</ul>
+</li>
+<li><strong>后序遍历</strong>:<ul>
+<li><strong>左孩子先入栈</strong>：与中序遍历类似，先将左孩子入栈。⭐</li>
+<li><strong>右孩子处理顺序</strong>：在弹出根节点前，必须先处理右孩子。需要特别注意判断右子树是否已经被处理过。⭐</li>
+<li><strong>根节点最后处理</strong>：只有在左子树和右子树都处理完毕后，才处理根节点。⭐</li>
+</ul>
+</li>
+</ul>
+<h5 id="栈操作中的关键差异"><a href="#栈操作中的关键差异" class="headerlink" title="栈操作中的关键差异"></a><strong>栈操作中的关键差异</strong></h5><ul>
+<li><strong>前序遍历</strong>：<ul>
+<li><strong>栈的顺序</strong>：由于前序遍历是先处理根节点，因此在入栈时，需要先将右孩子压入栈，再将左孩子压入栈，这样出栈时能够先处理左子树。</li>
+</ul>
+</li>
+<li><strong>中序遍历</strong>：<ul>
+<li><strong>递归性强</strong>：中序遍历在访问节点时，需要先将所有左孩子压栈，出栈后再检查右子树。这种操作使得中序遍历在栈的使用上较为直观和递归。</li>
+</ul>
+</li>
+<li><strong>后序遍历</strong>：<ul>
+<li><strong>节点的双重检查</strong>：后序遍历最复杂的部分在于对右子树的处理，需要在出栈之前确认右孩子是否已经访问过。如果右孩子还未访问，则需要将右孩子入栈继续处理。</li>
+</ul>
+</li>
+</ul>
+<h5 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h5><ul>
+<li><strong>前序遍历</strong>：<ul>
+<li>需要注意入栈顺序，先右后左，以确保左子树先于右子树处理。</li>
+</ul>
+</li>
+<li><strong>中序遍历</strong>：<ul>
+<li>处理左子树时，需要注意什么时候该弹栈处理根节点，以及处理右子树的时机。</li>
+</ul>
+</li>
+<li><strong>后序遍历</strong>：<ul>
+<li>必须时刻跟踪最后访问的节点，确保右子树在根节点之前被访问。需要利用一个额外的指针或变量记录上一次处理的节点（即“lastPop”），来判断右子树是否已经访问。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>所以其实只有中序遍历和后续遍历才符合用栈模拟<strong>递归</strong>。</p>
+<h3 id="902-最大为-N-的数字组合-力扣（LeetCode）"><a href="#902-最大为-N-的数字组合-力扣（LeetCode）" class="headerlink" title="902. 最大为 N 的数字组合 - 力扣（LeetCode）"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/numbers-at-most-n-given-digit-set/description/">902. 最大为 N 的数字组合 - 力扣（LeetCode）</a></h3><p>难度：困难</p>
+<p>类似PDD一面手撕算法题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="type">int</span> res; <span class="comment">// 用于记录最终的结果数量</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">atMostNGivenDigitSet</span><span class="params">(String[] digits, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">// 将 String[] 数组转换为 char[] 数组 </span></span><br><span class="line">        <span class="comment">// 因为后面用char[]数组，最后才发现给的原来是String[]...</span></span><br><span class="line">        <span class="type">char</span>[] chars = <span class="keyword">new</span> <span class="title class_">char</span>[digits.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; digits.length; i++) &#123;</span><br><span class="line">            chars[i] = digits[i].charAt(<span class="number">0</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 调用辅助函数计算结果</span></span><br><span class="line">        <span class="keyword">return</span> fun(chars, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fun</span><span class="params">(<span class="type">char</span>[] digits, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">nString</span> <span class="operator">=</span> String.valueOf(n); <span class="comment">// 将 n 转换为字符串以便逐位处理</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nString.length(); <span class="comment">// 获取 n 的位数</span></span><br><span class="line"></span><br><span class="line">        res = <span class="number">0</span>; <span class="comment">// 初始化结果为 0</span></span><br><span class="line">        Arrays.sort(digits); <span class="comment">// 对数字数组进行排序</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">digitsNum</span> <span class="operator">=</span> digits.length; <span class="comment">// 获取可用数字的数量</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算位数比 n 小的所有可能数的数量</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= len - <span class="number">1</span>; i++) &#123;</span><br><span class="line">            res += (<span class="type">int</span>) Math.pow(digitsNum, i);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 处理与 n 位数相同的情况</span></span><br><span class="line">        dfs(nString.toCharArray(), digits, <span class="number">0</span>, <span class="literal">false</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">char</span>[] n, <span class="type">char</span>[] digits, <span class="type">int</span> pos, <span class="type">boolean</span> flag)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> n.length; <span class="comment">// n 的长度</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">digitsNum</span> <span class="operator">=</span> digits.length; <span class="comment">// 可用数字的数量</span></span><br><span class="line">        <span class="keyword">if</span> (pos == len) &#123; <span class="comment">// 极端情况下 需要跳出dfs</span></span><br><span class="line">            <span class="keyword">if</span> (flag) res += <span class="number">1</span>; <span class="comment">// 如果 flag 为 true，表示构造的这个数等于n</span></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">char</span> <span class="variable">cur</span> <span class="operator">=</span> n[pos]; <span class="comment">// 当前处理的 n 中的字符</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">targetCurIdx</span> <span class="operator">=</span> -<span class="number">1</span>; <span class="comment">// 用于记录小于当前位数字的最大可用数字的索引</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> digitsNum - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123; <span class="comment">// 从大到小遍历 digits 数组</span></span><br><span class="line">            <span class="keyword">if</span> (digits[i] == cur) &#123;</span><br><span class="line">                <span class="comment">// 如果当前位数字等于 n 中对应位数字</span></span><br><span class="line">                dfs(n, digits, pos + <span class="number">1</span>, <span class="literal">true</span>); <span class="comment">// 当前这一位相等，在下一位寻找&lt;=的值</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (digits[i] &lt; cur) &#123;</span><br><span class="line">                <span class="comment">// 如果找到一个小于 n 当前位的数字 只要这一位小于，后面的剩余位都可以随便放置</span></span><br><span class="line">                targetCurIdx = i; <span class="comment">// 记录其索引</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 计算小于当前位但位数相同的所有可能数的数量</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">useableNum</span> <span class="operator">=</span> targetCurIdx + <span class="number">1</span>;</span><br><span class="line">        res += useableNum * Math.pow(digitsNum, len - pos - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="PDD面试题"><a href="#PDD面试题" class="headerlink" title="PDD面试题"></a>PDD面试题</h4><p>题意与上题差不多，但是只要求返回小于N的最大值。</p>
+<p>我的第一想法就是这个：</p>
+<ul>
+<li><p>先将目标值<code>n</code>转换为<code>char[]</code>便于一位一位地处理</p>
+</li>
+<li><p>将<code>digits</code>排序，便于从大到小遍历（不用二分查找，因为最多也就9个数字）</p>
+</li>
+<li><p>进入<code>dfs</code>函数，从<code>n</code>的高位依次往下遍历，当前位位置为<code>pos</code>，值为<code>cur = char[pos]-&#39;0&#39;</code>，在<code>digits</code>数组中从大到小寻找<code>targetCurIdx</code>,值小于等于<code>cur</code>的元素的下标。</p>
+<ul>
+<li>如果<code>targetCur</code>等于<code>cur</code>，那么进入下一层&#96;&#96;dfs<code>，寻找下一位的</code>targetCur&#96;</li>
+<li>如果<code>targetCur</code>小于<code>cur</code>，那么直接可以确定后面的所有值了，全用<code>digits</code>中最大的值填充即可</li>
+<li>如果<code>targetCur=-1</code>，<code>cur</code>比<code>digits</code>中的所有值都小，表明当前位是不能作为低于目标位的，要回到上一层dfs去，尝试用前面的位作为“低”位。</li>
+</ul>
+<p>如果dfs都到了最后一层，表明当前构造出的值等于目标值，也需要回到上一层dfs。</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] digits = &#123;<span class="number">2</span>, <span class="number">5</span>, <span class="number">4</span>&#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">2544</span>;</span><br><span class="line">        System.out.println(<span class="keyword">new</span> <span class="title class_">Solution</span>().fun(digits, n));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fun</span><span class="params">(<span class="type">int</span>[] digits, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">nString</span> <span class="operator">=</span> String.valueOf(n);</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nString.length();</span><br><span class="line">        <span class="type">int</span> <span class="variable">digitsNum</span> <span class="operator">=</span> digits.length;</span><br><span class="line"></span><br><span class="line">        Arrays.sort(digits);</span><br><span class="line">        <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> dfs(nString.toCharArray(), digits, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (res == -<span class="number">1</span>) &#123;</span><br><span class="line">            res = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= len - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                res = res * <span class="number">10</span> + digits[digitsNum - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="title function_">dfs</span><span class="params">(<span class="type">char</span>[] n, <span class="type">int</span>[] digits, <span class="type">int</span> pos, <span class="type">int</span> res)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> n.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">digitsNum</span> <span class="operator">=</span> digits.length;</span><br><span class="line">        <span class="keyword">if</span> (pos == len) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">cur</span> <span class="operator">=</span> n[pos] - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">targetCurIdx</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> digitsNum - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (digits[i] == cur) &#123;</span><br><span class="line">                <span class="type">int</span> <span class="variable">tmp</span> <span class="operator">=</span> dfs(n, digits, pos + <span class="number">1</span>, res * <span class="number">10</span> + digits[i]);</span><br><span class="line">                <span class="keyword">if</span> (tmp != -<span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">return</span> tmp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (digits[i] &lt; cur) &#123;</span><br><span class="line">                targetCurIdx = i;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (targetCurIdx == -<span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        res = res * <span class="number">10</span> + digits[targetCurIdx];</span><br><span class="line">        <span class="type">int</span> <span class="variable">leftPosCount</span> <span class="operator">=</span> len - <span class="number">1</span> - pos;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; leftPosCount; i++) &#123;</span><br><span class="line">            res = res * <span class="number">10</span> + digits[digitsNum - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可惜我想的比较复杂，当时又有点紧张，现场没有手撕出来。&#x2F;(ㄒoㄒ)&#x2F;~~</p>
+<hr>
+<p>也可以不用dfs，用一个指针遍历即可，主要是找到“低”位</p>
+<p>分三种情况，详情看代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">int</span>[] digits = &#123;<span class="number">5</span>, <span class="number">9</span>&#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">5555</span>;</span><br><span class="line">        System.out.println(<span class="keyword">new</span> <span class="title class_">Solution</span>().fun(digits, n));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">fun</span><span class="params">(<span class="type">int</span>[] digits, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">digitsNum</span> <span class="operator">=</span> digits.length;</span><br><span class="line">        <span class="type">char</span>[] digitChars = <span class="keyword">new</span> <span class="title class_">char</span>[digitsNum];</span><br><span class="line">        <span class="type">char</span> <span class="variable">max</span> <span class="operator">=</span> <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="type">char</span> <span class="variable">min</span> <span class="operator">=</span> <span class="string">&#x27;9&#x27;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; digitsNum; i++) &#123;</span><br><span class="line">            digitChars[i] = (<span class="type">char</span>) (digits[i] + <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">            max = digitChars[i] &gt; max ? digitChars[i] : max;   <span class="comment">// 记录max和min方便后续判断与赋值</span></span><br><span class="line">            min = digitChars[i] &lt; min ? digitChars[i] : min;</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(digitChars);</span><br><span class="line"></span><br><span class="line">        <span class="type">char</span>[] nChars = String.valueOf(n).toCharArray();</span><br><span class="line">        <span class="type">int</span> <span class="variable">len</span> <span class="operator">=</span> nChars.length;</span><br><span class="line"></span><br><span class="line">        <span class="type">char</span>[] res = <span class="keyword">new</span> <span class="title class_">char</span>[len];</span><br><span class="line">        Arrays.fill(res, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">p</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">state</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (p &lt; nChars.length) &#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">targetIdx</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">            <span class="type">char</span> <span class="variable">cur</span> <span class="operator">=</span> nChars[p];</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> digitsNum - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (digitChars[i] == cur) &#123;</span><br><span class="line">                    res[p] = digitChars[i];</span><br><span class="line">                    targetIdx = -<span class="number">2</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (digitChars[i] &lt; cur) &#123;</span><br><span class="line">                    targetIdx = i;</span><br><span class="line">                    res[p] = digitChars[targetIdx];</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (targetIdx == -<span class="number">2</span>) &#123;  <span class="comment">// 只有在前面都等于的时候继续</span></span><br><span class="line">                p++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (targetIdx == -<span class="number">1</span>) state = <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (targetIdx != -<span class="number">1</span>) state = <span class="number">2</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            ;  <span class="comment">// 退出while只有三种情况： 1. p=len,这个组合出来的数一定是等于n的   2. 在p这个位置 找到了比对应位置小的  3. 或者找不到对应小的。</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 反向</span></span><br><span class="line">        <span class="keyword">if</span> (state == <span class="number">0</span>) &#123;</span><br><span class="line">            p--;</span><br><span class="line">            <span class="keyword">while</span> (p &gt;= <span class="number">0</span> &amp;&amp; res[p] &lt;= min) &#123;</span><br><span class="line">                res[p] = max;</span><br><span class="line">                p--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (p == -<span class="number">1</span>) &#123;</span><br><span class="line">                res[<span class="number">0</span>] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> digitsNum - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (digitChars[i] &lt; res[p]) &#123;</span><br><span class="line">                        res[p] = digitChars[i];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (state == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i &lt; p) <span class="keyword">break</span>;</span><br><span class="line">                res[i] = max;</span><br><span class="line">            &#125;</span><br><span class="line">            p--;</span><br><span class="line">            <span class="keyword">while</span> (p &gt;= <span class="number">0</span> &amp;&amp; res[p] &lt;= min) &#123;</span><br><span class="line">                res[p] = max;</span><br><span class="line">                p--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (p == -<span class="number">1</span>) &#123;</span><br><span class="line">                res[<span class="number">0</span>] = <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> digitsNum - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (digitChars[i] &lt; res[p]) &#123;</span><br><span class="line">                        res[p] = digitChars[i];</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (state == <span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> len - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">                <span class="keyword">if</span> (i &lt;= p) <span class="keyword">break</span>;</span><br><span class="line">                res[i] = max;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将res转化为数字</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">resInt</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">            <span class="type">char</span> <span class="variable">cur</span> <span class="operator">=</span> res[i];</span><br><span class="line">            resInt = resInt * <span class="number">10</span> + (cur - <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> resInt; <span class="comment">// 返回最终结果</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其实还是挺难的，过程比较繁杂。</p>
+</div><script src="/js/lightgallery.min.js"></script><script>
+        if("undefined"!=typeof lightGallery) {
+        var options1 = {
+            selector: '.gallery-item'
+        };
+        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
+        }
+        </script>
+    </div>
+
+    <div class="post-meta">
+        <i>
+        
+            <span>2024-08-22</span>
+            
+                <span>该篇文章被 jay1an</span>
+            
+            
+                <span>打上标签:
+                    
+                    
+                        <a href='/tags/%E9%93%BE%E8%A1%A8/'>
+                            链表
+                        </a>
+                    
+                        <a href='/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/'>
+                            二叉树
+                        </a>
+                    
+                        <a href='/tags/DFS/'>
+                            DFS
+                        </a>
+                    
+                </span>
+             
+             
+                <span>归为分类:
+                    
+                    
+                        <a href='/categories/%E5%88%B7%E9%A2%98/'>
+                            刷题
+                        </a>
+                    
+                </span>
+            
+        
+        </i>
+    </div>
+    <br>
+    
+    <!-- <div class="post-footer-pre-next">
+        <span>上一篇：<a href=""></a></span>
+        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
+    </div> -->
+
+    
+        
+
+     
+</div>
+
+
+
+                                      
+                    
+                    
+                    <div class="footer">
+    
+        <span> 
+            © 1949-2024 China 
+
+            
+                
+
+            
+        </span>
+    
+</div>
+<!--这是指一条线往下的内容-->
+<div class="footer-last">
+    
+            <span>从头努力也坎坷</span>
+            
+    
+</div>
+
+
+    
+<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--目录-->
+    
+        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        
+<script src="/js/toc.js"></script>
+
+    
+    
+
+    
+<script src="/js/randomHeaderContent.js"></script>
+
+    <!--回到顶部按钮-->
+    
+        
+<script src="/js/returnToTop.js"></script>
+
+    
+
+    
+        
+<script src="/js/returnToLastPage.js"></script>
+
+    
+
+
+
+
+
+<script src="/js/lightgallery.min.js"></script>
+
+
+
+                </div>
+            
+            
+                <!-- 回到顶部的按钮-->  
+                <div class="progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+            
+                <!-- 返回的按钮-->  
+                <div class="return-to-last-progress-wrap shadow-drop-2-bottom">
+                    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+                    </svg>
+                </div>
+            
+    </body>
+</html>
