@@ -13,9 +13,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
     <meta name="description" content="回溯 - Backtracking" />
-    <meta name="hexo-theme-A4" content="v1.9.0" />
+    <meta name="hexo-theme-A4" content="v1.9.6" />
     <link rel="alternate icon" type="image/webp" href="/img/favicon.webp">
-    <title>Jay1an</title>
+    <title>Jay1an🎈</title>
 
     
         
@@ -64,180 +64,46 @@
     
     
    
-<link rel="stylesheet" href="/css/lightgallery.min.css">
+<link rel="stylesheet" href="/css/lightgallery-bundle.min.css">
 
 
 <meta name="generator" content="Hexo 7.3.0"></head>
     
-    <style>
-        :root {
-            --waline-theme-color: #323e74; 
-            --waline-color: #323e74; 
-            --waline-border-color: #323e74; 
-            --waline-white: #323e74; 
-            --waline-bgcolor-light: #f2fafc;  
-        }
-        body {
-            color: #323e74;
-            background: #eaeae8;
-        }
-        .post-md code {
-            background: #e7f7f3;
-            color: #7f688d; 
-        }
-        .post-md pre, .post-md .highlight {
-            background: #e7f7f3;
-            color: #7f688d; 
-        }
-        pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
-            color: #323e74;
-        }
-        pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
-            color: #323e74;
-        }
-        .year-font-color {
-            color: #323e74 !important;
-        }
-        .wl-card span.wl-nick {
-            color: #323e74; 
-        }
-        .wl-card .wl-badge {
-            border: 1px solid #323e74;
-            color: #323e74; 
-        }
-        .wl-btn {
-            border: 1px solid #323e74; 
-            color:  #323e74;  
-        }
-        .wl-btn.primary {
-            color: #f2fafc; 
-        }
-        .wl-header label {
-            color: #323e74;
-        }
-        a {
-            color: #7f688d;
-        }
-
-        .post-md a {
-            color: #7f688d;
-        }
-
-        .nav li a {
-            color: #7f688d;
-        }
-
-        .archive-main a:link {
-            color: #7f688d;
-        }
-        .archive-main a:visited {
-            color: #767c7c; 
-        }
-
-        .archive li span {
-            color: #323e74;
-        }
-
-        .post-main-title {
-            color: #323e74;
-        }
-
-        .post-md h1,
-        .post-md h2,
-        .post-md h3,
-        .post-md h4,
-        .post-md h5,
-        .post-md h6 {
-            color: #323e74;
-        }
-
-        [data-waline] p {
-            color: #323e74;
-        }
-        [data-waline] a {
-            color: #323e74;
-        } 
-        .wl-sort li.active {
-            color: #323e74;
-        }
-
-        .wl-card .wl-meta>span {
-            background: #f2fafc;
-        }
-
-        .paper {
-            background: #eaeae8;
-        }
-
-        .index-main {
-            background: #f2fafc;
-        }
-
-        .paper-main {
-            background: #f2fafc;
-        }
-
-        .wl-panel {
-            background: #f2fafc;
-        }
-
-        .archive li:nth-child(odd) {
-            background: #f2fafc;
-            ;
-        }
-
-        .archive li:nth-child(even) {
-            background: #f2fafc;
-        }
-
-        .post-md table tr:nth-child(odd) td {
-            background: #f2fafc;
-        }
-
-        .post-md table tr:nth-child(even) td {
-            background: #f2fafc;
-        }
+    
 
     
-        .progress-wrap::after {
-            color: #323e74; /* 箭头的颜色 */
-        }
-        .progress-wrap svg.progress-circle path {
-	        stroke: #323e74; /* 边框的颜色 */
-        }
-        .progress-wrap::before {
-	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
-         }
+    
 
-        .return-to-last-progress-wrap::after {
-            color: #323e74; /* 箭头的颜色 */
-        }
-        .return-to-last-progress-wrap svg.progress-circle path {
-	        stroke: #323e74; /* 边框的颜色 */
-        }
-        .return-to-last-progress-wrap::before {
-	        background-image: linear-gradient(298deg, #7f688d, #7f688d); /* 鼠标滑过的箭头颜色 */
-         }
 
-         .left-toc-container::-webkit-scrollbar-thumb {
-            background-color: #323e74; /* 设置滚动条拖动块的颜色 */
-        }
 
-        .bs-docs-sidebar .nav>.active>a,
-        .bs-docs-sidebar .nav>li>a:hover,
-        .bs-docs-sidebar .nav>li>a:focus {
-            color: #7f688d;
-            border-left-color: #7f688d;
-        }
-        .bs-docs-sidebar .nav>li>a {
-            color:  #323e74;
-        }
-    </style>
+    
 
+    
+    
+
+    
     
     
     <body>
         <script src="/js/darkmode-js.min.js"></script>
+        
+        <script>
+            const options = {
+                bottom: '40px', // default: '32px'
+                right: 'unset', // default: '32px'
+                left: '42px', // default: 'unset'
+                time: '0.3s', // default: '0.3s'
+                mixColor: '#fff', // default: '#fff'
+                backgroundColor: ' #e4e4e4 ',  // default: '#fff'
+                buttonColorDark: '#100f2c',  // default: '#100f2c'
+                buttonColorLight: '#fff', // default: '#fff'
+                saveInCookies: true, // default: true,
+                label: '🌓', // default: ''
+                autoMatchOsTheme: true // default: true
+            }
+            const darkmode = new Darkmode(options);
+            darkmode.showWidget();
+        </script>
         
         
             <div class="left-toc-container">
@@ -259,7 +125,7 @@
         width: 56px;
         height: auto;" alt="^-^" cache-control="max-age=86400" class="header-img" src="/img/favicon.webp" width="10%"></img>
         <div class="header-content">
-            <a class="logo" href="/">Jay1an</a> 
+            <a class="logo" href="/">Jay1an🎈</a> 
             <span class="description">I am who I am.</span> 
         </div>
         
@@ -269,15 +135,23 @@
     <ul class="nav">
         
             
-                <li><a href="/">首页</a></li>
+                <li><a href="/">⛩️首页</a></li>
             
         
             
-                <li><a href="/list/">文章</a></li>
+                <li><a href="/list/">🗒️文章</a></li>
             
         
             
-                <li><a href="/categories/">分类</a></li>
+                <li><a href="/categories/">🏷️分类</a></li>
+            
+        
+            
+                <li><a href="/about/">🎨关于</a></li>
+            
+        
+            
+                <li><a href="/now/">🎡Now</a></li>
             
         
     </ul>
@@ -292,12 +166,48 @@
                     <!--说明是文章post页面-->
                     
                         <div class="post-main">
+    
 
     
-        <div class="post-main-title">
-            回溯 - Backtracking
-        </div>
+        
+            
+                <div class="post-main-title" style="text-align: center;">
+                    回溯 - Backtracking
+                </div>
+            
+        
       
+    
+
+    
+
+        
+            <div class="post-head-meta-center">
+        
+                
+                    <span>最近更新：2024-07-26</span> 
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                     <span>字数总计：3.7k</span>
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                    <span>阅读估时：17分钟</span>
+                
+                
+                    
+                        &nbsp; | &nbsp;
+                    
+                    <span id="busuanzi_container_page_pv">
+                        阅读量：<span id="busuanzi_value_page_pv"></span>次
+                    </span>
+                
+            </div>
     
 
     <div class="post-md">
@@ -306,7 +216,7 @@
                 <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%9B%9E%E6%BA%AF"><span class="post-toc-text">基础算法 - 回溯</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%9B%B8%E5%85%B3%E9%A2%98%E7%9B%AE"><span class="post-toc-text">相关题目</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#46-%E5%85%A8%E6%8E%92%E5%88%97-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">46. 全排列 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#47-%E5%85%A8%E6%8E%92%E5%88%97-II-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">47. 全排列 II - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#78-%E5%AD%90%E9%9B%86-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">78. 子集 - 力扣（LeetCode）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92"><span class="post-toc-text">动态规划</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%9B%9E%E6%BA%AF"><span class="post-toc-text">回溯</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">17. 电话号码的字母组合 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#39-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8C-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">39. 组合总和 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#22-%E6%8B%AC%E5%8F%B7%E7%94%9F%E6%88%90-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">22. 括号生成 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#79-%E5%8D%95%E8%AF%8D%E6%90%9C%E7%B4%A2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">79. 单词搜索 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#131-%E5%88%86%E5%89%B2%E5%9B%9E%E6%96%87%E4%B8%B2-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">131. 分割回文串 - 力扣（LeetCode）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#51-N-%E7%9A%87%E5%90%8E-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="post-toc-text">51. N 皇后 - 力扣（LeetCode）</span></a></li></ol></li></ol></li></ol>
             
         
-        <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css" /><div class="article-gallery"><h1 id="基础算法-回溯"><a href="#基础算法-回溯" class="headerlink" title="基础算法 - 回溯"></a>基础算法 - 回溯</h1><p>回溯（Backtracking）作为一种重要的算法设计技术，在解决组合问题、排列问题以及搜索问题中广泛应用。其核心思想是通过试探和撤销的方式，在搜索过程中找到所有可能的解决方案。</p>
+        <div class=".article-gallery"><h1 id="基础算法-回溯"><a href="#基础算法-回溯" class="headerlink" title="基础算法 - 回溯"></a>基础算法 - 回溯</h1><p>回溯（Backtracking）作为一种重要的算法设计技术，在解决组合问题、排列问题以及搜索问题中广泛应用。其核心思想是通过试探和撤销的方式，在搜索过程中找到所有可能的解决方案。</p>
 <p>回溯算法的主要特点包括：</p>
 <ul>
 <li><strong>递归</strong>：回溯算法通常采用递归方式实现，通过递归函数进行问题的求解。</li>
@@ -377,14 +287,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 用数组来记录位置</span></span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; ans = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; path = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 记录状态，记录每一个格子被多少个皇后锁定了</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;String&gt;&gt; <span class="title function_">solveNQueens</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="comment">// 0 表示没有被皇后锁定，表明下一个皇后可以放置在这个位置上</span></span><br><span class="line">        <span class="comment">// 初始state数组均为0</span></span><br><span class="line">        <span class="type">int</span>[][] state = <span class="keyword">new</span> <span class="title class_">int</span>[n][n];</span><br><span class="line">        dfs(<span class="number">0</span>, state);</span><br><span class="line">        <span class="comment">// 答案都存在ans数组里面，但是题目要求我们给出的是字符串...所以我们需要加上这一段,旨在将数组类型的答案转换为字符串List</span></span><br><span class="line">        List&lt;List&lt;String&gt;&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; ans.size(); i++) &#123;</span><br><span class="line">            path = ans.get(i);</span><br><span class="line">            List&lt;String&gt; tmp = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">                <span class="type">StringBuffer</span> <span class="variable">stringBuffer</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">                <span class="type">int</span> <span class="variable">pos</span> <span class="operator">=</span> path.get(j);</span><br><span class="line">                <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (k == pos) &#123;</span><br><span class="line">                        stringBuffer.append(<span class="string">&#x27;Q&#x27;</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                        stringBuffer.append(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                tmp.add(stringBuffer.toString());</span><br><span class="line">            &#125;</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(tmp));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果皇后放在了i，j这个位置，那么需要在state上做一些标记，比如说某一些格子会被攻击</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">mark</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j, <span class="type">int</span>[][] state)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> state.length;</span><br><span class="line">        <span class="comment">// 注意这样的话state[i][j]就会+4</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            <span class="comment">// 每一行需要被标记</span></span><br><span class="line">            state[k][j]++;</span><br><span class="line">            <span class="comment">// 每一列也需要被标记</span></span><br><span class="line">            state[i][k]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 斜着的</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> -n + <span class="number">1</span>; k &lt; n; k++) &#123;</span><br><span class="line">            <span class="comment">// i，j同+k，为 \</span></span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i + k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i + k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i + k][j + k]++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// i,j 异号 k,为/</span></span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i - k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i - k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i - k][j + k]++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 对应反相减就可以了</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">unMark</span><span class="params">(<span class="type">int</span> i, <span class="type">int</span> j, <span class="type">int</span>[][] state)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> state.length;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>; k &lt; n; k++) &#123;</span><br><span class="line">            state[k][j]--;</span><br><span class="line">            state[i][k]--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> -n + <span class="number">1</span>; k &lt; n; k++) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i + k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i + k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i + k][j + k]--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> ((<span class="number">0</span> &lt;= i - k) &amp;&amp; (<span class="number">0</span> &lt;= j + k) &amp;&amp; (i - k &lt; n) &amp;&amp; (j + k &lt; n)) &#123;</span><br><span class="line">                state[i - k][j + k]--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> cur, <span class="type">int</span>[][] state)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> state.length;</span><br><span class="line">        <span class="comment">// cur代表这一次的dfs是寻找第cur个皇后的位置的</span></span><br><span class="line">        <span class="comment">// 如果cur等于n，代表所有的皇后都找到了对应的位置了，那么可以返回了</span></span><br><span class="line">        <span class="keyword">if</span> (cur == n) &#123;</span><br><span class="line">            ans.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;(path));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 遍历每一个位置，尝试每一个位置</span></span><br><span class="line">        <span class="comment">// 经过思考，其实不必要遍历每一个位置，因为N皇后的第一个肯定是在第一行的，第二个肯定是在第二行的....</span></span><br><span class="line">        <span class="comment">// 所以我们就根据cur的值，确定在哪一行进行遍历就可以了(cur可以作为行的索引)</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">            <span class="comment">// 如果有位置的话，就搜索下一个</span></span><br><span class="line">            <span class="keyword">if</span> (state[cur][i] == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="comment">// 先标记</span></span><br><span class="line">                mark(cur, i, state);</span><br><span class="line">                <span class="comment">// tmp中最多有n-1个元素，分别代表每一行的皇后对应的位置</span></span><br><span class="line">                path.add(i);</span><br><span class="line">                dfs(cur + <span class="number">1</span>, state);</span><br><span class="line">                <span class="comment">// 弹出</span></span><br><span class="line">                path.remove(path.size() - <span class="number">1</span>);</span><br><span class="line">                <span class="comment">// 清楚标记</span></span><br><span class="line">                unMark(cur, i, state);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>和前面的回溯题没什么不同，就是标记元素的方式改变了。<code>Mark()</code>与<code>UnMark()</code></p>
-</div><script src="/js/lightgallery.min.js"></script><script>
-        if("undefined"!=typeof lightGallery) {
-        var options1 = {
-            selector: '.gallery-item'
-        };
-        lightGallery(document.getElementsByClassName('article-gallery')[0], options1);
-        }
-        </script>
+</div>
     </div>
 
     <div class="post-meta">
@@ -423,10 +326,23 @@
     </div>
     <br>
     
-    <!-- <div class="post-footer-pre-next">
-        <span>上一篇：<a href=""></a></span>
-        <span class="post-footer-pre-next-last-span-right">上一篇：<a href=""></a></span>
-    </div> -->
+    
+        
+            
+    
+            <div class="post-footer-pre-next">
+                
+                    <span>上一篇：<a href='/2024/06/11/algorithms-stack/'>栈 - Stack</a></span>
+                
+
+                
+                    <span class="post-footer-pre-next-last-span-right">下一篇：<a href="/2024/06/08/algorithms-sliding-window/">滑动窗口 - Sliding Window</a>
+                    </span>
+                
+            </div>
+    
+        
+    
 
     
         
@@ -442,36 +358,41 @@
                     <div class="footer">
     
         <span> 
-            © 1949-2024 China 
+            © 1949-2024 Jay1an 
 
             
                 
 
             
         </span>
+       
     
 </div>
+
+
+
 <!--这是指一条线往下的内容-->
 <div class="footer-last">
     
             <span>从头努力也坎坷</span>
+            
+                <span class="footer-last-span-right"><i>本站由<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/index.html">Hexo</a>驱动｜使用<a target="_blank" rel="noopener" href="https://github.com/HiNinoJay/hexo-theme-A4">Hexo-theme-A4</a>主题</i></span>
             
     
 </div>
 
 
     
-<script src="/js/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
     <!--目录-->
     
-        <script src="/js/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-        <script src="/js/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
-        <script src="/js/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript" ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js" type="text/javascript" ></script>
         
 <script src="/js/toc.js"></script>
 
-    
     
 
     
@@ -494,9 +415,54 @@
 
 
 
-<script src="/js/lightgallery.min.js"></script>
+<script src="/js/lightgallery/lightgallery.umd.min.js"></script>
 
 
+
+<script src="/js/lightgallery/plugins/lg-thumbnail.umd.min.js"></script>
+
+
+
+<script src="/js/lightgallery/plugins/lg-fullscreen.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-autoplay.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-zoom.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-rotate.umd.min.js"></script>
+
+
+<script src="/js/lightgallery/plugins/lg-paper.umd.min.js"></script>
+
+
+
+
+<script type="text/javascript">
+     
+    if (typeof lightGallery !== "undefined") {
+        var options1 = {
+            selector: '.gallery-item',
+            plugins: [lgThumbnail, lgFullscreen, lgAutoplay, lgZoom, lgRotate, lgPager], // 启用插件
+            thumbnail: true,          // 显示缩略图
+            zoom: true,               // 启用缩放功
+            rotate: true,             // 启用旋转功能能
+            autoplay: true,        // 启用自动播放功能
+            fullScreen: true,      // 启用全屏功能
+            pager: false, //页码,
+            zoomFromOrigin: true,   // 从原始位置缩放
+            actualSize: true,       // 启用查看实际大小的功能
+            enableZoomAfter: 300,    // 延迟缩放，确保图片加载完成后可缩放
+        };
+        lightGallery(document.getElementsByClassName('.article-gallery')[0], options1); // 修复选择器
+    }
+    
+</script>
+
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
 
                 </div>
             
